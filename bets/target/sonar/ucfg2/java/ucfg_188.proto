@@ -1,0 +1,65 @@
+
+%domain.ApustuAnitza#galdutaMarkatu()ZU
+K/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/ApustuAnitza.javat t("5*Ì
+2u u(K
+I
+u u(
+adomain.Apustua"__id*"
+
+__unknown_file (
+""à
+Ö
+u u(
+adomain.Apustua"
+__arrayGet*4
+
+__unknown_file (
+
+%0java.util.Vector*"
+
+__unknown_file (
+""*
+4
+1*Å
+3w w(^
+\
+w w(!
+domain.ApustuAnitza"
+egoera"__id*'
+
+__unknown_file (	
+galduta"
+x x(
+""*Û
+4v v(ìê
+v v(
+%1java.lang.String",domain.Apustua#getEgoera()Ljava/lang/String;*1
+
+__unknown_file (
+
+adomain.Apustua2getEgoera()≈¬
+v v(%
+%2boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%1java.lang.String*'
+
+__unknown_file (	
+galduta2equals(Ljava/lang/Object;)*
+2
+3*Å
+5u u(m
+k
+u u(
+%0java.util.Vector"__id*A
+
+__unknown_file (%*#
+domain.ApustuAnitza"
+
+apustuak*
+2*!
+1{	 {("
+{ {(
+""B
+domain.ApustuAnitzaHX

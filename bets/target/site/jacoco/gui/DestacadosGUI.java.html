@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DestacadosGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">DestacadosGUI.java</span></div><h1>DestacadosGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import businessLogic.BLFacade;
+import domain.Registered;
+import domain.Team;
+
+public class DestacadosGUI extends JFrame{
+<span class="nc" id="L22">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
+
+	private static final long serialVersionUID = 1L;
+
+	private JLabel lblTitle;
+	private JFrame thisw;
+
+	private JButton btnPopular;
+
+	private JButton btnClose;
+
+	private JButton btnSugerencias;
+	private Registered user;
+	private JButton btnSeguir;
+
+	private JButton btnEquipo;
+	
+	private Registered r;
+
+<span class="nc" id="L41">	public DestacadosGUI(Registered u) {</span>
+<span class="nc" id="L42">		user=u;</span>
+<span class="nc" id="L43">		r= businessLogic.findUser(user);</span>
+<span class="nc" id="L44">		getContentPane().setBackground(Color.WHITE);</span>
+<span class="nc" id="L45">		thisw=this;</span>
+<span class="nc" id="L46">		getContentPane().setLayout(null);</span>
+<span class="nc" id="L47">		this.setSize(new Dimension(1200, 350));</span>
+<span class="nc" id="L48">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Destacados&quot;));</span>
+		
+<span class="nc" id="L50">		lblTitle = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Destacados&quot;));</span>
+<span class="nc" id="L51">		lblTitle.setBackground(Color.PINK);</span>
+<span class="nc" id="L52">		lblTitle.setOpaque(true);</span>
+<span class="nc" id="L53">		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L54">		lblTitle.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 20));</span>
+<span class="nc" id="L55">		lblTitle.setBounds(0, 22, 1176, 39);</span>
+<span class="nc" id="L56">		getContentPane().add(lblTitle);</span>
+		
+<span class="nc" id="L58">		btnClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L59">		btnClose.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
+<span class="nc" id="L60">		btnClose.setBackground(Color.DARK_GRAY);</span>
+<span class="nc" id="L61">		btnClose.setForeground(Color.WHITE);</span>
+<span class="nc" id="L62">		btnClose.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L64">				jButtonClose_actionPerformed(e);</span>
+<span class="nc" id="L65">			}</span>
+		});
+<span class="nc" id="L67">		btnClose.setBounds(38, 229, 190, 58);</span>
+<span class="nc" id="L68">		getContentPane().add(btnClose);</span>
+		
+<span class="nc" id="L70">		btnPopular = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Popular&quot;));</span>
+<span class="nc" id="L71">		btnPopular.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L72">		btnPopular.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L73">		btnPopular.setBackground(Color.PINK);</span>
+<span class="nc" id="L74">		btnPopular.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L76">				JFrame a =new PopularGUI(user);</span>
+<span class="nc" id="L77">				a.setVisible(true);</span>
+<span class="nc" id="L78">				thisw.setVisible(false);</span>
+<span class="nc" id="L79">			}</span>
+		});
+<span class="nc" id="L81">		btnPopular.setBounds(38, 95, 317, 98);</span>
+<span class="nc" id="L82">		getContentPane().add(btnPopular);</span>
+		
+<span class="nc" id="L84">		btnSugerencias = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Sugerencia&quot;));</span>
+<span class="nc" id="L85">		btnSugerencias.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L86">		btnSugerencias.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L87">		btnSugerencias.setBackground(Color.PINK);</span>
+<span class="nc" id="L88">		btnSugerencias.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L90">				JFrame a =new SugerenciasGUI(user);</span>
+<span class="nc" id="L91">				a.setVisible(true);</span>
+<span class="nc" id="L92">				thisw.setVisible(false);</span>
+<span class="nc" id="L93">			}</span>
+		});
+<span class="nc" id="L95">		btnSugerencias.setBounds(412, 95, 353, 98);</span>
+<span class="nc" id="L96">		getContentPane().add(btnSugerencias);</span>
+		
+<span class="nc" id="L98">		btnEquipo = new JButton();</span>
+<span class="nc" id="L99">		btnEquipo.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L100">		btnEquipo.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L102">				JFrame a=new TaldeaApostatuGUI(r);</span>
+<span class="nc" id="L103">				a.setVisible(true);</span>
+<span class="nc" id="L104">				thisw.setVisible(false);</span>
+<span class="nc" id="L105">			}</span>
+		});
+<span class="nc" id="L107">		btnEquipo.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L108">		btnEquipo.setBackground(Color.PINK);</span>
+<span class="nc" id="L109">		btnEquipo.setBounds(828, 95, 332, 98);</span>
+<span class="nc" id="L110">		getContentPane().add(btnEquipo);</span>
+		
+<span class="nc" id="L112">		btnSeguir = new JButton(); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L113">		btnSeguir.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
+<span class="nc" id="L114">		btnSeguir.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc bnc" id="L116" title="All 2 branches missed.">				if(businessLogic.findTeam(r)==null) {</span>
+<span class="nc" id="L117">					btnEquipo.setEnabled(true);</span>
+<span class="nc" id="L118">					JFrame a =new TaldeaJarraituGUI(r);</span>
+<span class="nc" id="L119">					a.setVisible(true);</span>
+<span class="nc" id="L120">					thisw.setVisible(false);</span>
+<span class="nc" id="L121">				}else {</span>
+<span class="nc" id="L122">					btnEquipo.setEnabled(false);</span>
+<span class="nc" id="L123">					businessLogic.ezJarraituTaldea(r);</span>
+<span class="nc" id="L124">					btnEquipo.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AukTeam&quot;));</span>
+<span class="nc" id="L125">					btnSeguir.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Seguir&quot;));</span>
+<span class="nc" id="L126">					btnEquipo.setIcon(null);</span>
+<span class="nc" id="L127">					thisw.setVisible(false);</span>
+<span class="nc" id="L128">					JFrame a =new DestacadosGUI(r);</span>
+<span class="nc" id="L129">					a.setVisible(true);</span>
+				}
+<span class="nc" id="L131">			}</span>
+		});
+<span class="nc" id="L133">		btnSeguir.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L134">		btnSeguir.setBackground(Color.PINK);</span>
+<span class="nc" id="L135">		btnSeguir.setBounds(977, 229, 183, 58);</span>
+<span class="nc" id="L136">		getContentPane().add(btnSeguir);</span>
+		
+<span class="nc bnc" id="L138" title="All 2 branches missed.">		if(businessLogic.findTeam(r)==null) {</span>
+<span class="nc" id="L139">			btnSeguir.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Seguir&quot;));</span>
+<span class="nc" id="L140">			btnEquipo.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AukTeam&quot;));</span>
+<span class="nc" id="L141">			btnEquipo.setEnabled(false);</span>
+		}else {
+<span class="nc" id="L143">			btnSeguir.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoSeguir&quot;));</span>
+<span class="nc" id="L144">			btnEquipo.setEnabled(true);</span>
+<span class="nc" id="L145">			Team t=businessLogic.findTeam(r);</span>
+<span class="nc" id="L146">			ImageIcon imageIcon = new ImageIcon(&quot;.\\src/main/resources\\Equipos\\&quot;+t.getIzena()+&quot;.png&quot;); // load the image to a imageIcon</span>
+<span class="nc" id="L147">			Image image = imageIcon.getImage(); // transform it </span>
+<span class="nc" id="L148">		    Image newimg = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH); // scale it the smooth way  </span>
+<span class="nc" id="L149">		    imageIcon = new ImageIcon(newimg);</span>
+<span class="nc" id="L150">	        btnEquipo.setIcon(imageIcon);</span>
+		}
+<span class="nc" id="L152">	}</span>
+
+	private void jButtonClose_actionPerformed(ActionEvent e) {
+<span class="nc" id="L155">		this.setVisible(false);</span>
+<span class="nc" id="L156">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

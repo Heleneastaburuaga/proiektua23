@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Sport.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Sport.java</span></div><h1>Sport.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.Serializable;
+import java.util.Vector;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class Sport implements Serializable{
+	@XmlID
+	@Id 
+	private String izena;
+<span class="pc" id="L21">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+	private Vector&lt;Event&gt; events=new Vector&lt;Event&gt;();
+	
+	private Integer apustuKantitatea;
+	
+	public Sport() {
+<span class="nc" id="L27">		super();</span>
+<span class="nc" id="L28">	}</span>
+	
+<span class="fc" id="L30">	public Sport(String izena) {</span>
+<span class="fc" id="L31">		this.izena=izena;</span>
+<span class="fc" id="L32">		this.apustuKantitatea=0;</span>
+<span class="fc" id="L33">	}</span>
+
+	public String getIzena() {
+<span class="nc" id="L36">		return izena;</span>
+	}
+
+	public void setIzena(String izena) {
+<span class="nc" id="L40">		this.izena = izena;</span>
+<span class="nc" id="L41">	}</span>
+
+	public Vector&lt;Event&gt; getEvents() {
+<span class="nc" id="L44">		return events;</span>
+	}
+
+	public void setEvents(Vector&lt;Event&gt; events) {
+<span class="nc" id="L48">		this.events = events;</span>
+<span class="nc" id="L49">	}</span>
+
+	public Integer getApustuKantitatea() {
+<span class="nc" id="L52">		return apustuKantitatea;</span>
+	}
+
+	public void setApustuKantitatea(Integer apustuKantitatea) {
+<span class="nc" id="L56">		this.apustuKantitatea = apustuKantitatea;</span>
+<span class="nc" id="L57">	}</span>
+	
+	public void eguneratuApustuKantitatea() {
+<span class="fc" id="L60">		this.apustuKantitatea=this.apustuKantitatea+1;</span>
+<span class="fc" id="L61">	}</span>
+	
+	public void addEvent(Event ev) {
+<span class="fc" id="L64">		this.events.add(ev);</span>
+<span class="fc" id="L65">	}</span>
+	
+
+	@Override
+	public String toString() {
+<span class="nc" id="L70">		return this.izena;</span>
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L75" title="All 2 branches missed.">		if(this == o) {</span>
+<span class="nc" id="L76">			return true;</span>
+		}
+<span class="nc bnc" id="L78" title="All 2 branches missed.">		if(o==null) {</span>
+<span class="nc" id="L79">			return false;</span>
+		}
+<span class="nc bnc" id="L81" title="All 2 branches missed.">		if(this.getClass() != o.getClass()) {</span>
+<span class="nc" id="L82">			return false;</span>
+		}
+<span class="nc" id="L84">		Sport sp = (Sport) o;</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">		if(sp.getApustuKantitatea() == null) {</span>
+<span class="nc" id="L86">			return false;</span>
+		}
+<span class="nc" id="L88">		return this.izena.equals(sp.getIzena());</span>
+	}
+	
+	@Override
+	public int hashCode() {
+<span class="nc" id="L93">	    final int prime = 31;</span>
+<span class="nc" id="L94">	    int result = 1;</span>
+<span class="nc" id="L95">	    result = prime * result + apustuKantitatea;</span>
+<span class="nc" id="L96">	    return result;</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

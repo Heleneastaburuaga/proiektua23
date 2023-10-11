@@ -1,0 +1,135 @@
+
+(domain.Quote#equals(Ljava/lang/Object;)ZN
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.javao o("startingBlock*!
+2x x("
+x x(
+""*Ú
+3w w(åâ
+w w(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*,
+
+__unknown_file (
+domain.Quote2
+getClass()ìê
+w w("
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*3
+
+__unknown_file (
+
+ojava.lang.Object2
+getClass()µ
+≤
+w w("
+%4boolean"	__compare*"
+
+__unknown_file (
+!=*3
+
+__unknown_file (
+
+%2java.lang.Class*3
+
+__unknown_file (
+
+%3java.lang.Class*
+2
+1*Ä
+startingBlocko o( à
+Ö
+n n(
+
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*3
+
+__unknown_file (
+
+ojava.lang.ObjectU
+S
+o o(
+ojava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%8*
+7*!
+4u u("
+u	 u(
+""*º
+5t	 t(
+§
+°
+t	 t(
+%1boolean"	__compare*"
+
+__unknown_file (
+==*3
+
+__unknown_file (
+
+ojava.lang.Object*"
+
+__unknown_file (
+""*
+3
+4*!
+6q q("
+q	 q(
+""*∆
+7p p(
+Æ
+´
+p p(
+%0boolean"	__compare*"
+
+__unknown_file (
+==*,
+
+__unknown_file (
+domain.Quote*3
+
+__unknown_file (
+
+ojava.lang.Object*
+5
+6*Ú
+1z z(Z
+X
+z z(
+qdomain.Quote"__id*3
+
+__unknown_file (
+
+ojava.lang.Objectòï
+{ {(!
+%5java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*,
+
+__unknown_file (
+domain.Quote2getQuoteNumber()õò
+{% {(7
+%6java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*/
+
+__unknown_file (
+
+qdomain.Quote2getQuoteNumber()π
+∂
+{ {(7
+%7boolean"	__compare*"
+
+__unknown_file (
+==*5
+
+__unknown_file (
+
+%5java.lang.Integer*5
+
+__unknown_file (
+
+%6java.lang.Integer"
+{ {(8
+"":!
+o o(
+ojava.lang.ObjectB
+domain.QuoteHX

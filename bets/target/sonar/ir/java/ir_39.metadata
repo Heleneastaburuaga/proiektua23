@@ -1,0 +1,10 @@
+dataAccess.DataAccess#ezJarraituTaldea(Ldomain/Registered;)V
+==
+getUsername domain.Registered#getUsername()Ljava/lang/String;
+begin javax.persistence.EntityTransaction#begin()V
+setTaldea domain.Registered#setTaldea(Ldomain/Team;)V
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getTaldea domain.Registered#getTaldea()Ldomain/Team;
+removeUser domain.Team#removeUser(Ldomain/Registered;)V
+commit javax.persistence.EntityTransaction#commit()V

@@ -1,0 +1,5 @@
+dataAccess.DataAccess#isLogin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Registered;
+java.lang.String#equals(Ljava/lang/Object;)Z
+==
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getPassword domain.Registered#getPassword()Ljava/lang/String;

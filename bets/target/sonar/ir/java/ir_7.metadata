@@ -1,0 +1,10 @@
+dataAccess.DataAccess#getEvents(Ljava/util/Date;)Ljava/util/Vector;
+java.util.Vector#<init>()V
+java.util.Vector#instance-init#
+==
+setParameter javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;
+getResultList javax.persistence.TypedQuery#getResultList()Ljava/util/List;
+println java.io.PrintStream#println(Ljava/lang/String;)V
+toString domain.Event#toString()Ljava/lang/String;
+createQuery javax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+add java.util.Vector#add(Ljava/lang/Object;)Z

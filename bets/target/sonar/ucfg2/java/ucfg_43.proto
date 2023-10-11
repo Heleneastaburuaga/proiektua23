@@ -1,0 +1,127 @@
+
+BdataAccess.DataAccess#getEventsTeam(Ldomain/Team;)Ljava/util/List;Y
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.javaÄ	 Ä	(!"1*©
+1
+Å		 Å	(z
+x
+
+Å		 Å	(%
+%0javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbêç
+
+Å	 Å	(,
+%1java.lang.String"(domain.Team#getIzena()Ljava/lang/String;*1
+
+__unknown_file (
+
+teamdomain.Team2
+getIzena()…∆
+
+Å		 Å	(-
+%2domain.Team"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*C
+
+__unknown_file ('
+%
+%0javax.persistence.EntityManager*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+%1java.lang.String2)find(Ljava/lang/Class;Ljava/lang/Object;)W
+U
+
+Å	 Å	(.
+tdomain.Team"__id*/
+
+__unknown_file (
+
+%2domain.Teamz
+x
+
+Ç	 Ç	(%
+%3javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbΩ∫
+Ç	 Ç	(ñ"
+%4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*C
+
+__unknown_file ('
+%
+%3javax.persistence.EntityManager*|
+
+__unknown_file (`^
+\SELECT ev FROM Event ev WHERE ev.getLokala().getIzena()=?1 OR ev.getKanpokoa().getIzena()=?2*"
+
+__unknown_file (
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)~
+|
+Ç	 Ç	(ó%
+queryjavax.persistence.TypedQuery"__id*@
+
+__unknown_file ($
+"
+%4javax.persistence.TypedQueryçä
+
+É	 É	($
+%5java.lang.String"(domain.Team#getIzena()Ljava/lang/String;*.
+
+__unknown_file (
+
+tdomain.Team2
+getIzena()—Œ
+
+É	 É	(%"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*C
+
+__unknown_file ('
+%
+queryjavax.persistence.TypedQuery* 
+
+__unknown_file (2*4
+
+__unknown_file (
+
+%5java.lang.String2!setParameter(ILjava/lang/Object;)çä
+
+Ñ	 Ñ	($
+%7java.lang.String"(domain.Team#getIzena()Ljava/lang/String;*.
+
+__unknown_file (
+
+tdomain.Team2
+getIzena()—Œ
+
+Ñ	 Ñ	(%"
+%8javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*C
+
+__unknown_file ('
+%
+queryjavax.persistence.TypedQuery* 
+
+__unknown_file (2*4
+
+__unknown_file (
+
+%7java.lang.String2!setParameter(ILjava/lang/Object;)π∂
+
+Ö		 Ö	(
+%9java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*C
+
+__unknown_file ('
+%
+queryjavax.persistence.TypedQuery2getResultList()"$
+
+Ö	 Ö	(
+
+%9java.util.List:!
+
+Ä	" Ä	(+
+teamdomain.TeamB
+dataAccess.DataAccessH

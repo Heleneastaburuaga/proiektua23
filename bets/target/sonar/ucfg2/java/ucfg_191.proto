@@ -1,0 +1,90 @@
+
+0domain.ApustuAnitza#toString()Ljava/lang/String;W
+K/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/ApustuAnitza.javaê ê("1*è
+1
+ë	 ë(i
+g
+
+ë	 ë(
+%0java.util.Date"__id*=
+
+__unknown_file (!*
+domain.ApustuAnitza"
+datat
+r
+
+ë	 ë(!
+%1java.lang.String"__concat*$
+
+ë	 ë(
+
+%0java.util.Date*
+
+ë ë(!
+
+; Zenbat: m
+k
+
+ë# ë(.
+%2java.lang.Double"__id*?
+
+__unknown_file (#*!
+domain.ApustuAnitza"
+balioaòï
+
+ë# ë(9
+%3java.lang.String"-java.lang.Double#toString()Ljava/lang/String;*4
+
+__unknown_file (
+
+%2java.lang.Double2
+toString()Ä
+~
+
+ë	 ë(9
+%4java.lang.String"__concat*&
+
+ë	 ë(!
+
+%1java.lang.String*&
+
+ë# ë(9
+
+%3java.lang.Stringv
+t
+
+ë	 ë(H
+%5java.lang.String"__concat*&
+
+ë	 ë(9
+
+%4java.lang.String*
+
+ë< ë(H
+
+; Egoera: m
+k
+
+ëK ë(V
+%6java.lang.String"__id*?
+
+__unknown_file (#*!
+domain.ApustuAnitza"
+egoeraÄ
+~
+
+ë	 ë(V
+%7java.lang.String"__concat*&
+
+ë	 ë(H
+
+%5java.lang.String*&
+
+ëK ë(V
+
+%6java.lang.String"&
+
+ë ë(W
+
+%7java.lang.StringB
+domain.ApustuAnitzaH

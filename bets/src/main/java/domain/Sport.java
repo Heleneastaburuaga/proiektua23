@@ -72,10 +72,28 @@ public class Sport implements Serializable{
 	
 	@Override
 	public boolean equals(Object o) {
+		if(this == o) {
+			return true;
+		}
+		if(o==null) {
+			return false;
+		}
+		if(this.getClass() != o.getClass()) {
+			return false;
+		}
 		Sport sp = (Sport) o;
-		if(sp==null) {
+		if(sp.getApustuKantitatea() == null) {
 			return false;
 		}
 		return this.izena.equals(sp.getIzena());
 	}
+	
+	@Override
+	public int hashCode() {
+	    final int prime = 31;
+	    int result = 1;
+	    result = prime * result + apustuKantitatea;
+	    return result;
+	}
+	
 }

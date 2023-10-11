@@ -1,0 +1,5 @@
+gui.MainUserGUI#<init>()V
+gui.MainUserGUI#initialize()V
+==
+<init> javax.swing.JFrame#<init>()V
+addWindowListener java.awt.Window#addWindowListener(Ljava/awt/event/WindowListener;)V

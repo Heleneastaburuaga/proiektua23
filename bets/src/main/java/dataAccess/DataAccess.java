@@ -862,7 +862,7 @@ public void open(boolean initializeMode){
 				Jarraitzailea erab=db.find(Jarraitzailea.class, reg.getJarraitzaileaNumber());
 				b=true;
 				for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
-					if(apu.getApustuKopia()==apustuAnitza.getApustuKopia()) {
+					if(apu.getApustuKopia().equals(apustuAnitza.getApustuKopia())) {
 						b=false;
 					}
 				}
@@ -1088,7 +1088,10 @@ public void open(boolean initializeMode){
 		Boolean b=false;
 		Registered jarraitu = (Registered) db.find(Registered.class, jarraitua.getUsername());
 		Registered harpideduna = (Registered) db.find(Registered.class, jabea.getUsername());
-		if(!harpideduna.getJarraitutakoLista().contains(jarraitu)) {
+		
+		Jarraitzailea jarraitzailea = new Jarraitzailea(harpideduna,jarraitu);
+		//if(!harpideduna.getJarraitutakoLista().contains(jarraitu)) {
+		if(!harpideduna.getJarraitutakoLista().contains(jarraitzailea)) {
 			db.getTransaction().begin();
 			Jarraitzailea jar = new Jarraitzailea(harpideduna, jarraitu);
 			harpideduna.addJarraitutako(jar);

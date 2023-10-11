@@ -74,7 +74,7 @@ public class Apustua implements Serializable{
 	}
 	
 	public boolean galdutaMarkatu(Quote quo) {
-		if(kuota.getQuestion().getQuestionNumber()==quo.getQuestion().getQuestionNumber() && quo.getQuoteNumber()!=kuota.getQuoteNumber()) {
+		if(kuota.getQuestion().getQuestionNumber().equals(quo.getQuestion().getQuestionNumber())&& !(quo.getQuoteNumber().equals(kuota.getQuoteNumber()))) {
 			this.egoera="galduta";
 			return true;
 		}
@@ -84,13 +84,35 @@ public class Apustua implements Serializable{
 	public void eguneratuApustuKant(Sport s) {
 		s.eguneratuApustuKantitatea();
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
+		
+		if( this == o) {
+			return true;
+		}
+		if(o==null) {
+			return false;
+		}
+		if(this.getClass() != o.getClass()) {
+			return false;
+		}
 		Apustua a = (Apustua) o; 
-		if(a==null) {
+		if(a.getApostuaNumber() == null) {
 			return false;
 		}
 		return this.getApostuaNumber().equals(a.getApostuaNumber()); 
 	}
+
+
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + apustuaNumber;
+		return result;
+	}
+	
+
 }

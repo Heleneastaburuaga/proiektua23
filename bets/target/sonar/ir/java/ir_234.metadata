@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#popularrenaLortu()Ldomain/Sport;
+==
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V
+popularrenaLortu dataAccess.DataAccess#popularrenaLortu()Ldomain/Sport;

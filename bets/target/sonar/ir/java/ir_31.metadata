@@ -1,0 +1,24 @@
+dataAccess.DataAccess#EmaitzakIpini(Ldomain/Quote;)V
+java.util.Date#<init>()V
+exceptions.EventNotFinished#instance-init#
+exceptions.EventNotFinished#<init>()V
+java.util.Date#instance-init#
+==
+setEgoera domain.Apustua#setEgoera(Ljava/lang/String;)V
+getApustuak domain.Quote#getApustuak()Ljava/util/Vector;
+galdutaMarkatu domain.Apustua#galdutaMarkatu(Ldomain/Quote;)Z
+getApustuAnitza domain.Apustua#getApustuAnitza()Ldomain/ApustuAnitza;
+begin javax.persistence.EntityTransaction#begin()V
+getQuestion domain.Quote#getQuestion()Ldomain/Question;
+getEventDate domain.Event#getEventDate()Ljava/util/Date;
+ApustuaIrabazi dataAccess.DataAccess#ApustuaIrabazi(Ldomain/ApustuAnitza;)V
+setEgoera domain.ApustuAnitza#setEgoera(Ljava/lang/String;)V
+getEvent domain.Question#getEvent()Ldomain/Event;
+getQuotes domain.Question#getQuotes()Ljava/util/Vector;
+irabazitaMarkatu domain.ApustuAnitza#irabazitaMarkatu()Z
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getForecast domain.Quote#getForecast()Ljava/lang/String;
+compareTo java.util.Date#compareTo(Ljava/util/Date;)I
+setResult domain.Question#setResult(Ljava/lang/String;)V
+commit javax.persistence.EntityTransaction#commit()V

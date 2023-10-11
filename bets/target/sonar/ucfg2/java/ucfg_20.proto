@@ -1,0 +1,73 @@
+
+JdataAccess.DataAccess#findEventFromApustua(Ldomain/Apustua;)Ldomain/Event;Y
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java› ›(""1*À	
+1
+œ œ(z
+x
+
+œ œ(%
+%0javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+db¥¢
+
+œ' œ(;
+%1java.lang.Integer"4domain.Apustua#getApostuaNumber()Ljava/lang/Integer;*1
+
+__unknown_file (
+
+qdomain.Apustua2getApostuaNumber()ÍÊ
+
+œ œ(<
+%2domain.Apustua"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*C
+
+__unknown_file ('
+%
+%0javax.persistence.EntityManager*"
+
+__unknown_file (
+""*5
+
+__unknown_file (
+
+%1java.lang.Integer2)find(Ljava/lang/Class;Ljava/lang/Object;)_
+]
+
+œ œ(=
+quodomain.Apustua"__id*2
+
+__unknown_file (
+
+%2domain.ApustuaŠ
+
+	 (
+%3domain.Quote"'domain.Apustua#getKuota()Ldomain/Quote;*3
+
+__unknown_file (
+
+quodomain.Apustua2
+getKuota()”‘
+
+	 (%
+%4domain.Question"+domain.Quote#getQuestion()Ldomain/Question;*0
+
+__unknown_file (
+
+%3domain.Quote2getQuestion()Ž‹
+
+	 (0
+%5domain.Event"(domain.Question#getEvent()Ldomain/Event;*3
+
+__unknown_file (
+
+%4domain.Question2
+getEvent()""
+
+ (1
+
+%5domain.Event:!
+
+›# ›(,
+qdomain.ApustuaB
+dataAccess.DataAccessH

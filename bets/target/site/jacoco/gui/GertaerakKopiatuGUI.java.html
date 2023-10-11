@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GertaerakKopiatuGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">GertaerakKopiatuGUI.java</span></div><h1>GertaerakKopiatuGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import businessLogic.BLFacade;
+import domain.Event;
+import exceptions.EventFinished;
+
+public class GertaerakKopiatuGUI extends JFrame{
+	private static final long serialVersionUID = 1L;
+<span class="nc" id="L28">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
+	private JLabel lblGertaerakKopiatu;
+	private JScrollPane scrollBar;
+	private JList list;
+<span class="nc" id="L32">	private DefaultListModel&lt;Event&gt; eventsLista = new DefaultListModel&lt;Event&gt;();</span>
+	private JLabel lblYear;
+	private JLabel lblMonth;
+	private JLabel lblDay;
+	private JTextField txtYear;
+	private JTextField txtMonth;
+	private JTextField txtDay;
+	private JButton btnCopy;
+	private JLabel lblError;
+	private JButton btnInfo;
+<span class="nc" id="L42">	private Boolean b =false;</span>
+	
+<span class="nc" id="L44">	public GertaerakKopiatuGUI() {</span>
+<span class="nc" id="L45">		this.getContentPane().setLayout(null);</span>
+<span class="nc" id="L46">		this.setSize(new Dimension(455, 370));</span>
+<span class="nc" id="L47">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakKopiatu&quot;));</span>
+		
+<span class="nc" id="L49">		lblGertaerakKopiatu = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakKopiatu&quot;));</span>
+<span class="nc" id="L50">		lblGertaerakKopiatu.setBackground(Color.PINK);</span>
+<span class="nc" id="L51">		lblGertaerakKopiatu.setOpaque(true);</span>
+<span class="nc" id="L52">		lblGertaerakKopiatu.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L53">		lblGertaerakKopiatu.setBounds(2, 10, 439, 13);</span>
+<span class="nc" id="L54">		getContentPane().add(lblGertaerakKopiatu);</span>
+		
+<span class="nc" id="L56">		list = new JList();</span>
+<span class="nc" id="L57">		list.addListSelectionListener(new ListSelectionListener() {</span>
+			public void valueChanged(ListSelectionEvent e) {
+<span class="nc" id="L59">				btnCopy.setEnabled(true);</span>
+<span class="nc" id="L60">				btnInfo.setEnabled(true);</span>
+<span class="nc" id="L61">			}</span>
+		});
+<span class="nc" id="L63">		list.setModel(eventsLista);</span>
+<span class="nc" id="L64">		list.setBounds(137, 121, 1, 1);</span>
+<span class="nc" id="L65">		getContentPane().add(list);</span>
+		
+<span class="nc" id="L67">		eventsLista.addAll(businessLogic.getEventsAll());</span>
+		
+<span class="nc" id="L69">		scrollBar = new JScrollPane(list);</span>
+<span class="nc" id="L70">		scrollBar.setBounds(25, 33, 387, 181);</span>
+<span class="nc" id="L71">		getContentPane().add(scrollBar);</span>
+		
+<span class="nc" id="L73">		lblYear = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Year&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L74">		lblYear.setOpaque(true);</span>
+<span class="nc" id="L75">		lblYear.setForeground(Color.WHITE);</span>
+<span class="nc" id="L76">		lblYear.setBackground(Color.PINK);</span>
+<span class="nc" id="L77">		lblYear.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L78">		lblYear.setBounds(58, 224, 59, 13);</span>
+<span class="nc" id="L79">		getContentPane().add(lblYear);</span>
+		
+<span class="nc" id="L81">		lblMonth = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Month&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L82">		lblMonth.setOpaque(true);</span>
+<span class="nc" id="L83">		lblMonth.setForeground(Color.WHITE);</span>
+<span class="nc" id="L84">		lblMonth.setBackground(Color.PINK);</span>
+<span class="nc" id="L85">		lblMonth.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L86">		lblMonth.setBounds(174, 224, 86, 13);</span>
+<span class="nc" id="L87">		getContentPane().add(lblMonth);</span>
+		
+<span class="nc" id="L89">		lblDay = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Day&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L90">		lblDay.setOpaque(true);</span>
+<span class="nc" id="L91">		lblDay.setForeground(Color.WHITE);</span>
+<span class="nc" id="L92">		lblDay.setBackground(Color.PINK);</span>
+<span class="nc" id="L93">		lblDay.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L94">		lblDay.setBounds(312, 224, 59, 13);</span>
+<span class="nc" id="L95">		getContentPane().add(lblDay);</span>
+		
+<span class="nc" id="L97">		txtYear = new JTextField();</span>
+<span class="nc" id="L98">		txtYear.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L99">		txtYear.setText(&quot;&quot;); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L100">		txtYear.setBounds(39, 241, 96, 19);</span>
+<span class="nc" id="L101">		getContentPane().add(txtYear);</span>
+<span class="nc" id="L102">		txtYear.setColumns(10);</span>
+		
+<span class="nc" id="L104">		txtMonth = new JTextField();</span>
+<span class="nc" id="L105">		txtMonth.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L106">		txtMonth.setText(&quot;&quot;); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L107">		txtMonth.setBounds(174, 241, 96, 19);</span>
+<span class="nc" id="L108">		getContentPane().add(txtMonth);</span>
+<span class="nc" id="L109">		txtMonth.setColumns(10);</span>
+		
+<span class="nc" id="L111">		txtDay = new JTextField();</span>
+<span class="nc" id="L112">		txtDay.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L113">		txtDay.setText(&quot;&quot;); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L114">		txtDay.setBounds(298, 241, 96, 19);</span>
+<span class="nc" id="L115">		getContentPane().add(txtDay);</span>
+<span class="nc" id="L116">		txtDay.setColumns(10);</span>
+		
+<span class="nc" id="L118">		btnCopy = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Copiar&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L119">		btnCopy.setBackground(Color.PINK);</span>
+<span class="nc" id="L120">		btnCopy.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L121">		btnCopy.setEnabled(false);</span>
+		
+<span class="nc" id="L123">		btnInfo = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;InfoIkusi&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L124">		btnInfo.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L125">		btnInfo.setBackground(Color.PINK);</span>
+<span class="nc" id="L126">		JButton btnClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L127">		btnClose.setBackground(Color.DARK_GRAY);</span>
+<span class="nc" id="L128">		btnClose.setForeground(Color.WHITE);</span>
+<span class="nc" id="L129">		btnClose.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L131">				jButtonClose_actionPerformed(e);</span>
+<span class="nc" id="L132">			}</span>
+		});
+<span class="nc" id="L134">		btnClose.setBounds(327, 291, 85, 21);</span>
+<span class="nc" id="L135">		getContentPane().add(btnClose);</span>
+		
+<span class="nc" id="L137">		lblError = new JLabel(); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L138">		lblError.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L139">		lblError.setBounds(39, 270, 346, 13);</span>
+<span class="nc" id="L140">		getContentPane().add(lblError);</span>
+<span class="nc" id="L141">		lblError.setVisible(false);</span>
+		
+<span class="nc" id="L143">		btnCopy.addActionListener(new ActionListener() {</span>
+			
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+<span class="nc bnc" id="L148" title="All 8 branches missed.">					if(Integer.parseInt(txtMonth.getText())&gt;=0 &amp;&amp; Integer.parseInt(txtMonth.getText())&lt;=12 &amp;&amp; Integer.parseInt(txtDay.getText())&lt;=31 &amp;&amp; Integer.parseInt(txtDay.getText())&gt;=0) {</span>
+<span class="nc" id="L149">						lblError.setVisible(false);</span>
+<span class="nc" id="L150">						java.util.Date date =newDate(Integer.parseInt(txtYear.getText()),Integer.parseInt(txtMonth.getText())-1,Integer.parseInt(txtDay.getText()));	</span>
+<span class="nc bnc" id="L151" title="All 2 branches missed.">						if(date.compareTo(new Date())&gt;=0) {</span>
+<span class="nc" id="L152">							b = businessLogic.gertaerakKopiatu((Event)list.getSelectedValue(), date);</span>
+<span class="nc bnc" id="L153" title="All 2 branches missed.">						}else if(date.compareTo(new Date())&lt;0){</span>
+<span class="nc" id="L154">							lblError.setVisible(true);</span>
+<span class="nc" id="L155">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraKopiatuError&quot;));</span>
+<span class="nc bnc" id="L156" title="All 2 branches missed.">						}else if(!b) {</span>
+<span class="nc" id="L157">							lblError.setVisible(true);</span>
+<span class="nc" id="L158">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraSorError&quot;));</span>
+						}else{
+<span class="nc" id="L160">							lblError.setVisible(true);</span>
+<span class="nc" id="L161">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraSorCorrect&quot;));</span>
+						}
+<span class="nc" id="L163">						eventsLista.removeAllElements();</span>
+<span class="nc" id="L164">						eventsLista.addAll(businessLogic.getEventsAll());</span>
+<span class="nc" id="L165">						btnCopy.setEnabled(false);</span>
+<span class="nc" id="L166">						btnInfo.setEnabled(false);</span>
+<span class="nc" id="L167">					}else {</span>
+<span class="nc" id="L168">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DateError&quot;));</span>
+<span class="nc" id="L169">						lblError.setVisible(true);</span>
+					}
+<span class="nc" id="L171">				}catch(NumberFormatException a) {</span>
+<span class="nc" id="L172">					lblError.setVisible(true);</span>
+<span class="nc" id="L173">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DateError&quot;));</span>
+<span class="nc" id="L174">				}</span>
+<span class="nc" id="L175">			}</span>
+		});
+<span class="nc" id="L177">		btnCopy.setBounds(25, 291, 92, 21);</span>
+<span class="nc" id="L178">		getContentPane().add(btnCopy);</span>
+<span class="nc" id="L179">		btnCopy.setEnabled(false);</span>
+<span class="nc" id="L180">		btnInfo.setEnabled(false);</span>
+		
+<span class="nc" id="L182">		btnInfo.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L184">				JFrame a = new GertaeraInfo((Event)list.getSelectedValue());</span>
+<span class="nc" id="L185">				a.setVisible(true);</span>
+<span class="nc" id="L186">			}</span>
+		});
+<span class="nc" id="L188">		btnInfo.setBounds(148, 291, 139, 21);</span>
+<span class="nc" id="L189">		getContentPane().add(btnInfo);</span>
+		
+		
+<span class="nc" id="L192">	}</span>
+	private void jButtonClose_actionPerformed(ActionEvent e) {
+<span class="nc" id="L194">		this.setVisible(false);</span>
+<span class="nc" id="L195">	}</span>
+	
+	private Date newDate(int year,int month,int day) {
+
+<span class="nc" id="L199">	     Calendar calendar = Calendar.getInstance();</span>
+<span class="nc" id="L200">	     calendar.set(year, month, day,0,0,0);</span>
+<span class="nc" id="L201">	     calendar.set(Calendar.MILLISECOND, 0);</span>
+
+<span class="nc" id="L203">	     return calendar.getTime();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

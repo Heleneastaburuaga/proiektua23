@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JarraituGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">JarraituGUI.java</span></div><h1>JarraituGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import businessLogic.BLFacade;
+import domain.Registered;
+import javax.swing.JTextField;
+
+public class JarraituGUI extends JFrame{
+<span class="nc" id="L25">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
+	private static final long serialVersionUID = 1L;
+	private JLabel lblRanking;
+	private JList list;
+<span class="nc" id="L29">	private DefaultListModel&lt;Registered&gt; rankingLista = new DefaultListModel&lt;Registered&gt;();</span>
+	private JScrollPane scrollBar;
+	private JButton btnClose;
+	private JButton btnInfo;
+	private Registered user;
+	private JButton btnSeguir;
+	private JTextField textField;
+	private Boolean b;
+	private JLabel lblError;
+	private JLabel lblDiruaSartu;
+	
+<span class="nc" id="L40">	public JarraituGUI(Registered u) {</span>
+<span class="nc" id="L41">		user=u;</span>
+<span class="nc" id="L42">		this.getContentPane().setLayout(null);</span>
+<span class="nc" id="L43">		this.setSize(new Dimension(400, 320));</span>
+<span class="nc" id="L44">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Ranking&quot;));</span>
+		
+<span class="nc" id="L46">		lblRanking = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Ranking&quot;));</span>
+<span class="nc" id="L47">		lblRanking.setBackground(Color.PINK);</span>
+<span class="nc" id="L48">		lblRanking.setForeground(Color.BLACK);</span>
+<span class="nc" id="L49">		lblRanking.setOpaque(true);</span>
+<span class="nc" id="L50">		lblRanking.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 14));</span>
+<span class="nc" id="L51">		lblRanking.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L52">		lblRanking.setBounds(10, 21, 366, 13);</span>
+<span class="nc" id="L53">		getContentPane().add(lblRanking);</span>
+		
+<span class="nc" id="L55">		list = new JList();</span>
+		
+<span class="nc" id="L57">		lblError = new JLabel(); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L58">		lblError.setHorizontalAlignment(SwingConstants.CENTER);</span>
+		
+<span class="nc" id="L60">		btnSeguir = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Seguir&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L61">		btnSeguir.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L62">		btnSeguir.setBackground(Color.PINK);</span>
+<span class="nc" id="L63">		btnSeguir.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L65">				String textua = textField.getText().trim(); </span>
+				Double zenb; 
+				try {
+<span class="nc" id="L68">					zenb = Double.parseDouble(textua);</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">					if(zenb&gt;0.0) {</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">						if(((Registered)user).getUsername().equals(((Registered)list.getSelectedValue()).getUsername())){</span>
+<span class="nc" id="L71">							lblError.setVisible(true);</span>
+<span class="nc" id="L72">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;JarraituError2&quot;) + ((Registered)list.getSelectedValue()).getUsername());</span>
+						}else {
+<span class="nc" id="L74">							b = businessLogic.jarraitu((Registered)user, (Registered)list.getSelectedValue(), zenb);</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">							if(b) {</span>
+<span class="nc" id="L76">								lblError.setVisible(true);</span>
+<span class="nc" id="L77">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;JarraituCorrect&quot;) + ((Registered)list.getSelectedValue()).getUsername());</span>
+							}else {
+<span class="nc" id="L79">								lblError.setVisible(true);</span>
+<span class="nc" id="L80">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;JarraituError&quot;));</span>
+							}
+						}
+					}else {
+<span class="nc" id="L84">						lblError.setVisible(true); </span>
+<span class="nc" id="L85">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;)); </span>
+					}
+<span class="nc" id="L87">				}catch(NumberFormatException e1) {</span>
+<span class="nc" id="L88">					lblError.setVisible(true); </span>
+<span class="nc" id="L89">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
+<span class="nc" id="L90">				}</span>
+<span class="nc" id="L91">				btnInfo.setEnabled(false);</span>
+<span class="nc" id="L92">				btnSeguir.setEnabled(false);</span>
+<span class="nc" id="L93">			}</span>
+		});
+<span class="nc" id="L95">		btnInfo = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Ver2&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L96">		btnInfo.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L97">		btnInfo.setBackground(Color.PINK);</span>
+<span class="nc" id="L98">		btnInfo.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L100">				JFrame a = new ApustuBerdinakGUI((Registered) list.getSelectedValue(), user);</span>
+<span class="nc" id="L101">				a.setVisible(true);</span>
+<span class="nc" id="L102">			}</span>
+		});
+<span class="nc" id="L104">		btnInfo.setBounds(124, 227, 122, 21);</span>
+<span class="nc" id="L105">		getContentPane().add(btnInfo);</span>
+		
+		
+<span class="nc" id="L108">		list.addListSelectionListener(new ListSelectionListener() {</span>
+			public void valueChanged(ListSelectionEvent e) {
+<span class="nc bnc" id="L110" title="All 2 branches missed.">				if(textField.getText()!=null) {</span>
+<span class="nc" id="L111">					btnInfo.setEnabled(true);</span>
+<span class="nc" id="L112">					btnSeguir.setEnabled(true);</span>
+<span class="nc" id="L113">					lblError.setVisible(false);</span>
+				}
+<span class="nc" id="L115">			}</span>
+		});
+<span class="nc" id="L117">		list.setModel(rankingLista);</span>
+<span class="nc" id="L118">		list.setBounds(1, 1, 116, 94);</span>
+<span class="nc" id="L119">		getContentPane().add(list);</span>
+		
+<span class="nc" id="L121">		scrollBar = new JScrollPane(list);</span>
+<span class="nc" id="L122">		scrollBar.setBounds(10, 36, 366, 153);</span>
+<span class="nc" id="L123">		getContentPane().add(scrollBar);</span>
+		
+<span class="nc" id="L125">		btnClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L126">		btnClose.setBackground(Color.DARK_GRAY);</span>
+<span class="nc" id="L127">		btnClose.setForeground(Color.WHITE);</span>
+<span class="nc" id="L128">		btnClose.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L130">				jButtonClose_actionPerformed(e);</span>
+<span class="nc" id="L131">			}</span>
+		});
+<span class="nc" id="L133">		btnClose.setBounds(291, 227, 85, 21);</span>
+<span class="nc" id="L134">		getContentPane().add(btnClose);</span>
+		
+<span class="nc" id="L136">		rankingLista.addAll(businessLogic.rankingLortu());</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">		for(int i=0; i&lt;rankingLista.getSize(); i++) {</span>
+<span class="nc" id="L138">			rankingLista.get(i).setMode(&quot;RankingGUI&quot;);</span>
+		}
+		
+<span class="nc" id="L141">		btnInfo.setEnabled(false);</span>
+		
+<span class="nc" id="L143">		btnSeguir.setEnabled(false);</span>
+<span class="nc" id="L144">		btnSeguir.setBounds(10, 227, 104, 21);</span>
+<span class="nc" id="L145">		getContentPane().add(btnSeguir);</span>
+		
+<span class="nc" id="L147">		textField = new JTextField();</span>
+<span class="nc" id="L148">		textField.setBounds(92, 196, 272, 21);</span>
+<span class="nc" id="L149">		getContentPane().add(textField);</span>
+<span class="nc" id="L150">		textField.setColumns(10);</span>
+		
+<span class="nc" id="L152">		lblDiruaSartu = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DiruLimitea&quot;));</span>
+<span class="nc" id="L153">		lblDiruaSartu.setOpaque(true);</span>
+<span class="nc" id="L154">		lblDiruaSartu.setBackground(Color.PINK);</span>
+<span class="nc" id="L155">		lblDiruaSartu.setBounds(10, 199, 78, 13);</span>
+<span class="nc" id="L156">		getContentPane().add(lblDiruaSartu);</span>
+		
+		
+<span class="nc" id="L159">		lblError.setVisible(false);</span>
+<span class="nc" id="L160">		lblError.setBounds(20, 258, 344, 13);</span>
+<span class="nc" id="L161">		getContentPane().add(lblError);</span>
+		
+<span class="nc" id="L163">	}</span>
+	
+	private void jButtonClose_actionPerformed(ActionEvent e) {
+<span class="nc" id="L166">		this.setVisible(false);</span>
+<span class="nc" id="L167">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

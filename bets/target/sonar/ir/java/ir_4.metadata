@@ -1,0 +1,6 @@
+dataAccess.DataAccess#<init>(Z)V
+==
+getDataBaseOpenMode configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;
+println java.io.PrintStream#println(Ljava/lang/String;)V
+open dataAccess.DataAccess#open(Z)V
+isDatabaseLocal configuration.ConfigXML#isDatabaseLocal()Z

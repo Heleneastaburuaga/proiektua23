@@ -1,0 +1,97 @@
+
+.domain.Apustua#galdutaMarkatu(Ldomain/Quote;)ZP
+F/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Apustua.javaL L("4*|
+2N N(Y
+W
+N N(
+domain.Apustua"
+egoera"__id*'
+
+__unknown_file (	
+galduta"
+O O(
+""*í
+3M_ M(bùö
+M_ M(s
+%6java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*1
+
+__unknown_file (
+
+quodomain.Quote2getQuoteNumber()b
+`
+	M{ M(Ä
+%7domain.Quote"__id*9
+
+__unknown_file (*
+domain.Apustua"
+kuotaùö
+	M{ M(ë
+%8java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*0
+
+__unknown_file (
+
+%7domain.Quote2getQuoteNumber()÷”
+	M_ M(í
+%9boolean"-java.lang.Integer#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%6java.lang.Integer*5
+
+__unknown_file (
+
+%8java.lang.Integer2equals(Ljava/lang/Object;)*
+2
+1*—
+4M M(
+a
+_
+M M(
+
+%0domain.Quote"__id*9
+
+__unknown_file (*
+domain.Apustua"
+kuotaíè
+M M(
+%1domain.Question"+domain.Quote#getQuestion()Ldomain/Question;*0
+
+__unknown_file (
+
+%0domain.Quote2getQuestion()®•
+M M(,
+%2java.lang.Integer"6domain.Question#getQuestionNumber()Ljava/lang/Integer;*3
+
+__unknown_file (
+
+%1domain.Question2getQuestionNumber()ìê
+M4 M(E
+%3domain.Question"+domain.Quote#getQuestion()Ldomain/Question;*1
+
+__unknown_file (
+
+quodomain.Quote2getQuestion()®•
+M4 M(Y
+%4java.lang.Integer"6domain.Question#getQuestionNumber()Ljava/lang/Integer;*3
+
+__unknown_file (
+
+%3domain.Question2getQuestionNumber()’“
+M M(Z
+%5boolean"-java.lang.Integer#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%2java.lang.Integer*5
+
+__unknown_file (
+
+%4java.lang.Integer2equals(Ljava/lang/Object;)*
+3
+1*!
+1Q	 Q("
+Q Q(
+"":
+L L((
+quodomain.QuoteB
+domain.ApustuaHX

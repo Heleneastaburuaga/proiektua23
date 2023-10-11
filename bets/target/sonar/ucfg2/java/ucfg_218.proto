@@ -1,0 +1,175 @@
+
+(domain.Event#equals(Ljava/lang/Object;)ZP
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Event.javaŸ Ÿ("startingBlock*%
+2
+¨
+ ¨("
+
+¨ ¨(
+""*œ
+3
+¦ ¦(b
+`
+
+¦ ¦(
+otherdomain.Event"__id*5
+
+__unknown_file (
+
+objjava.lang.Objectl
+j
+
+§ §(
+%5java.lang.Integer"__id*=
+
+__unknown_file (!*
+domain.Event"
+eventNumbers
+q
+
+§ §(&
+%6java.lang.Integer"__id*D
+
+__unknown_file ((*&
+
+otherdomain.Event"
+eventNumber»
+¸
+
+§ §(&
+%7boolean"	__compare*"
+
+__unknown_file (
+!=*5
+
+__unknown_file (
+
+%5java.lang.Integer*5
+
+__unknown_file (
+
+%6java.lang.Integer*
+2
+1*Š
+startingBlock
+Ÿ Ÿ("Œ
+‰
+
+ž ž(
+
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectY
+W
+
+Ÿ Ÿ(!
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%8*
+9*%
+4
+¥
+ ¥("
+
+¥ ¥(
+""*ü
+5
+¤ ¤(Ž‹
+
+¤ ¤(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*,
+
+__unknown_file (
+domain.Event2
+getClass()—”
+
+¤ ¤("
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()·
+´
+
+¤ ¤("
+%4boolean"	__compare*"
+
+__unknown_file (
+!=*3
+
+__unknown_file (
+
+%2java.lang.Class*3
+
+__unknown_file (
+
+%3java.lang.Class*
+3
+4*%
+6
+£
+ £("
+
+£ £(
+""*Â
+7
+¢ ¢(	¨
+¥
+
+¢ ¢(
+%1boolean"	__compare*"
+
+__unknown_file (
+==*5
+
+__unknown_file (
+
+objjava.lang.Object*"
+
+__unknown_file (
+""*
+5
+6*%
+8
+¡
+ ¡("
+
+¡ ¡(
+""*Ì
+9
+   (
+²
+¯
+
+   (
+%0boolean"	__compare*"
+
+__unknown_file (
+==*,
+
+__unknown_file (
+domain.Event*5
+
+__unknown_file (
+
+objjava.lang.Object*
+7
+8*%
+1
+©	 ©("
+
+© ©(
+"":%
+
+Ÿ Ÿ(!
+objjava.lang.ObjectB
+domain.EventHX

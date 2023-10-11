@@ -1,0 +1,41 @@
+dataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z
+domain.ApustuAnitza#instance-init#
+java.util.Date#<init>()V
+domain.ApustuAnitza#<init>(Ldomain/Registered;Ljava/lang/Double;)V
+domain.Apustua#<init>(Ldomain/ApustuAnitza;Ldomain/Quote;)V
+java.lang.Integer#equals(Ljava/lang/Object;)Z
+domain.Transaction#<init>(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V
+java.util.Date#instance-init#
+domain.Apustua#instance-init#
+domain.Transaction#instance-init#
+==
+addApustuAnitza domain.Registered#addApustuAnitza(Ldomain/ApustuAnitza;)V
+addApustua domain.ApustuAnitza#addApustua(Ldomain/Apustua;)V
+setApustuKopia domain.ApustuAnitza#setApustuKopia(Ljava/lang/Integer;)V
+ApustuaEgin dataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z
+begin javax.persistence.EntityTransaction#begin()V
+getApostuaNumber domain.Apustua#getApostuaNumber()Ljava/lang/Integer;
+getQuestion domain.Quote#getQuestion()Ldomain/Question;
+getJarraitzaileaNumber domain.Jarraitzailea#getJarraitzaileaNumber()Ljava/lang/Integer;
+updateDiruKontua domain.Registered#updateDiruKontua(Ljava/lang/Double;)V
+persist javax.persistence.EntityManager#persist(Ljava/lang/Object;)V
+getApustuKopia domain.ApustuAnitza#getApustuKopia()Ljava/lang/Integer;
+getEvent domain.Question#getEvent()Ldomain/Event;
+setApustuKantitatea domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V
+getKuota domain.Apustua#getKuota()Ldomain/Quote;
+getDirukop domain.Registered#getDirukop()Ljava/lang/Double;
+commit javax.persistence.EntityTransaction#commit()V
+getApustuKantitatea domain.Sport#getApustuKantitatea()Ljava/lang/Integer;
+getUsername domain.Registered#getUsername()Ljava/lang/String;
+addApustua domain.Quote#addApustua(Ldomain/Apustua;)V
+getApustuAnitzaNumber domain.ApustuAnitza#getApustuAnitzaNumber()Ljava/lang/Integer;
+getApustuAnitzak domain.Registered#getApustuAnitzak()Ljava/util/Vector;
+getQuoteNumber domain.Quote#getQuoteNumber()Ljava/lang/Integer;
+getNork domain.Jarraitzailea#getNork()Ldomain/Registered;
+getApustuak domain.ApustuAnitza#getApustuak()Ljava/util/Vector;
+getDiruLimitea domain.Registered#getDiruLimitea()Ljava/lang/Double;
+getJarraitzaileLista domain.Registered#getJarraitzaileLista()Ljava/util/Vector;
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getSport domain.Event#getSport()Ldomain/Sport;
+addTransaction domain.Registered#addTransaction(Ldomain/Transaction;)V

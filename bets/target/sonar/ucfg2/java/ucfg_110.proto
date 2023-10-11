@@ -1,0 +1,83 @@
+
+,domain.Question#toString()Ljava/lang/String;S
+G/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Question.java³ ³("1*­
+1
+´	 ´(r
+p
+
+´	 ´(
+%0java.lang.Integer"__id*C
+
+__unknown_file ('*%
+domain.Question"
+questionNumbern
+l
+
+´	 ´(
+%1java.lang.String"__concat*'
+
+´	 ´(
+
+%0java.lang.Integer*
+
+´ ´(
+;k
+i
+
+´ ´($
+%2java.lang.String"__id*=
+
+__unknown_file (!*
+domain.Question"
+
+question€
+~
+
+´	 ´($
+%3java.lang.String"__concat*&
+
+´	 ´(
+
+%1java.lang.String*&
+
+´ ´($
+
+%2java.lang.Stringm
+k
+
+´	 ´((
+%4java.lang.String"__concat*&
+
+´	 ´($
+
+%3java.lang.String*
+
+´% ´((
+;­
+ª
+
+´+ ´(F
+%5java.lang.String".java.lang.Double#toString(D)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.Double*"
+
+__unknown_file (
+""€
+~
+
+´	 ´(F
+%6java.lang.String"__concat*&
+
+´	 ´((
+
+%4java.lang.String*&
+
+´+ ´(F
+
+%5java.lang.String"&
+
+´ ´(G
+
+%6java.lang.StringB
+domain.QuestionH

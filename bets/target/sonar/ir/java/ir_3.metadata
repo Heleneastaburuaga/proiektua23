@@ -1,0 +1,2 @@
+dataAccess.DataAccess#instance-init#
+configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;

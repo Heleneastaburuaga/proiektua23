@@ -1,0 +1,129 @@
+
+.domain.Registered#toString()Ljava/lang/String;U
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.java© ©("3*Œ
+2
+«
+ «(œ™
+
+«
+ «(
+%2java.lang.String"1domain.Registered#getUsername()Ljava/lang/String;*1
+
+__unknown_file (
+domain.Registered2getUsername()m
+k
+
+«
+ «("
+%3java.lang.String"__concat*&
+
+«
+ «(
+
+%2java.lang.String*
+
+« «("
+ n
+l
+
+«
+ «(0
+%4java.lang.String"__concat*&
+
+«
+ «("
+
+%3java.lang.String*
+
+«% «(0
+""n
+l
+
+«
+ «(6
+%5java.lang.String"__concat*&
+
+«
+ «(0
+
+%4java.lang.String*
+
+«2 «(6
+: q
+o
+
+«9 «(J
+%6java.lang.Double"__id*C
+
+__unknown_file ('*%
+domain.Registered"
+irabazitakoa€
+~
+
+«
+ «(J
+%7java.lang.String"__concat*&
+
+«
+ «(6
+
+%5java.lang.String*&
+
+«9 «(J
+
+%6java.lang.Doubleo
+m
+
+«
+ «(P
+%8java.lang.String"__concat*&
+
+«
+ «(J
+
+%7java.lang.String*
+
+«M «(P
+ï¿½"&
+
+« «(Q
+
+%8java.lang.String*Ï
+3
+ª ª(	i
+g
+
+ª ª(
+%0java.lang.String"__id*;
+
+__unknown_file (*
+domain.Registered"
+modeÊÇ
+
+ª ª(#
+%1boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%0java.lang.String**
+
+__unknown_file (
+
+RankingGUI2equals(Ljava/lang/Object;)*
+2
+1*Ö
+1
+­
+ ­(œ™
+
+­
+ ­(
+%9java.lang.String"1domain.Registered#getUsername()Ljava/lang/String;*1
+
+__unknown_file (
+domain.Registered2getUsername()"&
+
+­ ­(
+
+%9java.lang.StringB
+domain.RegisteredH

@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#findEventFromApustua(Ldomain/Apustua;)Ldomain/Event;
+==
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V
+findEventFromApustua dataAccess.DataAccess#findEventFromApustua(Ldomain/Apustua;)Ldomain/Event;

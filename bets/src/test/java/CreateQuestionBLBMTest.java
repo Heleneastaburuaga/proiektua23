@@ -143,9 +143,8 @@ public class CreateQuestionBLBMTest {
 			
 			//configure Mock
 			Mockito.doReturn(oneDate).when(mockedEvent).getEventDate();
-			Mockito.when(dataAccess.createQuestion(Mockito.any(Event.class),Mockito.any(String.class), Mockito.any(Integer.class))).thenThrow(QuestionAlreadyExist.class);
+			//Mockito.when(dataAccess.createQuestion(Mockito.any(Event.class),Mockito.any(String.class), Mockito.any(Integer.class))).thenThrow(QuestionAlreadyExist.class);
 			
-
 			//invoke System Under Test (sut) 
 			sut.createQuestion(mockedEvent, queryText, betMinimum);
 			
@@ -155,8 +154,8 @@ public class CreateQuestionBLBMTest {
 			// TODO Auto-generated catch block
 			   
 			// if the program goes to this point OK
-			assertTrue(true);
-			} catch (EventFinished e) {
+			 assertTrue(true);
+			}catch (EventFinished e) {
 				// if the program goes to this point fail
 			    fail();
 				// TODO Auto-generated catch block

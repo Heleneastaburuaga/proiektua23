@@ -1,0 +1,3 @@
+domain.Registered#removeApustua(Ldomain/ApustuAnitza;)V
+==
+remove java.util.Vector#remove(Ljava/lang/Object;)Z

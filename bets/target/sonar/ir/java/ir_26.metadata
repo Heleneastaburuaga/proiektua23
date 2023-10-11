@@ -1,0 +1,28 @@
+dataAccess.DataAccess#apustuaEzabatu(Ldomain/Registered;Ldomain/ApustuAnitza;)V
+java.util.Date#<init>()V
+domain.Transaction#<init>(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V
+java.util.Date#instance-init#
+domain.Transaction#instance-init#
+==
+getApustuKantitatea domain.Sport#getApustuKantitatea()Ljava/lang/Integer;
+getUsername domain.Registered#getUsername()Ljava/lang/String;
+getApustuAnitzaNumber domain.ApustuAnitza#getApustuAnitzaNumber()Ljava/lang/Integer;
+size java.util.Vector#size()I
+removeApustua domain.Quote#removeApustua(Ldomain/Apustua;)V
+begin javax.persistence.EntityTransaction#begin()V
+getQuestion domain.Quote#getQuestion()Ldomain/Question;
+updateDiruKontua domain.Registered#updateDiruKontua(Ljava/lang/Double;)V
+getBalioa domain.ApustuAnitza#getBalioa()Ljava/lang/Double;
+get java.util.Vector#get(I)Ljava/lang/Object;
+removeApustua domain.Registered#removeApustua(Ldomain/ApustuAnitza;)V
+persist javax.persistence.EntityManager#persist(Ljava/lang/Object;)V
+getApustuak domain.ApustuAnitza#getApustuak()Ljava/util/Vector;
+getEvent domain.Question#getEvent()Ldomain/Event;
+setApustuKantitatea domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getKuota domain.Apustua#getKuota()Ldomain/Quote;
+getSport domain.Event#getSport()Ldomain/Sport;
+remove javax.persistence.EntityManager#remove(Ljava/lang/Object;)V
+addTransaction domain.Registered#addTransaction(Ldomain/Transaction;)V
+commit javax.persistence.EntityTransaction#commit()V

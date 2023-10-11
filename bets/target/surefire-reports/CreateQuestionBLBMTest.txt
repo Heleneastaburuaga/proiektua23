@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: CreateQuestionBLBMTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.73 sec <<< FAILURE! - in CreateQuestionBLBMTest
+test1(CreateQuestionBLBMTest)  Time elapsed: 2.384 sec  <<< ERROR!
+java.util.MissingResourceException: Can't find bundle for base name Etiquetas, locale es_ES
+	at CreateQuestionBLBMTest.test1(CreateQuestionBLBMTest.java:61)
+
+test3(CreateQuestionBLBMTest)  Time elapsed: 0.005 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "domain.Event.getEventDate()" because "event" is null
+	at CreateQuestionBLBMTest.test3(CreateQuestionBLBMTest.java:110)
+
+test7(CreateQuestionBLBMTest)  Time elapsed: 0.005 sec  <<< ERROR!
+java.util.MissingResourceException: Can't find bundle for base name Etiquetas, locale es_ES
+	at CreateQuestionBLBMTest.test7(CreateQuestionBLBMTest.java:149)
+

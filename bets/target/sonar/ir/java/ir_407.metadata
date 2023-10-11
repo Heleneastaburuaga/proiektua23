@@ -1,0 +1,6 @@
+domain.Apustua#galdutaMarkatu(Ldomain/Quote;)Z
+java.lang.Integer#equals(Ljava/lang/Object;)Z
+==
+getQuestionNumber domain.Question#getQuestionNumber()Ljava/lang/Integer;
+getQuestion domain.Quote#getQuestion()Ldomain/Question;
+getQuoteNumber domain.Quote#getQuoteNumber()Ljava/lang/Integer;

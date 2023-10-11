@@ -1,0 +1,9 @@
+businessLogic.BLFacadeImplementation#<init>(LdataAccess/DataAccess;)V
+java.lang.String#equals(Ljava/lang/Object;)Z
+configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;
+==
+initializeDB dataAccess.DataAccess#initializeDB()V
+println java.io.PrintStream#println(Ljava/lang/String;)V
+getDataBaseOpenMode configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V

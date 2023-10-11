@@ -1,0 +1,8 @@
+dataAccess.DataAccess#storeRegistered(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+domain.Registered#instance-init#
+domain.Registered#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+==
+persist javax.persistence.EntityManager#persist(Ljava/lang/Object;)V
+begin javax.persistence.EntityTransaction#begin()V
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+commit javax.persistence.EntityTransaction#commit()V

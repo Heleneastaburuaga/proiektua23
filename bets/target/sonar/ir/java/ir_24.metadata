@@ -1,0 +1,14 @@
+dataAccess.DataAccess#DiruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V
+domain.Transaction#<init>(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V
+domain.Transaction#instance-init#
+==
+persist javax.persistence.EntityManager#persist(Ljava/lang/Object;)V
+getUsername domain.Registered#getUsername()Ljava/lang/String;
+println java.io.PrintStream#println(Ljava/lang/String;)V
+begin javax.persistence.EntityTransaction#begin()V
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getMota domain.Transaction#getMota()Ljava/lang/String;
+updateDiruKontua domain.Registered#updateDiruKontua(Ljava/lang/Double;)V
+addTransaction domain.Registered#addTransaction(Ldomain/Transaction;)V
+commit javax.persistence.EntityTransaction#commit()V

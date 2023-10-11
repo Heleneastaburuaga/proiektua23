@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApustuAnitza.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">ApustuAnitza.java</span></div><h1>ApustuAnitza.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Vector;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class ApustuAnitza implements Serializable{
+	@Id
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@GeneratedValue
+	private Integer apustuAnitzaNumber;
+	private Date data;
+<span class="pc" id="L28">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+	private Vector&lt;Apustua&gt; apustuak = new Vector&lt;Apustua&gt;();
+	@XmlIDREF
+	private Registered user;
+	private String egoera;
+	private Integer apustuKopia;
+	private Double balioa; 
+	
+	public ApustuAnitza() {
+<span class="nc" id="L37">		super();</span>
+<span class="nc" id="L38">	}</span>
+	
+<span class="fc" id="L40">	public ApustuAnitza(Registered user,Double balioa) {</span>
+<span class="fc" id="L41">		this.user=user;</span>
+<span class="fc" id="L42">		this.data=new Date();</span>
+<span class="fc" id="L43">		this.apustuKopia=0;</span>
+<span class="fc" id="L44">		this.egoera=&quot;jokoan&quot;;</span>
+<span class="fc" id="L45">		this.balioa= balioa;</span>
+<span class="fc" id="L46">	}</span>
+	
+	public Registered getUser() {
+<span class="nc" id="L49">		return user;</span>
+	}
+
+	public void setUser(Registered user) {
+<span class="nc" id="L53">		this.user = user;</span>
+<span class="nc" id="L54">	}</span>
+
+	public Double getBalioa() {
+<span class="fc" id="L57">		return balioa;</span>
+	}
+
+	public void setBalioa(Double balioa) {
+<span class="nc" id="L61">		this.balioa = balioa;</span>
+<span class="nc" id="L62">	}</span>
+
+	public Integer getApustuAnitzaNumber() {
+<span class="nc" id="L65">		return apustuAnitzaNumber;</span>
+	}
+
+	public void setApustuAnitzaNumber(Integer apustuAnitzaNumber) {
+<span class="nc" id="L69">		this.apustuAnitzaNumber = apustuAnitzaNumber;</span>
+<span class="nc" id="L70">	}</span>
+
+	public Date getData() {
+<span class="nc" id="L73">		return data;</span>
+	}
+
+	public void setData(Date data) {
+<span class="nc" id="L77">		this.data = data;</span>
+<span class="nc" id="L78">	}</span>
+
+	public Vector&lt;Apustua&gt; getApustuak() {
+<span class="nc" id="L81">		return apustuak;</span>
+	}
+
+	public void setApustuak(Vector&lt;Apustua&gt; apustuak) {
+<span class="nc" id="L85">		this.apustuak = apustuak;</span>
+<span class="nc" id="L86">	}</span>
+	
+	public void addApustua(Apustua ap) {
+<span class="fc" id="L89">		this.apustuak.add(ap);</span>
+<span class="fc" id="L90">	}</span>
+	
+	public String getEgoera() {
+<span class="nc" id="L93">		return egoera;</span>
+	}
+
+	public void setEgoera(String egoera) {
+<span class="nc" id="L97">		this.egoera = egoera;</span>
+<span class="nc" id="L98">	}</span>
+
+	public Integer getApustuKopia() {
+<span class="nc" id="L101">		return apustuKopia;</span>
+	}
+
+	public void setApustuKopia(Integer apustuKopia) {
+<span class="nc" id="L105">		this.apustuKopia = apustuKopia;</span>
+<span class="nc" id="L106">	}</span>
+
+	public void addKirolaKant() {
+<span class="nc" id="L109">		Sport s=null;</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">		for(Apustua q: apustuak) {</span>
+<span class="nc" id="L111">			s=q.getKuota().getQuestion().getEvent().getSport();</span>
+<span class="nc" id="L112">			s.setApustuKantitatea(s.getApustuKantitatea()+1);</span>
+<span class="nc" id="L113">		}</span>
+<span class="nc" id="L114">	}</span>
+	
+	public boolean galdutaMarkatu() {
+<span class="nc bnc" id="L117" title="All 2 branches missed.">		for(Apustua a: apustuak) {</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">			if(a.getEgoera().equals(&quot;galduta&quot;)) {</span>
+<span class="nc" id="L119">				this.egoera=&quot;galduta&quot;;</span>
+<span class="nc" id="L120">				return true;</span>
+			}
+<span class="nc" id="L122">		}</span>
+<span class="nc" id="L123">		return false;</span>
+	}
+	
+	public boolean irabazitaMarkatu() {
+<span class="nc bnc" id="L127" title="All 2 branches missed.">		if(this.egoera.equals(&quot;jokoan&quot;)) {</span>
+<span class="nc bnc" id="L128" title="All 2 branches missed.">			for(Apustua a: apustuak) {</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">				if(!a.getEgoera().equals(&quot;irabazita&quot;)) {</span>
+<span class="nc" id="L130">					return false;</span>
+				}
+<span class="nc" id="L132">			}</span>
+<span class="nc" id="L133">			this.egoera=&quot;irabazita&quot;;</span>
+<span class="nc" id="L134">			return true;</span>
+		}
+<span class="nc" id="L136">		return false;</span>
+	}
+	
+	public void removeApustua(Apustua ap) {
+<span class="nc" id="L140">		this.apustuak.remove(ap);</span>
+<span class="nc" id="L141">	}</span>
+	
+	@Override
+	public String toString() {
+<span class="nc" id="L145">		return this.data + &quot;; Zenbat: &quot;+ this.balioa.toString() + &quot;; Egoera: &quot; + this.egoera;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

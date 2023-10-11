@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Event.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Event.java</span></div><h1>Event.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Vector;
+
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class Event implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@Id @GeneratedValue
+	private Integer eventNumber;
+	private String description; 
+	private Date eventDate;
+<span class="pc" id="L25">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+	private Vector&lt;Question&gt; questions=new Vector&lt;Question&gt;();
+	@XmlIDREF
+	private Sport sport;
+	@XmlIDREF
+	private Team lokala;
+	@XmlIDREF
+	private Team kanpokoa;
+
+	public Vector&lt;Question&gt; getQuestions() {
+<span class="fc" id="L35">		return questions;</span>
+	}
+
+	public void setQuestions(Vector&lt;Question&gt; questions) {
+<span class="nc" id="L39">		this.questions = questions;</span>
+<span class="nc" id="L40">	}</span>
+
+	public Event() {
+<span class="fc" id="L43">		super();</span>
+<span class="fc" id="L44">	}</span>
+
+<span class="fc" id="L46">	public Event(Integer eventNumber, String description,Date eventDate, Team lokala, Team kanpokoa) {</span>
+<span class="fc" id="L47">		this.eventNumber = eventNumber;</span>
+<span class="fc" id="L48">		this.description = description;</span>
+<span class="fc" id="L49">		this.eventDate=eventDate;</span>
+<span class="fc" id="L50">		this.lokala=lokala;</span>
+<span class="fc" id="L51">		this.kanpokoa=kanpokoa;</span>
+<span class="fc" id="L52">	}</span>
+	
+<span class="nc" id="L54">	public Event(String description,Date eventDate, Team lokala, Team kanpokoa) {</span>
+<span class="nc" id="L55">		this.description = description;</span>
+<span class="nc" id="L56">		this.eventDate=eventDate;</span>
+<span class="nc" id="L57">		this.lokala=lokala;</span>
+<span class="nc" id="L58">		this.kanpokoa=kanpokoa;</span>
+<span class="nc" id="L59">	}</span>
+	
+<span class="fc" id="L61">	public Event(String description,Date eventDate) {</span>
+<span class="fc" id="L62">		this.description = description;</span>
+<span class="fc" id="L63">		this.eventDate=eventDate;</span>
+<span class="fc" id="L64">	}</span>
+
+	public Integer getEventNumber() {
+<span class="fc" id="L67">		return eventNumber;</span>
+	}
+
+	public void setEventNumber(Integer eventNumber) {
+<span class="nc" id="L71">		this.eventNumber = eventNumber;</span>
+<span class="nc" id="L72">	}</span>
+
+	public String getDescription() {
+<span class="nc" id="L75">		return description;</span>
+	}
+	
+	public void setDescription(String description) {
+<span class="nc" id="L79">		this.description=description;</span>
+<span class="nc" id="L80">	}</span>
+
+	public Date getEventDate() {
+<span class="fc" id="L83">		return eventDate;</span>
+	}
+
+	public void setEventDate(Date eventDate) {
+<span class="nc" id="L87">		this.eventDate = eventDate;</span>
+<span class="nc" id="L88">	}	</span>
+	
+	public Sport getSport() {
+<span class="nc" id="L91">		return sport;</span>
+	}
+
+	public void setSport(Sport sport) {
+<span class="fc" id="L95">		this.sport = sport;</span>
+<span class="fc" id="L96">	}</span>
+
+	public String toString(){
+<span class="fc" id="L99">		return eventNumber+&quot;;&quot;+description;</span>
+	}
+	
+	/**
+	 * This method creates a bet with a question, minimum bet ammount and percentual profit
+	 * 
+	 * @param question to be added to the event
+	 * @param betMinimum of that question
+	 * @return Bet
+	 */
+	public Question addQuestion(String question, double betMinimum)  {
+<span class="fc" id="L110">        Question q=new Question(question,betMinimum, this);</span>
+<span class="fc" id="L111">        questions.add(q);</span>
+<span class="fc" id="L112">        return q;</span>
+	}
+	
+	public void listaraGehitu(Question q)  {
+<span class="nc" id="L116">        questions.add(q);</span>
+<span class="nc" id="L117">	}</span>
+
+	
+	/**
+	 * This method checks if the question already exists for that event
+	 * 
+	 * @param question that needs to be checked if there exists
+	 * @return true if the question exists and false in other case
+	 */
+	public boolean DoesQuestionExists(String question)  {	
+<span class="fc bfc" id="L127" title="All 2 branches covered.">		for (Question q:this.getQuestions()){</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">			if (q.getQuestion().compareTo(question)==0)</span>
+<span class="fc" id="L129">				return true;</span>
+<span class="fc" id="L130">		}</span>
+<span class="fc" id="L131">		return false;</span>
+	}
+		
+	public Team getLokala() {
+<span class="nc" id="L135">		return lokala;</span>
+	}
+
+	public void setLokala(Team lokala) {
+<span class="nc" id="L139">		this.lokala = lokala;</span>
+<span class="nc" id="L140">	}</span>
+
+	public Team getKanpokoa() {
+<span class="nc" id="L143">		return kanpokoa;</span>
+	}
+
+	public void setKanpokoa(Team kanpokoa) {
+<span class="nc" id="L147">		this.kanpokoa = kanpokoa;</span>
+<span class="nc" id="L148">	}</span>
+	
+	@Override
+	public int hashCode() {
+<span class="nc" id="L152">		final int prime = 31;</span>
+<span class="nc" id="L153">		int result = 1;</span>
+<span class="nc" id="L154">		result = prime * result + eventNumber;</span>
+<span class="nc" id="L155">		return result;</span>
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+<span class="nc bnc" id="L160" title="All 2 branches missed.">		if (this == obj)</span>
+<span class="nc" id="L161">			return true;</span>
+<span class="nc bnc" id="L162" title="All 2 branches missed.">		if (obj == null)</span>
+<span class="nc" id="L163">			return false;</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">		if (getClass() != obj.getClass())</span>
+<span class="nc" id="L165">			return false;</span>
+<span class="nc" id="L166">		Event other = (Event) obj;</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">		if (eventNumber != other.eventNumber)</span>
+<span class="nc" id="L168">			return false;</span>
+<span class="nc" id="L169">		return true;</span>
+	}
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

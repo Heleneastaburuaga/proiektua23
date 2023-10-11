@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#storeRegistered(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+==
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V
+storeRegistered dataAccess.DataAccess#storeRegistered(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V

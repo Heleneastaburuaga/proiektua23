@@ -1,0 +1,38 @@
+dataAccess.DataAccess#gertaeraEzabatu(Ldomain/Event;)Z
+java.util.Date#<init>()V
+java.lang.String#equals(Ljava/lang/Object;)Z
+java.util.Date#instance-init#
+==
+getUser domain.ApustuAnitza#getUser()Ldomain/Registered;
+getApustuak domain.Quote#getApustuak()Ljava/util/Vector;
+getApustuAnitza domain.Apustua#getApustuAnitza()Ldomain/ApustuAnitza;
+begin javax.persistence.EntityTransaction#begin()V
+get java.util.List#get(I)Ljava/lang/Object;
+getQuestion domain.Quote#getQuestion()Ldomain/Question;
+ApustuaIrabazi dataAccess.DataAccess#ApustuaIrabazi(Ldomain/ApustuAnitza;)V
+getEventNumber domain.Event#getEventNumber()Ljava/lang/Integer;
+get java.util.Vector#get(I)Ljava/lang/Object;
+getResultList javax.persistence.TypedQuery#getResultList()Ljava/util/List;
+getEvent domain.Question#getEvent()Ldomain/Event;
+createQuery javax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+setApustuKantitatea domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V
+compareTo java.util.Date#compareTo(Ljava/util/Date;)I
+commit javax.persistence.EntityTransaction#commit()V
+size java.util.List#size()I
+getApustuKantitatea domain.Sport#getApustuKantitatea()Ljava/lang/Integer;
+setParameter javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;
+size java.util.Vector#size()I
+getApustuAnitzaNumber domain.ApustuAnitza#getApustuAnitzaNumber()Ljava/lang/Integer;
+isEmpty java.util.Vector#isEmpty()Z
+getEventDate domain.Event#getEventDate()Ljava/util/Date;
+getEgoera domain.ApustuAnitza#getEgoera()Ljava/lang/String;
+apustuaEzabatu dataAccess.DataAccess#apustuaEzabatu(Ldomain/Registered;Ldomain/ApustuAnitza;)V
+removeApustua domain.ApustuAnitza#removeApustua(Ldomain/Apustua;)V
+getApustuak domain.ApustuAnitza#getApustuak()Ljava/util/Vector;
+irabazitaMarkatu domain.ApustuAnitza#irabazitaMarkatu()Z
+getQuestions domain.Event#getQuestions()Ljava/util/Vector;
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getSport domain.Event#getSport()Ldomain/Sport;
+remove javax.persistence.EntityManager#remove(Ljava/lang/Object;)V
+getResult domain.Question#getResult()Ljava/lang/String;

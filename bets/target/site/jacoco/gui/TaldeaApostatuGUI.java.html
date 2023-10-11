@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TaldeaApostatuGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">TaldeaApostatuGUI.java</span></div><h1>TaldeaApostatuGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.util.ResourceBundle;
+import java.util.Vector;
+
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+
+import businessLogic.BLFacade;
+import domain.Event;
+import domain.Question;
+import domain.Quote;
+import domain.Registered;
+import domain.Registered;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
+import java.awt.Font;
+
+public class TaldeaApostatuGUI extends JFrame{
+<span class="nc" id="L31">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
+
+	private static final long serialVersionUID = 1L;
+
+	private JLabel lblTeam;
+	private Registered user;
+	private JFrame thisw;
+
+	private JLabel lblEquipo;
+
+	private JLabel lblEvent;
+	private JList list;
+<span class="nc" id="L43">	private DefaultListModel&lt;Event&gt; events = new DefaultListModel&lt;Event&gt;();</span>
+	private JScrollPane scrollBar;
+	private JLabel lblQuestion;
+	private JList list_1;
+<span class="nc" id="L47">	private DefaultListModel&lt;Question&gt; questions = new DefaultListModel&lt;Question&gt;();</span>
+	private JScrollPane scrollBar_1;
+<span class="nc" id="L49">	private DefaultListModel&lt;Quote&gt; quotes = new DefaultListModel&lt;Quote&gt;();</span>
+	private JLabel lblQuotes;
+	private JList list_2;
+	private JScrollPane scrollBar_2;
+	private JButton btnClose;
+	private JButton btnApostatu;
+
+	private JLabel lblErrorQuestion;
+
+	private JLabel lblErrorQuote;
+	
+<span class="nc" id="L60">	public TaldeaApostatuGUI(Registered u) {</span>
+<span class="nc" id="L61">		thisw=this;</span>
+<span class="nc" id="L62">		user=u;</span>
+<span class="nc" id="L63">		getContentPane().setLayout(null);</span>
+		
+<span class="nc" id="L65">		this.setSize(new Dimension(550, 820));</span>
+<span class="nc" id="L66">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TaldeaApostatu&quot;));</span>
+		
+<span class="nc" id="L68">		lblTeam = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TeamEvents&quot;));</span>
+<span class="nc" id="L69">		lblTeam.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L70">		lblTeam.setHorizontalAlignment(SwingConstants.RIGHT);</span>
+<span class="nc" id="L71">		lblTeam.setOpaque(true);</span>
+<span class="nc" id="L72">		lblTeam.setBounds(10, 47, 313, 57);</span>
+<span class="nc" id="L73">		getContentPane().add(lblTeam);</span>
+		
+<span class="nc" id="L75">		lblErrorQuote = new JLabel();</span>
+<span class="nc" id="L76">		lblErrorQuote.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L77">		lblErrorQuestion = new JLabel();</span>
+<span class="nc" id="L78">		lblErrorQuestion.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+		
+<span class="nc" id="L80">		lblEquipo = new JLabel(businessLogic.findTeam(user).getIzena());</span>
+<span class="nc" id="L81">		lblEquipo.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L82">		ImageIcon imageIcon = new ImageIcon(&quot;.\\src/main/resources\\Equipos\\&quot;+businessLogic.findTeam(user).getIzena()+&quot;.png&quot;); // load the image to a imageIcon</span>
+<span class="nc" id="L83">		Image image = imageIcon.getImage(); // transform it </span>
+<span class="nc" id="L84">	    Image newimg = image.getScaledInstance(50, 50, Image.SCALE_SMOOTH); // scale it the smooth way  </span>
+<span class="nc" id="L85">	    imageIcon = new ImageIcon(newimg);</span>
+<span class="nc" id="L86">        lblEquipo.setIcon(imageIcon);</span>
+<span class="nc" id="L87">		lblEquipo.setBounds(333, 47, 173, 57);</span>
+<span class="nc" id="L88">		getContentPane().add(lblEquipo);</span>
+		
+<span class="nc" id="L90">		lblEvent = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Event&quot;));</span>
+<span class="nc" id="L91">		lblEvent.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L92">		lblEvent.setBounds(31, 138, 80, 27);</span>
+<span class="nc" id="L93">		getContentPane().add(lblEvent);</span>
+		
+<span class="nc" id="L95">		list = new JList();</span>
+<span class="nc" id="L96">		list.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L97">		list.addListSelectionListener(new ListSelectionListener() {</span>
+			public void valueChanged(ListSelectionEvent e) {
+<span class="nc" id="L99">				btnApostatu.setEnabled(false);</span>
+<span class="nc" id="L100">				questions.removeAllElements();</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">				for(domain.Question question : businessLogic.findQuestion((Event)list.getSelectedValue()))</span>
+<span class="nc" id="L102">					questions.addElement(question); </span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">				if(questions.size()==0) {</span>
+<span class="nc" id="L104">					lblErrorQuestion.setVisible(true);</span>
+<span class="nc" id="L105">					lblErrorQuestion.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoQueries&quot;));</span>
+				}else {
+<span class="nc" id="L107">					lblErrorQuestion.setVisible(false);</span>
+<span class="nc" id="L108">					lblErrorQuote.setVisible(false);</span>
+				}
+<span class="nc" id="L110">			}</span>
+		});
+<span class="nc" id="L112">		list.setModel(events);</span>
+<span class="nc" id="L113">		list.setBounds(97, 110, 1, 1);</span>
+<span class="nc" id="L114">		getContentPane().add(list);</span>
+		
+<span class="nc" id="L116">		scrollBar = new JScrollPane(list);</span>
+<span class="nc" id="L117">		scrollBar.setBounds(31, 176, 475, 144);</span>
+<span class="nc" id="L118">		getContentPane().add(scrollBar);</span>
+		
+<span class="nc" id="L120">		events.addAll(businessLogic.getEventsTeam(businessLogic.findTeam(user)));</span>
+		
+<span class="nc" id="L122">		lblQuestion = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Queries&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L123">		lblQuestion.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L124">		lblQuestion.setBounds(31, 342, 80, 29);</span>
+<span class="nc" id="L125">		getContentPane().add(lblQuestion);</span>
+		
+<span class="nc" id="L127">		list_1 = new JList();</span>
+<span class="nc" id="L128">		list_1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L129">		list_1.addListSelectionListener(new ListSelectionListener() {</span>
+			public void valueChanged(ListSelectionEvent e) {
+<span class="nc" id="L131">				btnApostatu.setEnabled(false);</span>
+<span class="nc" id="L132">				quotes.removeAllElements();</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">				for(domain.Quote quote : businessLogic.findQuote((Question)list_1.getSelectedValue()))</span>
+<span class="nc" id="L134">					quotes.addElement(quote);</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">				if(quotes.size()==0) {</span>
+<span class="nc" id="L136">					btnApostatu.setEnabled(false);</span>
+<span class="nc" id="L137">					lblErrorQuote.setVisible(true);</span>
+<span class="nc" id="L138">					lblErrorQuote.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoQuote&quot;));</span>
+				}else {
+<span class="nc" id="L140">					btnApostatu.setEnabled(true);</span>
+<span class="nc" id="L141">					lblErrorQuote.setVisible(false);</span>
+				}
+<span class="nc bnc" id="L143" title="All 2 branches missed.">				if(list_2.getSelectedValue()==null) {</span>
+<span class="nc" id="L144">					btnApostatu.setEnabled(false);</span>
+				}
+<span class="nc" id="L146">			}</span>
+		});
+<span class="nc" id="L148">		list_1.setModel(questions);</span>
+<span class="nc" id="L149">		list_1.setBounds(48, 196, 1, 1);</span>
+<span class="nc" id="L150">		getContentPane().add(list_1);</span>
+		
+<span class="nc" id="L152">		scrollBar_1 = new JScrollPane(list_1);</span>
+<span class="nc" id="L153">		scrollBar_1.setBounds(31, 381, 475, 130);</span>
+<span class="nc" id="L154">		getContentPane().add(scrollBar_1);</span>
+		
+<span class="nc" id="L156">		lblQuotes = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Quote&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L157">		lblQuotes.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L158">		lblQuotes.setBounds(31, 521, 80, 22);</span>
+<span class="nc" id="L159">		getContentPane().add(lblQuotes);</span>
+		
+<span class="nc" id="L161">		list_2 = new JList();</span>
+<span class="nc" id="L162">		list_2.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L163">		list_2.addListSelectionListener(new ListSelectionListener() {</span>
+			public void valueChanged(ListSelectionEvent e) {
+<span class="nc" id="L165">				btnApostatu.setEnabled(true);</span>
+<span class="nc" id="L166">			}</span>
+		});
+<span class="nc" id="L168">		list_2.setModel(quotes);</span>
+<span class="nc" id="L169">		list_2.setBounds(64, 325, 1, 1);</span>
+<span class="nc" id="L170">		getContentPane().add(list_2);</span>
+		
+<span class="nc" id="L172">		scrollBar_2 = new JScrollPane(list_2);</span>
+<span class="nc" id="L173">		scrollBar_2.setBounds(31, 553, 475, 134);</span>
+<span class="nc" id="L174">		getContentPane().add(scrollBar_2);</span>
+		
+<span class="nc" id="L176">		btnClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L177">		btnClose.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
+<span class="nc" id="L178">		btnClose.setForeground(Color.WHITE);</span>
+<span class="nc" id="L179">		btnClose.setBackground(Color.DARK_GRAY);</span>
+<span class="nc" id="L180">		btnClose.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L182">				jButtonClose_actionPerformed(e);</span>
+<span class="nc" id="L183">				JFrame a = new DestacadosGUI(user);</span>
+<span class="nc" id="L184">				a.setVisible(true);</span>
+<span class="nc" id="L185">			}</span>
+		});
+<span class="nc" id="L187">		btnClose.setBounds(364, 712, 142, 47);</span>
+<span class="nc" id="L188">		getContentPane().add(btnClose);</span>
+		
+<span class="nc" id="L190">		btnApostatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaEgin&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L191">		btnApostatu.setBackground(Color.PINK);</span>
+<span class="nc" id="L192">		btnApostatu.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L193">		btnApostatu.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L194">		btnApostatu.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L196">				JFrame a =new ApustuaEginGUI(new Vector&lt;Event&gt;(),user, (Quote)list_2.getSelectedValue());</span>
+<span class="nc" id="L197">				a.setVisible(true);</span>
+<span class="nc" id="L198">				thisw.setVisible(false);</span>
+<span class="nc" id="L199">			}</span>
+		});
+<span class="nc" id="L201">		btnApostatu.setBounds(31, 712, 142, 47);</span>
+<span class="nc" id="L202">		btnApostatu.setEnabled(false);</span>
+<span class="nc" id="L203">		getContentPane().add(btnApostatu);</span>
+		
+<span class="nc" id="L205">		lblErrorQuestion.setBounds(137, 342, 369, 29);</span>
+<span class="nc" id="L206">		getContentPane().add(lblErrorQuestion);</span>
+		
+<span class="nc" id="L208">		lblErrorQuote.setBounds(121, 541, 385, 29);</span>
+<span class="nc" id="L209">		getContentPane().add(lblErrorQuote);</span>
+		
+<span class="nc" id="L211">	}</span>
+	private void jButtonClose_actionPerformed(ActionEvent e) {
+<span class="nc" id="L213">		this.setVisible(false);</span>
+<span class="nc" id="L214">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Apustua.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Apustua.java</span></div><h1>Apustua.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.Serializable;
+import java.util.Vector;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@Entity
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Apustua implements Serializable{
+
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@Id @GeneratedValue
+	private Integer apustuaNumber; 
+	
+	@XmlIDREF
+	private Quote kuota;
+	@XmlIDREF
+	private ApustuAnitza apustuAnitza;
+	private String egoera;
+	
+	public Apustua(ApustuAnitza ap, Quote q) {
+<span class="fc" id="L34">		super();</span>
+<span class="fc" id="L35">		this.apustuAnitza=ap;</span>
+<span class="fc" id="L36">		this.kuota=q;</span>
+<span class="fc" id="L37">		this.egoera=&quot;jokoan&quot;;</span>
+<span class="fc" id="L38">	}</span>
+	
+	public Apustua() {
+<span class="nc" id="L41">		super();</span>
+<span class="nc" id="L42">	}</span>
+
+	public Integer getApostuaNumber() {
+<span class="nc" id="L45">		return apustuaNumber;</span>
+	}
+
+	public void setApostuaNumber(Integer apustuaNumber) {
+<span class="nc" id="L49">		this.apustuaNumber = apustuaNumber;</span>
+<span class="nc" id="L50">	}</span>
+
+	public Quote getKuota() {
+<span class="nc" id="L53">		return kuota;</span>
+	}
+
+	public void setKuota(Quote kuota) {
+<span class="nc" id="L57">		this.kuota = kuota;</span>
+<span class="nc" id="L58">	}</span>
+
+	public String getEgoera() {
+<span class="nc" id="L61">		return egoera;</span>
+	}
+
+	public void setEgoera(String egoera) {
+<span class="nc" id="L65">		this.egoera = egoera;</span>
+<span class="nc" id="L66">	}</span>
+	
+	public ApustuAnitza getApustuAnitza() {
+<span class="nc" id="L69">		return apustuAnitza;</span>
+	}
+
+	public void setApustuAnitza(ApustuAnitza apustuAnitza) {
+<span class="nc" id="L73">		this.apustuAnitza = apustuAnitza;</span>
+<span class="nc" id="L74">	}</span>
+	
+	public boolean galdutaMarkatu(Quote quo) {
+<span class="nc bnc" id="L77" title="All 4 branches missed.">		if(kuota.getQuestion().getQuestionNumber().equals(quo.getQuestion().getQuestionNumber())&amp;&amp; !(quo.getQuoteNumber().equals(kuota.getQuoteNumber()))) {</span>
+<span class="nc" id="L78">			this.egoera=&quot;galduta&quot;;</span>
+<span class="nc" id="L79">			return true;</span>
+		}
+<span class="nc" id="L81">		return false;</span>
+	}
+	
+	public void eguneratuApustuKant(Sport s) {
+<span class="fc" id="L85">		s.eguneratuApustuKantitatea();</span>
+<span class="fc" id="L86">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+		
+<span class="nc bnc" id="L91" title="All 2 branches missed.">		if( this == o) {</span>
+<span class="nc" id="L92">			return true;</span>
+		}
+<span class="nc bnc" id="L94" title="All 2 branches missed.">		if(o==null) {</span>
+<span class="nc" id="L95">			return false;</span>
+		}
+<span class="nc bnc" id="L97" title="All 2 branches missed.">		if(this.getClass() != o.getClass()) {</span>
+<span class="nc" id="L98">			return false;</span>
+		}
+<span class="nc" id="L100">		Apustua a = (Apustua) o; </span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">		if(a.getApostuaNumber() == null) {</span>
+<span class="nc" id="L102">			return false;</span>
+		}
+<span class="nc" id="L104">		return this.getApostuaNumber().equals(a.getApostuaNumber()); </span>
+	}
+
+
+	
+	@Override
+	public int hashCode() {
+<span class="nc" id="L111">		final int prime = 31;</span>
+<span class="nc" id="L112">		int result = 1;</span>
+<span class="nc" id="L113">		result = prime * result + apustuaNumber;</span>
+<span class="nc" id="L114">		return result;</span>
+	}
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

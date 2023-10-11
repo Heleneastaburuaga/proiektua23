@@ -146,7 +146,7 @@ public class Event implements Serializable {
 	public void setKanpokoa(Team kanpokoa) {
 		this.kanpokoa = kanpokoa;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
