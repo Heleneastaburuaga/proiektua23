@@ -42,8 +42,8 @@ public class ApustuakEzabatuGUI extends JFrame{
 	public ApustuakEzabatuGUI(Registered u) {
 		user = u; 
 		this.getContentPane().setLayout(null);
-		
-		lblComboBox = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("ApustuLista"));
+		String etiqueta = "Etiquetas";
+		lblComboBox = new JLabel(ResourceBundle.getBundle(etiqueta).getString("ApustuLista"));
 		lblComboBox.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		lblComboBox.setHorizontalAlignment(SwingConstants.CENTER);
 		lblComboBox.setBounds(186, 62, 215, 21);
@@ -72,7 +72,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 		});
 		
 		
-		jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
+		jButtonClose = new JButton(ResourceBundle.getBundle(etiqueta).getString("Close"));
 		jButtonClose.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jButtonClose_actionPerformed(e);
@@ -82,7 +82,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 		getContentPane().add(jButtonClose);
 		
 		
-		jButtonEzabatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Ezabatu"));
+		jButtonEzabatu = new JButton(ResourceBundle.getBundle(etiqueta).getString("Ezabatu"));
 		if(listApustuak.getSize()==0) {
 			jButtonEzabatu.setEnabled(false); 
 		}else {
@@ -118,7 +118,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 		jButtonEzabatu.setBounds(160, 246, 117, 30);
 		getContentPane().add(jButtonEzabatu);
 		this.setSize(new Dimension(604, 370));
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("ApustuaEzabatu"));
+		this.setTitle(ResourceBundle.getBundle(etiqueta).getString("ApustuaEzabatu"));
 	}
 	
 	private void jButtonClose_actionPerformed(ActionEvent e) {

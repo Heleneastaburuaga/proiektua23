@@ -76,7 +76,7 @@ public class DiruaSartuGUI extends JFrame{
 					
 					if(zenb>0.0) {
 						
-						businessLogic.DiruaSartu(user, zenb, "DiruaSartu");
+						businessLogic.diruaSartu(user, zenb, "DiruaSartu");
 						lblError.setVisible(true); 
 						lblError.setText(ResourceBundle.getBundle("Etiquetas").getString("DiruCorrect"));
 						

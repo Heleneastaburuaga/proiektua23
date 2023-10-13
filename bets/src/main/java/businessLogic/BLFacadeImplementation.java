@@ -1,4 +1,5 @@
 package businessLogic;
+import java.util.ArrayList;
 import java.util.Collection;
 //hola
 import java.util.Date;
@@ -31,13 +32,13 @@ import exceptions.QuoteAlreadyExist;
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
 	DataAccess dbManager;
-
+	String initialize = "initialize";
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
 		ConfigXML c=ConfigXML.getInstance();
 		
-		if (c.getDataBaseOpenMode().equals("initialize")) {
-		    dbManager=new DataAccess(c.getDataBaseOpenMode().equals("initialize"));
+		if (c.getDataBaseOpenMode().equals(initialize)) {
+		    dbManager=new DataAccess(c.getDataBaseOpenMode().equals(initialize));
 		    dbManager.initializeDB();
 		    } else
 		     dbManager=new DataAccess();
@@ -51,7 +52,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
 		ConfigXML c=ConfigXML.getInstance();
 		
-		if (c.getDataBaseOpenMode().equals("initialize")) {
+		if (c.getDataBaseOpenMode().equals(initialize)) {
 			da.open(true);
 			da.initializeDB();			
 			da.close();
@@ -88,7 +89,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		
 		return qry;
-   };
+   }
 	
 	/**
 	 * This method invokes the data access to retrieve the events of a given date 
@@ -97,9 +98,9 @@ public class BLFacadeImplementation  implements BLFacade {
 	 * @return collection of events
 	 */
     @WebMethod	
-	public Vector<Event> getEvents(Date date)  {
+	public ArrayList<Event> getEvents(Date date)  {
 		dbManager.open(false);
-		Vector<Event>  events=dbManager.getEvents(date);
+		ArrayList<Event>  events=dbManager.getEvents(date);
 		dbManager.close();
 		return events;
 	}
@@ -159,9 +160,9 @@ public class BLFacadeImplementation  implements BLFacade {
     }
     @WebMethod	
     public boolean gertaerakSortu(String description,Date eventDate, String sport) throws EventFinished{
-    	if(new Date().compareTo(eventDate)>0)
+    	if(new Date().compareTo(eventDate)>0) {
 			throw new EventFinished("Gertaera honen data dagoeneko pasa da");
-    	
+    	}
     	dbManager.open(false);
     	boolean b = dbManager.gertaerakSortu(description, eventDate, sport);
     	dbManager.close();
@@ -188,7 +189,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		return v;
     }
     @WebMethod	
-    public void DiruaSartu(Registered u, Double dirua, String mota) {
+    public void diruaSartu(Registered u, Double dirua, String mota) {
     	Date data = new Date();
     	dbManager.open(false); 
     	dbManager.DiruaSartu(u, dirua, data, mota);
@@ -380,4 +381,3 @@ public class BLFacadeImplementation  implements BLFacade {
 		return team;
 	}
 }
-

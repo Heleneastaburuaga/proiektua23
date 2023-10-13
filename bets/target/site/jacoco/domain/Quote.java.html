@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Quote.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiektua23</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Quote.java</span></div><h1>Quote.java</h1><pre class="source lang-java linenums">package domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Vector;
 
@@ -29,98 +30,98 @@ public class Quote implements Serializable{
 	private Double balio;
 	@XmlIDREF
 	private Question question;
-<span class="pc" id="L32">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
-	private Vector&lt;Apustua&gt; apustuak = new Vector&lt;Apustua&gt;(); 
+<span class="pc" id="L33">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+	private ArrayList&lt;Apustua&gt; apustuak = new ArrayList&lt;Apustua&gt;(); 
 
 	public Quote() {
-<span class="nc" id="L36">		super();</span>
-<span class="nc" id="L37">	}</span>
+<span class="nc" id="L37">		super();</span>
+<span class="nc" id="L38">	}</span>
 	
-<span class="fc" id="L39">	public Quote(Double balio, String forecast, Question question) {</span>
-<span class="fc" id="L40">		this.balio = balio; </span>
-<span class="fc" id="L41">		this.forecast = forecast; </span>
-<span class="fc" id="L42">		this.question=question;</span>
-<span class="fc" id="L43">	}</span>
+<span class="fc" id="L40">	public Quote(Double balio, String forecast, Question question) {</span>
+<span class="fc" id="L41">		this.balio = balio; </span>
+<span class="fc" id="L42">		this.forecast = forecast; </span>
+<span class="fc" id="L43">		this.question=question;</span>
+<span class="fc" id="L44">	}</span>
 	
-<span class="nc" id="L45">	public Quote(Double balio, String forecast) {</span>
-<span class="nc" id="L46">		this.balio = balio; </span>
-<span class="nc" id="L47">		this.forecast = forecast; </span>
-<span class="nc" id="L48">	}</span>
+<span class="nc" id="L46">	public Quote(Double balio, String forecast) {</span>
+<span class="nc" id="L47">		this.balio = balio; </span>
+<span class="nc" id="L48">		this.forecast = forecast; </span>
+<span class="nc" id="L49">	}</span>
 
-	public Vector&lt;Apustua&gt; getApustuak() {
-<span class="nc" id="L51">		return apustuak;</span>
+	public ArrayList&lt;Apustua&gt; getApustuak() {
+<span class="nc" id="L52">		return apustuak;</span>
 	}
 
-	public void setApustuak(Vector&lt;Apustua&gt; apustuak) {
-<span class="nc" id="L55">		this.apustuak = apustuak;</span>
-<span class="nc" id="L56">	}</span>
+	public void setApustuak(ArrayList&lt;Apustua&gt; apustuak) {
+<span class="nc" id="L56">		this.apustuak = apustuak;</span>
+<span class="nc" id="L57">	}</span>
 	
 	public Double getQuote() {
-<span class="nc" id="L59">		return balio;</span>
+<span class="nc" id="L60">		return balio;</span>
 	}
 
 	public void setQuote(Double balio) {
-<span class="nc" id="L63">		this.balio = balio;</span>
-<span class="nc" id="L64">	}</span>
+<span class="nc" id="L64">		this.balio = balio;</span>
+<span class="nc" id="L65">	}</span>
 
 	public String getForecast() {
-<span class="nc" id="L67">		return forecast;</span>
+<span class="nc" id="L68">		return forecast;</span>
 	}
 
 	public void setForecast(String forecast) {
-<span class="nc" id="L71">		this.forecast = forecast;</span>
-<span class="nc" id="L72">	}</span>
+<span class="nc" id="L72">		this.forecast = forecast;</span>
+<span class="nc" id="L73">	}</span>
 
 	public Integer getQuoteNumber() {
-<span class="nc" id="L75">		return quoteNumber;</span>
+<span class="nc" id="L76">		return quoteNumber;</span>
 	}
 
 	public void setQuoteNumber(Integer quoteNumber) {
-<span class="nc" id="L79">		this.quoteNumber = quoteNumber;</span>
-<span class="nc" id="L80">	}</span>
+<span class="nc" id="L80">		this.quoteNumber = quoteNumber;</span>
+<span class="nc" id="L81">	}</span>
 
 	public Question getQuestion() {
-<span class="nc" id="L83">		return question;</span>
+<span class="nc" id="L84">		return question;</span>
 	}
 
 	public void setQuestion(Question question) {
-<span class="nc" id="L87">		this.question = question;</span>
-<span class="nc" id="L88">	}</span>
+<span class="nc" id="L88">		this.question = question;</span>
+<span class="nc" id="L89">	}</span>
 	
 	public String toString(){
-<span class="nc" id="L91">		return &quot;Forecast: &quot;+forecast+&quot;; Quote: &quot;+Double.toString(balio);</span>
+<span class="nc" id="L92">		return &quot;Forecast: &quot;+forecast+&quot;; Quote: &quot;+Double.toString(balio);</span>
 	}
 	
 	public void addApustua(Apustua a) {
-<span class="fc" id="L95">		this.apustuak.add(a);</span>
-<span class="fc" id="L96">	}</span>
+<span class="fc" id="L96">		this.apustuak.add(a);</span>
+<span class="fc" id="L97">	}</span>
 	
 	public void removeApustua(Apustua a) {
-<span class="nc" id="L99">		boolean aurkitua = false; </span>
-<span class="nc" id="L100">		int i = 0; </span>
-<span class="nc bnc" id="L101" title="All 4 branches missed.">		while( i&lt;apustuak.size() &amp;&amp; !aurkitua) {</span>
-<span class="nc bnc" id="L102" title="All 2 branches missed.">			if(apustuak.get(i).getApostuaNumber().equals(a.getApostuaNumber())) {</span>
-<span class="nc" id="L103">				apustuak.remove(i); </span>
-<span class="nc" id="L104">				aurkitua = true; </span>
+<span class="nc" id="L100">		boolean aurkitua = false; </span>
+<span class="nc" id="L101">		int i = 0; </span>
+<span class="nc bnc" id="L102" title="All 4 branches missed.">		while( i&lt;apustuak.size() &amp;&amp; !aurkitua) {</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">			if(apustuak.get(i).getApostuaNumber().equals(a.getApostuaNumber())) {</span>
+<span class="nc" id="L104">				apustuak.remove(i); </span>
+<span class="nc" id="L105">				aurkitua = true; </span>
 			}
-<span class="nc" id="L106">			i++; </span>
+<span class="nc" id="L107">			i++; </span>
 		}
-<span class="nc" id="L108">	}</span>
+<span class="nc" id="L109">	}</span>
 	
 	@Override
 	public boolean equals(Object o) {
-<span class="nc bnc" id="L112" title="All 2 branches missed.">		if (this == o) {</span>
-<span class="nc" id="L113">	        return true;</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		if (this == o) {</span>
+<span class="nc" id="L114">	        return true;</span>
 	    }
 
-<span class="nc bnc" id="L116" title="All 2 branches missed.">	    if (o == null ) {</span>
-<span class="nc" id="L117">	        return false;</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">	    if (o == null ) {</span>
+<span class="nc" id="L118">	        return false;</span>
 	    }
-<span class="nc bnc" id="L119" title="All 2 branches missed.">	    if(getClass() != o.getClass()) {</span>
-<span class="nc" id="L120">	    	return false;</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">	    if(getClass() != o.getClass()) {</span>
+<span class="nc" id="L121">	    	return false;</span>
 	    }
-<span class="nc" id="L122">	    Quote q = (Quote) o;</span>
-<span class="nc bnc" id="L123" title="All 2 branches missed.">	    return this.getQuoteNumber() == q.getQuoteNumber();</span>
+<span class="nc" id="L123">	    Quote q = (Quote) o;</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">	    return this.getQuoteNumber() == q.getQuoteNumber();</span>
 
 
 	}
@@ -128,10 +129,10 @@ public class Quote implements Serializable{
 	
 	@Override
 	public int hashCode() {
-<span class="nc" id="L131">	    final int prime = 31;</span>
-<span class="nc" id="L132">	    int result = 1;</span>
-<span class="nc" id="L133">	    result = prime * result + quoteNumber;</span>
-<span class="nc" id="L134">	    return result;</span>
+<span class="nc" id="L132">	    final int prime = 31;</span>
+<span class="nc" id="L133">	    int result = 1;</span>
+<span class="nc" id="L134">	    result = prime * result + quoteNumber;</span>
+<span class="nc" id="L135">	    return result;</span>
 	}
 	
 	

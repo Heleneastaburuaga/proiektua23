@@ -1,10 +1,10 @@
 
 ndataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)ZY
-M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.javaº º("25*Õ
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.javaΩ Ω("25*Õ
 13
-› ›(µ≤
+ﬁ ﬁ(µ≤
 
-› ›(4
+ﬁ ﬁ(4
 %55java.util.Vector":domain.Registered#getJarraitzaileLista()Ljava/util/Vector;*7
 
 __unknown_file (
@@ -13,24 +13,24 @@ M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.javaº
 3*◊
 
 24
-¿ ¿(z
+¡ ¡(z
 x
 
-¿ ¿(%
+¡ ¡(%
 %5javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbËÂ
 
-¿ ¿()
+¡ ¡()
 %6#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
 
 __unknown_file ('
 %
 %5javax.persistence.EntityManager2getTransaction()õò
 
-¿ ¿(
+¡ ¡(
 
 %7void",javax.persistence.EntityTransaction#begin()V*G
 
@@ -38,11 +38,11 @@ x
 )
 %6#javax.persistence.EntityTransaction2begin()><
 
-¡# ¡(/
+¬# ¬(/
 %8domain.ApustuAnitza"domain.ApustuAnitzaÖ
 Ç
 
-¡ ¡(=
+¬ ¬(=
 %9"Bdomain.ApustuAnitza#<init>(Ldomain/Registered;Ljava/lang/Double;)V*7
 
 __unknown_file (
@@ -58,7 +58,7 @@ x
 balioajava.lang.Doubler
 p
 
-¡ ¡(>#
+¬ ¬(>#
 apustuAnitzadomain.ApustuAnitza"__id*7
 
 __unknown_file (
@@ -66,14 +66,14 @@ p
 %8domain.ApustuAnitza{
 y
 
-¬ ¬(&
+√ √(&
 %10javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÄ˝
 
-¬ ¬(
+√ √(
 %11void"<javax.persistence.EntityManager#persist(Ljava/lang/Object;)V*D
 
 __unknown_file ((
@@ -85,9 +85,9 @@ y
 apustuAnitzadomain.ApustuAnitza2persist(Ljava/lang/Object;)*
 21*Ñ	
 14
-⁄ ⁄(ÎË
+€ €(ÎË
 
-⁄ ⁄(
+€ €(
 %49void"7domain.Registered#addTransaction(Ldomain/Transaction;)V*7
 
 __unknown_file (
@@ -99,14 +99,14 @@ y
 tdomain.Transaction2$addTransaction(Ldomain/Transaction;){
 y
 
-€ €(&
+‹ ‹(&
 %50javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÙÒ
 
-€ €(
+‹ ‹(
 %51void"<javax.persistence.EntityManager#persist(Ljava/lang/Object;)V*D
 
 __unknown_file ((
@@ -118,21 +118,21 @@ y
 tdomain.Transaction2persist(Ljava/lang/Object;){
 y
 
-‹ ‹(&
+› ›(&
 %52javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÍÁ
 
-‹ ‹(*
+› ›(*
 %53#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
 
 __unknown_file ((
 &
 %52javax.persistence.EntityManager2getTransaction()üú
 
-‹ ‹(
+› ›(
 %54void"-javax.persistence.EntityTransaction#commit()V*H
 
 __unknown_file (,
@@ -140,24 +140,24 @@ y
 %53#javax.persistence.EntityTransaction2commit()*
 13*¶	
 25
-Ω! Ω(#z
+æ! æ(#z
 x
 
-Ω! Ω(#%
+æ! æ(#%
 %0javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbüú
 
-Ω; Ω(J
+æ; æ(J
 %1java.lang.String"1domain.Registered#getUsername()Ljava/lang/String;*4
 
 __unknown_file (
 
 udomain.Registered2getUsername()œÃ
 
-Ω! Ω(K
+æ! æ(K
 %2domain.Registered"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*C
 
 __unknown_file ('
@@ -172,7 +172,7 @@ x
 %1java.lang.String2)find(Ljava/lang/Class;Ljava/lang/Object;)f
 d
 
-Ω Ω(L
+æ æ(L
 userdomain.Registered"__id*5
 
 __unknown_file (
@@ -180,13 +180,13 @@ d
 %2domain.RegisteredP
 N
 
-æ æ(
+ø ø(
 bjava.lang.Boolean"__id*"
 
 __unknown_file (
 ""†ù
 
-ø ø(
+¿ ¿(
 %3java.lang.Double"0domain.Registered#getDirukop()Ljava/lang/Double;*7
 
 __unknown_file (
@@ -194,7 +194,7 @@ N
 userdomain.Registered2getDirukop()Ω
 ∫
 
-ø ø(
+¿ ¿(
 %4boolean"	__compare*"
 
 __unknown_file (
@@ -210,17 +210,17 @@ N
 24
 1*˜
 15
-” ”(M
+‘ ‘(M
 K
 
-” ”(
+‘ ‘(
 adomain.Apustua"__id*"
 
 __unknown_file (
 ""ã
 à
 
-” ”(
+‘ ‘(
 adomain.Apustua"
 __arrayGet*5
 
@@ -233,24 +233,24 @@ __arrayGet*5
 14
 16*È
 16
-‘ ‘({
+’ ’({
 y
 
-‘ ‘(&
+’ ’(&
 %37javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 db¶£
 
-‘) ‘(=
+’) ’(=
 %38java.lang.Integer"4domain.Apustua#getApostuaNumber()Ljava/lang/Integer;*1
 
 __unknown_file (
 
 adomain.Apustua2getApostuaNumber()–Õ
 
-‘ ‘(>
+’ ’(>
 %39domain.Apustua"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -265,7 +265,7 @@ y
 %38java.lang.Integer2)find(Ljava/lang/Class;Ljava/lang/Object;)`
 ^
 
-‘ ‘(?
+’ ’(?
 apudomain.Apustua"__id*3
 
 __unknown_file (
@@ -273,14 +273,14 @@ y
 %39domain.Apustua{
 y
 
-’ ’(&
+÷ ÷(&
 %40javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbéã
 
-’# ’(1
+÷# ÷(1
 %41domain.Quote"'domain.Apustua#getKuota()Ldomain/Quote;*3
 
 __unknown_file (
@@ -288,14 +288,14 @@ y
 apudomain.Apustua2
 getKuota()†ù
 
-’# ’(B
+÷# ÷(B
 %42java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*1
 
 __unknown_file (
 
 %41domain.Quote2getQuoteNumber()ŒÀ
 
-’ ’(C
+÷ ÷(C
 %43domain.Quote"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -310,21 +310,21 @@ getKuota()†ù
 %42java.lang.Integer2)find(Ljava/lang/Class;Ljava/lang/Object;)Z
 X
 
-’ ’(D
+÷ ÷(D
 qdomain.Quote"__id*1
 
 __unknown_file (
 
 %43domain.Quoteîë
 
-÷ ÷(
+◊ ◊(
 %44domain.Question"+domain.Quote#getQuestion()Ldomain/Question;*/
 
 __unknown_file (
 
 qdomain.Quote2getQuestion()êç
 
-÷ ÷()
+◊ ◊()
 %45domain.Event"(domain.Question#getEvent()Ldomain/Event;*4
 
 __unknown_file (
@@ -332,7 +332,7 @@ X
 %44domain.Question2
 getEvent()äá
 
-÷ ÷(4
+◊ ◊(4
 %46domain.Sport"%domain.Event#getSport()Ldomain/Sport;*1
 
 __unknown_file (
@@ -341,21 +341,21 @@ getEvent()äá
 getSport()\
 Z
 
-÷ ÷(5
+◊ ◊(5
 spodomain.Sport"__id*1
 
 __unknown_file (
 
 %46domain.Sport™ß
 
-◊ ◊(5
+ÿ ÿ(5
 %47java.lang.Integer"5domain.Sport#getApustuKantitatea()Ljava/lang/Integer;*1
 
 __unknown_file (
 
 spodomain.Sport2getApustuKantitatea()’“
 
-◊ ◊(8
+ÿ ÿ(8
 %48void"6domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V*1
 
 __unknown_file (
@@ -366,9 +366,9 @@ Z
 ""2(setApustuKantitatea(Ljava/lang/Integer;)*
 15*»
 17
-” ”(Ø¨
+‘ ‘(Ø¨
 
-” ”(,
+‘ ‘(,
 %36java.util.Vector"3domain.ApustuAnitza#getApustuak()Ljava/util/Vector;*A
 
 __unknown_file (%
@@ -376,9 +376,9 @@ Z
 apustuAnitzadomain.ApustuAnitza2getApustuak()*
 15*À
 18
-œ œ(âÜ
+– –(âÜ
 
-œ œ(6
+– –(6
 %29void"8domain.ApustuAnitza#setApustuKopia(Ljava/lang/Integer;)V*A
 
 __unknown_file (%
@@ -389,7 +389,7 @@ Z
 +
 apustuBikoitzaGalarazijava.lang.Integer2#setApustuKopia(Ljava/lang/Integer;)ÿ’
 
-– –(!
+— —(!
 %30void"7domain.Registered#updateDiruKontua(Ljava/lang/Double;)V*7
 
 __unknown_file (
@@ -399,22 +399,22 @@ Z
 __unknown_file (
 ""2$updateDiruKontua(Ljava/lang/Double;)53
 
-—5 —(9
+“5 “(9
 %31java.util.Date"java.util.Dated
 b
 
-—1 —(;
+“1 “(;
 %32"java.util.Date#<init>()V*3
 
 __unknown_file (
 
 %31java.util.Date=;
 
-— —("
+“ “("
 %33domain.Transaction"domain.Transactionâ
 Ü
 
-— —(K
+“ “(K
 %34"cdomain.Transaction#<init>(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V*7
 
 __unknown_file (
@@ -437,14 +437,14 @@ b
 ApustuaEginf
 d
 
-— —(L
+“ “(L
 tdomain.Transaction"__id*7
 
 __unknown_file (
 
 %33domain.Transaction˚¯
 
-“ “(%
+” ”(%
 %35void"9domain.Registered#addApustuAnitza(Ldomain/ApustuAnitza;)V*7
 
 __unknown_file (
@@ -456,9 +456,9 @@ d
 apustuAnitzadomain.ApustuAnitza2&addApustuAnitza(Ldomain/ApustuAnitza;)*
 17*Ÿ
 19
-Õ Õ('≈¬
+Œ Œ('≈¬
 
-Õ Õ(?
+Œ Œ(?
 %28java.lang.Integer">domain.ApustuAnitza#getApustuAnitzaNumber()Ljava/lang/Integer;*A
 
 __unknown_file (%
@@ -466,7 +466,7 @@ d
 apustuAnitzadomain.ApustuAnitza2getApustuAnitzaNumber()y
 w
 
-Õ Õ(?+
+Œ Œ(?+
 apustuBikoitzaGalarazijava.lang.Integer"__id*6
 
 __unknown_file (
@@ -474,29 +474,29 @@ w
 %28java.lang.Integer*
 18*%
 1
-Ô
- Ô("
+
+ ("
 
-Ô Ô(
+ (
 ""*%
 2
-Ì
- Ì("
+Ó
+ Ó("
 
-Ì Ì(
+Ó Ó(
 ""*Ö
 3
-› ›(U
+ﬁ ﬁ(U
 S
 
-› ›(
+ﬁ ﬁ(
 regdomain.Jarraitzailea"__id*"
 
 __unknown_file (
 ""ì
 ê
 
-› ›(
+ﬁ ﬁ(
 regdomain.Jarraitzailea"
 __arrayGet*5
 
@@ -509,17 +509,17 @@ __arrayGet*5
 2
 12*“
 4
-È È(
+Í Í(
 £†
 
-È È(%
+Í Í(%
 %71domain.Registered"1domain.Jarraitzailea#getNork()Ldomain/Registered;*:
 
 __unknown_file (
 
 erabdomain.Jarraitzailea2	getNork()ïí
 
-È È(M
+Í Í(M
 %72boolean"ndataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z*5
 
 __unknown_file (
@@ -542,31 +542,31 @@ __arrayGet*5
 apustuBikoitzaGalarazijava.lang.Integer2WApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)*
 3*†
 5
-Á Á(
+Ë Ë(
 £†
 
-Á Á(%
+Ë Ë(%
 %67domain.Registered"1domain.Jarraitzailea#getNork()Ldomain/Registered;*:
 
 __unknown_file (
 
 erabdomain.Jarraitzailea2	getNork()£†
 
-Á. Á(<
+Ë. Ë(<
 %68domain.Registered"1domain.Jarraitzailea#getNork()Ldomain/Registered;*:
 
 __unknown_file (
 
 erabdomain.Jarraitzailea2	getNork()®•
 
-Á. Á(M
+Ë. Ë(M
 %69java.lang.Double"4domain.Registered#getDiruLimitea()Ljava/lang/Double;*6
 
 __unknown_file (
 
 %68domain.Registered2getDiruLimitea()íè
 
-Á Á(f
+Ë Ë(f
 %70boolean"ndataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z*5
 
 __unknown_file (
@@ -589,16 +589,16 @@ __arrayGet*5
 apustuBikoitzaGalarazijava.lang.Integer2WApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)*
 3*©
 6
-Ê Ê(£†
+Á Á(£†
 
-Ê Ê(
+Á Á(
 %64domain.Registered"1domain.Jarraitzailea#getNork()Ldomain/Registered;*:
 
 __unknown_file (
 
 erabdomain.Jarraitzailea2	getNork()®•
 
-Ê Ê('
+Á Á('
 %65java.lang.Double"4domain.Registered#getDiruLimitea()Ljava/lang/Double;*6
 
 __unknown_file (
@@ -606,7 +606,7 @@ __arrayGet*5
 %64domain.Registered2getDiruLimitea()æ
 ª
 
-Ê Ê(.
+Á Á(.
 %66boolean"	__compare*!
 
 __unknown_file (
@@ -622,17 +622,17 @@ __arrayGet*5
 4
 5*Ü
 8
-‡ ‡(T
+· ·(T
 R
 
-‡ ‡(
+· ·(
 apudomain.ApustuAnitza"__id*"
 
 __unknown_file (
 ""í
 è
 
-‡ ‡(
+· ·(
 apudomain.ApustuAnitza"
 __arrayGet*5
 
@@ -647,33 +647,33 @@ __arrayGet*5
 6
 10*b
 9
-‚ ‚(L
+„ „(L
 J
 
-‚ ‚(
+„ „(
 bjava.lang.Boolean"__id*
 
 __unknown_file (2 *
 8*	
 20
-   ({
+À À({
 y
 
-   (&
+À À(&
 %21javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÍÁ
 
-   (*
+À À(*
 %22#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
 
 __unknown_file ((
 &
 %21javax.persistence.EntityManager2getTransaction()üú
 
-   (
+À À(
 %23void"-javax.persistence.EntityTransaction#commit()V*H
 
 __unknown_file (,
@@ -681,21 +681,21 @@ y
 %22#javax.persistence.EntityTransaction2commit(){
 y
 
-À À(&
+Ã Ã(&
 %24javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÍÁ
 
-À À(*
+Ã Ã(*
 %25#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
 
 __unknown_file ((
 &
 %24javax.persistence.EntityManager2getTransaction()ùö
 
-À À(
+Ã Ã(
 %26void",javax.persistence.EntityTransaction#begin()V*H
 
 __unknown_file (,
@@ -703,7 +703,7 @@ y
 %25#javax.persistence.EntityTransaction2begin()Ω
 ∫
 
-Ã Ã( 
+Õ Õ( 
 %27boolean"	__compare*"
 
 __unknown_file (
@@ -718,17 +718,17 @@ y
 18
 19*˘
 21
-√ √(M
+ƒ ƒ(M
 K
 
-√ √(
+ƒ ƒ(
 quodomain.Quote"__id*"
 
 __unknown_file (
 ""ç
 ä
 
-√ √(
+ƒ ƒ(
 quodomain.Quote"
 __arrayGet*7
 
@@ -741,23 +741,23 @@ __arrayGet*7
 20
 22*‡
 10
-· ·(Æ´
+‚ ‚(Æ´
 
-· ·(
+‚ ‚(
 %61java.lang.Integer"7domain.ApustuAnitza#getApustuKopia()Ljava/lang/Integer;*8
 
 __unknown_file (
 
 apudomain.ApustuAnitza2getApustuKopia()∑¥
 
-·$ ·(A
+‚$ ‚(A
 %62java.lang.Integer"7domain.ApustuAnitza#getApustuKopia()Ljava/lang/Integer;*A
 
 __unknown_file (%
 #
 apustuAnitzadomain.ApustuAnitza2getApustuKopia()⁄◊
 
-· ·(B
+‚ ‚(B
 %63boolean"-java.lang.Integer#equals(Ljava/lang/Object;)Z*6
 
 __unknown_file (
@@ -770,24 +770,24 @@ __arrayGet*7
 8
 9*¨
 22
-ƒ ƒ({
+≈ ≈({
 y
 
-ƒ ƒ(&
+≈ ≈(&
 %12javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 db†ù
 
-ƒ' ƒ(;
+≈' ≈(;
 %13java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*1
 
 __unknown_file (
 
 quodomain.Quote2getQuoteNumber()ŒÀ
 
-ƒ ƒ(<
+≈ ≈(<
 %14domain.Quote"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -802,18 +802,18 @@ y
 %13java.lang.Integer2)find(Ljava/lang/Class;Ljava/lang/Object;)^
 \
 
-ƒ ƒ(=
+≈ ≈(=
 kuotedomain.Quote"__id*1
 
 __unknown_file (
 
 %14domain.Quote53
 
-≈ ≈(
+∆ ∆(
 %15domain.Apustua"domain.ApustuaÄ
 ˝
 
-≈ ≈(1
+∆ ∆(1
 %16";domain.Apustua#<init>(Ldomain/ApustuAnitza;Ldomain/Quote;)V*3
 
 __unknown_file (
@@ -829,7 +829,7 @@ y
 kuotedomain.Quote_
 ]
 
-≈ ≈(2
+∆ ∆(2
 apdomain.Apustua"__id*3
 
 __unknown_file (
@@ -837,14 +837,14 @@ y
 %15domain.Apustua{
 y
 
-∆ ∆(&
+« «(&
 %17javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÒÓ
 
-∆ ∆(
+« «(
 %18void"<javax.persistence.EntityManager#persist(Ljava/lang/Object;)V*D
 
 __unknown_file ((
@@ -855,7 +855,7 @@ y
 
 apdomain.Apustua2persist(Ljava/lang/Object;)‰·
 
-« «(
+» »(
 %19void"1domain.ApustuAnitza#addApustua(Ldomain/Apustua;)V*A
 
 __unknown_file (%
@@ -866,7 +866,7 @@ y
 
 apdomain.Apustua2addApustua(Ldomain/Apustua;)œÃ
 
-» »(
+… …(
 %20void"*domain.Quote#addApustua(Ldomain/Apustua;)V*3
 
 __unknown_file (
@@ -878,16 +878,16 @@ y
 apdomain.Apustua2addApustua(Ldomain/Apustua;)*
 21*Í
 11
-‡ ‡(£†
+· ·(£†
 
-‡ ‡((
+· ·((
 %59domain.Registered"1domain.Jarraitzailea#getNork()Ldomain/Registered;*:
 
 __unknown_file (
 
 erabdomain.Jarraitzailea2	getNork()¨©
 
-‡ ‡(;
+· ·(;
 %60java.util.Vector"6domain.Registered#getApustuAnitzak()Ljava/util/Vector;*6
 
 __unknown_file (
@@ -895,24 +895,24 @@ y
 %59domain.Registered2getApustuAnitzak()*
 8*Ó
 12
-ﬁ ﬁ({
+ﬂ ﬂ({
 y
 
-ﬁ ﬁ(&
+ﬂ ﬂ(&
 %56javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 db¿Ω
 
-ﬁ4 ﬁ(P
+ﬂ4 ﬂ(P
 %57java.lang.Integer"@domain.Jarraitzailea#getJarraitzaileaNumber()Ljava/lang/Integer;*9
 
 __unknown_file (
 
 regdomain.Jarraitzailea2getJarraitzaileaNumber()÷”
 
-ﬁ ﬁ(Q
+ﬂ ﬂ(Q
 %58domain.Jarraitzailea"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -927,7 +927,7 @@ y
 %57java.lang.Integer2)find(Ljava/lang/Class;Ljava/lang/Object;)m
 k
 
-ﬁ ﬁ(R
+ﬂ ﬂ(R
 erabdomain.Jarraitzailea"__id*9
 
 __unknown_file (
@@ -935,22 +935,22 @@ k
 %58domain.JarraitzaileaN
 L
 
-ﬂ ﬂ(
+‡ ‡(
 
 bjava.lang.Boolean"__id* 
 
 __unknown_file (2*
 11:$
 
-º º()
+Ω Ω()
 udomain.Registered:'
 
-º* º(>
+Ω* Ω(>
 quotejava.util.Vector:(
 
-º? º(M
+Ω? Ω(M
 balioajava.lang.Double:9
 
-ºN º(l+
+ΩN Ω(l+
 apustuBikoitzaGalarazijava.lang.IntegerB
 dataAccess.DataAccessHX

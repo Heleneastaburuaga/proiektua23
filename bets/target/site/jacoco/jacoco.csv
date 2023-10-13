@@ -1048,9 +1048,9 @@ proiektua23,gui,MainGUI.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
 proiektua23,gui,MainGUI.new ActionListener() {...},25,0,0,0,5,0,2,0,2,0
 proiektua23,gui,MainUserGUI,350,0,14,0,71,0,19,0,12,0
 proiektua23,gui,FindQuestionsGUI,344,0,0,0,60,0,3,0,3,0
-proiektua23,gui,CreateQuestionGUI,576,0,8,0,109,0,9,0,5,0
+proiektua23,gui,CreateQuestionGUI,592,0,8,0,110,0,9,0,5,0
 proiektua23,gui,TaldeaApostatuGUI,588,0,0,0,91,0,2,0,2,0
-proiektua23,gui,CreateQuestionGUI.new PropertyChangeListener() {...},248,0,14,0,39,0,9,0,2,0
+proiektua23,gui,CreateQuestionGUI.new PropertyChangeListener() {...},252,0,14,0,39,0,9,0,2,0
 proiektua23,gui,CreateQuestionGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 proiektua23,gui,CreateQuestionGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 proiektua23,gui,MainGUI,301,0,16,0,65,0,21,0,13,0
@@ -1095,7 +1095,7 @@ proiektua23,gui,ApustuaEginGUI.new ActionListener() {...},170,0,6,0,28,0,5,0,2,0
 proiektua23,gui,ApustuaEginGUI.new ActionListener() {...},53,0,4,0,10,0,4,0,2,0
 proiektua23,gui,ApustuaEginGUI.new ActionListener() {...},129,0,10,0,20,0,7,0,2,0
 proiektua23,gui,ApustuaEginGUI.new ActionListener() {...},42,0,0,0,9,0,2,0,2,0
-proiektua23,gui,ApustuakEzabatuGUI,226,0,12,0,41,0,8,0,2,0
+proiektua23,gui,ApustuakEzabatuGUI,228,0,12,0,42,0,8,0,2,0
 proiektua23,gui,EmaitzakIpiniGUI,474,0,4,0,90,0,6,0,4,0
 proiektua23,gui,SugerenciasGUI.new ActionListener() {...},30,0,0,0,5,0,2,0,2,0
 proiektua23,gui,SugerenciasGUI.new ActionListener() {...},21,0,0,0,5,0,2,0,2,0
@@ -1185,7 +1185,7 @@ proiektua23,org.objenesis.instantiator.util,ClassDefinitionUtils,114,0,2,0,19,0,
 proiektua23,org.objenesis.instantiator.util,DefineClassHelper.Java8,81,0,4,0,16,0,5,0,3,0
 proiektua23,org.objenesis.instantiator.util,ClassUtils,32,0,0,0,8,0,4,0,4,0
 proiektua23,dataAccess,ObjectdbManagerServer,192,0,2,0,43,0,3,0,2,0
-proiektua23,dataAccess,DataAccess,1696,2045,99,7,353,454,87,7,35,6
+proiektua23,dataAccess,DataAccess,1698,2045,99,7,355,454,87,7,35,6
 proiektua23,dataAccess,ObjectdbManagerServer.new ActionListener() {...},48,0,0,0,12,0,2,0,2,0
 proiektua23,javax.transaction.xa,XAException,13,0,0,0,7,0,3,0,3,0
 proiektua23,net.bytebuddy.description.method,ParameterList.ForLoadedExecutable.Dispatcher.ForLegacyVm,31,0,0,0,5,0,4,0,4,0
@@ -1243,7 +1243,7 @@ proiektua23,com.objectdb.jpa.type,ManagedTypeImpl,629,0,34,0,109,0,52,0,35,0
 proiektua23,com.objectdb.jpa.type,IdentifiableTypeImpl,281,0,34,0,62,0,30,0,13,0
 proiektua23,com.objectdb.jpa.type,EntityTypeImpl,19,0,0,0,7,0,5,0,5,0
 proiektua23,configuration,UtilDate,97,32,0,0,27,6,4,1,4,1
-proiektua23,configuration,ConfigXML,41,175,0,0,12,36,9,7,9,7
+proiektua23,configuration,ConfigXML,41,179,0,0,12,37,9,7,9,7
 proiektua23,org.objenesis.tck,TCK,230,0,16,0,55,0,16,0,8,0
 proiektua23,org.objenesis.tck,Candidate,72,0,6,0,17,0,11,0,8,0
 proiektua23,org.objenesis.tck,AbstractLoader.LoggingErrorHandler,18,0,0,0,5,0,2,0,2,0
@@ -3086,7 +3086,7 @@ proiektua23,com.toedter.calendar.demo,JCalendarDemo.new PropertyChangeListener()
 proiektua23,com.toedter.calendar.demo,JCalendarDemo.new ActionListener() {...},28,0,0,0,0,0,2,0,2,0
 proiektua23,com.toedter.calendar.demo,JCalendarDemo.new JPanel() {...},12,0,0,0,0,0,2,0,2,0
 proiektua23,com.toedter.calendar.demo,DemoTable,48,0,2,0,0,0,2,0,1,0
-proiektua23,businessLogic,BLFacadeImplementation,555,36,6,2,155,12,40,2,36,2
+proiektua23,businessLogic,BLFacadeImplementation,560,40,6,2,155,13,40,2,36,2
 proiektua23,businessLogic,BusinessLogicServer.new ActionListener() {...},14,0,0,0,4,0,2,0,2,0
 proiektua23,businessLogic,BusinessLogicServer.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
 proiektua23,businessLogic,BusinessLogicServer,233,0,4,0,48,0,4,0,2,0

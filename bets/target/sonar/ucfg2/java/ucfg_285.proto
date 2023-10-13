@@ -1,18 +1,18 @@
 
 2gui.AdminGUI#getJContentPane()Ljavax/swing/JPanel;N
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/AdminGUI.javad d("3*¨<
-2f f(:8
-f f(
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/AdminGUI.javac c("3*¨<
+2e e(:8
+e e(
 %2javax.swing.JPanel"javax.swing.JPanelh
 f
-f f(
+e e(
 %3"javax.swing.JPanel#<init>()V*6
 
 __unknown_file (
 
 %2javax.swing.JPanell
 j
-f f( 
+e e( 
 gui.AdminGUI"
 jContentPane"__id*6
 
@@ -20,19 +20,19 @@ j
 
 %2javax.swing.JPanell
 j
-g g(
+f f(
 %4javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneL
 J
-g g()
+f f()
 %5java.awt.Color"__id*"
 
 __unknown_file (
 ""ﬂ‹
-g g(*
+f f(*
 
 %6void"7javax.swing.JComponent#setBackground(Ljava/awt/Color;)V*6
 
@@ -44,13 +44,13 @@ J
 
 %5java.awt.Color2setBackground(Ljava/awt/Color;)l
 j
-h h(
+g g(
 %7javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPane”–
-h h(
+g g(
 
 %8void"7java.awt.Container#setLayout(Ljava/awt/LayoutManager;)V*6
 
@@ -61,19 +61,19 @@ j
 __unknown_file (
 ""2#setLayout(Ljava/awt/LayoutManager;)l
 j
-i i(
+h h(
 %9javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneâ
 Ü
-i i($
+h h($
 %10javax.swing.JLabel"1gui.AdminGUI#getLblNewLabel()Ljavax/swing/JLabel;*,
 
 __unknown_file (
 gui.AdminGUIˆÛ
-i i(%
+h h(%
 %11java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*6
 
 __unknown_file (
@@ -84,19 +84,19 @@ j
 
 %10javax.swing.JLabel2add(Ljava/awt/Component;)m
 k
-j j(
+i i(
 %12javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneÜ
 É
-j j(
+i i(
 %13javax.swing.JButton"-gui.AdminGUI#getBoton3()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-j j( 
+i i( 
 %14java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -107,19 +107,19 @@ k
 
 %13javax.swing.JButton2add(Ljava/awt/Component;)m
 k
-k k(
+j j(
 %15javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneÜ
 É
-k k(
+j j(
 %16javax.swing.JButton"-gui.AdminGUI#getBoton2()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-k k( 
+j j( 
 %17java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -130,19 +130,19 @@ k
 
 %16javax.swing.JButton2add(Ljava/awt/Component;)m
 k
-l l(
+k k(
 %18javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneå
 â
-l l(%
+k k(%
 %19javax.swing.JButton"3gui.AdminGUI#getBtnNewButton()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-l l(&
+k k(&
 %20java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -153,19 +153,19 @@ k
 
 %19javax.swing.JButton2add(Ljava/awt/Component;)m
 k
-m m(
+l l(
 %21javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneé
 ã
-m m('
+l l('
 %22javax.swing.JButton"5gui.AdminGUI#getBtnNewButton_1()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-m m((
+l l((
 %23java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -176,19 +176,19 @@ k
 
 %22javax.swing.JButton2add(Ljava/awt/Component;)m
 k
-n n(
+m m(
 %24javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneì
 ê
-n n(,
+m m(,
 %25javax.swing.JButton":gui.AdminGUI#getJButtonEmaitzaIpini()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-n n(-
+m m(-
 %26java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -199,7 +199,7 @@ k
 
 %25javax.swing.JButton2add(Ljava/awt/Component;)Â
 ‚
-p1 p(V
+o1 o(V
 %27java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*8
 
 __unknown_file ("
@@ -207,7 +207,7 @@ k
 
 __unknown_file (
 	EtiquetasÄ˝
-p1 p(t
+o1 o(t
 %28java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;*=
 
 __unknown_file (!
@@ -216,10 +216,10 @@ k
 
 __unknown_file (
 GertaerakEzabatu2getString(Ljava/lang/String;)=;
-p) p(0
+o) o(0
 %29javax.swing.JButton"javax.swing.JButton∂
 ≥
-p% p(u
+o% o(u
 %30"/javax.swing.JButton#<init>(Ljava/lang/String;)V*8
 
 __unknown_file (
@@ -230,19 +230,19 @@ k
 
 %28java.lang.String|
 z
-p p(v.
+o o(v.
 jButtonGertaerakEzabatujavax.swing.JButton"__id*8
 
 __unknown_file (
 
 %29javax.swing.JButtonM
 K
-q) q(8
+p) p(8
 %31java.awt.Color"__id*"
 
 __unknown_file (
 ""˜Ù
-q q(9
+p p(9
 %32void"7javax.swing.JComponent#setForeground(Ljava/awt/Color;)V*L
 
 __unknown_file (0
@@ -253,12 +253,12 @@ K
 
 %31java.awt.Color2setForeground(Ljava/awt/Color;)M
 K
-r) r(3
+q) q(3
 %33java.awt.Color"__id*"
 
 __unknown_file (
 ""˜Ù
-r r(4
+q q(4
 %34void"7javax.swing.JComponent#setBackground(Ljava/awt/Color;)V*L
 
 __unknown_file (0
@@ -268,16 +268,16 @@ K
 __unknown_file (
 
 %33java.awt.Color2setBackground(Ljava/awt/Color;)31
-s1 s(?
+r1 r(?
 %35gui.AdminGUI$2"gui.AdminGUI$2d
 b
-s- x(
+r- w(
 %36"java.lang.Object#<init>()V*3
 
 __unknown_file (
 
 %35gui.AdminGUI$2°û
-s x(
+r w(
 %37void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V*L
 
 __unknown_file (0
@@ -287,7 +287,7 @@ b
 __unknown_file (
 
 %35gui.AdminGUI$222addActionListener(Ljava/awt/event/ActionListener;)®•
-y y(7
+x x(7
 %38void"#java.awt.Component#setBounds(IIII)V*L
 
 __unknown_file (0
@@ -302,13 +302,13 @@ b
 
 __unknown_file (22setBounds(IIII)m
 k
-z z(
+y y(
 %39javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneåâ
-z z(,
+y y(,
 %40java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -319,19 +319,19 @@ k
 .
 jButtonGertaerakEzabatujavax.swing.JButton2add(Ljava/awt/Component;)m
 k
-{ {(
+z z(
 %41javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneè
 å
-{ {((
+z z((
 %42javax.swing.JButton"6gui.AdminGUI#getJButtonDesLogin()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-{ {()
+z z()
 %43java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -342,19 +342,19 @@ k
 
 %42javax.swing.JButton2add(Ljava/awt/Component;)m
 k
-| |(
+{ {(
 %44javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneì
 ê
-| |(,
+{ {(,
 %45javax.swing.JButton":gui.AdminGUI#getBtnGertaerakKopiatu()Ljavax/swing/JButton;*,
 
 __unknown_file (
 gui.AdminGUI¯ı
-| |(-
+{ {(-
 %46java.awt.Component"@java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;*7
 
 __unknown_file (
@@ -365,16 +365,16 @@ k
 
 %45javax.swing.JButton2add(Ljava/awt/Component;)*
 1*≠
-3e e(l
+3d d(l
 j
-e e(
+d d(
 %0javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPaneß
 §
-e e(
+d d(
 %1boolean"	__compare*"
 
 __unknown_file (
@@ -388,15 +388,15 @@ j
 ""*
 2
 1*•
-1~	 ~(m
+1}	 }(m
 k
-~	 ~(
+}	 }(
 %47javax.swing.JPanel"__id*>
 
 __unknown_file ("* 
 gui.AdminGUI"
 jContentPane"'
-~ ~(
+} }(
 
 %47javax.swing.JPanelB
 gui.AdminGUI

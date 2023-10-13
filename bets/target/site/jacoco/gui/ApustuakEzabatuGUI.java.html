@@ -42,8 +42,8 @@ public class ApustuakEzabatuGUI extends JFrame{
 <span class="nc" id="L42">	public ApustuakEzabatuGUI(Registered u) {</span>
 <span class="nc" id="L43">		user = u; </span>
 <span class="nc" id="L44">		this.getContentPane().setLayout(null);</span>
-		
-<span class="nc" id="L46">		lblComboBox = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuLista&quot;));</span>
+<span class="nc" id="L45">		String etiqueta = &quot;Etiquetas&quot;;</span>
+<span class="nc" id="L46">		lblComboBox = new JLabel(ResourceBundle.getBundle(etiqueta).getString(&quot;ApustuLista&quot;));</span>
 <span class="nc" id="L47">		lblComboBox.setFont(new Font(&quot;Times New Roman&quot;, Font.BOLD, 18));</span>
 <span class="nc" id="L48">		lblComboBox.setHorizontalAlignment(SwingConstants.CENTER);</span>
 <span class="nc" id="L49">		lblComboBox.setBounds(186, 62, 215, 21);</span>
@@ -72,7 +72,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 		});
 		
 		
-<span class="nc" id="L75">		jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L75">		jButtonClose = new JButton(ResourceBundle.getBundle(etiqueta).getString(&quot;Close&quot;));</span>
 <span class="nc" id="L76">		jButtonClose.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L78">				jButtonClose_actionPerformed(e);</span>
@@ -82,7 +82,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 <span class="nc" id="L82">		getContentPane().add(jButtonClose);</span>
 		
 		
-<span class="nc" id="L85">		jButtonEzabatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Ezabatu&quot;));</span>
+<span class="nc" id="L85">		jButtonEzabatu = new JButton(ResourceBundle.getBundle(etiqueta).getString(&quot;Ezabatu&quot;));</span>
 <span class="nc bnc" id="L86" title="All 2 branches missed.">		if(listApustuak.getSize()==0) {</span>
 <span class="nc" id="L87">			jButtonEzabatu.setEnabled(false); </span>
 		}else {
@@ -118,7 +118,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 <span class="nc" id="L118">		jButtonEzabatu.setBounds(160, 246, 117, 30);</span>
 <span class="nc" id="L119">		getContentPane().add(jButtonEzabatu);</span>
 <span class="nc" id="L120">		this.setSize(new Dimension(604, 370));</span>
-<span class="nc" id="L121">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaEzabatu&quot;));</span>
+<span class="nc" id="L121">		this.setTitle(ResourceBundle.getBundle(etiqueta).getString(&quot;ApustuaEzabatu&quot;));</span>
 <span class="nc" id="L122">	}</span>
 	
 	private void jButtonClose_actionPerformed(ActionEvent e) {

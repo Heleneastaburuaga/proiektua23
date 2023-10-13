@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -198,7 +199,7 @@ public class KuotakIpiniGUI extends JFrame{
 								jLabelErrorForecast.setVisible(true);
 								jLabelErrorForecast.setText(ResourceBundle.getBundle("Etiquetas").getString("QuoCorrect"));
 							} catch (QuoteAlreadyExist e1) {
-								// TODO Auto-generated catch block
+						
 								jLabelErrorForecast.setVisible(true);
 								jLabelErrorForecast.setText(ResourceBundle.getBundle("Etiquetas").getString("QuoteExist"));
 							}
@@ -259,7 +260,7 @@ public class KuotakIpiniGUI extends JFrame{
 					try {
 						BLFacade facade = MainGUI.getBusinessLogic();
 
-						Vector<domain.Event> events = facade.getEvents(firstDay);
+						ArrayList<domain.Event> events = facade.getEvents(firstDay);
 						
 						if (events.isEmpty()) {
 							jLabelListOfEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("NoEvents")

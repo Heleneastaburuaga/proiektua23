@@ -1,26 +1,26 @@
 
 Igui.CreateQuestionGUI$3#propertyChange(Ljava/beans/PropertyChangeEvent;)VW
-M/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/CreateQuestionGUI.java{ {("34*†
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/CreateQuestionGUI.java{ {("34*“
 24
-¢ ¢(?g
-e
+¢ ¢(Bm
+k
 
-¢ ¢(?
-eventsjava.util.Vector"__id*5
-
-__unknown_file (
-
-%50java.util.Vector€~
-
-¤
- ¤(
-%51boolean"java.util.Vector#isEmpty()Z*8
+¢ ¢(B
+eventsjava.util.ArrayList"__id*8
 
 __unknown_file (
 
-eventsjava.util.Vector2	isEmpty()*
+%50java.util.ArrayList‡„
+
+¤
+ ¤(
+%51boolean"java.util.ArrayList#isEmpty()Z*;
+
+__unknown_file (
+
+eventsjava.util.ArrayList2	isEmpty()*
 17
-22*“
+22*™
 25
    (3s
 q
@@ -30,10 +30,10 @@ q
 
 __unknown_file (
 
-%49businessLogic.BLFacade…‚
+%49businessLogic.BLFacade‹ˆ
 
-¢$ ¢(>
-%50java.util.Vector"DbusinessLogic.BLFacade#getEvents(Ljava/util/Date;)Ljava/util/Vector;*>
+¢' ¢(A
+%50java.util.ArrayList"GbusinessLogic.BLFacade#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;*>
 
 __unknown_file ("
  
@@ -562,38 +562,38 @@ $
 __unknown_file (
 
 %3java.lang.Object2setLocale(Ljava/util/Locale;)*
-0*Ä
+0*Ç
 11
 « «(T
 R
 
 « «(
-%72java.io.PrintStream"__id*"
+%74java.io.PrintStream"__id*"
 
 __unknown_file (
-""x
-v
+""{
+y
 
 « «(+
-%73java.lang.String"__concat*
+%75java.lang.String"__concat*
 
 « «("	
-Events **
+Events *-
 
-«% «(+
-
-eventsjava.util.VectorÜÙ
+«% «(+
+
+eventsjava.util.ArrayListÜÙ
 
 « «(,
-%74void"0java.io.PrintStream#println(Ljava/lang/String;)V*8
+%76void"0java.io.PrintStream#println(Ljava/lang/String;)V*8
 
 __unknown_file (
 
-%72java.io.PrintStream*5
+%74java.io.PrintStream*5
 
 __unknown_file (
 
-%73java.lang.String2println(Ljava/lang/String;)*
+%75java.lang.String2println(Ljava/lang/String;)*
 8*³
 34~ ~(ÑÎ
 ~ ~(-
@@ -619,50 +619,50 @@ v
 ~
 
 ª ª(
-%70javax.swing.JComboBox"__id*L
+%72javax.swing.JComboBox"__id*L
 
 __unknown_file (0*.
 gui.CreateQuestionGUI$3"
 jComboBoxEvents“
 
 ª ª(&
-%71void"'javax.swing.JComboBox#removeAllItems()V*:
+%73void"'javax.swing.JComboBox#removeAllItems()V*:
 
 __unknown_file (
 
-%70javax.swing.JComboBox2removeAllItems()*
+%72javax.swing.JComboBox2removeAllItems()*
 11*ú
 13
 ¨" ©(4„
 
 
 ¨" ©(4
-%68java.lang.String"__concat*'
+%70java.lang.String"__concat*'
 
-¨" ¨(b
+¨" ¨(`
 
-%64java.lang.String*'
+%66java.lang.String*'
 
 © ©(4
 
-%67java.lang.StringÚ×
+%69java.lang.StringÚ×
 
 ¨ ©(5
-%69void"/javax.swing.JLabel#setText(Ljava/lang/String;)V*7
+%71void"/javax.swing.JLabel#setText(Ljava/lang/String;)V*7
 
 __unknown_file (
 
-%61javax.swing.JLabel*5
+%62javax.swing.JLabel*5
 
 __unknown_file (
 
-%68java.lang.String2setText(Ljava/lang/String;)*
+%70java.lang.String2setText(Ljava/lang/String;)*
 12*”
 14
 © ©(4ûø
 
 © ©(4
-%67java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*A
+%69java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*A
 
 __unknown_file (%
 #
@@ -670,89 +670,98 @@ v
 
 __unknown_file (
 
-%66java.util.Date2format(Ljava/util/Date;)*
+%68java.util.Date2format(Ljava/util/Date;)*
 13*
 15
-¨^ ¨(bp
+¨\ ¨(`p
 n
 
-¨" ¨(b
-%64java.lang.String"__concat*'
+¨" ¨(`
+%66java.lang.String"__concat*'
 
-¨" ¨([
+¨" ¨(Y
 
-%63java.lang.String*
+%65java.lang.String*
 
-¨^ ¨(b
+¨\ ¨(`
 : y
 w
 
 © ©()
-%65java.util.Calendar"__id*H
+%67java.util.Calendar"__id*H
 
 __unknown_file (,**
 gui.CreateQuestionGUI$3"
 calendarAct˜•
 
 © ©(3
-%66java.util.Date",java.util.Calendar#getTime()Ljava/util/Date;*7
+%68java.util.Date",java.util.Calendar#getTime()Ljava/util/Date;*7
 
 __unknown_file (
 
-%65java.util.Calendar2	getTime()*
+%67java.util.Calendar2	getTime()*
 14*‘
 16
-¨R ¨(Zøõ
+¨P ¨(Xøõ
 
-¨" ¨([
-%63java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;*=
+¨" ¨(Y
+%65java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;*=
 
 __unknown_file (!
 
-%62java.util.ResourceBundle*&
+%64java.util.ResourceBundle*&
 
 __unknown_file (
 
 Events2getString(Ljava/lang/String;)*
-15*ƒ
+15*†
 17
 ¨ ¨(€
 ~
 
 ¨ ¨(
-%61javax.swing.JLabel"__id*O
+%62javax.swing.JLabel"__id*O
 
 __unknown_file (3*1
 gui.CreateQuestionGUI$3"
-jLabelListOfEventsç
-ä
+jLabelListOfEventsu
+s
 
-¨" ¨(G
-%62java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*8
+¨; ¨(D
+%63java.lang.String"__id*F
+
+__unknown_file (**(
+gui.CreateQuestionGUI$3"
+	etiquetasó
+ğ
+
+¨" ¨(E
+%64java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*8
 
 __unknown_file ("
-java.util.ResourceBundle*)
+java.util.ResourceBundle*5
 
-__unknown_file (
-	Etiquetas*
+__unknown_file (
+
+%63java.lang.String*
 16*ú
 18
 ¥" ¦(;„
 
 
 ¥" ¦(;
-%59java.lang.String"__concat*'
+%60java.lang.String"__concat*'
 
 ¥" ¦(
 
-%55java.lang.String*'
+%56java.lang.String*'
 
 ¦ ¦(;
 
-%58java.lang.StringÚ×
+%59java.lang.StringÚ×
 
 ¥ ¦(<
-%60void"/javax.swing.JLabel#setText(Ljava/lang/String;)V*7
+%61void"/javax.swing.JLabel#setText(Ljava/lang/String;)V*7
 
 __unknown_file (
 
@@ -760,13 +769,13 @@ w
 
 __unknown_file (
 
-%59java.lang.String2setText(Ljava/lang/String;)*
+%60java.lang.String2setText(Ljava/lang/String;)*
 12*”
 19
 ¦ ¦(;ûø
 
 ¦ ¦(;
-%58java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*A
+%59java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*A
 
 __unknown_file (%
 #
@@ -774,7 +783,7 @@ w
 
 __unknown_file (
 
-%57java.util.Date2format(Ljava/util/Date;)*
+%58java.util.Date2format(Ljava/util/Date;)*
 18*(
 0 "!
 
@@ -785,18 +794,18 @@ w
 z
 
 ´ ´(
-%83javax.swing.JButton"__id*J
+%85javax.swing.JButton"__id*J
 
 __unknown_file (.*,
 gui.CreateQuestionGUI$3"
 jButtonCreate²¯
 
 ´ ´(%
-%84void")javax.swing.AbstractButton#setEnabled(Z)V*8
+%86void")javax.swing.AbstractButton#setEnabled(Z)V*8
 
 __unknown_file (
 
-%83javax.swing.JButton* 
+%85javax.swing.JButton* 
 
 __unknown_file (22setEnabled(Z)*
 0*Å
@@ -805,18 +814,18 @@ z
 z
 
 ² ²(
-%81javax.swing.JButton"__id*J
+%83javax.swing.JButton"__id*J
 
 __unknown_file (.*,
 gui.CreateQuestionGUI$3"
 jButtonCreate°­
 
 ² ²(&
-%82void")javax.swing.AbstractButton#setEnabled(Z)V*8
+%84void")javax.swing.AbstractButton#setEnabled(Z)V*8
 
 __unknown_file (
 
-%81javax.swing.JButton*
+%83javax.swing.JButton*
 
 __unknown_file (2 2setEnabled(Z)*
 0*²
@@ -826,7 +835,7 @@ z
 
 ±
  ±(
-%80boolean"	__compare*"
+%82boolean"	__compare*"
 
 __unknown_file (
 ==*(
@@ -834,42 +843,42 @@ z
 __unknown_file (
 
 
-%79int*
+%81int*
 
 __unknown_file (2 *
 3
-4*Œ
+4*’
 6
 ±
- ±(vt
+ ±(|z
 
 ±
  ±(
 
-%79int"java.util.Vector#size()I*8
+%81int"java.util.ArrayList#size()I*;
 
-__unknown_file (
-
-eventsjava.util.Vector2size()*
+__unknown_file (
+
+eventsjava.util.ArrayList2size()*
 5*›
 7
 ¯ ¯(€
 ~
 
 ¯ ¯(
-%77javax.swing.JComboBox"__id*L
+%79javax.swing.JComboBox"__id*L
 
 __unknown_file (0*.
 gui.CreateQuestionGUI$3"
 jComboBoxEvents
 
 ¯ ¯(
-%78void"java.awt.Component#repaint()V*:
+%80void"java.awt.Component#repaint()V*:
 
 __unknown_file (
 
-%77javax.swing.JComboBox2	repaint()*
-6*õ
+%79javax.swing.JComboBox2	repaint()*
+6*ø
 8
 ­ ­(L
 J
@@ -878,16 +887,16 @@ J
 evdomain.Event"__id*"
 
 __unknown_file (
-""
-Š
+""
+
 
 ­ ­(
 evdomain.Event"
-__arrayGet*8
+__arrayGet*;
 
-__unknown_file (
-
-eventsjava.util.Vector*"
+__unknown_file (
+
+eventsjava.util.ArrayList*"
 
 __unknown_file (
 ""*
@@ -898,18 +907,18 @@ __arrayGet*8
 …
 
 ® ®('
-%75 javax.swing.DefaultComboBoxModel"__id*H
+%77 javax.swing.DefaultComboBoxModel"__id*H
 
 __unknown_file (,**
 gui.CreateQuestionGUI$3"
 modelEvents÷ô
 
 ® ®(!
-%76void"@javax.swing.DefaultComboBoxModel#addElement(Ljava/lang/Object;)V*E
+%78void"@javax.swing.DefaultComboBoxModel#addElement(Ljava/lang/Object;)V*E
 
 __unknown_file ()
 '
-%75 javax.swing.DefaultComboBoxModel*0
+%77 javax.swing.DefaultComboBoxModel*0
 
 __unknown_file (
 
@@ -920,44 +929,44 @@ __arrayGet*8
 n
 
 ¥" ¦(
-%55java.lang.String"__concat*'
+%56java.lang.String"__concat*'
 
-¥" ¥(]
+¥" ¥([
 
-%54java.lang.String*
+%55java.lang.String*
 
 ¦ ¦(
 : y
 w
 
 ¦% ¦(0
-%56java.util.Calendar"__id*H
+%57java.util.Calendar"__id*H
 
 __unknown_file (,**
 gui.CreateQuestionGUI$3"
 calendarAct˜•
 
 ¦% ¦(:
-%57java.util.Date",java.util.Calendar#getTime()Ljava/util/Date;*7
+%58java.util.Date",java.util.Calendar#getTime()Ljava/util/Date;*7
 
 __unknown_file (
 
-%56java.util.Calendar2	getTime()*
+%57java.util.Calendar2	getTime()*
 19*“
 21
-¥R ¥(\ú÷
+¥P ¥(Zú÷
 
-¥" ¥(]
-%54java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;*=
+¥" ¥([
+%55java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;*=
 
 __unknown_file (!
 
-%53java.util.ResourceBundle*(
+%54java.util.ResourceBundle*(
 
 __unknown_file (
 
 NoEvents2getString(Ljava/lang/String;)*
-20*ƒ
+20*†
 22
 ¥ ¥(€
 ~
@@ -967,17 +976,26 @@ w
 
 __unknown_file (3*1
 gui.CreateQuestionGUI$3"
-jLabelListOfEventsç
-ä
+jLabelListOfEventsu
+s
 
-¥" ¥(G
-%53java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*8
+¥; ¥(D
+%53java.lang.String"__id*F
+
+__unknown_file (**(
+gui.CreateQuestionGUI$3"
+	etiquetasó
+ğ
+
+¥" ¥(E
+%54java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*8
 
 __unknown_file ("
-java.util.ResourceBundle*)
+java.util.ResourceBundle*5
 
-__unknown_file (
-	Etiquetas*
+__unknown_file (
+
+%53java.lang.String*
 21:A
 { {(E5
 propertychangeeventjava.beans.PropertyChangeEventB

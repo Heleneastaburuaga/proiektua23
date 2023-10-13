@@ -1,4 +1,4 @@
-businessLogic.BLFacadeImplementation#DiruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/lang/String;)V
+businessLogic.BLFacadeImplementation#diruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/lang/String;)V
 java.util.Date#<init>()V
 java.util.Date#instance-init#
 ==

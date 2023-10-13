@@ -148,7 +148,7 @@ public class FindQuestionsGUI extends JFrame {
 
 <span class="nc" id="L149">						BLFacade facade=MainGUI.getBusinessLogic();</span>
 
-<span class="nc" id="L151">						Vector&lt;domain.Event&gt; events=facade.getEvents(firstDay);</span>
+<span class="nc" id="L151">						ArrayList&lt;domain.Event&gt; events=facade.getEvents(firstDay);</span>
 
 <span class="nc bnc" id="L153" title="All 2 branches missed.">						if (events.isEmpty() ) jLabelEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoEvents&quot;)+ &quot;: &quot;+dateformat1.format(calendarAct.getTime()));</span>
 <span class="nc" id="L154">						else jLabelEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;)+ &quot;: &quot;+dateformat1.format(calendarAct.getTime()));</span>

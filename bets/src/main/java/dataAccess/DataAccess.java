@@ -231,11 +231,12 @@ public class DataAccess  {
 				
 			}
 			else if (Locale.getDefault().equals(new Locale("en"))) {
-				q1=ev1.addQuestion("Who will win the match?",1);
+				String whoWin="Who will win the match?";
+				q1=ev1.addQuestion(whoWin,1);
 				q2=ev1.addQuestion("Who will score first?",2);
-				q3=ev11.addQuestion("Who will win the match?",1);
+				q3=ev11.addQuestion(whoWin,1);
 				q4=ev11.addQuestion("How many goals will be scored in the match?",2);
-				q5=ev17.addQuestion("Who will win the match?",1);
+				q5=ev17.addQuestion(whoWin,1);
 				q6=ev17.addQuestion("Will there be goals in the first half?",2);
 				
 			}			
@@ -638,9 +639,9 @@ public class DataAccess  {
 	 * @param date in which events are retrieved
 	 * @return collection of events
 	 */
-	public Vector<Event> getEvents(Date date) {
+	public ArrayList<Event> getEvents(Date date) {
 		System.out.println(">> DataAccess: getEvents");
-		Vector<Event> res = new Vector<Event>();	
+		ArrayList<Event> res = new ArrayList<Event>();	
 		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.eventDate=?1",Event.class);   
 		query.setParameter(1, date);
 		List<Event> events = query.getResultList();
@@ -733,9 +734,9 @@ public void open(boolean initializeMode){
 		db.getTransaction().begin();
 		Sport spo =db.find(Sport.class, sport);
 		if(spo!=null) {
-			TypedQuery<Event> Equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
-			Equery.setParameter(1, eventDate);
-			for(Event ev: Equery.getResultList()) {
+			TypedQuery<Event> equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
+			equery.setParameter(1, eventDate);
+			for(Event ev: equery.getResultList()) {
 				if(ev.getDescription().equals(description)) {
 					b = false;
 				}
@@ -923,8 +924,8 @@ public void open(boolean initializeMode){
 	
 	public void ApustuaIrabazi(ApustuAnitza apustua) {
 		ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, apustua.getApustuAnitzaNumber());
-		Registered reg = (Registered) apustuAnitza.getUser();
-		Registered r = (Registered) db.find(Registered.class, reg.getUsername());
+		Registered reg = apustuAnitza.getUser();
+		Registered r = db.find(Registered.class, reg.getUsername());
 		db.getTransaction().begin();
 		apustuAnitza.setEgoera("irabazita");
 		Double d=apustuAnitza.getBalioa();
@@ -947,7 +948,7 @@ public void open(boolean initializeMode){
 		if(new Date().compareTo(q.getQuestion().getEvent().getEventDate())<0)
 			throw new EventNotFinished();
 
-		Vector<Apustua> listApustuak = q.getApustuak();
+		ArrayList<Apustua> listApustuak = q.getApustuak();
 		db.getTransaction().begin();
 		Question que = q.getQuestion(); 
 		Question question = db.find(Question.class, que); 

@@ -1,18 +1,18 @@
 
 ?configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;[
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java¢ ¢(""1*´
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java£ £(""1*´
 1
-£	 £({
+¤	 ¤({
 y
 
-£	 £(
+¤	 ¤(
 %0java.lang.String"__id*M
 
 __unknown_file (1*/
 configuration.ConfigXML"
 dataBaseOpenMode"&
 
-£ £(
+¤ ¤(
 
 %0java.lang.StringB
 configuration.ConfigXMLH

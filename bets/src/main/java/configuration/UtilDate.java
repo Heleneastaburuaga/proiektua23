@@ -6,9 +6,8 @@ import java.util.TimeZone;
 
 public class UtilDate {
 
-	
-	public static Date trim(Date date) {
 
+	public static Date trim(Date date) {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeZone(TimeZone.getTimeZone("CET"));
 		calendar.setTime(date);

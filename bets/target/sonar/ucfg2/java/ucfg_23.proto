@@ -1,18 +1,18 @@
 
 HdataAccess.DataAccess#findQuote(Ldomain/Question;)Ljava/util/Collection;Y
-M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java´ ´(#"1*€	
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java¨ ¨(#"1*€	
 1
-¨ ¨(z
+≠ ≠(z
 x
 
-¨ ¨(%
+≠ ≠(%
 %0javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbêç
 
-¨ ¨(k"
+≠ ≠(k"
 %1javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*C
 
 __unknown_file ('
@@ -26,14 +26,14 @@ x
 ""20createQuery(Ljava/lang/String;Ljava/lang/Class;)~
 |
 
-¨ ¨(l&
+≠ ≠(l&
 Qqueryjavax.persistence.TypedQuery"__id*@
 
 __unknown_file ($
 "
 %1javax.persistence.TypedQuery◊‘
 
-≠ ≠(""
+Æ Æ(""
 %2javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*D
 
 __unknown_file ((
@@ -46,17 +46,17 @@ x
 
 questiondomain.Question2!setParameter(ILjava/lang/Object;)∫∑
 
-Æ	 Æ(
+Ø	 Ø(
 %3java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*D
 
 __unknown_file ((
 &
 Qqueryjavax.persistence.TypedQuery2getResultList()"$
 
-Æ Æ( 
+Ø Ø( 
 
 %3java.util.List:)
 
-´$ ´(5
+¨$ ¨(5
 questiondomain.QuestionB
 dataAccess.DataAccessH

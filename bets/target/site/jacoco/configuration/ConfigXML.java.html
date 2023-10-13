@@ -75,96 +75,97 @@ public class ConfigXML {
 		
 		  try {
 <span class="fc" id="L77">			  DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();</span>
-<span class="fc" id="L78">			  DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();</span>
-<span class="fc" id="L79">			  Document doc = dBuilder.parse(new File(configFile));</span>
-<span class="fc" id="L80">			  doc.getDocumentElement().normalize();</span>
+<span class="fc" id="L78">			  dbFactory.setFeature(&quot;http://apache.org/xml/features/disallow-doctype-decl&quot;, true);</span>
+<span class="fc" id="L79">			  DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();</span>
+<span class="fc" id="L80">			  Document doc = dBuilder.parse(new File(configFile));</span>
+<span class="fc" id="L81">			  doc.getDocumentElement().normalize();</span>
 
-<span class="fc" id="L82">			  NodeList list = doc.getElementsByTagName(&quot;config&quot;);</span>
-<span class="fc" id="L83">			  Element config = (Element) list.item(0); // list.item(0) is a Node that is an Element</span>
+<span class="fc" id="L83">			  NodeList list = doc.getElementsByTagName(&quot;config&quot;);</span>
+<span class="fc" id="L84">			  Element config = (Element) list.item(0); // list.item(0) is a Node that is an Element</span>
 
 			  
 				//Two possible values: true (no instance of RemoteServer needs to be launched) or false (RemoteServer needs to be run first)
-<span class="fc" id="L87">			  String value= ((Element)config.getElementsByTagName(&quot;businessLogic&quot;).item(0)).getAttribute(&quot;local&quot;);</span>
-<span class="fc" id="L88">			  businessLogicLocal=value.equals(&quot;true&quot;);</span>
+<span class="fc" id="L88">			  String value= ((Element)config.getElementsByTagName(&quot;businessLogic&quot;).item(0)).getAttribute(&quot;local&quot;);</span>
+<span class="fc" id="L89">			  businessLogicLocal=value.equals(&quot;true&quot;);</span>
 
-<span class="fc" id="L90">			  businessLogicNode = getTagValue(&quot;businessLogicNode&quot;, config);</span>
+<span class="fc" id="L91">			  businessLogicNode = getTagValue(&quot;businessLogicNode&quot;, config);</span>
 
-<span class="fc" id="L92">			  businessLogicPort = getTagValue(&quot;businessLogicPort&quot;, config);</span>
+<span class="fc" id="L93">			  businessLogicPort = getTagValue(&quot;businessLogicPort&quot;, config);</span>
 
-<span class="fc" id="L94">			  businessLogicName = getTagValue(&quot;businessLogicName&quot;, config);</span>
+<span class="fc" id="L95">			  businessLogicName = getTagValue(&quot;businessLogicName&quot;, config);</span>
 			  
-<span class="fc" id="L96">			  locale = getTagValue(&quot;locale&quot;, config);</span>
+<span class="fc" id="L97">			  locale = getTagValue(&quot;locale&quot;, config);</span>
 
 			  
 			  
 				
 
-<span class="fc" id="L102">			  dbFilename = getTagValue(&quot;dbFilename&quot;, config);</span>
+<span class="fc" id="L103">			  dbFilename = getTagValue(&quot;dbFilename&quot;, config);</span>
 
 				//Two possible values: true (no instance of RemoteServer needs to be launched) or false (RemoteServer needs to be run first)
-<span class="fc" id="L105">			  value= ((Element)config.getElementsByTagName(&quot;database&quot;).item(0)).getAttribute(&quot;local&quot;);</span>
-<span class="fc" id="L106">			  databaseLocal=value.equals(&quot;true&quot;);</span>
+<span class="fc" id="L106">			  value= ((Element)config.getElementsByTagName(&quot;database&quot;).item(0)).getAttribute(&quot;local&quot;);</span>
+<span class="fc" id="L107">			  databaseLocal=value.equals(&quot;true&quot;);</span>
 			  
 			  
 			  //Two possible values: &quot;open&quot; or &quot;initialize&quot;
-<span class="fc" id="L110">			  dataBaseOpenMode= getTagValue(&quot;dataBaseOpenMode&quot;, config);</span>
+<span class="fc" id="L111">			  dataBaseOpenMode= getTagValue(&quot;dataBaseOpenMode&quot;, config);</span>
 
 	
-<span class="fc" id="L113">			  databaseNode = getTagValue(&quot;databaseNode&quot;, config);</span>
+<span class="fc" id="L114">			  databaseNode = getTagValue(&quot;databaseNode&quot;, config);</span>
 			  
-<span class="fc" id="L115">			  databasePort=Integer.parseInt(getTagValue(&quot;databasePort&quot;, config));</span>
+<span class="fc" id="L116">			  databasePort=Integer.parseInt(getTagValue(&quot;databasePort&quot;, config));</span>
 				
-<span class="fc" id="L117">			  user=getTagValue(&quot;user&quot;, config);</span>
+<span class="fc" id="L118">			  user=getTagValue(&quot;user&quot;, config);</span>
 				
-<span class="fc" id="L119">			  password=getTagValue(&quot;password&quot;, config);</span>
+<span class="fc" id="L120">			  password=getTagValue(&quot;password&quot;, config);</span>
 
-<span class="fc" id="L121">			  System.out.print(&quot;Read from config.xml: &quot;);</span>
-<span class="fc" id="L122">			  System.out.print(&quot;\t businessLogicLocal=&quot;+businessLogicLocal);</span>
-<span class="fc" id="L123">			  System.out.print(&quot;\t databaseLocal=&quot;+databaseLocal);</span>
-<span class="fc" id="L124">			  System.out.println(&quot;\t dataBaseOpenMode=&quot;+dataBaseOpenMode); </span>
+<span class="fc" id="L122">			  System.out.print(&quot;Read from config.xml: &quot;);</span>
+<span class="fc" id="L123">			  System.out.print(&quot;\t businessLogicLocal=&quot;+businessLogicLocal);</span>
+<span class="fc" id="L124">			  System.out.print(&quot;\t databaseLocal=&quot;+databaseLocal);</span>
+<span class="fc" id="L125">			  System.out.println(&quot;\t dataBaseOpenMode=&quot;+dataBaseOpenMode); </span>
 					  
-<span class="nc" id="L126">		  } catch (Exception e) {</span>
-<span class="nc" id="L127">			System.out.println(&quot;Error in ConfigXML.java: problems with &quot;+ configFile);</span>
-<span class="nc" id="L128">		    e.printStackTrace();</span>
-<span class="fc" id="L129">		  }		</span>
+<span class="nc" id="L127">		  } catch (Exception e) {</span>
+<span class="nc" id="L128">			System.out.println(&quot;Error in ConfigXML.java: problems with &quot;+ configFile);</span>
+<span class="nc" id="L129">		    e.printStackTrace();</span>
+<span class="fc" id="L130">		  }		</span>
 		
-<span class="fc" id="L131">	}</span>
+<span class="fc" id="L132">	}</span>
 
 	private static String getTagValue(String sTag, Element eElement)
 	 {
-<span class="fc" id="L135">		  NodeList nlList= eElement.getElementsByTagName(sTag).item(0).getChildNodes();</span>
-<span class="fc" id="L136">		  Node nValue = (Node) nlList.item(0);</span>
+<span class="fc" id="L136">		  NodeList nlList= eElement.getElementsByTagName(sTag).item(0).getChildNodes();</span>
+<span class="fc" id="L137">		  Node nValue = (Node) nlList.item(0);</span>
 
-<span class="fc" id="L138">		  return nValue.getNodeValue();</span>
+<span class="fc" id="L139">		  return nValue.getNodeValue();</span>
 
 	 }
 	
 	public static ConfigXML getInstance() {
-<span class="fc" id="L143">		return theInstance;</span>
+<span class="fc" id="L144">		return theInstance;</span>
 	}
 
 	public String getBusinessLogicNode() {
-<span class="nc" id="L147">		return businessLogicNode;</span>
+<span class="nc" id="L148">		return businessLogicNode;</span>
 	}
 
 	public String getBusinessLogicPort() {
-<span class="nc" id="L151">		return businessLogicPort;</span>
+<span class="nc" id="L152">		return businessLogicPort;</span>
 	}
 
 	public String getBusinessLogicName() {
-<span class="nc" id="L155">		return businessLogicName;</span>
+<span class="nc" id="L156">		return businessLogicName;</span>
 	}
 	
 	public String getDbFilename(){
-<span class="fc" id="L159">		return dbFilename;</span>
+<span class="fc" id="L160">		return dbFilename;</span>
 	}
 
 	public String getDataBaseOpenMode(){
-<span class="fc" id="L163">		return dataBaseOpenMode;</span>
+<span class="fc" id="L164">		return dataBaseOpenMode;</span>
 	}
 
 	public String getDatabaseNode() {
-<span class="nc" id="L167">		return databaseNode;</span>
+<span class="nc" id="L168">		return databaseNode;</span>
 	}
 
 }

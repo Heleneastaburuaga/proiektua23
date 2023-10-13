@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -34,277 +35,277 @@ import exceptions.EventNotFinished;
 import javax.swing.SwingConstants;
 
 public class EmaitzakIpiniGUI extends JFrame{
-<span class="nc" id="L37">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L38">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
 
 	private static final long serialVersionUID = 1L;
 
-<span class="nc" id="L41">	private JComboBox&lt;Event&gt; jComboBoxEvents = new JComboBox&lt;Event&gt;();</span>
-<span class="nc" id="L42">	DefaultComboBoxModel&lt;Event&gt; modelEvents = new DefaultComboBoxModel&lt;Event&gt;();</span>
+<span class="nc" id="L42">	private JComboBox&lt;Event&gt; jComboBoxEvents = new JComboBox&lt;Event&gt;();</span>
+<span class="nc" id="L43">	DefaultComboBoxModel&lt;Event&gt; modelEvents = new DefaultComboBoxModel&lt;Event&gt;();</span>
 	
-<span class="nc" id="L44">	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ListEvents&quot;));</span>
-<span class="nc" id="L45">	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EventDate&quot;));</span>
-<span class="nc" id="L46">	private JCalendar jCalendar = new JCalendar();</span>
-<span class="nc" id="L47">	private Calendar calendarAct = null;</span>
-<span class="nc" id="L48">	private Calendar calendarAnt = null;</span>
+<span class="nc" id="L45">	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ListEvents&quot;));</span>
+<span class="nc" id="L46">	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EventDate&quot;));</span>
+<span class="nc" id="L47">	private JCalendar jCalendar = new JCalendar();</span>
+<span class="nc" id="L48">	private Calendar calendarAct = null;</span>
+<span class="nc" id="L49">	private Calendar calendarAnt = null;</span>
 
-<span class="nc" id="L50">	private JScrollPane scrollPaneEvents = new JScrollPane();</span>
-<span class="nc" id="L51">	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L51">	private JScrollPane scrollPaneEvents = new JScrollPane();</span>
+<span class="nc" id="L52">	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
 	
-<span class="nc" id="L53">	private Vector&lt;Date&gt; datesWithEventsCurrentMonth = new Vector&lt;Date&gt;();</span>
-<span class="nc" id="L54">	private final JLabel jLabelQuestion = new JLabel(); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L55">	private final JComboBox&lt;Question&gt; jComboBoxQuestions = new JComboBox&lt;Question&gt;();</span>
-<span class="nc" id="L56">	DefaultComboBoxModel&lt;Question&gt; modelQuestions = new DefaultComboBoxModel&lt;Question&gt;();</span>
+<span class="nc" id="L54">	private Vector&lt;Date&gt; datesWithEventsCurrentMonth = new Vector&lt;Date&gt;();</span>
+<span class="nc" id="L55">	private final JLabel jLabelQuestion = new JLabel(); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L56">	private final JComboBox&lt;Question&gt; jComboBoxQuestions = new JComboBox&lt;Question&gt;();</span>
+<span class="nc" id="L57">	DefaultComboBoxModel&lt;Question&gt; modelQuestions = new DefaultComboBoxModel&lt;Question&gt;();</span>
 	
 	private domain.Event event;
-<span class="nc" id="L59">	private final JLabel jLabelQuotes = new JLabel(); </span>
+<span class="nc" id="L60">	private final JLabel jLabelQuotes = new JLabel(); </span>
 
 	private JComboBox jComboBoxQuotes;
-<span class="nc" id="L62">	DefaultComboBoxModel&lt;Quote&gt; modelQuotes = new DefaultComboBoxModel&lt;Quote&gt;();</span>
+<span class="nc" id="L63">	DefaultComboBoxModel&lt;Quote&gt; modelQuotes = new DefaultComboBoxModel&lt;Quote&gt;();</span>
 	
 	private Registered user; 
-<span class="nc" id="L65">	private final JButton jButtonEmaitzaIpini = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EmaitzaIpini&quot;)); </span>
-<span class="nc" id="L66">	private final JLabel jLabelError = new JLabel();</span>
+<span class="nc" id="L66">	private final JButton jButtonEmaitzaIpini = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EmaitzaIpini&quot;)); </span>
+<span class="nc" id="L67">	private final JLabel jLabelError = new JLabel();</span>
 	
-<span class="nc" id="L68">	public EmaitzakIpiniGUI(Vector&lt;domain.Event&gt; v) {</span>
+<span class="nc" id="L69">	public EmaitzakIpiniGUI(Vector&lt;domain.Event&gt; v) {</span>
 		try {
-<span class="nc" id="L70">			jbInit(v);</span>
-<span class="nc" id="L71">		} catch (Exception e) {</span>
-<span class="nc" id="L72">			e.printStackTrace();</span>
-<span class="nc" id="L73">		}</span>
-<span class="nc" id="L74">	}</span>
+<span class="nc" id="L71">			jbInit(v);</span>
+<span class="nc" id="L72">		} catch (Exception e) {</span>
+<span class="nc" id="L73">			e.printStackTrace();</span>
+<span class="nc" id="L74">		}</span>
+<span class="nc" id="L75">	}</span>
 
 	private void jbInit(Vector&lt;domain.Event&gt; v) throws Exception {
 
-<span class="nc" id="L78">		this.getContentPane().setLayout(null);</span>
-<span class="nc" id="L79">		this.setSize(new Dimension(604, 370));</span>
-<span class="nc" id="L80">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EmaitzaIpini&quot;));</span>
+<span class="nc" id="L79">		this.getContentPane().setLayout(null);</span>
+<span class="nc" id="L80">		this.setSize(new Dimension(604, 370));</span>
+<span class="nc" id="L81">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EmaitzaIpini&quot;));</span>
 		
-<span class="nc" id="L82">		jLabelError.setHorizontalAlignment(SwingConstants.CENTER);</span>
-<span class="nc" id="L83">		jLabelError.setBounds(116, 205, 322, 13);</span>
-<span class="nc" id="L84">		getContentPane().add(jLabelError);</span>
-<span class="nc" id="L85">		jLabelError.setVisible(false);</span>
+<span class="nc" id="L83">		jLabelError.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L84">		jLabelError.setBounds(116, 205, 322, 13);</span>
+<span class="nc" id="L85">		getContentPane().add(jLabelError);</span>
+<span class="nc" id="L86">		jLabelError.setVisible(false);</span>
 
-<span class="nc" id="L87">		jComboBoxEvents.setModel(modelEvents);</span>
-<span class="nc" id="L88">		jComboBoxEvents.setBounds(new Rectangle(275, 47, 250, 20));</span>
-<span class="nc" id="L89">		jLabelListOfEvents.setBounds(new Rectangle(290, 18, 277, 20));</span>
+<span class="nc" id="L88">		jComboBoxEvents.setModel(modelEvents);</span>
+<span class="nc" id="L89">		jComboBoxEvents.setBounds(new Rectangle(275, 47, 250, 20));</span>
+<span class="nc" id="L90">		jLabelListOfEvents.setBounds(new Rectangle(290, 18, 277, 20));</span>
 
-<span class="nc" id="L91">		jCalendar.setBounds(new Rectangle(40, 50, 225, 150));</span>
-<span class="nc" id="L92">		scrollPaneEvents.setBounds(new Rectangle(25, 44, 346, 116));</span>
-<span class="nc" id="L93">		jButtonClose.setBounds(new Rectangle(291, 228, 130, 30));</span>
-<span class="nc" id="L94">		jButtonClose.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L92">		jCalendar.setBounds(new Rectangle(40, 50, 225, 150));</span>
+<span class="nc" id="L93">		scrollPaneEvents.setBounds(new Rectangle(25, 44, 346, 116));</span>
+<span class="nc" id="L94">		jButtonClose.setBounds(new Rectangle(291, 228, 130, 30));</span>
+<span class="nc" id="L95">		jButtonClose.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L96">				jButtonClose_actionPerformed(e);</span>
-<span class="nc" id="L97">			}</span>
+<span class="nc" id="L97">				jButtonCloseActionPerformed(e);</span>
+<span class="nc" id="L98">			}</span>
 		});
 
-<span class="nc" id="L100">		this.getContentPane().add(jButtonClose, null);</span>
-<span class="nc" id="L101">		this.getContentPane().add(jLabelListOfEvents, null);</span>
-<span class="nc" id="L102">		this.getContentPane().add(jComboBoxEvents, null);</span>
+<span class="nc" id="L101">		this.getContentPane().add(jButtonClose, null);</span>
+<span class="nc" id="L102">		this.getContentPane().add(jLabelListOfEvents, null);</span>
+<span class="nc" id="L103">		this.getContentPane().add(jComboBoxEvents, null);</span>
 
-<span class="nc" id="L104">		this.getContentPane().add(jCalendar, null);</span>
+<span class="nc" id="L105">		this.getContentPane().add(jCalendar, null);</span>
 		
 		
-<span class="nc" id="L107">		BLFacade facade = MainGUI.getBusinessLogic();</span>
-<span class="nc" id="L108">		datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
-<span class="nc" id="L109">		paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
+<span class="nc" id="L108">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L109">		datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
+<span class="nc" id="L110">		paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
 		
 		
 
-<span class="nc" id="L113">		jLabelEventDate.setBounds(new Rectangle(40, 15, 140, 25));</span>
-<span class="nc" id="L114">		jLabelEventDate.setBounds(40, 16, 140, 25);</span>
-<span class="nc" id="L115">		getContentPane().add(jLabelEventDate);</span>
-<span class="nc" id="L116">		jLabelQuestion.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GalderaLista&quot;)); </span>
-<span class="nc" id="L117">		jLabelQuestion.setBounds(290, 77, 103, 13);</span>
+<span class="nc" id="L114">		jLabelEventDate.setBounds(new Rectangle(40, 15, 140, 25));</span>
+<span class="nc" id="L115">		jLabelEventDate.setBounds(40, 16, 140, 25);</span>
+<span class="nc" id="L116">		getContentPane().add(jLabelEventDate);</span>
+<span class="nc" id="L117">		jLabelQuestion.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GalderaLista&quot;)); </span>
+<span class="nc" id="L118">		jLabelQuestion.setBounds(290, 77, 103, 13);</span>
 		
-<span class="nc" id="L119">		getContentPane().add(jLabelQuestion);</span>
-<span class="nc" id="L120">		jComboBoxQuestions.setModel(modelQuestions);</span>
-<span class="nc" id="L121">		jComboBoxQuestions.setBounds(275, 100, 250, 21);</span>
+<span class="nc" id="L120">		getContentPane().add(jLabelQuestion);</span>
+<span class="nc" id="L121">		jComboBoxQuestions.setModel(modelQuestions);</span>
+<span class="nc" id="L122">		jComboBoxQuestions.setBounds(275, 100, 250, 21);</span>
 		
-<span class="nc" id="L123">		getContentPane().add(jComboBoxQuestions);</span>
+<span class="nc" id="L124">		getContentPane().add(jComboBoxQuestions);</span>
 		
-<span class="nc" id="L125">		jComboBoxEvents.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L126">		jComboBoxEvents.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L127">				event = ((domain.Event) jComboBoxEvents.getSelectedItem());</span>
-<span class="nc" id="L128">				jComboBoxQuestions.removeAllItems();</span>
-<span class="nc bnc" id="L129" title="All 2 branches missed.">				for(domain.Question question : businessLogic.findQuestion(event)) {</span>
-<span class="nc bnc" id="L130" title="All 2 branches missed.">					if(question.getResult()==null)</span>
-<span class="nc" id="L131">						modelQuestions.addElement(question); </span>
-<span class="nc" id="L132">				}</span>
+<span class="nc" id="L128">				event = ((domain.Event) jComboBoxEvents.getSelectedItem());</span>
+<span class="nc" id="L129">				jComboBoxQuestions.removeAllItems();</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">				for(domain.Question question : businessLogic.findQuestion(event)) {</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">					if(question.getResult()==null)</span>
+<span class="nc" id="L132">						modelQuestions.addElement(question); </span>
+<span class="nc" id="L133">				}</span>
 					
 				
-<span class="nc bnc" id="L135" title="All 2 branches missed.">				if(modelQuestions.getSize()&gt;0) {</span>
-<span class="nc" id="L136">					jButtonEmaitzaIpini.setEnabled(true);</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">				if(modelQuestions.getSize()&gt;0) {</span>
+<span class="nc" id="L137">					jButtonEmaitzaIpini.setEnabled(true);</span>
 				}else {
-<span class="nc" id="L138">					jButtonEmaitzaIpini.setEnabled(false);</span>
+<span class="nc" id="L139">					jButtonEmaitzaIpini.setEnabled(false);</span>
 				}
-<span class="nc" id="L140">				}</span>
+<span class="nc" id="L141">				}</span>
 				
 
 		});
-<span class="nc" id="L144">		jLabelQuotes.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;KuotaLista&quot;)); </span>
-<span class="nc" id="L145">		jLabelQuotes.setBounds(290, 131, 103, 13);</span>
+<span class="nc" id="L145">		jLabelQuotes.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;KuotaLista&quot;)); </span>
+<span class="nc" id="L146">		jLabelQuotes.setBounds(290, 131, 103, 13);</span>
 		
-<span class="nc" id="L147">		getContentPane().add(jLabelQuotes);</span>
+<span class="nc" id="L148">		getContentPane().add(jLabelQuotes);</span>
 		
-<span class="nc" id="L149">		jComboBoxQuotes = new JComboBox();</span>
-<span class="nc" id="L150">		jComboBoxQuotes.setBounds(275, 158, 250, 21);</span>
-<span class="nc" id="L151">		jComboBoxQuotes.setModel(modelQuotes);</span>
+<span class="nc" id="L150">		jComboBoxQuotes = new JComboBox();</span>
+<span class="nc" id="L151">		jComboBoxQuotes.setBounds(275, 158, 250, 21);</span>
+<span class="nc" id="L152">		jComboBoxQuotes.setModel(modelQuotes);</span>
 		
-<span class="nc" id="L153">		getContentPane().add(jComboBoxQuotes);</span>
-<span class="nc" id="L154">		jButtonEmaitzaIpini.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L154">		getContentPane().add(jComboBoxQuotes);</span>
+<span class="nc" id="L155">		jButtonEmaitzaIpini.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L156">				Question que= (Question) jComboBoxQuestions.getSelectedItem();</span>
-<span class="nc" id="L157">				Quote q = (Quote)jComboBoxQuotes.getSelectedItem(); </span>
+<span class="nc" id="L157">				Question que= (Question) jComboBoxQuestions.getSelectedItem();</span>
+<span class="nc" id="L158">				Quote q = (Quote)jComboBoxQuotes.getSelectedItem(); </span>
 				try {
-<span class="nc" id="L159">					businessLogic.EmaitzakIpini(q);</span>
-<span class="nc" id="L160">					jComboBoxQuestions.removeAllItems();</span>
-<span class="nc bnc" id="L161" title="All 2 branches missed.">					for(domain.Question question : businessLogic.findQuestion(event)) {</span>
-<span class="nc bnc" id="L162" title="All 2 branches missed.">						if(question.getResult()==null)</span>
-<span class="nc" id="L163">							modelQuestions.addElement(question); </span>
-<span class="nc" id="L164">					}</span>
+<span class="nc" id="L160">					businessLogic.EmaitzakIpini(q);</span>
+<span class="nc" id="L161">					jComboBoxQuestions.removeAllItems();</span>
+<span class="nc bnc" id="L162" title="All 2 branches missed.">					for(domain.Question question : businessLogic.findQuestion(event)) {</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">						if(question.getResult()==null)</span>
+<span class="nc" id="L164">							modelQuestions.addElement(question); </span>
+<span class="nc" id="L165">					}</span>
 					
-<span class="nc bnc" id="L166" title="All 2 branches missed.">					if(modelQuotes.getSize()&gt;0) {</span>
-<span class="nc" id="L167">						jButtonEmaitzaIpini.setEnabled(true);</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">					if(modelQuotes.getSize()&gt;0) {</span>
+<span class="nc" id="L168">						jButtonEmaitzaIpini.setEnabled(true);</span>
 					}else {
-<span class="nc" id="L169">						jButtonEmaitzaIpini.setEnabled(false);</span>
+<span class="nc" id="L170">						jButtonEmaitzaIpini.setEnabled(false);</span>
 					}
 					
-<span class="nc" id="L172">				} catch (EventNotFinished e1) {</span>
-<span class="nc" id="L173">					jLabelError.setVisible(true);</span>
-<span class="nc" id="L174">					jLabelError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraEzAmaitu&quot;));</span>
+<span class="nc" id="L173">				} catch (EventNotFinished e1) {</span>
+<span class="nc" id="L174">					jLabelError.setVisible(true);</span>
+<span class="nc" id="L175">					jLabelError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraEzAmaitu&quot;));</span>
 					
-<span class="nc" id="L176">				}</span>
-<span class="nc" id="L177">			}</span>
+<span class="nc" id="L177">				}</span>
+<span class="nc" id="L178">			}</span>
 		});
-<span class="nc" id="L179">		jButtonEmaitzaIpini.setBounds(132, 228, 133, 30);</span>
+<span class="nc" id="L180">		jButtonEmaitzaIpini.setBounds(132, 228, 133, 30);</span>
 		
-<span class="nc" id="L181">		getContentPane().add(jButtonEmaitzaIpini);</span>
-<span class="nc" id="L182">		jComboBoxQuestions.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L182">		getContentPane().add(jButtonEmaitzaIpini);</span>
+<span class="nc" id="L183">		jComboBoxQuestions.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L184">				Question q = ((domain.Question) jComboBoxQuestions.getSelectedItem());</span>
-<span class="nc" id="L185">				jComboBoxQuotes.removeAllItems();</span>
-<span class="nc bnc" id="L186" title="All 2 branches missed.">				for(domain.Quote quote : businessLogic.findQuote(q)) {</span>
-<span class="nc" id="L187">					modelQuotes.addElement(quote); </span>
-<span class="nc" id="L188">				}</span>
+<span class="nc" id="L185">				Question q = ((domain.Question) jComboBoxQuestions.getSelectedItem());</span>
+<span class="nc" id="L186">				jComboBoxQuotes.removeAllItems();</span>
+<span class="nc bnc" id="L187" title="All 2 branches missed.">				for(domain.Quote quote : businessLogic.findQuote(q)) {</span>
+<span class="nc" id="L188">					modelQuotes.addElement(quote); </span>
+<span class="nc" id="L189">				}</span>
 				
-<span class="nc bnc" id="L190" title="All 2 branches missed.">				if(jComboBoxQuotes.getSelectedItem()!=null) {</span>
-<span class="nc" id="L191">					jButtonEmaitzaIpini.setEnabled(true);</span>
+<span class="nc bnc" id="L191" title="All 2 branches missed.">				if(jComboBoxQuotes.getSelectedItem()!=null) {</span>
+<span class="nc" id="L192">					jButtonEmaitzaIpini.setEnabled(true);</span>
 				}else {
-<span class="nc" id="L193">					jButtonEmaitzaIpini.setEnabled(false);</span>
+<span class="nc" id="L194">					jButtonEmaitzaIpini.setEnabled(false);</span>
 				}
 				
 				
-<span class="nc" id="L197">			}</span>
+<span class="nc" id="L198">			}</span>
 		});
 		
 
 		
 		
 		// Code for JCalendar
-<span class="nc" id="L204">		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {</span>
+<span class="nc" id="L205">		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {</span>
 			public void propertyChange(PropertyChangeEvent propertychangeevent) {
-<span class="nc" id="L206">				jLabelError.setVisible(false);</span>
-<span class="nc bnc" id="L207" title="All 2 branches missed.">				if(modelQuotes.getSize()&gt;0) {</span>
-<span class="nc" id="L208">					jButtonEmaitzaIpini.setEnabled(true);</span>
+<span class="nc" id="L207">				jLabelError.setVisible(false);</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">				if(modelQuotes.getSize()&gt;0) {</span>
+<span class="nc" id="L209">					jButtonEmaitzaIpini.setEnabled(true);</span>
 				}else {
-<span class="nc" id="L210">					jButtonEmaitzaIpini.setEnabled(false);</span>
+<span class="nc" id="L211">					jButtonEmaitzaIpini.setEnabled(false);</span>
 				}
 //				this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {
 //					public void propertyChange(PropertyChangeEvent propertychangeevent) {
-<span class="nc bnc" id="L214" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;)) {</span>
-<span class="nc" id="L215">					jCalendar.setLocale((Locale) propertychangeevent.getNewValue());</span>
-<span class="nc bnc" id="L216" title="All 2 branches missed.">				} else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;)) {</span>
-<span class="nc" id="L217">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
-<span class="nc" id="L218">					calendarAct = (Calendar) propertychangeevent.getNewValue();</span>
-<span class="nc" id="L219">					System.out.println(&quot;calendarAnt: &quot;+calendarAnt.getTime());</span>
-<span class="nc" id="L220">					System.out.println(&quot;calendarAct: &quot;+calendarAct.getTime());</span>
-<span class="nc" id="L221">					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar.getLocale());</span>
+<span class="nc bnc" id="L215" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;)) {</span>
+<span class="nc" id="L216">					jCalendar.setLocale((Locale) propertychangeevent.getNewValue());</span>
+<span class="nc bnc" id="L217" title="All 2 branches missed.">				} else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;)) {</span>
+<span class="nc" id="L218">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
+<span class="nc" id="L219">					calendarAct = (Calendar) propertychangeevent.getNewValue();</span>
+<span class="nc" id="L220">					System.out.println(&quot;calendarAnt: &quot;+calendarAnt.getTime());</span>
+<span class="nc" id="L221">					System.out.println(&quot;calendarAct: &quot;+calendarAct.getTime());</span>
+<span class="nc" id="L222">					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar.getLocale());</span>
 					
-<span class="nc" id="L223">					int monthAnt = calendarAnt.get(Calendar.MONTH);</span>
-<span class="nc" id="L224">					int monthAct = calendarAct.get(Calendar.MONTH);</span>
-<span class="nc bnc" id="L225" title="All 2 branches missed.">					if (monthAct!=monthAnt) {</span>
-<span class="nc bnc" id="L226" title="All 2 branches missed.">						if (monthAct==monthAnt+2) { </span>
+<span class="nc" id="L224">					int monthAnt = calendarAnt.get(Calendar.MONTH);</span>
+<span class="nc" id="L225">					int monthAct = calendarAct.get(Calendar.MONTH);</span>
+<span class="nc bnc" id="L226" title="All 2 branches missed.">					if (monthAct!=monthAnt) {</span>
+<span class="nc bnc" id="L227" title="All 2 branches missed.">						if (monthAct==monthAnt+2) { </span>
 							// Si en JCalendar estÃ¡ 30 de enero y se avanza al mes siguiente, devolverÃ­a 2 de marzo (se toma como equivalente a 30 de febrero)
 							// Con este cÃ³digo se dejarÃ¡ como 1 de febrero en el JCalendar
-<span class="nc" id="L229">							calendarAct.set(Calendar.MONTH, monthAnt+1);</span>
-<span class="nc" id="L230">							calendarAct.set(Calendar.DAY_OF_MONTH, 1);</span>
+<span class="nc" id="L230">							calendarAct.set(Calendar.MONTH, monthAnt+1);</span>
+<span class="nc" id="L231">							calendarAct.set(Calendar.DAY_OF_MONTH, 1);</span>
 						}
 						
-<span class="nc" id="L233">						jCalendar.setCalendar(calendarAct);</span>
+<span class="nc" id="L234">						jCalendar.setCalendar(calendarAct);</span>
 						
-<span class="nc" id="L235">						BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L236">						BLFacade facade = MainGUI.getBusinessLogic();</span>
 
-<span class="nc" id="L237">						datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
+<span class="nc" id="L238">						datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
 					}
 
 
 
-<span class="nc" id="L242">					paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
+<span class="nc" id="L243">					paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
 
 					//	Date firstDay = UtilDate.trim(new Date(jCalendar.getCalendar().getTime().getTime()));
-<span class="nc" id="L245">					Date firstDay = UtilDate.trim(calendarAct.getTime());</span>
+<span class="nc" id="L246">					Date firstDay = UtilDate.trim(calendarAct.getTime());</span>
 
 					try {
-<span class="nc" id="L248">						BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L249">						BLFacade facade = MainGUI.getBusinessLogic();</span>
 
-<span class="nc" id="L250">						Vector&lt;domain.Event&gt; events = facade.getEvents(firstDay);</span>
+<span class="nc" id="L251">						ArrayList&lt;domain.Event&gt; events = facade.getEvents(firstDay);</span>
 						
-<span class="nc bnc" id="L252" title="All 2 branches missed.">						if (events.isEmpty()) {</span>
-<span class="nc" id="L253">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoEvents&quot;)</span>
-<span class="nc" id="L254">									+ &quot;: &quot; + dateformat1.format(calendarAct.getTime()));</span>
-<span class="nc" id="L255">							System.out.println(&quot;no events&quot;); </span>
+<span class="nc bnc" id="L253" title="All 2 branches missed.">						if (events.isEmpty()) {</span>
+<span class="nc" id="L254">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoEvents&quot;)</span>
+<span class="nc" id="L255">									+ &quot;: &quot; + dateformat1.format(calendarAct.getTime()));</span>
+<span class="nc" id="L256">							System.out.println(&quot;no events&quot;); </span>
 						
 						} else {
-<span class="nc" id="L258">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;) + &quot;: &quot;</span>
-<span class="nc" id="L259">									+ dateformat1.format(calendarAct.getTime()));</span>
+<span class="nc" id="L259">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;) + &quot;: &quot;</span>
+<span class="nc" id="L260">									+ dateformat1.format(calendarAct.getTime()));</span>
 						}
-<span class="nc" id="L261">						jComboBoxEvents.removeAllItems();</span>
-<span class="nc" id="L262">						System.out.println(&quot;Events &quot; + events);</span>
+<span class="nc" id="L262">						jComboBoxEvents.removeAllItems();</span>
+<span class="nc" id="L263">						System.out.println(&quot;Events &quot; + events);</span>
 
-<span class="nc bnc" id="L264" title="All 2 branches missed.">						for (domain.Event ev : events) {</span>
-<span class="nc" id="L265">							modelEvents.addElement(ev);</span>
-<span class="nc" id="L266">						}</span>
-<span class="nc" id="L267">						jComboBoxEvents.repaint();</span>
+<span class="nc bnc" id="L265" title="All 2 branches missed.">						for (domain.Event ev : events) {</span>
+<span class="nc" id="L266">							modelEvents.addElement(ev);</span>
+<span class="nc" id="L267">						}</span>
+<span class="nc" id="L268">						jComboBoxEvents.repaint();</span>
 						
-<span class="nc bnc" id="L269" title="All 2 branches missed.">						if (modelQuotes.getSize() == 0)</span>
-<span class="nc" id="L270">							jButtonEmaitzaIpini.setEnabled(false);</span>
+<span class="nc bnc" id="L270" title="All 2 branches missed.">						if (modelQuotes.getSize() == 0)</span>
+<span class="nc" id="L271">							jButtonEmaitzaIpini.setEnabled(false);</span>
 						else
-<span class="nc" id="L272">							jButtonEmaitzaIpini.setEnabled(true);</span>
+<span class="nc" id="L273">							jButtonEmaitzaIpini.setEnabled(true);</span>
 
-<span class="nc" id="L274">					} catch (Exception e1) {</span>
+<span class="nc" id="L275">					} catch (Exception e1) {</span>
 
-<span class="nc" id="L276">						System.out.println(e1.getMessage());</span>
-<span class="nc" id="L277">					}</span>
+<span class="nc" id="L277">						System.out.println(e1.getMessage());</span>
+<span class="nc" id="L278">					}</span>
 
 				}
-<span class="nc" id="L280">			}</span>
+<span class="nc" id="L281">			}</span>
 		});
-<span class="nc" id="L282">	}</span>
+<span class="nc" id="L283">	}</span>
 
 	
 public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; datesWithEventsCurrentMonth) {
 		// For each day with events in current month, the background color for that day is changed.
 
 		
-<span class="nc" id="L289">		Calendar calendar = jCalendar.getCalendar();</span>
+<span class="nc" id="L290">		Calendar calendar = jCalendar.getCalendar();</span>
 		
-<span class="nc" id="L291">		int month = calendar.get(Calendar.MONTH);</span>
-<span class="nc" id="L292">		int today=calendar.get(Calendar.DAY_OF_MONTH);</span>
-<span class="nc" id="L293">		int year=calendar.get(Calendar.YEAR);</span>
+<span class="nc" id="L292">		int month = calendar.get(Calendar.MONTH);</span>
+<span class="nc" id="L293">		int today=calendar.get(Calendar.DAY_OF_MONTH);</span>
+<span class="nc" id="L294">		int year=calendar.get(Calendar.YEAR);</span>
 		
-<span class="nc" id="L295">		calendar.set(Calendar.DAY_OF_MONTH, 1);</span>
-<span class="nc" id="L296">		int offset = calendar.get(Calendar.DAY_OF_WEEK);</span>
+<span class="nc" id="L296">		calendar.set(Calendar.DAY_OF_MONTH, 1);</span>
+<span class="nc" id="L297">		int offset = calendar.get(Calendar.DAY_OF_WEEK);</span>
 
-<span class="nc bnc" id="L298" title="All 2 branches missed.">		if (Locale.getDefault().equals(new Locale(&quot;es&quot;)))</span>
-<span class="nc" id="L299">			offset += 4;</span>
+<span class="nc bnc" id="L299" title="All 2 branches missed.">		if (Locale.getDefault().equals(new Locale(&quot;es&quot;)))</span>
+<span class="nc" id="L300">			offset += 4;</span>
 		else
-<span class="nc" id="L301">			offset += 5;</span>
+<span class="nc" id="L302">			offset += 5;</span>
 		
 		
-<span class="nc bnc" id="L304" title="All 2 branches missed.">	 	for (Date d:datesWithEventsCurrentMonth){</span>
+<span class="nc bnc" id="L305" title="All 2 branches missed.">	 	for (Date d:datesWithEventsCurrentMonth){</span>
 
-<span class="nc" id="L306">	 		calendar.setTime(d);</span>
-<span class="nc" id="L307">	 		System.out.println(d);</span>
+<span class="nc" id="L307">	 		calendar.setTime(d);</span>
+<span class="nc" id="L308">	 		System.out.println(d);</span>
 	 		
 
 			
@@ -316,21 +317,25 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 			// That number of components is calculated with &quot;offset&quot; and is different in
 			// English and Spanish
 //			    		  Component o=(Component) jCalendar.getDayChooser().getDayPanel().getComponent(i+offset);; 
-<span class="nc" id="L319">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
-<span class="nc" id="L320">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
-<span class="nc" id="L321">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L322">	 	}</span>
+<span class="nc" id="L320">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
+<span class="nc" id="L321">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
+<span class="nc" id="L322">			o.setBackground(Color.CYAN);</span>
+<span class="nc" id="L323">	 	}</span>
 	 	
-<span class="nc" id="L324"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
-<span class="nc" id="L325">	 		calendar.set(Calendar.MONTH, month);</span>
-<span class="nc" id="L326">	 		calendar.set(Calendar.YEAR, year);</span>
+<span class="nc" id="L325"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
+<span class="nc" id="L326">	 		calendar.set(Calendar.MONTH, month);</span>
+<span class="nc" id="L327">	 		calendar.set(Calendar.YEAR, year);</span>
 
 	 	
-<span class="nc" id="L329">	}</span>
-
+<span class="nc" id="L330">	}</span>
+	/*
 	private void jButtonClose_actionPerformed(ActionEvent e) {
-<span class="nc" id="L332">		this.setVisible(false);</span>
-<span class="nc" id="L333">	}</span>
+		this.setVisible(false);
+	}
+	*/
+	private void jButtonCloseActionPerformed(ActionEvent e) {
+<span class="nc" id="L337">		this.setVisible(false);</span>
+<span class="nc" id="L338">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

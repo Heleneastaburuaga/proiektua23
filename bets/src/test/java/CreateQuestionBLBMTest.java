@@ -143,8 +143,7 @@ public class CreateQuestionBLBMTest {
 			
 			//configure Mock
 			Mockito.doReturn(oneDate).when(mockedEvent).getEventDate();
-			//Mockito.when(dataAccess.createQuestion(Mockito.any(Event.class),Mockito.any(String.class), Mockito.any(Integer.class))).thenThrow(QuestionAlreadyExist.class);
-			
+	
 			//invoke System Under Test (sut) 
 			sut.createQuestion(mockedEvent, queryText, betMinimum);
 			

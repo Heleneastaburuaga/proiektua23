@@ -1,17 +1,17 @@
 
 (domain.Quote#equals(Ljava/lang/Object;)ZN
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.javao o("startingBlock*!
-2x x("
-x x(
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.javap p("startingBlock*!
+2y y("
+y y(
 ""*Ú
-3w w(åâ
-w w(
+3x x(åâ
+x x(
 %2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*,
 
 __unknown_file (
 domain.Quote2
 getClass()ìê
-w w("
+x x("
 %3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*3
 
 __unknown_file (
@@ -19,7 +19,7 @@ getClass()ìê
 ojava.lang.Object2
 getClass()µ
 ≤
-w w("
+x x("
 %4boolean"	__compare*"
 
 __unknown_file (
@@ -34,9 +34,9 @@ getClass()µ
 %3java.lang.Class*
 2
 1*Ä
-startingBlocko o( à
+startingBlockp p( à
 Ö
-n n(
+o o(
 
 %8"
 __annotate*2
@@ -48,20 +48,20 @@ __annotate*2
 
 ojava.lang.ObjectU
 S
-o o(
+p p(
 ojava.lang.Object"__annotation*"
 
 __unknown_file (
 
 %8*
 7*!
-4u u("
-u	 u(
+4v v("
+v	 v(
 ""*º
-5t	 t(
+5u	 u(
 §
 °
-t	 t(
+u	 u(
 %1boolean"	__compare*"
 
 __unknown_file (
@@ -75,13 +75,13 @@ S
 ""*
 3
 4*!
-6q q("
-q	 q(
+6r r("
+r	 r(
 ""*∆
-7p p(
+7q q(
 Æ
 ´
-p p(
+q q(
 %0boolean"	__compare*"
 
 __unknown_file (
@@ -95,27 +95,27 @@ S
 ojava.lang.Object*
 5
 6*Ú
-1z z(Z
+1{ {(Z
 X
-z z(
+{ {(
 qdomain.Quote"__id*3
 
 __unknown_file (
 
 ojava.lang.Objectòï
-{ {(!
+| |(!
 %5java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*,
 
 __unknown_file (
 domain.Quote2getQuoteNumber()õò
-{% {(7
+|% |(7
 %6java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*/
 
 __unknown_file (
 
 qdomain.Quote2getQuoteNumber()π
 ∂
-{ {(7
+| |(7
 %7boolean"	__compare*"
 
 __unknown_file (
@@ -128,8 +128,8 @@ X
 __unknown_file (
 
 %6java.lang.Integer"
-{ {(8
+| |(8
 "":!
-o o(
+p p(
 ojava.lang.ObjectB
 domain.QuoteHX

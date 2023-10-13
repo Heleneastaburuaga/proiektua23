@@ -1,6 +1,7 @@
 package domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Vector;
 
@@ -30,7 +31,7 @@ public class Quote implements Serializable{
 	@XmlIDREF
 	private Question question;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Apustua> apustuak = new Vector<Apustua>(); 
+	private ArrayList<Apustua> apustuak = new ArrayList<Apustua>(); 
 
 	public Quote() {
 		super();
@@ -47,11 +48,11 @@ public class Quote implements Serializable{
 		this.forecast = forecast; 
 	}
 
-	public Vector<Apustua> getApustuak() {
+	public ArrayList<Apustua> getApustuak() {
 		return apustuak;
 	}
 
-	public void setApustuak(Vector<Apustua> apustuak) {
+	public void setApustuak(ArrayList<Apustua> apustuak) {
 		this.apustuak = apustuak;
 	}
 	

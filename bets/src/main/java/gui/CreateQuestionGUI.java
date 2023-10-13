@@ -20,14 +20,14 @@ import exceptions.QuestionAlreadyExist;
 
 public class CreateQuestionGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
-
+	String etiquetas="Etiquetas";
 	private JComboBox<Event> jComboBoxEvents = new JComboBox<Event>();
 	DefaultComboBoxModel<Event> modelEvents = new DefaultComboBoxModel<Event>();
 
-	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("ListEvents"));
-	private JLabel jLabelQuery = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Query"));
-	private JLabel jLabelMinBet = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MinimumBetPrice"));
-	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("EventDate"));
+	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle(etiquetas).getString("ListEvents"));
+	private JLabel jLabelQuery = new JLabel(ResourceBundle.getBundle(etiquetas).getString("Query"));
+	private JLabel jLabelMinBet = new JLabel(ResourceBundle.getBundle(etiquetas).getString("MinimumBetPrice"));
+	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(etiquetas).getString("EventDate"));
 
 	private JTextField jTextFieldQuery = new JTextField();
 	private JTextField jTextFieldPrice = new JTextField();
@@ -37,8 +37,8 @@ public class CreateQuestionGUI extends JFrame {
 
 	private JScrollPane scrollPaneEvents = new JScrollPane();
 
-	private JButton jButtonCreate = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
-	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
+	private JButton jButtonCreate = new JButton(ResourceBundle.getBundle(etiquetas).getString("CreateQuery"));
+	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(etiquetas).getString("Close"));
 	private JLabel jLabelMsg = new JLabel();
 	private JLabel jLabelError = new JLabel();
 	
@@ -56,7 +56,7 @@ public class CreateQuestionGUI extends JFrame {
 
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(604, 370));
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
+		this.setTitle(ResourceBundle.getBundle(etiquetas).getString("CreateQuery"));
 
 		jComboBoxEvents.setModel(modelEvents);
 		jComboBoxEvents.setBounds(new Rectangle(275, 47, 250, 20));
@@ -159,13 +159,13 @@ public class CreateQuestionGUI extends JFrame {
 					try {
 						BLFacade facade = MainGUI.getBusinessLogic();
 
-						Vector<domain.Event> events = facade.getEvents(firstDay);
+						ArrayList<domain.Event> events = facade.getEvents(firstDay);
 
 						if (events.isEmpty())
-							jLabelListOfEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("NoEvents")
+							jLabelListOfEvents.setText(ResourceBundle.getBundle(etiquetas).getString("NoEvents")
 									+ ": " + dateformat1.format(calendarAct.getTime()));
 						else
-							jLabelListOfEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("Events") + ": "
+							jLabelListOfEvents.setText(ResourceBundle.getBundle(etiquetas).getString("Events") + ": "
 									+ dateformat1.format(calendarAct.getTime()));
 						jComboBoxEvents.removeAllItems();
 						System.out.println("Events " + events);
@@ -252,7 +252,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWit
 				float inputPrice = Float.parseFloat(jTextFieldPrice.getText());
 
 				if (inputPrice <= 0)
-					jLabelError.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorNumber"));
+					jLabelError.setText(ResourceBundle.getBundle(etiquetas).getString("ErrorNumber"));
 				else {
 
 					// Obtain the business logic from a StartWindow class (local or remote)
@@ -260,17 +260,17 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWit
 
 					facade.createQuestion(event, inputQuery, inputPrice);
 
-					jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryCreated"));
+					jLabelMsg.setText(ResourceBundle.getBundle(etiquetas).getString("QueryCreated"));
 				}
 			} else
-				jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorQuery"));
+				jLabelMsg.setText(ResourceBundle.getBundle(etiquetas).getString("ErrorQuery"));
 		} catch (EventFinished e1) {
-			jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorEventHasFinished") + ": "
+			jLabelMsg.setText(ResourceBundle.getBundle(etiquetas).getString("ErrorEventHasFinished") + ": "
 					+ event.getDescription());
 		} catch (QuestionAlreadyExist e1) {
-			jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
+			jLabelMsg.setText(ResourceBundle.getBundle(etiquetas).getString("ErrorQueryAlreadyExist"));
 		} catch (java.lang.NumberFormatException e1) {
-			jLabelError.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorNumber"));
+			jLabelError.setText(ResourceBundle.getBundle(etiquetas).getString("ErrorNumber"));
 		} catch (Exception e1) {
 
 			e1.printStackTrace();

@@ -1,9 +1,9 @@
 
 )domain.Quote#toString()Ljava/lang/String;N
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.javaZ Z("1*Ÿ
-1[	 [(f
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.java[ [("1*Ÿ
+1\	 \(f
 d
-[ [(
+\ \(
 %0java.lang.String"__id*:
 
 __unknown_file (*
@@ -11,31 +11,31 @@ d
 
 forecastp
 n
-[	 [(
+\	 \(
 %1java.lang.String"__concat*
-[	 [(
+\	 \(
 
 Forecast: *$
-[ [(
+\ \(
 
 %0java.lang.Stringo
 m
-[	 [(*
+\	 \(*
 %2java.lang.String"__concat*$
-[	 [(
+\	 \(
 
 %1java.lang.String*
-[ [(*
+\ \(*
 	; Quote: c
 a
-[; [(@
+\; \(@
 %3java.lang.Double"__id*7
 
 __unknown_file (*
 domain.Quote"
 balio½
 º
-[+ [(A
+\+ \(A
 %4java.lang.String".java.lang.Double#toString(D)Ljava/lang/String;*0
 
 __unknown_file ("
@@ -45,15 +45,15 @@ a
 
 %3java.lang.Doublez
 x
-[	 [(A
+\	 \(A
 %5java.lang.String"__concat*$
-[	 [(*
+\	 \(*
 
 %2java.lang.String*$
-[+ [(A
+\+ \(A
 
 %4java.lang.String"$
-[ [(B
+\ \(B
 
 %5java.lang.StringB
 domain.QuoteH

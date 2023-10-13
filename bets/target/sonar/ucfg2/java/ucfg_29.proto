@@ -1,25 +1,25 @@
 
 KdataAccess.DataAccess#findTransakzioak(Ldomain/Registered;)Ljava/util/List;Y
-M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java” ”(*"1*ƒ
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java• •(*"1*ƒ
 1
-•! •(#z
+–! –(#z
 x
 
-•! •(#%
+–! –(#%
 %0javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbŸœ
 
-•; •(J
+–; –(J
 %1java.lang.String"1domain.Registered#getUsername()Ljava/lang/String;*4
 
 __unknown_file (
 
 udomain.Registered2getUsername()ÏÌ
 
-•! •(K
+–! –(K
 %2domain.Registered"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*C
 
 __unknown_file ('
@@ -34,13 +34,13 @@ x
 %1java.lang.String2)find(Ljava/lang/Class;Ljava/lang/Object;)z
 x
 
-–# –(%%
+—# —(%%
 %3javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbª§
-–# –(‘"
+—# —(‘"
 %4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*C
 
 __unknown_file ('
@@ -53,21 +53,21 @@ ISELECT t FROM Transaction t WHERE t.getErabiltzailea().getUsername() =?1 *"
 __unknown_file (
 ""20createQuery(Ljava/lang/String;Ljava/lang/Class;)
 }
-– –(’&
+— —(’&
 Tqueryjavax.persistence.TypedQuery"__id*@
 
 __unknown_file ($
 "
 %4javax.persistence.TypedQueryŸœ
 
-— —((
+˜ ˜((
 %5java.lang.String"1domain.Registered#getUsername()Ljava/lang/String;*4
 
 __unknown_file (
 
 udomain.Registered2getUsername()ÒÏ
 
-— —()"
+˜ ˜()"
 %6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*D
 
 __unknown_file ((
@@ -80,17 +80,17 @@ ISELECT t FROM Transaction t WHERE t.getErabiltzailea().getUsername() =?1 *"
 
 %5java.lang.String2!setParameter(ILjava/lang/Object;)º·
 
-˜	 ˜(
+™	 ™(
 %7java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*D
 
 __unknown_file ((
 &
 Tqueryjavax.persistence.TypedQuery2getResultList()"$
 
-˜ ˜( 
+™ ™( 
 
 %7java.util.List:$
 
-”+ ”(7
+•+ •(7
 udomain.RegisteredB
 dataAccess.DataAccessH

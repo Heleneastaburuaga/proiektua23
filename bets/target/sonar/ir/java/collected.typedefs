@@ -1,7 +1,7 @@
 Ô
 gui.ApustuBerdinakGUIO
 <init>Egui.ApustuBerdinakGUI#<init>(Ldomain/Registered;Ldomain/Registered;)Vq
-jButtonClose_actionPerformedQgui.ApustuBerdinakGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vjavax.swing.JFrameÀ
+jButtonClose_actionPerformedQgui.ApustuBerdinakGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vjavax.swing.JFrameŒ
 dataAccess.DataAccess)
 <init>dataAccess.DataAccess#<init>()V*
 <init> dataAccess.DataAccess#<init>(Z)V}
@@ -29,8 +29,8 @@ DiruaSartujdataAccess.DataAccess#DiruaSartu(Ldomain/Registered;Ljava/lang/Doubl
 gertaeraEzabatu6dataAccess.DataAccess#gertaeraEzabatu(Ldomain/Event;)Z[
 gertaerakKopiatuGdataAccess.DataAccess#gertaerakKopiatu(Ldomain/Event;Ljava/util/Date;)Zm
 gertaerakSortu[dataAccess.DataAccess#gertaerakSortu(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)ZB
-getAllTeams3dataAccess.DataAccess#getAllTeams()Ljava/util/List;P
-	getEventsCdataAccess.DataAccess#getEvents(Ljava/util/Date;)Ljava/util/Vector;D
+getAllTeams3dataAccess.DataAccess#getAllTeams()Ljava/util/List;S
+	getEventsFdataAccess.DataAccess#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;D
 getEventsAll4dataAccess.DataAccess#getEventsAll()Ljava/util/List;Z
 getEventsMonthHdataAccess.DataAccess#getEventsMonth(Ljava/util/Date;)Ljava/util/Vector;S
 getEventsTeamBdataAccess.DataAccess#getEventsTeam(Ldomain/Team;)Ljava/util/List;5
@@ -220,17 +220,17 @@ addApustua1domain.ApustuAnitza#addApustua(Ldomain/Apustua;)V5
 <init>4exceptions.EventFinished#<init>(Ljava/lang/String;)Vjava.lang.Exception–
 gui.DestacadosGUI8
 <init>.gui.DestacadosGUI#<init>(Ldomain/Registered;)Vm
-jButtonClose_actionPerformedMgui.DestacadosGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vjavax.swing.JFrame÷
+jButtonClose_actionPerformedMgui.DestacadosGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vjavax.swing.JFrameŸ
 $businessLogic.BLFacadeImplementation8
 <init>.businessLogic.BLFacadeImplementation#<init>()VO
 <init>EbusinessLogic.BLFacadeImplementation#<init>(LdataAccess/DataAccess;)Vå
-ApustuaEgin}businessLogic.BLFacadeImplementation#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Zw
-
-DiruaSartuibusinessLogic.BLFacadeImplementation#DiruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/lang/String;)VT
+ApustuaEgin}businessLogic.BLFacadeImplementation#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)ZT
 EmaitzakIpiniCbusinessLogic.BLFacadeImplementation#EmaitzakIpini(Ldomain/Quote;)Vp
 apustuaEzabatu^businessLogic.BLFacadeImplementation#apustuaEzabatu(Ldomain/Registered;Ldomain/ApustuAnitza;)V6
 close-businessLogic.BLFacadeImplementation#close()Vy
-createQuestiongbusinessLogic.BLFacadeImplementation#createQuestion(Ldomain/Event;Ljava/lang/String;F)Ldomain/Question;_
+createQuestiongbusinessLogic.BLFacadeImplementation#createQuestion(Ldomain/Event;Ljava/lang/String;F)Ldomain/Question;w
+
+diruaSartuibusinessLogic.BLFacadeImplementation#diruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/lang/String;)V_
 ezJarraituTaldeaKbusinessLogic.BLFacadeImplementation#ezJarraituTaldea(Ldomain/Registered;)Vn
 findApustuAnitzaZbusinessLogic.BLFacadeImplementation#findApustuAnitza(Ldomain/Registered;)Ljava/util/List;d
 findApustuaUbusinessLogic.BLFacadeImplementation#findApustua(Ldomain/Registered;)Ljava/util/List;Y
@@ -246,8 +246,8 @@ DiruaSartuibusinessLogic.BLFacadeImplementation#DiruaSartu(Ldomain/Registered;L
 gertaeraEzabatuEbusinessLogic.BLFacadeImplementation#gertaeraEzabatu(Ldomain/Event;)Zj
 gertaerakKopiatuVbusinessLogic.BLFacadeImplementation#gertaerakKopiatu(Ldomain/Event;Ljava/util/Date;)Z|
 gertaerakSortujbusinessLogic.BLFacadeImplementation#gertaerakSortu(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)ZQ
-getAllTeamsBbusinessLogic.BLFacadeImplementation#getAllTeams()Ljava/util/List;_
-	getEventsRbusinessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/Vector;S
+getAllTeamsBbusinessLogic.BLFacadeImplementation#getAllTeams()Ljava/util/List;b
+	getEventsUbusinessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;S
 getEventsAllCbusinessLogic.BLFacadeImplementation#getEventsAll()Ljava/util/List;i
 getEventsMonthWbusinessLogic.BLFacadeImplementation#getEventsMonth(Ljava/util/Date;)Ljava/util/Vector;b
 getEventsTeamQbusinessLogic.BLFacadeImplementation#getEventsTeam(Ldomain/Team;)Ljava/util/List;D
@@ -291,22 +291,22 @@ initializegui.AdminGUI#initialize()VN
 setApustuKantitatea6domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V8
 	setEvents+domain.Sport#setEvents(Ljava/util/Vector;)V6
 setIzena*domain.Sport#setIzena(Ljava/lang/String;)V5
-toString)domain.Sport#toString()Ljava/lang/String;java.io.Serializablejava.lang.ObjectÁ
+toString)domain.Sport#toString()Ljava/lang/String;java.io.Serializablejava.lang.ObjectÌ
 domain.Quote 
 <init>domain.Quote#<init>()VD
 <init>:domain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;)VU
 <init>Kdomain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)V8
 
 addApustua*domain.Quote#addApustua(Ldomain/Apustua;)V2
-equals(domain.Quote#equals(Ljava/lang/Object;)Z;
-getApustuak,domain.Quote#getApustuak()Ljava/util/Vector;;
+equals(domain.Quote#equals(Ljava/lang/Object;)Z>
+getApustuak/domain.Quote#getApustuak()Ljava/util/ArrayList;;
 getForecast,domain.Quote#getForecast()Ljava/lang/String;:
 getQuestion+domain.Quote#getQuestion()Ldomain/Question;5
 getQuote)domain.Quote#getQuote()Ljava/lang/Double;B
 getQuoteNumber0domain.Quote#getQuoteNumber()Ljava/lang/Integer;$
 hashCodedomain.Quote#hashCode()I>
-removeApustua-domain.Quote#removeApustua(Ldomain/Apustua;)V<
-setApustuak-domain.Quote#setApustuak(Ljava/util/Vector;)V<
+removeApustua-domain.Quote#removeApustua(Ldomain/Apustua;)V?
+setApustuak0domain.Quote#setApustuak(Ljava/util/ArrayList;)V<
 setForecast-domain.Quote#setForecast(Ljava/lang/String;)V;
 setQuestion,domain.Quote#setQuestion(Ldomain/Question;)V6
 setQuote*domain.Quote#setQuote(Ljava/lang/Double;)VC
@@ -320,10 +320,10 @@ addApustua*domain.Quote#addApustua(Ldomain/Apustua;)V2
 <init>8exceptions.QuoteAlreadyExist#<init>(Ljava/lang/String;)Vjava.lang.Exception»
 gui.GertaeraInfo2
 <init>(gui.GertaeraInfo#<init>(Ldomain/Event;)Vl
-jButtonClose_actionPerformedLgui.GertaeraInfo#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vjavax.swing.JFrameä
+jButtonClose_actionPerformedLgui.GertaeraInfo#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vjavax.swing.JFrameà
 gui.EmaitzakIpiniGUI:
-<init>0gui.EmaitzakIpiniGUI#<init>(Ljava/util/Vector;)Vp
-jButtonClose_actionPerformedPgui.EmaitzakIpiniGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)V:
+<init>0gui.EmaitzakIpiniGUI#<init>(Ljava/util/Vector;)Vn
+jButtonCloseActionPerformedOgui.EmaitzakIpiniGUI#jButtonCloseActionPerformed(Ljava/awt/event/ActionEvent;)V:
 jbInit0gui.EmaitzakIpiniGUI#jbInit(Ljava/util/Vector;)Vt
 paintDaysWithEvents]gui.EmaitzakIpiniGUI#paintDaysWithEvents(Lcom/toedter/calendar/JCalendar;Ljava/util/Vector;)Vjavax.swing.JFrame≤
 exceptions.QuestionAlreadyExist3

@@ -1,25 +1,25 @@
 
 LdataAccess.DataAccess#findQuestionFromQuote(Ldomain/Quote;)Ldomain/Question;Y
-M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java† †(&"1*ï
+M/C:/Users/lande/git/proiektua23/bets/src/main/java/dataAccess/DataAccess.java° °(&"1*ï
 1
-° °(z
+¢ ¢(z
 x
 
-° °(%
+¢ ¢(%
 %0javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbùö
 
-°# °(5
+¢# ¢(5
 %1java.lang.Integer"0domain.Quote#getQuoteNumber()Ljava/lang/Integer;*/
 
 __unknown_file (
 
 qdomain.Quote2getQuoteNumber()À»
 
-° °(6
+¢ ¢(6
 %2domain.Quote"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*C
 
 __unknown_file ('
@@ -34,24 +34,24 @@ x
 %1java.lang.Integer2)find(Ljava/lang/Class;Ljava/lang/Object;)[
 Y
 
-° °(7
+¢ ¢(7
 quodomain.Quote"__id*0
 
 __unknown_file (
 
 %2domain.Quoteïí
 
-¢	 ¢(
+£	 £(
 %3domain.Question"+domain.Quote#getQuestion()Ldomain/Question;*1
 
 __unknown_file (
 
 quodomain.Quote2getQuestion()"%
 
-¢ ¢(
+£ £(
 
 %3domain.Question:
 
-†' †(.
+°' °(.
 qdomain.QuoteB
 dataAccess.DataAccessH

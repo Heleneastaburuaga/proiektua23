@@ -1,7 +1,7 @@
 organization=quintanairati
 projectKey=proiektua23
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.47360
+serverVersion=8.0.0.47490
 dashboardUrl=https://sonarcloud.io/dashboard?id=proiektua23
-ceTaskId=AYsegJihTVlIT8HMiRXC
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYsegJihTVlIT8HMiRXC
+ceTaskId=AYsoK0PLyhhFiioNEJA6
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYsoK0PLyhhFiioNEJA6

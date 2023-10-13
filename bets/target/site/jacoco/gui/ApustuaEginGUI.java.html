@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -41,416 +42,416 @@ import java.awt.Font;
 
 public class ApustuaEginGUI extends JFrame{
 
-<span class="nc" id="L44">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L45">	private BLFacade businessLogic = MainGUI.getBusinessLogic();</span>
 
 	private static final long serialVersionUID = 1L;
 
-<span class="nc" id="L48">	private JComboBox&lt;Event&gt; jComboBoxEvents = new JComboBox&lt;Event&gt;();</span>
-<span class="nc" id="L49">	DefaultComboBoxModel&lt;Event&gt; modelEvents = new DefaultComboBoxModel&lt;Event&gt;();</span>
+<span class="nc" id="L49">	private JComboBox&lt;Event&gt; jComboBoxEvents = new JComboBox&lt;Event&gt;();</span>
+<span class="nc" id="L50">	DefaultComboBoxModel&lt;Event&gt; modelEvents = new DefaultComboBoxModel&lt;Event&gt;();</span>
 	
-<span class="nc" id="L51">	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ListEvents&quot;));</span>
-<span class="nc" id="L52">	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EventDate&quot;));</span>
-<span class="nc" id="L53">	private JCalendar jCalendar = new JCalendar();</span>
-<span class="nc" id="L54">	private Calendar calendarAct = null;</span>
-<span class="nc" id="L55">	private Calendar calendarAnt = null;</span>
+<span class="nc" id="L52">	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ListEvents&quot;));</span>
+<span class="nc" id="L53">	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EventDate&quot;));</span>
+<span class="nc" id="L54">	private JCalendar jCalendar = new JCalendar();</span>
+<span class="nc" id="L55">	private Calendar calendarAct = null;</span>
+<span class="nc" id="L56">	private Calendar calendarAnt = null;</span>
 
-<span class="nc" id="L57">	private JScrollPane scrollPaneEvents = new JScrollPane();</span>
-<span class="nc" id="L58">	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L58">	private JScrollPane scrollPaneEvents = new JScrollPane();</span>
+<span class="nc" id="L59">	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
 	
-<span class="nc" id="L60">	private Vector&lt;Date&gt; datesWithEventsCurrentMonth = new Vector&lt;Date&gt;();</span>
-<span class="nc" id="L61">	private final JLabel jLabelQuestion = new JLabel(); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L62">	private final JComboBox&lt;Question&gt; jComboBoxQuestions = new JComboBox&lt;Question&gt;();</span>
-<span class="nc" id="L63">	DefaultComboBoxModel&lt;Question&gt; modelQuestions = new DefaultComboBoxModel&lt;Question&gt;();</span>
+<span class="nc" id="L61">	private Vector&lt;Date&gt; datesWithEventsCurrentMonth = new Vector&lt;Date&gt;();</span>
+<span class="nc" id="L62">	private final JLabel jLabelQuestion = new JLabel(); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L63">	private final JComboBox&lt;Question&gt; jComboBoxQuestions = new JComboBox&lt;Question&gt;();</span>
+<span class="nc" id="L64">	DefaultComboBoxModel&lt;Question&gt; modelQuestions = new DefaultComboBoxModel&lt;Question&gt;();</span>
 	
 	private domain.Event event;
-<span class="nc" id="L66">	private final JLabel jLabelQuotes = new JLabel(); </span>
-<span class="nc" id="L67">	private final JTextField textFieldDiruKop = new JTextField();</span>
-<span class="nc" id="L68">	private final JButton jButtonCreate = new JButton();</span>
+<span class="nc" id="L67">	private final JLabel jLabelQuotes = new JLabel(); </span>
+<span class="nc" id="L68">	private final JTextField textFieldDiruKop = new JTextField();</span>
+<span class="nc" id="L69">	private final JButton jButtonCreate = new JButton();</span>
 
 	private JComboBox jComboBoxQuotes;
-<span class="nc" id="L71">	DefaultComboBoxModel&lt;Quote&gt; modelQuotes = new DefaultComboBoxModel&lt;Quote&gt;();</span>
+<span class="nc" id="L72">	DefaultComboBoxModel&lt;Quote&gt; modelQuotes = new DefaultComboBoxModel&lt;Quote&gt;();</span>
 	
 	private Registered user; 
-<span class="nc" id="L74">	private final JLabel lblError = new JLabel(&quot;Errorea&quot;);</span>
+<span class="nc" id="L75">	private final JLabel lblError = new JLabel(&quot;Errorea&quot;);</span>
 
 	private JScrollPane scrollBar;
 
 	private JList&lt;Quote&gt; list;
-<span class="nc" id="L79">	private DefaultListModel&lt;Quote&gt; quoteList = new DefaultListModel&lt;Quote&gt;();</span>
+<span class="nc" id="L80">	private DefaultListModel&lt;Quote&gt; quoteList = new DefaultListModel&lt;Quote&gt;();</span>
 	
-<span class="nc" id="L81">	private final JButton btnApustuaGehitu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaGehitu&quot;));</span>
+<span class="nc" id="L82">	private final JButton btnApustuaGehitu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaGehitu&quot;));</span>
 	
-<span class="nc" id="L83">	private Double maxMinBet=0.0;</span>
+<span class="nc" id="L84">	private Double maxMinBet=0.0;</span>
 	
-<span class="nc" id="L85">	private Vector&lt;Quote&gt; quoteVec = new Vector&lt;Quote&gt;();</span>
+<span class="nc" id="L86">	private Vector&lt;Quote&gt; quoteVec = new Vector&lt;Quote&gt;();</span>
 
 	private JLabel lblApustua;
 
 	private JButton jButtonFinish;
 	
 	
-<span class="nc" id="L92">	public ApustuaEginGUI(Vector&lt;domain.Event&gt; v, Registered u, Quote q) {</span>
-<span class="nc" id="L93">		user = u; </span>
-<span class="nc" id="L94">		textFieldDiruKop.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
-<span class="nc" id="L95">		textFieldDiruKop.setHorizontalAlignment(SwingConstants.CENTER);</span>
-<span class="nc" id="L96">		textFieldDiruKop.setText(&quot;&quot;); </span>
-<span class="nc" id="L97">		textFieldDiruKop.setBounds(210, 313, 394, 37);</span>
-<span class="nc" id="L98">		textFieldDiruKop.setColumns(10);</span>
+<span class="nc" id="L93">	public ApustuaEginGUI(Vector&lt;domain.Event&gt; v, Registered u, Quote q) {</span>
+<span class="nc" id="L94">		user = u; </span>
+<span class="nc" id="L95">		textFieldDiruKop.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L96">		textFieldDiruKop.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L97">		textFieldDiruKop.setText(&quot;&quot;); </span>
+<span class="nc" id="L98">		textFieldDiruKop.setBounds(210, 313, 394, 37);</span>
+<span class="nc" id="L99">		textFieldDiruKop.setColumns(10);</span>
 		try {
-<span class="nc" id="L100">			jbInit(v, q);</span>
-<span class="nc" id="L101">		} catch (Exception e) {</span>
-<span class="nc" id="L102">			e.printStackTrace();</span>
-<span class="nc" id="L103">		}</span>
-<span class="nc" id="L104">	}</span>
+<span class="nc" id="L101">			jbInit(v, q);</span>
+<span class="nc" id="L102">		} catch (Exception e) {</span>
+<span class="nc" id="L103">			e.printStackTrace();</span>
+<span class="nc" id="L104">		}</span>
+<span class="nc" id="L105">	}</span>
 
 	private void jbInit(Vector&lt;domain.Event&gt; v, Quote q) throws Exception {
 
-<span class="nc" id="L108">		this.getContentPane().setLayout(null);</span>
-<span class="nc" id="L109">		this.setSize(new Dimension(1250, 470));</span>
-<span class="nc" id="L110">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaEgin&quot;));</span>
-<span class="nc" id="L111">		jComboBoxEvents.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L109">		this.getContentPane().setLayout(null);</span>
+<span class="nc" id="L110">		this.setSize(new Dimension(1250, 470));</span>
+<span class="nc" id="L111">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaEgin&quot;));</span>
+<span class="nc" id="L112">		jComboBoxEvents.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
 		
 
-<span class="nc" id="L114">		jComboBoxEvents.setModel(modelEvents);</span>
-<span class="nc" id="L115">		jComboBoxEvents.setBounds(new Rectangle(330, 80, 274, 34));</span>
-<span class="nc" id="L116">		jLabelListOfEvents.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
-<span class="nc" id="L117">		jLabelListOfEvents.setBounds(new Rectangle(330, 50, 286, 20));</span>
+<span class="nc" id="L115">		jComboBoxEvents.setModel(modelEvents);</span>
+<span class="nc" id="L116">		jComboBoxEvents.setBounds(new Rectangle(330, 80, 274, 34));</span>
+<span class="nc" id="L117">		jLabelListOfEvents.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L118">		jLabelListOfEvents.setBounds(new Rectangle(330, 50, 286, 20));</span>
 
-<span class="nc" id="L119">		jCalendar.setBounds(new Rectangle(10, 62, 286, 206));</span>
-<span class="nc" id="L120">		scrollPaneEvents.setBounds(new Rectangle(25, 44, 346, 116));</span>
-<span class="nc" id="L121">		jButtonClose.setForeground(Color.WHITE);</span>
-<span class="nc" id="L122">		jButtonClose.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
-<span class="nc" id="L123">		jButtonClose.setBackground(Color.DARK_GRAY);</span>
-<span class="nc" id="L124">		jButtonClose.setBounds(new Rectangle(456, 360, 148, 51));</span>
-<span class="nc" id="L125">		jButtonClose.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L120">		jCalendar.setBounds(new Rectangle(10, 62, 286, 206));</span>
+<span class="nc" id="L121">		scrollPaneEvents.setBounds(new Rectangle(25, 44, 346, 116));</span>
+<span class="nc" id="L122">		jButtonClose.setForeground(Color.WHITE);</span>
+<span class="nc" id="L123">		jButtonClose.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
+<span class="nc" id="L124">		jButtonClose.setBackground(Color.DARK_GRAY);</span>
+<span class="nc" id="L125">		jButtonClose.setBounds(new Rectangle(456, 360, 148, 51));</span>
+<span class="nc" id="L126">		jButtonClose.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L127">				jButtonClose_actionPerformed(e);</span>
-<span class="nc" id="L128">			}</span>
+<span class="nc" id="L128">				jButtonClose_actionPerformed(e);</span>
+<span class="nc" id="L129">			}</span>
 		});
 
-<span class="nc" id="L131">		this.getContentPane().add(jButtonClose, null);</span>
-<span class="nc" id="L132">		this.getContentPane().add(jLabelListOfEvents, null);</span>
-<span class="nc" id="L133">		this.getContentPane().add(jComboBoxEvents, null);</span>
+<span class="nc" id="L132">		this.getContentPane().add(jButtonClose, null);</span>
+<span class="nc" id="L133">		this.getContentPane().add(jLabelListOfEvents, null);</span>
+<span class="nc" id="L134">		this.getContentPane().add(jComboBoxEvents, null);</span>
 
-<span class="nc" id="L135">		this.getContentPane().add(jCalendar, null);</span>
+<span class="nc" id="L136">		this.getContentPane().add(jCalendar, null);</span>
 		
 		
-<span class="nc" id="L138">		BLFacade facade = MainGUI.getBusinessLogic();</span>
-<span class="nc" id="L139">		datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
-<span class="nc" id="L140">		paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
-<span class="nc" id="L141">		jLabelEventDate.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L139">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L140">		datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
+<span class="nc" id="L141">		paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
+<span class="nc" id="L142">		jLabelEventDate.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
 		
 		
 
-<span class="nc" id="L145">		jLabelEventDate.setBounds(new Rectangle(40, 15, 140, 25));</span>
-<span class="nc" id="L146">		jLabelEventDate.setBounds(22, 27, 274, 25);</span>
-<span class="nc" id="L147">		getContentPane().add(jLabelEventDate);</span>
-<span class="nc" id="L148">		jLabelQuestion.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
-<span class="nc" id="L149">		jLabelQuestion.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GalderaLista&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L150">		jLabelQuestion.setBounds(330, 124, 127, 29);</span>
+<span class="nc" id="L146">		jLabelEventDate.setBounds(new Rectangle(40, 15, 140, 25));</span>
+<span class="nc" id="L147">		jLabelEventDate.setBounds(22, 27, 274, 25);</span>
+<span class="nc" id="L148">		getContentPane().add(jLabelEventDate);</span>
+<span class="nc" id="L149">		jLabelQuestion.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L150">		jLabelQuestion.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GalderaLista&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L151">		jLabelQuestion.setBounds(330, 124, 127, 29);</span>
 		
-<span class="nc" id="L152">		getContentPane().add(jLabelQuestion);</span>
-<span class="nc" id="L153">		jComboBoxQuestions.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
-<span class="nc" id="L154">		jComboBoxQuestions.setModel(modelQuestions);</span>
-<span class="nc" id="L155">		jComboBoxQuestions.setBounds(330, 163, 274, 34);</span>
+<span class="nc" id="L153">		getContentPane().add(jLabelQuestion);</span>
+<span class="nc" id="L154">		jComboBoxQuestions.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L155">		jComboBoxQuestions.setModel(modelQuestions);</span>
+<span class="nc" id="L156">		jComboBoxQuestions.setBounds(330, 163, 274, 34);</span>
 		
-<span class="nc" id="L157">		getContentPane().add(jComboBoxQuestions);</span>
+<span class="nc" id="L158">		getContentPane().add(jComboBoxQuestions);</span>
 		
-<span class="nc" id="L159">		jComboBoxEvents.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L160">		jComboBoxEvents.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L161">				event = ((domain.Event) jComboBoxEvents.getSelectedItem());</span>
-<span class="nc" id="L162">				jComboBoxQuestions.removeAllItems();</span>
-<span class="nc bnc" id="L163" title="All 2 branches missed.">				for(domain.Question question : businessLogic.findQuestion(event))</span>
-<span class="nc" id="L164">					modelQuestions.addElement(question); </span>
-<span class="nc" id="L165">				}</span>
+<span class="nc" id="L162">				event = ((domain.Event) jComboBoxEvents.getSelectedItem());</span>
+<span class="nc" id="L163">				jComboBoxQuestions.removeAllItems();</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">				for(domain.Question question : businessLogic.findQuestion(event))</span>
+<span class="nc" id="L165">					modelQuestions.addElement(question); </span>
+<span class="nc" id="L166">				}</span>
 		});
-<span class="nc" id="L167">		jLabelQuotes.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
-<span class="nc" id="L168">		jLabelQuotes.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;KuotaLista&quot;)); </span>
-<span class="nc" id="L169">		jLabelQuotes.setBounds(330, 207, 113, 18);</span>
+<span class="nc" id="L168">		jLabelQuotes.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L169">		jLabelQuotes.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;KuotaLista&quot;)); </span>
+<span class="nc" id="L170">		jLabelQuotes.setBounds(330, 207, 113, 18);</span>
 		
-<span class="nc" id="L171">		getContentPane().add(jLabelQuotes);</span>
+<span class="nc" id="L172">		getContentPane().add(jLabelQuotes);</span>
 		
-<span class="nc" id="L173">		jComboBoxQuotes = new JComboBox();</span>
-<span class="nc" id="L174">		jComboBoxQuotes.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
-<span class="nc" id="L175">		jComboBoxQuotes.setBounds(330, 235, 274, 34);</span>
-<span class="nc" id="L176">		jComboBoxQuotes.setModel(modelQuotes);</span>
+<span class="nc" id="L174">		jComboBoxQuotes = new JComboBox();</span>
+<span class="nc" id="L175">		jComboBoxQuotes.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L176">		jComboBoxQuotes.setBounds(330, 235, 274, 34);</span>
+<span class="nc" id="L177">		jComboBoxQuotes.setModel(modelQuotes);</span>
 		
-<span class="nc" id="L178">		getContentPane().add(jComboBoxQuotes);</span>
-<span class="nc" id="L179">		jComboBoxQuestions.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L179">		getContentPane().add(jComboBoxQuotes);</span>
+<span class="nc" id="L180">		jComboBoxQuestions.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
 				
-<span class="nc" id="L182">				Question q = ((domain.Question) jComboBoxQuestions.getSelectedItem());</span>
-<span class="nc" id="L183">				jComboBoxQuotes.removeAllItems();</span>
-<span class="nc bnc" id="L184" title="All 2 branches missed.">				for(domain.Quote quote : businessLogic.findQuote(q)) {</span>
-<span class="nc" id="L185">					modelQuotes.addElement(quote); </span>
-<span class="nc" id="L186">				}</span>
-<span class="nc bnc" id="L187" title="All 2 branches missed.">				if(modelQuotes.getSize()==0) {</span>
-<span class="nc" id="L188">					btnApustuaGehitu.setEnabled(false);</span>
+<span class="nc" id="L183">				Question q = ((domain.Question) jComboBoxQuestions.getSelectedItem());</span>
+<span class="nc" id="L184">				jComboBoxQuotes.removeAllItems();</span>
+<span class="nc bnc" id="L185" title="All 2 branches missed.">				for(domain.Quote quote : businessLogic.findQuote(q)) {</span>
+<span class="nc" id="L186">					modelQuotes.addElement(quote); </span>
+<span class="nc" id="L187">				}</span>
+<span class="nc bnc" id="L188" title="All 2 branches missed.">				if(modelQuotes.getSize()==0) {</span>
+<span class="nc" id="L189">					btnApustuaGehitu.setEnabled(false);</span>
 				}else {
-<span class="nc" id="L190">					btnApustuaGehitu.setEnabled(true);</span>
+<span class="nc" id="L191">					btnApustuaGehitu.setEnabled(true);</span>
 				}
-<span class="nc" id="L192">			}</span>
+<span class="nc" id="L193">			}</span>
 		});
 		
 		
-<span class="nc" id="L196">		JLabel jLabelDiruKopurua = new JLabel(); </span>
-<span class="nc" id="L197">		jLabelDiruKopurua.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
-<span class="nc" id="L198">		jLabelDiruKopurua.setHorizontalAlignment(SwingConstants.RIGHT);</span>
-<span class="nc" id="L199">		jLabelDiruKopurua.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DiruKop&quot;)); </span>
-<span class="nc" id="L200">		jLabelDiruKopurua.setBounds(10, 313, 178, 37);</span>
-<span class="nc" id="L201">		getContentPane().add(jLabelDiruKopurua);</span>
-<span class="nc" id="L202">		lblError.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L197">		JLabel jLabelDiruKopurua = new JLabel(); </span>
+<span class="nc" id="L198">		jLabelDiruKopurua.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L199">		jLabelDiruKopurua.setHorizontalAlignment(SwingConstants.RIGHT);</span>
+<span class="nc" id="L200">		jLabelDiruKopurua.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DiruKop&quot;)); </span>
+<span class="nc" id="L201">		jLabelDiruKopurua.setBounds(10, 313, 178, 37);</span>
+<span class="nc" id="L202">		getContentPane().add(jLabelDiruKopurua);</span>
+<span class="nc" id="L203">		lblError.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
 		
-<span class="nc" id="L204">		lblError.setVisible(false);</span>
+<span class="nc" id="L205">		lblError.setVisible(false);</span>
 		
-<span class="nc" id="L206">		jButtonFinish = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuAmaitu&quot;));</span>
-<span class="nc" id="L207">		jButtonFinish.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
-<span class="nc" id="L208">		jButtonFinish.setBackground(Color.PINK);</span>
-<span class="nc" id="L209">		jButtonFinish.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L207">		jButtonFinish = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuAmaitu&quot;));</span>
+<span class="nc" id="L208">		jButtonFinish.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L209">		jButtonFinish.setBackground(Color.PINK);</span>
+<span class="nc" id="L210">		jButtonFinish.setForeground(Color.DARK_GRAY);</span>
 		
-<span class="nc" id="L211">		getContentPane().add(textFieldDiruKop);</span>
-<span class="nc" id="L212">		textFieldDiruKop.setVisible(false);</span>
-<span class="nc" id="L213">		jLabelDiruKopurua.setVisible(false);</span>
-<span class="nc" id="L214">		jButtonCreate.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L215">		jButtonCreate.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
-<span class="nc" id="L216">		jButtonCreate.setBackground(new Color(255, 105, 180));</span>
+<span class="nc" id="L212">		getContentPane().add(textFieldDiruKop);</span>
+<span class="nc" id="L213">		textFieldDiruKop.setVisible(false);</span>
+<span class="nc" id="L214">		jLabelDiruKopurua.setVisible(false);</span>
+<span class="nc" id="L215">		jButtonCreate.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L216">		jButtonCreate.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L217">		jButtonCreate.setBackground(new Color(255, 105, 180));</span>
 		
-<span class="nc" id="L218">		jButtonCreate.setVisible(false);</span>
-<span class="nc" id="L219">		jButtonCreate.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaEgin&quot;));</span>
-<span class="nc" id="L220">		jButtonCreate.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L219">		jButtonCreate.setVisible(false);</span>
+<span class="nc" id="L220">		jButtonCreate.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaEgin&quot;));</span>
+<span class="nc" id="L221">		jButtonCreate.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L222">				String textua = textFieldDiruKop.getText().trim(); </span>
+<span class="nc" id="L223">				String textua = textFieldDiruKop.getText().trim(); </span>
 				Double zenb; 
 				try {
-<span class="nc" id="L225">					zenb = Double.parseDouble(textua);</span>
-<span class="nc bnc" id="L226" title="All 2 branches missed.">					if(zenb&gt;0.0) {</span>
-<span class="nc bnc" id="L227" title="All 2 branches missed.">						if(zenb&gt;=maxMinBet) {</span>
-<span class="nc" id="L228">							Boolean b = businessLogic.ApustuaEgin(user, quoteVec, zenb, -1);</span>
-<span class="nc" id="L229">							quoteList= new DefaultListModel&lt;Quote&gt;();</span>
-<span class="nc" id="L230">							quoteVec= new Vector&lt;Quote&gt;();</span>
-<span class="nc" id="L231">							list.setModel(quoteList);</span>
-<span class="nc bnc" id="L232" title="All 2 branches missed.">							if(b) {</span>
-<span class="nc" id="L233">								lblError.setVisible(true); </span>
-<span class="nc" id="L234">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaCorrect&quot;));</span>
-<span class="nc" id="L235">								jButtonFinish.setEnabled(false);</span>
-<span class="nc" id="L236">								btnApustuaGehitu.setVisible(true);</span>
-<span class="nc" id="L237">								jButtonCreate.setVisible(false);</span>
-<span class="nc" id="L238">								textFieldDiruKop.setVisible(false);</span>
+<span class="nc" id="L226">					zenb = Double.parseDouble(textua);</span>
+<span class="nc bnc" id="L227" title="All 2 branches missed.">					if(zenb&gt;0.0) {</span>
+<span class="nc bnc" id="L228" title="All 2 branches missed.">						if(zenb&gt;=maxMinBet) {</span>
+<span class="nc" id="L229">							Boolean b = businessLogic.ApustuaEgin(user, quoteVec, zenb, -1);</span>
+<span class="nc" id="L230">							quoteList= new DefaultListModel&lt;Quote&gt;();</span>
+<span class="nc" id="L231">							quoteVec= new Vector&lt;Quote&gt;();</span>
+<span class="nc" id="L232">							list.setModel(quoteList);</span>
+<span class="nc bnc" id="L233" title="All 2 branches missed.">							if(b) {</span>
+<span class="nc" id="L234">								lblError.setVisible(true); </span>
+<span class="nc" id="L235">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaCorrect&quot;));</span>
+<span class="nc" id="L236">								jButtonFinish.setEnabled(false);</span>
+<span class="nc" id="L237">								btnApustuaGehitu.setVisible(true);</span>
+<span class="nc" id="L238">								jButtonCreate.setVisible(false);</span>
+<span class="nc" id="L239">								textFieldDiruKop.setVisible(false);</span>
 								//jLabelDiruKopurua.setVisible(false);
 							}else {
-<span class="nc" id="L241">								lblError.setVisible(true); </span>
-<span class="nc" id="L242">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError1&quot;)); </span>
+<span class="nc" id="L242">								lblError.setVisible(true); </span>
+<span class="nc" id="L243">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError1&quot;)); </span>
 							}							
-<span class="nc" id="L244">						}else {</span>
-<span class="nc" id="L245">							lblError.setVisible(true); </span>
-<span class="nc" id="L246">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError4&quot;)+ &quot; &quot; + maxMinBet); </span>
+<span class="nc" id="L245">						}else {</span>
+<span class="nc" id="L246">							lblError.setVisible(true); </span>
+<span class="nc" id="L247">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError4&quot;)+ &quot; &quot; + maxMinBet); </span>
 						}
 					}else {
-<span class="nc" id="L249">						lblError.setVisible(true); </span>
-<span class="nc" id="L250">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;)); </span>
+<span class="nc" id="L250">						lblError.setVisible(true); </span>
+<span class="nc" id="L251">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;)); </span>
 					}
 					
-<span class="nc" id="L253">				}catch(NumberFormatException e1) {</span>
-<span class="nc" id="L254">					lblError.setVisible(true); </span>
-<span class="nc" id="L255">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
-<span class="nc" id="L256">				}</span>
+<span class="nc" id="L254">				}catch(NumberFormatException e1) {</span>
+<span class="nc" id="L255">					lblError.setVisible(true); </span>
+<span class="nc" id="L256">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
+<span class="nc" id="L257">				}</span>
 				
-<span class="nc" id="L258">			}</span>
+<span class="nc" id="L259">			}</span>
 		});
-<span class="nc" id="L260">		jButtonCreate.setBounds(40, 360, 148, 51);</span>
+<span class="nc" id="L261">		jButtonCreate.setBounds(40, 360, 148, 51);</span>
 		
-<span class="nc" id="L262">		getContentPane().add(jButtonCreate);</span>
-<span class="nc" id="L263">		lblError.setHorizontalAlignment(SwingConstants.CENTER);</span>
-<span class="nc" id="L264">		lblError.setBounds(40, 283, 564, 20);</span>
+<span class="nc" id="L263">		getContentPane().add(jButtonCreate);</span>
+<span class="nc" id="L264">		lblError.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L265">		lblError.setBounds(40, 283, 564, 20);</span>
 		
-<span class="nc" id="L266">		getContentPane().add(lblError);</span>
+<span class="nc" id="L267">		getContentPane().add(lblError);</span>
 		
-<span class="nc" id="L268">		list = new JList&lt;Quote&gt;();</span>
-<span class="nc" id="L269">		list.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
-<span class="nc" id="L270">		list.setModel(quoteList);</span>
-<span class="nc" id="L271">		list.setBounds(10, 0, 392, 256);</span>
-<span class="nc" id="L272">		getContentPane().add(list);</span>
+<span class="nc" id="L269">		list = new JList&lt;Quote&gt;();</span>
+<span class="nc" id="L270">		list.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L271">		list.setModel(quoteList);</span>
+<span class="nc" id="L272">		list.setBounds(10, 0, 392, 256);</span>
+<span class="nc" id="L273">		getContentPane().add(list);</span>
 		
-<span class="nc" id="L274">		scrollBar = new JScrollPane(list);</span>
-<span class="nc" id="L275">		scrollBar.setBounds(626, 47, 589, 364);</span>
-<span class="nc" id="L276">		getContentPane().add(scrollBar);</span>
+<span class="nc" id="L275">		scrollBar = new JScrollPane(list);</span>
+<span class="nc" id="L276">		scrollBar.setBounds(626, 47, 589, 364);</span>
+<span class="nc" id="L277">		getContentPane().add(scrollBar);</span>
 		
-<span class="nc" id="L278">		jButtonFinish.setEnabled(false);</span>
-<span class="nc" id="L279">		jButtonFinish.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L279">		jButtonFinish.setEnabled(false);</span>
+<span class="nc" id="L280">		jButtonFinish.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
 				//jLabelDiruKopurua.setVisible(true);
-<span class="nc" id="L282">				textFieldDiruKop.setVisible(true);</span>
-<span class="nc" id="L283">				btnApustuaGehitu.setVisible(false);</span>
-<span class="nc" id="L284">				jButtonCreate.setVisible(true);</span>
-<span class="nc" id="L285">				jButtonCreate.setEnabled(true);</span>
-<span class="nc" id="L286">				jButtonFinish.setEnabled(false);</span>
-<span class="nc" id="L287">				textFieldDiruKop.setVisible(true);</span>
+<span class="nc" id="L283">				textFieldDiruKop.setVisible(true);</span>
+<span class="nc" id="L284">				btnApustuaGehitu.setVisible(false);</span>
+<span class="nc" id="L285">				jButtonCreate.setVisible(true);</span>
+<span class="nc" id="L286">				jButtonCreate.setEnabled(true);</span>
+<span class="nc" id="L287">				jButtonFinish.setEnabled(false);</span>
+<span class="nc" id="L288">				textFieldDiruKop.setVisible(true);</span>
 				//jLabelDiruKopurua.setVisible(true);
-<span class="nc" id="L289">				textFieldDiruKop.setText(&quot;&quot;);</span>
-<span class="nc" id="L290">			}</span>
+<span class="nc" id="L290">				textFieldDiruKop.setText(&quot;&quot;);</span>
+<span class="nc" id="L291">			}</span>
 		});
-<span class="nc" id="L292">		jButtonFinish.setBounds(282, 360, 148, 51);</span>
-<span class="nc" id="L293">		getContentPane().add(jButtonFinish);</span>
+<span class="nc" id="L293">		jButtonFinish.setBounds(282, 360, 148, 51);</span>
+<span class="nc" id="L294">		getContentPane().add(jButtonFinish);</span>
 		
-<span class="nc" id="L295">		lblApustua = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ZureApustua&quot;));</span>
-<span class="nc" id="L296">		lblApustua.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
-<span class="nc" id="L297">		lblApustua.setHorizontalAlignment(SwingConstants.CENTER);</span>
-<span class="nc" id="L298">		lblApustua.setBounds(626, 18, 589, 18);</span>
-<span class="nc" id="L299">		getContentPane().add(lblApustua);</span>
-<span class="nc" id="L300">		btnApustuaGehitu.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L301">		btnApustuaGehitu.setBackground(new Color(224, 255, 255));</span>
-<span class="nc" id="L302">		btnApustuaGehitu.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
-<span class="nc" id="L303">		btnApustuaGehitu.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L296">		lblApustua = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ZureApustua&quot;));</span>
+<span class="nc" id="L297">		lblApustua.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L298">		lblApustua.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L299">		lblApustua.setBounds(626, 18, 589, 18);</span>
+<span class="nc" id="L300">		getContentPane().add(lblApustua);</span>
+<span class="nc" id="L301">		btnApustuaGehitu.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L302">		btnApustuaGehitu.setBackground(new Color(224, 255, 255));</span>
+<span class="nc" id="L303">		btnApustuaGehitu.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L304">		btnApustuaGehitu.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L305">				Quote q = (Quote)jComboBoxQuotes.getSelectedItem();</span>
-<span class="nc" id="L306">				boolean comp = false;</span>
+<span class="nc" id="L306">				Quote q = (Quote)jComboBoxQuotes.getSelectedItem();</span>
+<span class="nc" id="L307">				boolean comp = false;</span>
 				
-<span class="nc bnc" id="L308" title="All 2 branches missed.">				if(new Date().compareTo(businessLogic.findEvent(q).getEventDate())&lt;0) {</span>
-<span class="nc bnc" id="L309" title="All 2 branches missed.">					for(Quote quo: quoteVec) {</span>
-<span class="nc bnc" id="L310" title="All 2 branches missed.">						if(businessLogic.findQuestionFromQuote(quo).getQuestionNumber().equals(businessLogic.findQuestionFromQuote(q).getQuestionNumber())) {</span>
-<span class="nc" id="L311">							comp=true;</span>
+<span class="nc bnc" id="L309" title="All 2 branches missed.">				if(new Date().compareTo(businessLogic.findEvent(q).getEventDate())&lt;0) {</span>
+<span class="nc bnc" id="L310" title="All 2 branches missed.">					for(Quote quo: quoteVec) {</span>
+<span class="nc bnc" id="L311" title="All 2 branches missed.">						if(businessLogic.findQuestionFromQuote(quo).getQuestionNumber().equals(businessLogic.findQuestionFromQuote(q).getQuestionNumber())) {</span>
+<span class="nc" id="L312">							comp=true;</span>
 						}
-<span class="nc" id="L313">					}</span>
-<span class="nc bnc" id="L314" title="All 2 branches missed.">					if(!comp) {</span>
-<span class="nc" id="L315">						quoteList.addElement(q);</span>
-<span class="nc" id="L316">						quoteVec.add(q);</span>
-<span class="nc bnc" id="L317" title="All 2 branches missed.">						if(maxMinBet&lt;businessLogic.findQuestionFromQuote(q).getBetMinimum()) {</span>
-<span class="nc" id="L318">							maxMinBet=businessLogic.findQuestionFromQuote(q).getBetMinimum();</span>
+<span class="nc" id="L314">					}</span>
+<span class="nc bnc" id="L315" title="All 2 branches missed.">					if(!comp) {</span>
+<span class="nc" id="L316">						quoteList.addElement(q);</span>
+<span class="nc" id="L317">						quoteVec.add(q);</span>
+<span class="nc bnc" id="L318" title="All 2 branches missed.">						if(maxMinBet&lt;businessLogic.findQuestionFromQuote(q).getBetMinimum()) {</span>
+<span class="nc" id="L319">							maxMinBet=businessLogic.findQuestionFromQuote(q).getBetMinimum();</span>
 						}
-<span class="nc" id="L320">						jButtonFinish.setEnabled(true);</span>
-<span class="nc" id="L321">						lblError.setVisible(false);</span>
+<span class="nc" id="L321">						jButtonFinish.setEnabled(true);</span>
+<span class="nc" id="L322">						lblError.setVisible(false);</span>
 					}else {
-<span class="nc" id="L323">						lblError.setVisible(true);</span>
-<span class="nc" id="L324">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError2&quot;));</span>
+<span class="nc" id="L324">						lblError.setVisible(true);</span>
+<span class="nc" id="L325">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError2&quot;));</span>
 					}
 				}else {
-<span class="nc" id="L327">					lblError.setVisible(true);</span>
-<span class="nc" id="L328">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError3&quot;));</span>
+<span class="nc" id="L328">					lblError.setVisible(true);</span>
+<span class="nc" id="L329">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError3&quot;));</span>
 				}
-<span class="nc" id="L330">			}</span>
+<span class="nc" id="L331">			}</span>
 		});
-<span class="nc" id="L332">		btnApustuaGehitu.setBounds(117, 360, 148, 51);</span>
+<span class="nc" id="L333">		btnApustuaGehitu.setBounds(117, 360, 148, 51);</span>
 		
-<span class="nc" id="L334">		getContentPane().add(btnApustuaGehitu);</span>
+<span class="nc" id="L335">		getContentPane().add(btnApustuaGehitu);</span>
 		
-<span class="nc bnc" id="L336" title="All 2 branches missed.">		if(q!=null) {</span>
-<span class="nc" id="L337">			quoteList.addElement(q);</span>
-<span class="nc" id="L338">			quoteVec.add(q);</span>
-<span class="nc" id="L339">			jButtonFinish.setEnabled(true);</span>
-<span class="nc" id="L340">			btnApustuaGehitu.setEnabled(true);</span>
+<span class="nc bnc" id="L337" title="All 2 branches missed.">		if(q!=null) {</span>
+<span class="nc" id="L338">			quoteList.addElement(q);</span>
+<span class="nc" id="L339">			quoteVec.add(q);</span>
+<span class="nc" id="L340">			jButtonFinish.setEnabled(true);</span>
+<span class="nc" id="L341">			btnApustuaGehitu.setEnabled(true);</span>
 		}
 		
 		
 		
 		// Code for JCalendar
-<span class="nc" id="L346">		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {</span>
+<span class="nc" id="L347">		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {</span>
 			public void propertyChange(PropertyChangeEvent propertychangeevent) {
-<span class="nc" id="L348">				lblError.setVisible(false);</span>
-<span class="nc bnc" id="L349" title="All 2 branches missed.">				if(modelQuotes.getSize()&gt;0) {</span>
+<span class="nc" id="L349">				lblError.setVisible(false);</span>
+<span class="nc bnc" id="L350" title="All 2 branches missed.">				if(modelQuotes.getSize()&gt;0) {</span>
 					
-<span class="nc" id="L351">					btnApustuaGehitu.setEnabled(true);</span>
+<span class="nc" id="L352">					btnApustuaGehitu.setEnabled(true);</span>
 				}else {
 					
-<span class="nc" id="L354">					btnApustuaGehitu.setEnabled(false);</span>
+<span class="nc" id="L355">					btnApustuaGehitu.setEnabled(false);</span>
 				}
 //				this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {
 //					public void propertyChange(PropertyChangeEvent propertychangeevent) {
-<span class="nc bnc" id="L358" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;)) {</span>
-<span class="nc" id="L359">					jCalendar.setLocale((Locale) propertychangeevent.getNewValue());</span>
-<span class="nc bnc" id="L360" title="All 2 branches missed.">				} else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;)) {</span>
-<span class="nc" id="L361">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
-<span class="nc" id="L362">					calendarAct = (Calendar) propertychangeevent.getNewValue();</span>
-<span class="nc" id="L363">					System.out.println(&quot;calendarAnt: &quot;+calendarAnt.getTime());</span>
-<span class="nc" id="L364">					System.out.println(&quot;calendarAct: &quot;+calendarAct.getTime());</span>
-<span class="nc" id="L365">					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar.getLocale());</span>
+<span class="nc bnc" id="L359" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;)) {</span>
+<span class="nc" id="L360">					jCalendar.setLocale((Locale) propertychangeevent.getNewValue());</span>
+<span class="nc bnc" id="L361" title="All 2 branches missed.">				} else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;)) {</span>
+<span class="nc" id="L362">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
+<span class="nc" id="L363">					calendarAct = (Calendar) propertychangeevent.getNewValue();</span>
+<span class="nc" id="L364">					System.out.println(&quot;calendarAnt: &quot;+calendarAnt.getTime());</span>
+<span class="nc" id="L365">					System.out.println(&quot;calendarAct: &quot;+calendarAct.getTime());</span>
+<span class="nc" id="L366">					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar.getLocale());</span>
 					
-<span class="nc" id="L367">					int monthAnt = calendarAnt.get(Calendar.MONTH);</span>
-<span class="nc" id="L368">					int monthAct = calendarAct.get(Calendar.MONTH);</span>
-<span class="nc bnc" id="L369" title="All 2 branches missed.">					if (monthAct!=monthAnt) {</span>
-<span class="nc bnc" id="L370" title="All 2 branches missed.">						if (monthAct==monthAnt+2) { </span>
+<span class="nc" id="L368">					int monthAnt = calendarAnt.get(Calendar.MONTH);</span>
+<span class="nc" id="L369">					int monthAct = calendarAct.get(Calendar.MONTH);</span>
+<span class="nc bnc" id="L370" title="All 2 branches missed.">					if (monthAct!=monthAnt) {</span>
+<span class="nc bnc" id="L371" title="All 2 branches missed.">						if (monthAct==monthAnt+2) { </span>
 							// Si en JCalendar estÃ¡ 30 de enero y se avanza al mes siguiente, devolverÃ­a 2 de marzo (se toma como equivalente a 30 de febrero)
 							// Con este cÃ³digo se dejarÃ¡ como 1 de febrero en el JCalendar
-<span class="nc" id="L373">							calendarAct.set(Calendar.MONTH, monthAnt+1);</span>
-<span class="nc" id="L374">							calendarAct.set(Calendar.DAY_OF_MONTH, 1);</span>
+<span class="nc" id="L374">							calendarAct.set(Calendar.MONTH, monthAnt+1);</span>
+<span class="nc" id="L375">							calendarAct.set(Calendar.DAY_OF_MONTH, 1);</span>
 						}
 						
-<span class="nc" id="L377">						jCalendar.setCalendar(calendarAct);</span>
+<span class="nc" id="L378">						jCalendar.setCalendar(calendarAct);</span>
 						
-<span class="nc" id="L379">						BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L380">						BLFacade facade = MainGUI.getBusinessLogic();</span>
 
-<span class="nc" id="L381">						datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
+<span class="nc" id="L382">						datesWithEventsCurrentMonth=facade.getEventsMonth(jCalendar.getDate());</span>
 					}
 
 
 
-<span class="nc" id="L386">					paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
+<span class="nc" id="L387">					paintDaysWithEvents(jCalendar,datesWithEventsCurrentMonth);</span>
 
 					//	Date firstDay = UtilDate.trim(new Date(jCalendar.getCalendar().getTime().getTime()));
-<span class="nc" id="L389">					Date firstDay = UtilDate.trim(calendarAct.getTime());</span>
+<span class="nc" id="L390">					Date firstDay = UtilDate.trim(calendarAct.getTime());</span>
 
 					try {
-<span class="nc" id="L392">						BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L393">						BLFacade facade = MainGUI.getBusinessLogic();</span>
 
-<span class="nc" id="L394">						Vector&lt;domain.Event&gt; events = facade.getEvents(firstDay);</span>
+<span class="nc" id="L395">						ArrayList&lt;domain.Event&gt; events = facade.getEvents(firstDay);</span>
 						
-<span class="nc bnc" id="L396" title="All 2 branches missed.">						if (events.isEmpty()) {</span>
-<span class="nc" id="L397">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoEvents&quot;)</span>
-<span class="nc" id="L398">									+ &quot;: &quot; + dateformat1.format(calendarAct.getTime()));</span>
-<span class="nc" id="L399">							System.out.println(&quot;no events&quot;); </span>
+<span class="nc bnc" id="L397" title="All 2 branches missed.">						if (events.isEmpty()) {</span>
+<span class="nc" id="L398">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;NoEvents&quot;)</span>
+<span class="nc" id="L399">									+ &quot;: &quot; + dateformat1.format(calendarAct.getTime()));</span>
+<span class="nc" id="L400">							System.out.println(&quot;no events&quot;); </span>
 						
 						} else {
-<span class="nc" id="L402">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;) + &quot;: &quot;</span>
-<span class="nc" id="L403">									+ dateformat1.format(calendarAct.getTime()));</span>
+<span class="nc" id="L403">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;) + &quot;: &quot;</span>
+<span class="nc" id="L404">									+ dateformat1.format(calendarAct.getTime()));</span>
 						}
-<span class="nc" id="L405">						jComboBoxEvents.removeAllItems();</span>
-<span class="nc" id="L406">						System.out.println(&quot;Events &quot; + events);</span>
+<span class="nc" id="L406">						jComboBoxEvents.removeAllItems();</span>
+<span class="nc" id="L407">						System.out.println(&quot;Events &quot; + events);</span>
 
-<span class="nc bnc" id="L408" title="All 2 branches missed.">						for (domain.Event ev : events) {</span>
-<span class="nc" id="L409">							modelEvents.addElement(ev);</span>
-<span class="nc" id="L410">						}</span>
-<span class="nc" id="L411">						jComboBoxEvents.repaint();</span>
+<span class="nc bnc" id="L409" title="All 2 branches missed.">						for (domain.Event ev : events) {</span>
+<span class="nc" id="L410">							modelEvents.addElement(ev);</span>
+<span class="nc" id="L411">						}</span>
+<span class="nc" id="L412">						jComboBoxEvents.repaint();</span>
 						
-<span class="nc bnc" id="L413" title="All 2 branches missed.">						if (events.size() == 0) {</span>
-<span class="nc" id="L414">							btnApustuaGehitu.setEnabled(false);</span>
+<span class="nc bnc" id="L414" title="All 2 branches missed.">						if (events.size() == 0) {</span>
+<span class="nc" id="L415">							btnApustuaGehitu.setEnabled(false);</span>
 						}else {
 							
-<span class="nc" id="L417">							btnApustuaGehitu.setEnabled(true);</span>
+<span class="nc" id="L418">							btnApustuaGehitu.setEnabled(true);</span>
 						}
 
-<span class="nc" id="L420">					} catch (Exception e1) {</span>
+<span class="nc" id="L421">					} catch (Exception e1) {</span>
 
-<span class="nc" id="L422">						System.out.println(e1.getMessage());</span>
-<span class="nc" id="L423">					}</span>
+<span class="nc" id="L423">						System.out.println(e1.getMessage());</span>
+<span class="nc" id="L424">					}</span>
 
 				}
-<span class="nc" id="L426">			}</span>
+<span class="nc" id="L427">			}</span>
 		});
-<span class="nc" id="L428">	}</span>
+<span class="nc" id="L429">	}</span>
 
 	
 public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; datesWithEventsCurrentMonth) {
 		// For each day with events in current month, the background color for that day is changed.
 
 		
-<span class="nc" id="L435">		Calendar calendar = jCalendar.getCalendar();</span>
+<span class="nc" id="L436">		Calendar calendar = jCalendar.getCalendar();</span>
 		
-<span class="nc" id="L437">		int month = calendar.get(Calendar.MONTH);</span>
-<span class="nc" id="L438">		int today=calendar.get(Calendar.DAY_OF_MONTH);</span>
-<span class="nc" id="L439">		int year=calendar.get(Calendar.YEAR);</span>
+<span class="nc" id="L438">		int month = calendar.get(Calendar.MONTH);</span>
+<span class="nc" id="L439">		int today=calendar.get(Calendar.DAY_OF_MONTH);</span>
+<span class="nc" id="L440">		int year=calendar.get(Calendar.YEAR);</span>
 		
-<span class="nc" id="L441">		calendar.set(Calendar.DAY_OF_MONTH, 1);</span>
-<span class="nc" id="L442">		int offset = calendar.get(Calendar.DAY_OF_WEEK);</span>
+<span class="nc" id="L442">		calendar.set(Calendar.DAY_OF_MONTH, 1);</span>
+<span class="nc" id="L443">		int offset = calendar.get(Calendar.DAY_OF_WEEK);</span>
 
-<span class="nc bnc" id="L444" title="All 2 branches missed.">		if (Locale.getDefault().equals(new Locale(&quot;es&quot;)))</span>
-<span class="nc" id="L445">			offset += 4;</span>
+<span class="nc bnc" id="L445" title="All 2 branches missed.">		if (Locale.getDefault().equals(new Locale(&quot;es&quot;)))</span>
+<span class="nc" id="L446">			offset += 4;</span>
 		else
-<span class="nc" id="L447">			offset += 5;</span>
+<span class="nc" id="L448">			offset += 5;</span>
 		
 		
-<span class="nc bnc" id="L450" title="All 2 branches missed.">	 	for (Date d:datesWithEventsCurrentMonth){</span>
+<span class="nc bnc" id="L451" title="All 2 branches missed.">	 	for (Date d:datesWithEventsCurrentMonth){</span>
 
-<span class="nc" id="L452">	 		calendar.setTime(d);</span>
-<span class="nc" id="L453">	 		System.out.println(d);</span>
+<span class="nc" id="L453">	 		calendar.setTime(d);</span>
+<span class="nc" id="L454">	 		System.out.println(d);</span>
 	 		
 
 			
@@ -462,20 +463,20 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 			// That number of components is calculated with &quot;offset&quot; and is different in
 			// English and Spanish
 //			    		  Component o=(Component) jCalendar.getDayChooser().getDayPanel().getComponent(i+offset);; 
-<span class="nc" id="L465">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
-<span class="nc" id="L466">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
-<span class="nc" id="L467">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L468">	 	}</span>
+<span class="nc" id="L466">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
+<span class="nc" id="L467">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
+<span class="nc" id="L468">			o.setBackground(Color.CYAN);</span>
+<span class="nc" id="L469">	 	}</span>
 	 	
-<span class="nc" id="L470"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
-<span class="nc" id="L471">	 		calendar.set(Calendar.MONTH, month);</span>
-<span class="nc" id="L472">	 		calendar.set(Calendar.YEAR, year);</span>
+<span class="nc" id="L471"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
+<span class="nc" id="L472">	 		calendar.set(Calendar.MONTH, month);</span>
+<span class="nc" id="L473">	 		calendar.set(Calendar.YEAR, year);</span>
 
 	 	
-<span class="nc" id="L475">	}</span>
+<span class="nc" id="L476">	}</span>
 
 	private void jButtonClose_actionPerformed(ActionEvent e) {
-<span class="nc" id="L478">		this.setVisible(false);</span>
-<span class="nc" id="L479">	}</span>
+<span class="nc" id="L479">		this.setVisible(false);</span>
+<span class="nc" id="L480">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

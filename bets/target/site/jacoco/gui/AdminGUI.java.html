@@ -67,16 +67,15 @@ public class AdminGUI extends JFrame {
 				try {
 					//if (ConfigXML.getInstance().isBusinessLogicLocal()) facade.close();
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
 					System.out.println(&quot;Error: &quot;+e1.toString()+&quot; , probably problems with Business Logic or Database&quot;);
 				}
-<span class="nc" id="L73">				System.exit(1);</span>
-<span class="nc" id="L74">			}</span>
+<span class="nc" id="L72">				System.exit(1);</span>
+<span class="nc" id="L73">			}</span>
 		});
 
-<span class="nc" id="L77">		initialize();</span>
+<span class="nc" id="L76">		initialize();</span>
 		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-<span class="nc" id="L79">	}</span>
+<span class="nc" id="L78">	}</span>
 	
 	
 
@@ -87,10 +86,10 @@ public class AdminGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-<span class="nc" id="L90">		this.setSize(495, 300);</span>
-<span class="nc" id="L91">		this.setContentPane(getJContentPane());</span>
-<span class="nc" id="L92">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AdminTitle&quot;));</span>
-<span class="nc" id="L93">	}</span>
+<span class="nc" id="L89">		this.setSize(495, 300);</span>
+<span class="nc" id="L90">		this.setContentPane(getJContentPane());</span>
+<span class="nc" id="L91">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AdminTitle&quot;));</span>
+<span class="nc" id="L92">	}</span>
 
 	/**
 	 * This method initializes jContentPane
@@ -98,32 +97,32 @@ public class AdminGUI extends JFrame {
 	 * @return javax.swing.JPanel
 	 */
 	private JPanel getJContentPane() {
-<span class="nc bnc" id="L101" title="All 2 branches missed.">		if (jContentPane == null) {</span>
-<span class="nc" id="L102">			jContentPane = new JPanel();</span>
-<span class="nc" id="L103">			jContentPane.setBackground(Color.WHITE);</span>
-<span class="nc" id="L104">			jContentPane.setLayout(null);</span>
-<span class="nc" id="L105">			jContentPane.add(getLblNewLabel());</span>
-<span class="nc" id="L106">			jContentPane.add(getBoton3());</span>
-<span class="nc" id="L107">			jContentPane.add(getBoton2());</span>
-<span class="nc" id="L108">			jContentPane.add(getBtnNewButton());</span>
-<span class="nc" id="L109">			jContentPane.add(getBtnNewButton_1());</span>
-<span class="nc" id="L110">			jContentPane.add(getJButtonEmaitzaIpini());</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">		if (jContentPane == null) {</span>
+<span class="nc" id="L101">			jContentPane = new JPanel();</span>
+<span class="nc" id="L102">			jContentPane.setBackground(Color.WHITE);</span>
+<span class="nc" id="L103">			jContentPane.setLayout(null);</span>
+<span class="nc" id="L104">			jContentPane.add(getLblNewLabel());</span>
+<span class="nc" id="L105">			jContentPane.add(getBoton3());</span>
+<span class="nc" id="L106">			jContentPane.add(getBoton2());</span>
+<span class="nc" id="L107">			jContentPane.add(getBtnNewButton());</span>
+<span class="nc" id="L108">			jContentPane.add(getBtnNewButton_1());</span>
+<span class="nc" id="L109">			jContentPane.add(getJButtonEmaitzaIpini());</span>
 			
-<span class="nc" id="L112">			JButton jButtonGertaerakEzabatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakEzabatu&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L113">			jButtonGertaerakEzabatu.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L114">			jButtonGertaerakEzabatu.setBackground(Color.PINK);</span>
-<span class="nc" id="L115">			jButtonGertaerakEzabatu.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L111">			JButton jButtonGertaerakEzabatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakEzabatu&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L112">			jButtonGertaerakEzabatu.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L113">			jButtonGertaerakEzabatu.setBackground(Color.PINK);</span>
+<span class="nc" id="L114">			jButtonGertaerakEzabatu.addActionListener(new ActionListener() {</span>
 				public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L117">					JFrame a = new GertaeraEzabatuGUI(new Vector&lt;Event&gt;());</span>
-<span class="nc" id="L118">					a.setVisible(true);</span>
-<span class="nc" id="L119">				}</span>
+<span class="nc" id="L116">					JFrame a = new GertaeraEzabatuGUI(new Vector&lt;Event&gt;());</span>
+<span class="nc" id="L117">					a.setVisible(true);</span>
+<span class="nc" id="L118">				}</span>
 			});
-<span class="nc" id="L121">			jButtonGertaerakEzabatu.setBounds(239, 124, 232, 30);</span>
-<span class="nc" id="L122">			jContentPane.add(jButtonGertaerakEzabatu);</span>
-<span class="nc" id="L123">			jContentPane.add(getJButtonDesLogin());</span>
-<span class="nc" id="L124">			jContentPane.add(getBtnGertaerakKopiatu());</span>
+<span class="nc" id="L120">			jButtonGertaerakEzabatu.setBounds(239, 124, 232, 30);</span>
+<span class="nc" id="L121">			jContentPane.add(jButtonGertaerakEzabatu);</span>
+<span class="nc" id="L122">			jContentPane.add(getJButtonDesLogin());</span>
+<span class="nc" id="L123">			jContentPane.add(getBtnGertaerakKopiatu());</span>
 		}
-<span class="nc" id="L126">		return jContentPane;</span>
+<span class="nc" id="L125">		return jContentPane;</span>
 	}
 
 
@@ -133,20 +132,20 @@ public class AdminGUI extends JFrame {
 	 * @return javax.swing.JButton
 	 */
 	private JButton getBoton2() {
-<span class="nc bnc" id="L136" title="All 2 branches missed.">		if (jButtonCreateQuery == null) {</span>
-<span class="nc" id="L137">			jButtonCreateQuery = new JButton();</span>
-<span class="nc" id="L138">			jButtonCreateQuery.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L139">			jButtonCreateQuery.setBackground(Color.PINK);</span>
-<span class="nc" id="L140">			jButtonCreateQuery.setBounds(10, 84, 213, 30);</span>
-<span class="nc" id="L141">			jButtonCreateQuery.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateQuery&quot;));</span>
-<span class="nc" id="L142">			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">		if (jButtonCreateQuery == null) {</span>
+<span class="nc" id="L136">			jButtonCreateQuery = new JButton();</span>
+<span class="nc" id="L137">			jButtonCreateQuery.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L138">			jButtonCreateQuery.setBackground(Color.PINK);</span>
+<span class="nc" id="L139">			jButtonCreateQuery.setBounds(10, 84, 213, 30);</span>
+<span class="nc" id="L140">			jButtonCreateQuery.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateQuery&quot;));</span>
+<span class="nc" id="L141">			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {</span>
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-<span class="nc" id="L144">					JFrame a = new CreateQuestionGUI(new Vector&lt;Event&gt;());</span>
-<span class="nc" id="L145">					a.setVisible(true);</span>
-<span class="nc" id="L146">				}</span>
+<span class="nc" id="L143">					JFrame a = new CreateQuestionGUI(new Vector&lt;Event&gt;());</span>
+<span class="nc" id="L144">					a.setVisible(true);</span>
+<span class="nc" id="L145">				}</span>
 			});
 		}
-<span class="nc" id="L149">		return jButtonCreateQuery;</span>
+<span class="nc" id="L148">		return jButtonCreateQuery;</span>
 	}
 	
 	/**
@@ -155,115 +154,115 @@ public class AdminGUI extends JFrame {
 	 * @return javax.swing.JButton
 	 */
 	private JButton getBoton3() {
-<span class="nc bnc" id="L158" title="All 2 branches missed.">		if (jButtonQueryQueries == null) {</span>
-<span class="nc" id="L159">			jButtonQueryQueries = new JButton();</span>
-<span class="nc" id="L160">			jButtonQueryQueries.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L161">			jButtonQueryQueries.setBackground(Color.PINK);</span>
-<span class="nc" id="L162">			jButtonQueryQueries.setBounds(10, 44, 213, 30);</span>
-<span class="nc" id="L163">			jButtonQueryQueries.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;QueryQueries&quot;));</span>
-<span class="nc" id="L164">			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc bnc" id="L157" title="All 2 branches missed.">		if (jButtonQueryQueries == null) {</span>
+<span class="nc" id="L158">			jButtonQueryQueries = new JButton();</span>
+<span class="nc" id="L159">			jButtonQueryQueries.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L160">			jButtonQueryQueries.setBackground(Color.PINK);</span>
+<span class="nc" id="L161">			jButtonQueryQueries.setBounds(10, 44, 213, 30);</span>
+<span class="nc" id="L162">			jButtonQueryQueries.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;QueryQueries&quot;));</span>
+<span class="nc" id="L163">			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {</span>
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-<span class="nc" id="L166">					JFrame a = new FindQuestionsGUI();</span>
+<span class="nc" id="L165">					JFrame a = new FindQuestionsGUI();</span>
 
-<span class="nc" id="L168">					a.setVisible(true);</span>
-<span class="nc" id="L169">				}</span>
+<span class="nc" id="L167">					a.setVisible(true);</span>
+<span class="nc" id="L168">				}</span>
 			});
 		}
-<span class="nc" id="L172">		return jButtonQueryQueries;</span>
+<span class="nc" id="L171">		return jButtonQueryQueries;</span>
 	}
 	
 
 	private JLabel getLblNewLabel() {
-<span class="nc bnc" id="L177" title="All 2 branches missed.">		if (jLabelSelectOption == null) {</span>
-<span class="nc" id="L178">			jLabelSelectOption = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;SelectOption&quot;));</span>
-<span class="nc" id="L179">			jLabelSelectOption.setOpaque(true);</span>
-<span class="nc" id="L180">			jLabelSelectOption.setBackground(Color.PINK);</span>
-<span class="nc" id="L181">			jLabelSelectOption.setBounds(110, 10, 249, 20);</span>
-<span class="nc" id="L182">			jLabelSelectOption.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 13));</span>
-<span class="nc" id="L183">			jLabelSelectOption.setForeground(Color.BLACK);</span>
-<span class="nc" id="L184">			jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc bnc" id="L176" title="All 2 branches missed.">		if (jLabelSelectOption == null) {</span>
+<span class="nc" id="L177">			jLabelSelectOption = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;SelectOption&quot;));</span>
+<span class="nc" id="L178">			jLabelSelectOption.setOpaque(true);</span>
+<span class="nc" id="L179">			jLabelSelectOption.setBackground(Color.PINK);</span>
+<span class="nc" id="L180">			jLabelSelectOption.setBounds(110, 10, 249, 20);</span>
+<span class="nc" id="L181">			jLabelSelectOption.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 13));</span>
+<span class="nc" id="L182">			jLabelSelectOption.setForeground(Color.BLACK);</span>
+<span class="nc" id="L183">			jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);</span>
 		}
-<span class="nc" id="L186">		return jLabelSelectOption;</span>
+<span class="nc" id="L185">		return jLabelSelectOption;</span>
 	}
 	
 	private JButton getBtnNewButton() {
-<span class="nc bnc" id="L190" title="All 2 branches missed.">		if (btnNewButton == null) {</span>
-<span class="nc" id="L191">			btnNewButton = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;KuotakIpini&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L192">			btnNewButton.setBackground(Color.PINK);</span>
-<span class="nc" id="L193">			btnNewButton.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L194">			btnNewButton.setBounds(239, 44, 232, 30);</span>
-<span class="nc" id="L195">			btnNewButton.addActionListener(new ActionListener() {</span>
+<span class="nc bnc" id="L189" title="All 2 branches missed.">		if (btnNewButton == null) {</span>
+<span class="nc" id="L190">			btnNewButton = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;KuotakIpini&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L191">			btnNewButton.setBackground(Color.PINK);</span>
+<span class="nc" id="L192">			btnNewButton.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L193">			btnNewButton.setBounds(239, 44, 232, 30);</span>
+<span class="nc" id="L194">			btnNewButton.addActionListener(new ActionListener() {</span>
 				public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L197">					JFrame a = new KuotakIpiniGUI(new Vector&lt;Event&gt;());</span>
-<span class="nc" id="L198">					a.setVisible(true);</span>
-<span class="nc" id="L199">				}</span>
+<span class="nc" id="L196">					JFrame a = new KuotakIpiniGUI(new Vector&lt;Event&gt;());</span>
+<span class="nc" id="L197">					a.setVisible(true);</span>
+<span class="nc" id="L198">				}</span>
 			});
 		}
-<span class="nc" id="L202">		return btnNewButton;</span>
+<span class="nc" id="L201">		return btnNewButton;</span>
 	}
 	private JButton getBtnNewButton_1() {
-<span class="nc bnc" id="L205" title="All 2 branches missed.">		if (btnNewButton_1 == null) {</span>
-<span class="nc" id="L206">			btnNewButton_1 = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakSortu&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L207">			btnNewButton_1.setBackground(Color.PINK);</span>
-<span class="nc" id="L208">			btnNewButton_1.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L209">			btnNewButton_1.setBounds(239, 84, 232, 30);</span>
-<span class="nc" id="L210">			btnNewButton_1.addActionListener(new ActionListener() {</span>
+<span class="nc bnc" id="L204" title="All 2 branches missed.">		if (btnNewButton_1 == null) {</span>
+<span class="nc" id="L205">			btnNewButton_1 = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakSortu&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L206">			btnNewButton_1.setBackground(Color.PINK);</span>
+<span class="nc" id="L207">			btnNewButton_1.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L208">			btnNewButton_1.setBounds(239, 84, 232, 30);</span>
+<span class="nc" id="L209">			btnNewButton_1.addActionListener(new ActionListener() {</span>
 				public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L212">					JFrame a = new GertaerakSortuGUI();</span>
-<span class="nc" id="L213">					a.setVisible(true);</span>
-<span class="nc" id="L214">				}</span>
+<span class="nc" id="L211">					JFrame a = new GertaerakSortuGUI();</span>
+<span class="nc" id="L212">					a.setVisible(true);</span>
+<span class="nc" id="L213">				}</span>
 			});
 		}
-<span class="nc" id="L217">		return btnNewButton_1;</span>
+<span class="nc" id="L216">		return btnNewButton_1;</span>
 	}
 	private JButton getJButtonEmaitzaIpini() {
-<span class="nc bnc" id="L220" title="All 2 branches missed.">		if (jButtonEmaitzaIpini == null) {</span>
-<span class="nc" id="L221">			jButtonEmaitzaIpini = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EmaitzaIpini&quot;));</span>
-<span class="nc" id="L222">			jButtonEmaitzaIpini.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L223">			jButtonEmaitzaIpini.setBackground(Color.PINK);</span>
-<span class="nc" id="L224">			jButtonEmaitzaIpini.addActionListener(new ActionListener() {</span>
+<span class="nc bnc" id="L219" title="All 2 branches missed.">		if (jButtonEmaitzaIpini == null) {</span>
+<span class="nc" id="L220">			jButtonEmaitzaIpini = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;EmaitzaIpini&quot;));</span>
+<span class="nc" id="L221">			jButtonEmaitzaIpini.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L222">			jButtonEmaitzaIpini.setBackground(Color.PINK);</span>
+<span class="nc" id="L223">			jButtonEmaitzaIpini.addActionListener(new ActionListener() {</span>
 				public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L226">					JFrame a = new EmaitzakIpiniGUI(new Vector&lt;Event&gt;());</span>
-<span class="nc" id="L227">					a.setVisible(true);</span>
-<span class="nc" id="L228">				}</span>
+<span class="nc" id="L225">					JFrame a = new EmaitzakIpiniGUI(new Vector&lt;Event&gt;());</span>
+<span class="nc" id="L226">					a.setVisible(true);</span>
+<span class="nc" id="L227">				}</span>
 			});
-<span class="nc" id="L230">			jButtonEmaitzaIpini.setBounds(10, 124, 213, 30);</span>
+<span class="nc" id="L229">			jButtonEmaitzaIpini.setBounds(10, 124, 213, 30);</span>
 		}
-<span class="nc" id="L232">		return jButtonEmaitzaIpini;</span>
+<span class="nc" id="L231">		return jButtonEmaitzaIpini;</span>
 	}
 	
 	
 	private JButton getJButtonDesLogin() {
-<span class="nc bnc" id="L237" title="All 2 branches missed.">		if (jButtonDesLogin == null) {</span>
-<span class="nc" id="L238">			jButtonDesLogin = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DesLogin&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L239">			jButtonDesLogin.setForeground(Color.WHITE);</span>
-<span class="nc" id="L240">			jButtonDesLogin.setBackground(Color.DARK_GRAY);</span>
-<span class="nc" id="L241">			jButtonDesLogin.addActionListener(new ActionListener() {</span>
+<span class="nc bnc" id="L236" title="All 2 branches missed.">		if (jButtonDesLogin == null) {</span>
+<span class="nc" id="L237">			jButtonDesLogin = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DesLogin&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L238">			jButtonDesLogin.setForeground(Color.WHITE);</span>
+<span class="nc" id="L239">			jButtonDesLogin.setBackground(Color.DARK_GRAY);</span>
+<span class="nc" id="L240">			jButtonDesLogin.addActionListener(new ActionListener() {</span>
 				public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L243">					JFrame a = new MainUserGUI();</span>
-<span class="nc" id="L244">					a.setVisible(true);</span>
-<span class="nc" id="L245">					thisw.setVisible(false);</span>
-<span class="nc" id="L246">				}</span>
+<span class="nc" id="L242">					JFrame a = new MainUserGUI();</span>
+<span class="nc" id="L243">					a.setVisible(true);</span>
+<span class="nc" id="L244">					thisw.setVisible(false);</span>
+<span class="nc" id="L245">				}</span>
 			});
-<span class="nc" id="L248">			jButtonDesLogin.setBounds(332, 208, 139, 28);</span>
+<span class="nc" id="L247">			jButtonDesLogin.setBounds(332, 208, 139, 28);</span>
 		}
-<span class="nc" id="L250">		return jButtonDesLogin;</span>
+<span class="nc" id="L249">		return jButtonDesLogin;</span>
 	}
 	
 	private JButton getBtnGertaerakKopiatu() {
-<span class="nc bnc" id="L254" title="All 2 branches missed.">		if (btnGertaerakKopiatu == null) {</span>
-<span class="nc" id="L255">			btnGertaerakKopiatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakKopiatu&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L256">			btnGertaerakKopiatu.setForeground(Color.DARK_GRAY);</span>
-<span class="nc" id="L257">			btnGertaerakKopiatu.setBackground(Color.PINK);</span>
-<span class="nc" id="L258">			btnGertaerakKopiatu.addActionListener(new ActionListener() {</span>
+<span class="nc bnc" id="L253" title="All 2 branches missed.">		if (btnGertaerakKopiatu == null) {</span>
+<span class="nc" id="L254">			btnGertaerakKopiatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaerakKopiatu&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L255">			btnGertaerakKopiatu.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L256">			btnGertaerakKopiatu.setBackground(Color.PINK);</span>
+<span class="nc" id="L257">			btnGertaerakKopiatu.addActionListener(new ActionListener() {</span>
 				public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L260">					JFrame a = new GertaerakKopiatuGUI();</span>
-<span class="nc" id="L261">					a.setVisible(true);</span>
-<span class="nc" id="L262">				}</span>
+<span class="nc" id="L259">					JFrame a = new GertaerakKopiatuGUI();</span>
+<span class="nc" id="L260">					a.setVisible(true);</span>
+<span class="nc" id="L261">				}</span>
 			});
-<span class="nc" id="L264">			btnGertaerakKopiatu.setBounds(239, 164, 232, 28);</span>
+<span class="nc" id="L263">			btnGertaerakKopiatu.setBounds(239, 164, 232, 28);</span>
 		}
-<span class="nc" id="L266">		return btnGertaerakKopiatu;</span>
+<span class="nc" id="L265">		return btnGertaerakKopiatu;</span>
 	}
 } // @jve:decl-index=0:visual-constraint=&quot;0,0&quot;
 
