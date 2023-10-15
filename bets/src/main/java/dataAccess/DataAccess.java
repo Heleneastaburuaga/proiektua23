@@ -203,6 +203,11 @@ public class DataAccess  {
 			ev26.setSport(sp3);
 			ev27.setSport(sp3);
 			
+			Event ev = new Event("Athetic-Alaves", UtilDate.newDate(2023, 9, 22), team2, team7);
+            sp1.addEvent(ev);
+            ev.setSport(sp1);
+			
+			
 			Question q1;
 			Question q2;
 			Question q3;
@@ -255,6 +260,7 @@ public class DataAccess  {
 			q9 = ev22.addQuestion("Irabazlea?", 1.5);
 			q10 = ev26.addQuestion("Irabazlea?", 1.5);
 			q11 = ev27.addQuestion("Zeinek irabaziko du lehenengo set-a", 3.0);
+			
 			
 			
 			Quote quote1 = q1.addQuote(1.3, "1", q1); 
@@ -979,7 +985,6 @@ public void open(boolean initializeMode){
 		Event event  = db.find(Event.class, ev); 
 		boolean resultB = true; 
 		List<Question> listQ = event.getQuestions(); 
-		
 		for(Question q : listQ) {
 			if(q.getResult() == null) {
 				resultB = false; 

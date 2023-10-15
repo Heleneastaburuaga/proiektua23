@@ -120,7 +120,7 @@ public class CreateQuestionDAB {
 		try {
 			
 			//define paramaters
-			String eventText="event1";
+			String eventText="event9";
 			String queryText=null;
 			Float betMinimum=new Float(2);
 			
@@ -135,7 +135,7 @@ public class CreateQuestionDAB {
 			
 			//configure the state of the system (create object in the dabatase)
 			testDA.open();
-			ev = testDA.addEventWithQuestion(eventText,oneDate,"query2", betMinimum);
+			ev = testDA.addEventWithQuestion(eventText,oneDate,"query6", betMinimum);
 			testDA.close();			
 			
 			//invoke System Under Test (sut)  

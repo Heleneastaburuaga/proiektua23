@@ -36,7 +36,7 @@ public class CreateQuestionBLBMTest {
 
 	
 	@Test
-	//sut.createQuestion:  The event has NOT a question with a queryText.
+	//sut.createQuestion:  The event has NOT a question with a queryText. 
 	public void test1() {
 			try {
 				//define paramaters

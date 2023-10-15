@@ -42,6 +42,12 @@ public class Quote implements Serializable{
 		this.forecast = forecast; 
 		this.question=question;
 	}
+	public Quote(int quoteNumber, Double balio, String forecast, Question question) {
+		this.quoteNumber= quoteNumber;
+		this.balio = balio; 
+		this.forecast = forecast; 
+		this.question=question;
+	}
 	
 	public Quote(Double balio, String forecast) {
 		this.balio = balio; 
