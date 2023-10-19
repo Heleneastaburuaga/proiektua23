@@ -1,3 +1,4 @@
+package test.dataAccess;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -10,7 +11,6 @@ import org.junit.Test;
 import dataAccess.DataAccess;
 import dataAccess.DataAccessGertaeraEzabatu;
 import domain.Event;
-import test.dataAccess.TestDataAccess;
 
 public class DataAccessGertaeraEzabatuTest {
 	static DataAccessGertaeraEzabatu sut=new DataAccessGertaeraEzabatu();
