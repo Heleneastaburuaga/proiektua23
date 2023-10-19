@@ -1,0 +1,6 @@
+domain.Sport#equals(Ljava/lang/Object;)Z
+java.lang.Object#getClass()Ljava/lang/Class;
+java.lang.String#equals(Ljava/lang/Object;)Z
+==
+getApustuKantitatea domain.Sport#getApustuKantitatea()Ljava/lang/Integer;
+getIzena domain.Sport#getIzena()Ljava/lang/String;

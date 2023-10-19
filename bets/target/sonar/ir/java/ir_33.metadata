@@ -1,6 +1,0 @@
-dataAccess.DataAccess#saldoaBistaratu(Ldomain/Registered;)Ljava/lang/String;
-java.lang.Double#toString()Ljava/lang/String;
-==
-getUsername domain.Registered#getUsername()Ljava/lang/String;
-find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
-getDirukop domain.Registered#getDirukop()Ljava/lang/Double;

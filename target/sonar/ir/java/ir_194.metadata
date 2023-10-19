@@ -1,0 +1,4 @@
+gui.MugimenduakBistaratuGUI#instance-init#
+gui.MainGUI#getBusinessLogic()LbusinessLogic/BLFacade;
+javax.swing.DefaultListModel#instance-init#
+javax.swing.DefaultListModel#<init>()V

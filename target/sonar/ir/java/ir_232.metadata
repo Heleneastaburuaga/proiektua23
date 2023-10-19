@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#getEventsAll()Ljava/util/List;
+==
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V
+getEventsAll dataAccess.DataAccess#getEventsAll()Ljava/util/List;

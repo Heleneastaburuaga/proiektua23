@@ -1,0 +1,28 @@
+gui.ApustuBerdinakGUI#<init>(Ldomain/Registered;Ldomain/Registered;)V
+java.awt.Dimension#<init>(II)V
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+java.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;
+java.awt.Dimension#instance-init#
+javax.swing.JList#<init>()V
+java.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;
+javax.swing.JLabel#instance-init#
+javax.swing.JButton#<init>(Ljava/lang/String;)V
+javax.swing.JScrollPane#instance-init#
+javax.swing.JList#instance-init#
+javax.swing.JButton#instance-init#
+javax.swing.JScrollPane#<init>(Ljava/awt/Component;)V
+==
+getContentPane javax.swing.JFrame#getContentPane()Ljava/awt/Container;
+addAll javax.swing.DefaultListModel#addAll(Ljava/util/Collection;)V
+setBounds java.awt.Component#setBounds(IIII)V
+setSize java.awt.Window#setSize(Ljava/awt/Dimension;)V
+findApustuAnitza businessLogic.BLFacade#findApustuAnitza(Ldomain/Registered;)Ljava/util/List;
+setHorizontalAlignment javax.swing.JLabel#setHorizontalAlignment(I)V
+add java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;
+setTitle java.awt.Frame#setTitle(Ljava/lang/String;)V
+setLayout java.awt.Container#setLayout(Ljava/awt/LayoutManager;)V
+addActionListener javax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V
+setOpaque javax.swing.JComponent#setOpaque(Z)V
+setBackground javax.swing.JComponent#setBackground(Ljava/awt/Color;)V
+setForeground javax.swing.JComponent#setForeground(Ljava/awt/Color;)V
+setModel javax.swing.JList#setModel(Ljavax/swing/ListModel;)V

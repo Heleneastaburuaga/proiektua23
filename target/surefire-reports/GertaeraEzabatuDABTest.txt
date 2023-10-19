@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: GertaeraEzabatuDABTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.523 sec <<< FAILURE! - in GertaeraEzabatuDABTest
+test27(GertaeraEzabatuDABTest)  Time elapsed: 0.15 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaeraEzabatuDABTest.test27(GertaeraEzabatuDABTest.java:138)
+
+test36(GertaeraEzabatuDABTest)  Time elapsed: 0.1 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaeraEzabatuDABTest.test36(GertaeraEzabatuDABTest.java:190)
+
+test3(GertaeraEzabatuDABTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaeraEzabatuDABTest.test3(GertaeraEzabatuDABTest.java:107)
+
+test4(GertaeraEzabatuDABTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaeraEzabatuDABTest.test4(GertaeraEzabatuDABTest.java:69)
+

@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#findQuestion(Ldomain/Event;)Ljava/util/Collection;
-==
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V
-findQuestion dataAccess.DataAccess#findQuestion(Ldomain/Event;)Ljava/util/Collection;

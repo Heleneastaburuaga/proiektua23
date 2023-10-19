@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#storeQuote(Ljava/lang/String;Ljava/lang/Double;Ldomain/Question;)V
+==
+storeQuote dataAccess.DataAccess#storeQuote(Ljava/lang/String;Ljava/lang/Double;Ldomain/Question;)Ldomain/Quote;
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V

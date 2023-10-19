@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z
-==
-close dataAccess.DataAccess#close()V
-ApustuaEgin dataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z
-open dataAccess.DataAccess#open(Z)V

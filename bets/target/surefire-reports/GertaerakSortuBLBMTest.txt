@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: GertaerakSortuBLBMTest
--------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE! - in GertaerakSortuBLBMTest
-test6(GertaerakSortuBLBMTest)  Time elapsed: 0.004 sec  <<< FAILURE!
-java.lang.AssertionError
-	at GertaerakSortuBLBMTest.test6(GertaerakSortuBLBMTest.java:125)
-

@@ -1,5 +1,0 @@
-gui.AdminGUI#<init>(Ldomain/Registered;)V
-gui.AdminGUI#initialize()V
-==
-<init> javax.swing.JFrame#<init>()V
-addWindowListener java.awt.Window#addWindowListener(Ljava/awt/event/WindowListener;)V

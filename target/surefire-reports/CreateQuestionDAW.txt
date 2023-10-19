@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: CreateQuestionDAW
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.378 sec <<< FAILURE! - in CreateQuestionDAW
+test1(CreateQuestionDAW)  Time elapsed: 0.221 sec  <<< ERROR!
+java.util.MissingResourceException: Can't find bundle for base name Etiquetas, locale es_ES
+	at CreateQuestionDAW.test1(CreateQuestionDAW.java:57)
+

@@ -1,2 +1,0 @@
-gui.DestacadosGUI#instance-init#
-gui.MainGUI#getBusinessLogic()LbusinessLogic/BLFacade;

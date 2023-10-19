@@ -1,8 +1,0 @@
-gui.AdminGUI#initialize()V
-java.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;
-java.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;
-gui.AdminGUI#getJContentPane()Ljavax/swing/JPanel;
-==
-setSize java.awt.Window#setSize(II)V
-setTitle java.awt.Frame#setTitle(Ljava/lang/String;)V
-setContentPane javax.swing.JFrame#setContentPane(Ljava/awt/Container;)V

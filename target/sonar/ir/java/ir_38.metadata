@@ -1,0 +1,5 @@
+dataAccess.DataAccess#popularrenaLortu()Ldomain/Sport;
+==
+getApustuKantitatea domain.Sport#getApustuKantitatea()Ljava/lang/Integer;
+getResultList javax.persistence.TypedQuery#getResultList()Ljava/util/List;
+createQuery javax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;

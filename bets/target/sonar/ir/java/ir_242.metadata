@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#findQuestionFromQuote(Ldomain/Quote;)Ldomain/Question;
-==
-findQuestionFromQuote dataAccess.DataAccess#findQuestionFromQuote(Ldomain/Quote;)Ldomain/Question;
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V

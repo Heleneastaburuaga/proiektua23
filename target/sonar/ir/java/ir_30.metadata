@@ -1,0 +1,24 @@
+dataAccess.DataAccess#ApustuaIrabazi(Ldomain/ApustuAnitza;)V
+java.util.Date#<init>()V
+domain.Transaction#<init>(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V
+java.util.Date#instance-init#
+domain.Transaction#instance-init#
+==
+getUser domain.ApustuAnitza#getUser()Ldomain/Registered;
+getApustuAnitzaNumber domain.ApustuAnitza#getApustuAnitzaNumber()Ljava/lang/Integer;
+getUsername domain.Registered#getUsername()Ljava/lang/String;
+getZenbat domain.Registered#getZenbat()I
+begin javax.persistence.EntityTransaction#begin()V
+setIrabazitakoa domain.Registered#setIrabazitakoa(Ljava/lang/Double;)V
+updateDiruKontua domain.Registered#updateDiruKontua(Ljava/lang/Double;)V
+getBalioa domain.ApustuAnitza#getBalioa()Ljava/lang/Double;
+setZenbat domain.Registered#setZenbat(I)V
+setEgoera domain.ApustuAnitza#setEgoera(Ljava/lang/String;)V
+getIrabazitakoa domain.Registered#getIrabazitakoa()Ljava/lang/Double;
+persist javax.persistence.EntityManager#persist(Ljava/lang/Object;)V
+getApustuak domain.ApustuAnitza#getApustuak()Ljava/util/Vector;
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+getQuote domain.Quote#getQuote()Ljava/lang/Double;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+getKuota domain.Apustua#getKuota()Ldomain/Quote;
+commit javax.persistence.EntityTransaction#commit()V

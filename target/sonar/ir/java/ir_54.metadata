@@ -1,0 +1,3 @@
+domain.Team#removeUser(Ldomain/Registered;)V
+==
+remove java.util.Vector#remove(Ljava/lang/Object;)Z

@@ -1,0 +1,11 @@
+dataAccess.DataAccess#rankingLortu()Ljava/util/List;
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#
+==
+getResultList javax.persistence.TypedQuery#getResultList()Ljava/util/List;
+getIrabazitakoa domain.Registered#getIrabazitakoa()Ljava/lang/Double;
+add java.util.List#add(ILjava/lang/Object;)V
+createQuery javax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+isEmpty java.util.List#isEmpty()Z
+get java.util.List#get(I)Ljava/lang/Object;
+size java.util.List#size()I

@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#jarraitu(Ldomain/Registered;Ldomain/Registered;Ljava/lang/Double;)Z
+==
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open(Z)V
+jarraitu dataAccess.DataAccess#jarraitu(Ldomain/Registered;Ldomain/Registered;Ljava/lang/Double;)Z

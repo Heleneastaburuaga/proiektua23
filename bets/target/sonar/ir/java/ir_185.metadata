@@ -1,5 +1,0 @@
-domain.Event#DoesQuestionExists(Ljava/lang/String;)Z
-java.lang.String#compareTo(Ljava/lang/String;)I
-==
-getQuestions domain.Event#getQuestions()Ljava/util/Vector;
-getQuestion domain.Question#getQuestion()Ljava/lang/String;

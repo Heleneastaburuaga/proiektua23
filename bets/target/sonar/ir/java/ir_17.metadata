@@ -1,5 +1,0 @@
-dataAccess.DataAccess#findSport(Ldomain/Event;)Ldomain/Sport;
-==
-find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
-getSport domain.Event#getSport()Ldomain/Sport;
-getEventNumber domain.Event#getEventNumber()Ljava/lang/Integer;

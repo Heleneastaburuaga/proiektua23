@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#findQuote(Ldomain/Question;)Ljava/util/Collection;
-==
-findQuote dataAccess.DataAccess#findQuote(Ldomain/Question;)Ljava/util/Collection;
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V

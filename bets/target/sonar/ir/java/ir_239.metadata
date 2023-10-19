@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#findUser(Ldomain/Registered;)Ldomain/Registered;
-==
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V
-findUser dataAccess.DataAccess#findUser(Ldomain/Registered;)Ldomain/Registered;

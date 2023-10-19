@@ -1,6 +1,0 @@
-gui.GertaerakKopiatuGUI#newDate(III)Ljava/util/Date;
-java.util.Calendar#getInstance()Ljava/util/Calendar;
-java.util.Calendar#set(IIIIII)V
-java.util.Calendar#getTime()Ljava/util/Date;
-==
-set java.util.Calendar#set(II)V

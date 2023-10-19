@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#rankingLortu()Ljava/util/List;
-==
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V
-rankingLortu dataAccess.DataAccess#rankingLortu()Ljava/util/List;

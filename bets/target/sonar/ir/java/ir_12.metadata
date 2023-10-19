@@ -1,3 +1,0 @@
-dataAccess.DataAccess#isRegister(Ljava/lang/String;)Z
-==
-find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;

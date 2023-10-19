@@ -1,0 +1,3 @@
+domain.Team#addUser(Ldomain/Registered;)V
+==
+add java.util.Vector#add(Ljava/lang/Object;)Z

@@ -1,4 +1,0 @@
-domain.Quote#equals(Ljava/lang/Object;)Z
-java.lang.Object#getClass()Ljava/lang/Class;
-==
-getQuoteNumber domain.Quote#getQuoteNumber()Ljava/lang/Integer;

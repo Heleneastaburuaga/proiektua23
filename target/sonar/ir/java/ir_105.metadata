@@ -1,0 +1,5 @@
+domain.Question#addQuote(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)Ldomain/Quote;
+domain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)V
+domain.Quote#instance-init#
+==
+add java.util.Vector#add(Ljava/lang/Object;)Z

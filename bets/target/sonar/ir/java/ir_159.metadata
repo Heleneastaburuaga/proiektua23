@@ -1,8 +1,0 @@
-domain.ApustuAnitza#addKirolaKant()V
-==
-getApustuKantitatea domain.Sport#getApustuKantitatea()Ljava/lang/Integer;
-getEvent domain.Question#getEvent()Ldomain/Event;
-setApustuKantitatea domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V
-getQuestion domain.Quote#getQuestion()Ldomain/Question;
-getKuota domain.Apustua#getKuota()Ldomain/Quote;
-getSport domain.Event#getSport()Ldomain/Sport;

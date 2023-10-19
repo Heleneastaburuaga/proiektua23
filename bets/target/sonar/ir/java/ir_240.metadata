@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#getEventsTeam(Ldomain/Team;)Ljava/util/List;
-==
-getEventsTeam dataAccess.DataAccess#getEventsTeam(Ldomain/Team;)Ljava/util/List;
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V

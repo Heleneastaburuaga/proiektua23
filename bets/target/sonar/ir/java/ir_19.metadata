@@ -1,5 +1,0 @@
-dataAccess.DataAccess#findTeam(Ldomain/Registered;)Ldomain/Team;
-==
-getUsername domain.Registered#getUsername()Ljava/lang/String;
-find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
-getTaldea domain.Registered#getTaldea()Ldomain/Team;

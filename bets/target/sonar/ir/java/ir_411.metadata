@@ -1,5 +1,0 @@
-domain.Apustua#equals(Ljava/lang/Object;)Z
-java.lang.Object#getClass()Ljava/lang/Class;
-java.lang.Integer#equals(Ljava/lang/Object;)Z
-==
-getApostuaNumber domain.Apustua#getApostuaNumber()Ljava/lang/Integer;

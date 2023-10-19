@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#getAllTeams()Ljava/util/List;
-==
-close dataAccess.DataAccess#close()V
-open dataAccess.DataAccess#open(Z)V
-getAllTeams dataAccess.DataAccess#getAllTeams()Ljava/util/List;

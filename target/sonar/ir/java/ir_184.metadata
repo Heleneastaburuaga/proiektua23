@@ -1,0 +1,3 @@
+domain.Event#listaraGehitu(Ldomain/Question;)V
+==
+add java.util.Vector#add(Ljava/lang/Object;)Z

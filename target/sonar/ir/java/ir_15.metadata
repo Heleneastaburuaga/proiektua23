@@ -1,0 +1,12 @@
+dataAccess.DataAccess#storeQuote(Ljava/lang/String;Ljava/lang/Double;Ldomain/Question;)Ldomain/Quote;
+exceptions.QuoteAlreadyExist#<init>(Ljava/lang/String;)V
+exceptions.QuoteAlreadyExist#instance-init#
+==
+getQuestionNumber domain.Question#getQuestionNumber()Ljava/lang/Integer;
+persist javax.persistence.EntityManager#persist(Ljava/lang/Object;)V
+doesQuoteExist domain.Question#doesQuoteExist(Ljava/lang/String;)Z
+begin javax.persistence.EntityTransaction#begin()V
+getTransaction javax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+addQuote domain.Question#addQuote(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)Ldomain/Quote;
+commit javax.persistence.EntityTransaction#commit()V

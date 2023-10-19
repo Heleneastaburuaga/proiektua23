@@ -1,0 +1,5 @@
+dataAccess.DataAccess#findQuestionFromQuote(Ldomain/Quote;)Ldomain/Question;
+==
+getQuoteNumber domain.Quote#getQuoteNumber()Ljava/lang/Integer;
+getQuestion domain.Quote#getQuestion()Ldomain/Question;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;

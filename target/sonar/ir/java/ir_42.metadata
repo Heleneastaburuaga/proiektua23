@@ -1,0 +1,4 @@
+dataAccess.DataAccess#findUser(Ldomain/Registered;)Ldomain/Registered;
+==
+getUsername domain.Registered#getUsername()Ljava/lang/String;
+find javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;

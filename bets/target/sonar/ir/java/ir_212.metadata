@@ -1,5 +1,0 @@
-businessLogic.BLFacadeImplementation#getEventsMonth(Ljava/util/Date;)Ljava/util/Vector;
-==
-close dataAccess.DataAccess#close()V
-getEventsMonth dataAccess.DataAccess#getEventsMonth(Ljava/util/Date;)Ljava/util/Vector;
-open dataAccess.DataAccess#open(Z)V

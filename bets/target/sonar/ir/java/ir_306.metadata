@@ -1,3 +1,0 @@
-gui.EmaitzakIpiniGUI#jButtonCloseActionPerformed(Ljava/awt/event/ActionEvent;)V
-==
-setVisible java.awt.Window#setVisible(Z)V
