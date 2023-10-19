@@ -1,1 +1,1 @@
-domain.Registered#setPassword(Ljava/lang/String;)V
+domain.Registered#setUsername(Ljava/lang/String;)V

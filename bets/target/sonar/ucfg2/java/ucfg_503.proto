@@ -1,18 +1,18 @@
 
-@configuration.ConfigXML#getBusinessLogicPort()Ljava/lang/String;[
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.javaó ó(#"1*µ
+>configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;[
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.javaè è($"1*Ω
 1
-ò	 ò(|
-z
+ê	 ê(}
+{
 
-ò	 ò(
-%0java.lang.String"__id*N
+ê	 ê(
+%0configuration.ConfigXML"__id*H
 
-__unknown_file (2*0
-configuration.ConfigXML"
-businessLogicPort"&
+__unknown_file (,**
+configuration.ConfigXML"
+theInstance"-
 
-ò ò(
-
-%0java.lang.StringB
+ê ê(
+
+%0configuration.ConfigXMLB"
 configuration.ConfigXMLH

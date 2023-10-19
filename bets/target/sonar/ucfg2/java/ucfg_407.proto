@@ -1,73 +1,15 @@
 
-/domain.Transaction#toString()Ljava/lang/String;T
-J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.javaI I("1*µ
-1J	 J(f
-d
-J J(
-%0java.util.Date"__id*<
-
-__unknown_file ( *
-domain.Transaction"
-dataj
-h
-J	 J(
-%1java.lang.String"__concat*
-J	 J(
-
-Data: *"
-J J(
-
-%0java.util.Dateo
-m
-J	 J(+
-%2java.lang.String"__concat*$
-J	 J(
-
-%1java.lang.String*
-J  J(+
-	, dirua: i
-g
-J. J(8
-%3java.lang.Double"__id*=
-
-__unknown_file (!*
-domain.Transaction"
-diruaz
-x
-J	 J(8
-%4java.lang.String"__concat*$
-J	 J(+
-
-%2java.lang.String*$
-J. J(8
-
-%3java.lang.Doublen
-l
-J	 J(E
-%5java.lang.String"__concat*$
-J	 J(8
-
-%4java.lang.String*
-J; J(E
-
-, mota: h
+.domain.Transaction#getMota()Ljava/lang/String;T
+J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.javaA A("1*
+1B	 B(h
 f
-JH J(Q
-%6java.lang.String"__id*<
+B	 B(
+%0java.lang.String"__id*<
 
 __unknown_file ( *
 domain.Transaction"
-motaz
-x
-J	 J(Q
-%7java.lang.String"__concat*$
-J	 J(E
+mota"$
+B B(
 
-%5java.lang.String*$
-JH J(Q
-
-%6java.lang.String"$
-J J(R
-
-%7java.lang.StringB
+%0java.lang.StringB
 domain.TransactionH

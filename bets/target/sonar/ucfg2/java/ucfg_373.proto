@@ -1,15 +1,15 @@
 
-4domain.Registered#getDiruLimitea()Ljava/lang/Double;S
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javax x("1*£
-1y	 y(n
-l
-y	 y(
-%0java.lang.Double"__id*B
+-domain.Registered#getMode()Ljava/lang/String;S
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javap p("1*œ
+1q	 q(g
+e
+q	 q(
+%0java.lang.String"__id*;
 
-__unknown_file (&*$
-domain.Registered"
-diruLimitea"$
-y y(
+__unknown_file (*
+domain.Registered"
+mode"$
+q q(
 
-%0java.lang.DoubleB
+%0java.lang.StringB
 domain.RegisteredH

@@ -1,1 +1,1 @@
-gui.AdminGUI#getBusinessLogic()LbusinessLogic/BLFacade;
+gui.AdminGUI#instance-init#

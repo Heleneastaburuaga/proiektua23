@@ -1,4 +1,4 @@
-gui.MainUserGUI#getRdbtnNewRadioButton_2()Ljavax/swing/JRadioButton;
+gui.MainUserGUI#getRdbtnNewRadioButton()Ljavax/swing/JRadioButton;
 javax.swing.JRadioButton#instance-init#
 javax.swing.JRadioButton#<init>(Ljava/lang/String;)V
 ==

@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: GertaerakSortuDABTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 3, Errors: 4, Skipped: 0, Time elapsed: 0.592 sec <<< FAILURE! - in GertaerakSortuDABTest
+test2(GertaerakSortuDABTest)  Time elapsed: 0.072 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaerakSortuDABTest.test2(GertaerakSortuDABTest.java:34)
+
+test3(GertaerakSortuDABTest)  Time elapsed: 0.059 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because "description" is null
+	at GertaerakSortuDABTest.test3(GertaerakSortuDABTest.java:43)
+
+test4(GertaerakSortuDABTest)  Time elapsed: 0.066 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaerakSortuDABTest.test4(GertaerakSortuDABTest.java:59)
+
+test5(GertaerakSortuDABTest)  Time elapsed: 0.06 sec  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at GertaerakSortuDABTest.test5(GertaerakSortuDABTest.java:68)
+
+test6(GertaerakSortuDABTest)  Time elapsed: 0.077 sec  <<< FAILURE!
+java.lang.AssertionError
+	at GertaerakSortuDABTest.test6(GertaerakSortuDABTest.java:86)
+
+test7(GertaerakSortuDABTest)  Time elapsed: 0.048 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at GertaerakSortuDABTest.test7(GertaerakSortuDABTest.java:101)
+
+test8(GertaerakSortuDABTest)  Time elapsed: 0.036 sec  <<< ERROR!
+java.lang.IllegalArgumentException: Unexpected null argument
+	at GertaerakSortuDABTest.test8(GertaerakSortuDABTest.java:120)
+

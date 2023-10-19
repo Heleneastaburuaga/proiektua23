@@ -1,3 +1,3 @@
-domain.Registered#addJarraitutako(Ldomain/Jarraitzailea;)V
+domain.Registered#removeApustua(Ldomain/ApustuAnitza;)V
 ==
-add java.util.Vector#add(Ljava/lang/Object;)Z
+remove java.util.Vector#remove(Ljava/lang/Object;)Z

@@ -1,53 +1,52 @@
 
-Dgui.MainUserGUI#getRdbtnNewRadioButton_2()Ljavax/swing/JRadioButton;S
-G/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/MainUserGUI.java½ ½(."3*Ë
+Dgui.MainUserGUI#getRdbtnNewRadioButton_1()Ljavax/swing/JRadioButton;S
+G/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/MainUserGUI.java° °(."3*È
 2
-¿, ¿(8HF
+², ²(5HF
 
-¿ ¿(+
-%2javax.swing.JRadioButton"javax.swing.JRadioButtonµ
-²
+² ²(+
+%2javax.swing.JRadioButton"javax.swing.JRadioButton²
+¯
 
-¿ ¿(9
+² ²(6
 %3"4javax.swing.JRadioButton#<init>(Ljava/lang/String;)V*<
 
 __unknown_file ( 
 
-%2javax.swing.JRadioButton**
+%2javax.swing.JRadioButton*'
 
-__unknown_file (
-
-Castellano€
+__unknown_file (	
+Euskara€
 ~
 
-¿ ¿(9,
+² ²(6,
 gui.MainUserGUI"
-rdbtnNewRadioButton_2"__id*<
+rdbtnNewRadioButton_1"__id*<
 
 __unknown_file ( 
 
 %2javax.swing.JRadioButton€
 ~
 
-À À(
+³ ³(
 %4javax.swing.JRadioButton"__id*J
 
 __unknown_file (.*,
 gui.MainUserGUI"
-rdbtnNewRadioButton_2:8
+rdbtnNewRadioButton_1:8
 
-À/ À(=
-%5gui.MainUserGUI$7"gui.MainUserGUI$7g
+³/ ³(=
+%5gui.MainUserGUI$6"gui.MainUserGUI$6g
 e
 
-À+ Æ(
+³+ ¸(
 %6"java.lang.Object#<init>()V*5
 
 __unknown_file (
 
-%5gui.MainUserGUI$7”‘
+%5gui.MainUserGUI$6”‘
 
-À Æ(
+³ ¸(
 
 %7void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V*<
 
@@ -57,10 +56,10 @@ e
 
 __unknown_file (
 
-%5gui.MainUserGUI$722addActionListener(Ljava/awt/event/ActionListener;)u
+%5gui.MainUserGUI$622addActionListener(Ljava/awt/event/ActionListener;)u
 s
 
-Ç Ç(
+¹ ¹(
 %8javax.swing.ButtonGroup"__id*@
 
 __unknown_file ($*"
@@ -68,14 +67,14 @@ s
 buttonGroup€
 ~
 
-Ç Ç((
+¹ ¹((
 %9javax.swing.JRadioButton"__id*J
 
 __unknown_file (.*,
 gui.MainUserGUI"
-rdbtnNewRadioButton_2öó
+rdbtnNewRadioButton_1öó
 
-Ç Ç()
+¹ ¹()
 %10void":javax.swing.ButtonGroup#add(Ljavax/swing/AbstractButton;)V*;
 
 __unknown_file (
@@ -87,18 +86,18 @@ s
 %9javax.swing.JRadioButton2!add(Ljavax/swing/AbstractButton;)*
 1*Ì
 3
-¾ ¾(€
+± ±(€
 ~
 
-¾ ¾(
+± ±(
 %0javax.swing.JRadioButton"__id*J
 
 __unknown_file (.*,
 gui.MainUserGUI"
-rdbtnNewRadioButton_2¯
+rdbtnNewRadioButton_1¯
 ¬
 
-¾ ¾(#
+± ±(#
 %1boolean"	__compare*"
 
 __unknown_file (
@@ -113,17 +112,17 @@ s
 2
 1*Ä
 1
-É	 É(
+»	 »(
 
 
-É	 É(
+»	 »(
 %11javax.swing.JRadioButton"__id*J
 
 __unknown_file (.*,
 gui.MainUserGUI"
-rdbtnNewRadioButton_2"/
+rdbtnNewRadioButton_1"/
 
-É É(!
+» »(!
 
 %11javax.swing.JRadioButtonB
 gui.MainUserGUI

@@ -1,13 +1,9 @@
-businessLogic.BLFacadeImplementation#createQuestion(Ldomain/Event;Ljava/lang/String;F)Ldomain/Question;
-exceptions.EventFinished#<init>(Ljava/lang/String;)V
-java.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;
-java.util.Date#<init>()V
-exceptions.EventFinished#instance-init#
-java.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;
-java.util.Date#instance-init#
+businessLogic.BLFacadeImplementation#<init>(LdataAccess/DataAccess;)V
+java.lang.String#equals(Ljava/lang/Object;)Z
+configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;
 ==
-createQuestion dataAccess.DataAccess#createQuestion(Ldomain/Event;Ljava/lang/String;F)Ldomain/Question;
+initializeDB dataAccess.DataAccess#initializeDB()V
+println java.io.PrintStream#println(Ljava/lang/String;)V
+getDataBaseOpenMode configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
-getEventDate domain.Event#getEventDate()Ljava/util/Date;
-compareTo java.util.Date#compareTo(Ljava/util/Date;)I

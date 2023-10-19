@@ -1,18 +1,18 @@
 
-1domain.Registered#getUsername()Ljava/lang/String;U
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.java· ·("1*¥
+*domain.Registered#getTaldea()Ldomain/Team;U
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.java° °("1*š
 1
-¸	 ¸(l
-j
+±	 ±(f
+d
 
-¸	 ¸(
-%0java.lang.String"__id*>
+±	 ±(
+%0domain.Team"__id*=
 
-__unknown_file ("* 
-domain.Registered"	
-usrname"&
+__unknown_file (!*
+domain.Registered"
+taldea"!
 
-¸ ¸(
-
-%0java.lang.StringB
+± ±(
+
+%0domain.TeamB
 domain.RegisteredH

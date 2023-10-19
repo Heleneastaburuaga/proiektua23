@@ -1,16 +1,7 @@
 
-7configuration.ConfigXML#getPassword()Ljava/lang/String;Y
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java= =("1*¦
-1>	 >(q
-o
->	 >(
-%0java.lang.String"__id*E
-
-__unknown_file ()*'
-configuration.ConfigXML"
-
-password"$
-> >(
-
-%0java.lang.StringB
-configuration.ConfigXMLH
+*configuration.ConfigXML#getDatabasePort()IY
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java5 5("1*!
+16	 6("
+6 6(
+""B
+configuration.ConfigXMLHX

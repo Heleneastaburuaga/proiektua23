@@ -176,9 +176,10 @@ addApustua1domain.ApustuAnitza#addApustua(Ldomain/Apustua;)V5
 toString0domain.ApustuAnitza#toString()Ljava/lang/String;java.io.Serializablejava.lang.Objecto
 gui.RegisterGUI#
 <init>gui.RegisterGUI#<init>()V#
-jbInitgui.RegisterGUI#jbInit()Vjavax.swing.JFrame£
+jbInitgui.RegisterGUI#jbInit()Vjavax.swing.JFrameú
 domain.Event 
-<init>domain.Event#<init>()Vo
+<init>domain.Event#<init>()VU
+<init>Kdomain.Event#<init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Date;)Vo
 <init>edomain.Event#<init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Date;Ldomain/Team;Ldomain/Team;)VB
 <init>8domain.Event#<init>(Ljava/lang/String;Ljava/util/Date;)V\
 <init>Rdomain.Event#<init>(Ljava/lang/String;Ljava/util/Date;Ldomain/Team;Ldomain/Team;)VJ
@@ -291,9 +292,10 @@ initializegui.AdminGUI#initialize()VN
 setApustuKantitatea6domain.Sport#setApustuKantitatea(Ljava/lang/Integer;)V8
 	setEvents+domain.Sport#setEvents(Ljava/util/Vector;)V6
 setIzena*domain.Sport#setIzena(Ljava/lang/String;)V5
-toString)domain.Sport#toString()Ljava/lang/String;java.io.Serializablejava.lang.Objectí
+toString)domain.Sport#toString()Ljava/lang/String;java.io.Serializablejava.lang.ObjectÅ	
 domain.Quote 
-<init>domain.Quote#<init>()VD
+<init>domain.Quote#<init>()VV
+<init>Ldomain.Quote#<init>(ILjava/lang/Double;Ljava/lang/String;Ldomain/Question;)VD
 <init>:domain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;)VU
 <init>Kdomain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)V8
 

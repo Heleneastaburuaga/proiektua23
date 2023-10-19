@@ -1,1 +1,1 @@
-domain.Transaction#getTransactionNumber()Ljava/lang/Integer;
+domain.Transaction#<init>(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V

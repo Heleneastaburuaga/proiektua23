@@ -1,1 +1,1 @@
-domain.Registered#getBankAccount()Ljava/lang/Integer;
+domain.Registered#getPassword()Ljava/lang/String;

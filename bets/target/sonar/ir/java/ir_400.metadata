@@ -1,1 +1,3 @@
-domain.Apustua#setApostuaNumber(Ljava/lang/Integer;)V
+domain.Apustua#<init>()V
+==
+<init> java.lang.Object#<init>()V

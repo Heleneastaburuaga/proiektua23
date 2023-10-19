@@ -28,10 +28,10 @@ public class Question implements Serializable {
 	private Integer questionNumber;
 	private String question; 
 	private double betMinimum;
-<span class="pc" id="L31">	private String result=null;  </span>
+<span class="fc" id="L31">	private String result=null;  </span>
 	@XmlIDREF
 	private Event event;
-<span class="pc" id="L34">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+<span class="fc" id="L34">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
 	private Vector&lt;Quote&gt; quotes=new Vector&lt;Quote&gt;();
 
 	public Question(){
@@ -43,12 +43,12 @@ public class Question implements Serializable {
 	}
 	
 	public Question(Integer queryNumber, String query, double betMinimum, Event event) {
-<span class="nc" id="L46">		super();</span>
-<span class="nc" id="L47">		this.questionNumber = queryNumber;</span>
-<span class="nc" id="L48">		this.question = query;</span>
-<span class="nc" id="L49">		this.betMinimum=betMinimum;</span>
-<span class="nc" id="L50">		this.event = event;</span>
-<span class="nc" id="L51">	}</span>
+<span class="fc" id="L46">		super();</span>
+<span class="fc" id="L47">		this.questionNumber = queryNumber;</span>
+<span class="fc" id="L48">		this.question = query;</span>
+<span class="fc" id="L49">		this.betMinimum=betMinimum;</span>
+<span class="fc" id="L50">		this.event = event;</span>
+<span class="fc" id="L51">	}</span>
 	
 	public Question(String query, double betMinimum,  Event event) {
 <span class="fc" id="L54">		super();</span>
@@ -64,7 +64,7 @@ public class Question implements Serializable {
 	 * @return the question number
 	 */
 	public Integer getQuestionNumber() {
-<span class="nc" id="L67">		return questionNumber;</span>
+<span class="fc" id="L67">		return questionNumber;</span>
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class Question implements Serializable {
 	 * @return the the query result
 	 */
 	public String getResult() {
-<span class="nc" id="L131">		return result;</span>
+<span class="fc" id="L131">		return result;</span>
 	}
 
 
@@ -140,8 +140,8 @@ public class Question implements Serializable {
 	 */
 	
 	public void setResult(String result) {
-<span class="nc" id="L143">		this.result = result;</span>
-<span class="nc" id="L144">	}</span>
+<span class="fc" id="L143">		this.result = result;</span>
+<span class="fc" id="L144">	}</span>
 
 
 
@@ -151,7 +151,7 @@ public class Question implements Serializable {
 	 * @return the associated event
 	 */
 	public Event getEvent() {
-<span class="nc" id="L154">		return event;</span>
+<span class="fc" id="L154">		return event;</span>
 	}
 
 

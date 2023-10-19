@@ -1,1 +1,1 @@
-domain.Quote#setApustuak(Ljava/util/ArrayList;)V
+domain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;)V

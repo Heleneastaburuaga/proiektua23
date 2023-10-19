@@ -1,1 +1,3 @@
-domain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)V
+domain.Quote#<init>()V
+==
+<init> java.lang.Object#<init>()V

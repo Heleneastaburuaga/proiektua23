@@ -1,1 +1,3 @@
-domain.Registered#setTransakzioak(Ljava/util/Vector;)V
+domain.Registered#<init>()V
+==
+<init> java.lang.Object#<init>()V

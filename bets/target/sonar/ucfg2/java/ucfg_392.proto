@@ -1,18 +1,19 @@
 
-5domain.Registered#getBankAccount()Ljava/lang/Integer;U
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaÇ Ç("1*«
+1domain.Registered#getPassword()Ljava/lang/String;U
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.java¿ ¿("1*¦
 1
-È	 È(q
-o
+À	 À(m
+k
 
-È	 È(
-%0java.lang.Integer"__id*B
+À	 À(
+%0java.lang.String"__id*?
 
-__unknown_file (&*$
+__unknown_file (#*!
 domain.Registered"
-bankAccount"'
 
-È È(
-
-%0java.lang.IntegerB
+password"&
+
+À À(
+
+%0java.lang.StringB
 domain.RegisteredH

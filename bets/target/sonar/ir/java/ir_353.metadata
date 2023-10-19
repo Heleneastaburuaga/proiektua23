@@ -1,1 +1,3 @@
-domain.Transaction#setTransactionNumber(Ljava/lang/Integer;)V
+domain.Transaction#<init>()V
+==
+<init> java.lang.Object#<init>()V

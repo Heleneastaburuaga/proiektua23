@@ -1,1 +1,1 @@
-domain.Transaction#setErabiltzailea(Ldomain/Registered;)V
+domain.Transaction#setTransactionNumber(Ljava/lang/Integer;)V

@@ -1,1 +1,1 @@
-domain.Event#getSport()Ldomain/Sport;
+domain.Event#setEventDate(Ljava/util/Date;)V

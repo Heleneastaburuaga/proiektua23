@@ -1,1 +1,1 @@
-domain.Transaction#getErabiltzailea()Ldomain/Registered;
+domain.Transaction#getTransactionNumber()Ljava/lang/Integer;

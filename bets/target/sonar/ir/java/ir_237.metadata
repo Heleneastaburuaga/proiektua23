@@ -1,5 +1,5 @@
-businessLogic.BLFacadeImplementation#jarraituTaldea(Ldomain/Registered;Ldomain/Team;)V
+businessLogic.BLFacadeImplementation#getAllTeams()Ljava/util/List;
 ==
-jarraituTaldea dataAccess.DataAccess#jarraituTaldea(Ldomain/Registered;Ldomain/Team;)V
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
+getAllTeams dataAccess.DataAccess#getAllTeams()Ljava/util/List;

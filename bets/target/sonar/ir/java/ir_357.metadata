@@ -1,1 +1,1 @@
-domain.Transaction#setDirua(Ljava/lang/Double;)V
+domain.Transaction#setErabiltzailea(Ldomain/Registered;)V

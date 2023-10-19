@@ -1,1 +1,1 @@
-domain.Transaction#toString()Ljava/lang/String;
+domain.Transaction#getMota()Ljava/lang/String;

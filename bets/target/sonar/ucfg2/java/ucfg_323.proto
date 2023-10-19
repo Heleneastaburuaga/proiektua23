@@ -1,15 +1,16 @@
 
-0domain.Quote#getQuoteNumber()Ljava/lang/Integer;N
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.javaK K("1* 
-1L	 L(j
-h
-L	 L(
-%0java.lang.Integer"__id*=
+,domain.Quote#getForecast()Ljava/lang/String;N
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.javaI I("1*›
+1J	 J(f
+d
+J	 J(
+%0java.lang.String"__id*:
 
-__unknown_file (!*
+__unknown_file (*
 domain.Quote"
-quoteNumber"%
-L L(
-
-%0java.lang.IntegerB
+
+forecast"$
+J J(
+
+%0java.lang.StringB
 domain.QuoteH

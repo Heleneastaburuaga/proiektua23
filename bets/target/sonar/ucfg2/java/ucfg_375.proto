@@ -1,18 +1,15 @@
 
-:domain.Registered#getJarraitzaileLista()Ljava/util/Vector;U
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaÄ Ä(2"1*ß
-1
-Å	 Å(n
+4domain.Registered#getDiruLimitea()Ljava/lang/Double;S
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javax x("1*£
+1y	 y(n
 l
-
-Å	 Å(
-%0java.util.Vector"__id*@
+y	 y(
+%0java.lang.Double"__id*B
 
-__unknown_file ($*"
-domain.Registered"
-	niriLista"&
-
-Å Å(
+__unknown_file (&*$
+domain.Registered"
+diruLimitea"$
+y y(
 
-%0java.util.VectorB
+%0java.lang.DoubleB
 domain.RegisteredH

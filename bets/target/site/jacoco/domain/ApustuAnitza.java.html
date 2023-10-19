@@ -25,7 +25,7 @@ public class ApustuAnitza implements Serializable{
 	@GeneratedValue
 	private Integer apustuAnitzaNumber;
 	private Date data;
-<span class="pc" id="L28">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+<span class="fc" id="L28">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
 	private Vector&lt;Apustua&gt; apustuak = new Vector&lt;Apustua&gt;();
 	@XmlIDREF
 	private Registered user;
@@ -34,8 +34,8 @@ public class ApustuAnitza implements Serializable{
 	private Double balioa; 
 	
 	public ApustuAnitza() {
-<span class="nc" id="L37">		super();</span>
-<span class="nc" id="L38">	}</span>
+<span class="fc" id="L37">		super();</span>
+<span class="fc" id="L38">	}</span>
 	
 <span class="fc" id="L40">	public ApustuAnitza(Registered user,Double balioa) {</span>
 <span class="fc" id="L41">		this.user=user;</span>

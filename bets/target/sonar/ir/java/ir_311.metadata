@@ -1,1 +1,3 @@
-domain.Registered#instance-init#
+exceptions.ApustuaAlreadyExist#<init>()V
+==
+<init> java.lang.Exception#<init>()V

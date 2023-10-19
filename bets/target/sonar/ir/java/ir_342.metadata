@@ -1,1 +1,1 @@
-domain.Registered#getUsername()Ljava/lang/String;
+domain.Registered#getTaldea()Ldomain/Team;

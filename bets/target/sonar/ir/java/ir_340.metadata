@@ -1,1 +1,3 @@
-domain.Registered#getTaldea()Ldomain/Team;
+domain.Registered#addJarraitutako(Ldomain/Jarraitzailea;)V
+==
+add java.util.Vector#add(Ljava/lang/Object;)Z

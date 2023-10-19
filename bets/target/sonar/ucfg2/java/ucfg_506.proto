@@ -1,18 +1,18 @@
 
-?configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;[
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java£ £(""1*´
+@configuration.ConfigXML#getBusinessLogicName()Ljava/lang/String;[
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java› ›(#"1*µ
 1
-¤	 ¤({
-y
+œ	 œ(|
+z
 
-¤	 ¤(
-%0java.lang.String"__id*M
+œ	 œ(
+%0java.lang.String"__id*N
 
-__unknown_file (1*/
-configuration.ConfigXML"
-dataBaseOpenMode"&
+__unknown_file (2*0
+configuration.ConfigXML"
+businessLogicName"&
 
-¤ ¤(
+œ œ(
 
 %0java.lang.StringB
 configuration.ConfigXMLH

@@ -1,15 +1,16 @@
 
-)domain.Quote#getQuote()Ljava/lang/Double;N
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.java; ;("1*˜
-1<	 <(c
-a
-<	 <(
-%0java.lang.Double"__id*7
+/domain.Quote#getApustuak()Ljava/util/ArrayList;N
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Quote.java9 9(&"1*¡
+1:	 :(i
+g
+:	 :(
+%0java.util.ArrayList"__id*:
 
-__unknown_file (*
-domain.Quote"
-balio"$
-< <(
-
-%0java.lang.DoubleB
+__unknown_file (*
+domain.Quote"
+
+apustuak"'
+: :(
+
+%0java.util.ArrayListB
 domain.QuoteH

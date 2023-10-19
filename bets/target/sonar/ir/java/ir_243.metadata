@@ -1,5 +1,5 @@
-businessLogic.BLFacadeImplementation#findTeam(Ldomain/Registered;)Ldomain/Team;
+businessLogic.BLFacadeImplementation#findEventFromApustua(Ldomain/Apustua;)Ldomain/Event;
 ==
-findTeam dataAccess.DataAccess#findTeam(Ldomain/Registered;)Ldomain/Team;
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
+findEventFromApustua dataAccess.DataAccess#findEventFromApustua(Ldomain/Apustua;)Ldomain/Event;

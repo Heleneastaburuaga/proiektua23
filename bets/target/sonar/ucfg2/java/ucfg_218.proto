@@ -1,175 +1,17 @@
 
-(domain.Event#equals(Ljava/lang/Object;)ZP
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Event.javaü ü("startingBlock*%
-2
-®
- ®("
-
-® ®(
-""*ú
-3
-¶ ¶(b
-`
-
-¶ ¶(
-otherdomain.Event"__id*5
-
-__unknown_file (
-
-objjava.lang.Objectl
+domain.Event#hashCode()IP
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Event.javaù ù("1*ì
+1
+û û(l
 j
 
-ß ß(
-%5java.lang.Integer"__id*=
+† †('
+%0java.lang.Integer"__id*=
 
 __unknown_file (!*
 domain.Event"
-eventNumbers
-q
+eventNumber"
 
-ß ß(&
-%6java.lang.Integer"__id*D
-
-__unknown_file ((*&
-
-otherdomain.Event"
-eventNumberª
-∏
-
-ß ß(&
-%7boolean"	__compare*"
-
-__unknown_file (
-!=*5
-
-__unknown_file (
-
-%5java.lang.Integer*5
-
-__unknown_file (
-
-%6java.lang.Integer*
-2
-1*ä
-startingBlock
-ü ü("å
-â
-
-û û(
-
-%8"
-__annotate*2
-
-__unknown_file (
-java.lang.Override*5
-
-__unknown_file (
-
-objjava.lang.ObjectY
-W
-
-ü ü(!
-objjava.lang.Object"__annotation*"
-
-__unknown_file (
-
-%8*
-9*%
-4
-•
- •("
-
-• •(
-""*¸
-5
-§ §(éã
-
-§ §(
-%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*,
-
-__unknown_file (
-domain.Event2
-getClass()óî
-
-§ §("
-%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
-
-__unknown_file (
-
-objjava.lang.Object2
-getClass()∑
-¥
-
-§ §("
-%4boolean"	__compare*"
-
-__unknown_file (
-!=*3
-
-__unknown_file (
-
-%2java.lang.Class*3
-
-__unknown_file (
-
-%3java.lang.Class*
-3
-4*%
-6
-£
- £("
-
-£ £(
-""*¬
-7
-¢ ¢(	®
-•
-
-¢ ¢(
-%1boolean"	__compare*"
-
-__unknown_file (
-==*5
-
-__unknown_file (
-
-objjava.lang.Object*"
-
-__unknown_file (
-""*
-5
-6*%
-8
-°
- °("
-
-° °(
-""*Ã
-9
-† †(
-≤
-Ø
-
-† †(
-%0boolean"	__compare*"
-
-__unknown_file (
-==*,
-
-__unknown_file (
-domain.Event*5
-
-__unknown_file (
-
-objjava.lang.Object*
-7
-8*%
-1
-©	 ©("
-
-© ©(
-"":%
-
-ü ü(!
-objjava.lang.ObjectB
+° °(
+""B
 domain.EventHX

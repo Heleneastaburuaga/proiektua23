@@ -1,5 +1,5 @@
-businessLogic.BLFacadeImplementation#jarraitu(Ldomain/Registered;Ldomain/Registered;Ljava/lang/Double;)Z
+businessLogic.BLFacadeImplementation#gertaerakKopiatu(Ldomain/Event;Ljava/util/Date;)Z
 ==
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
-jarraitu dataAccess.DataAccess#jarraitu(Ldomain/Registered;Ldomain/Registered;Ljava/lang/Double;)Z
+gertaerakKopiatu dataAccess.DataAccess#gertaerakKopiatu(Ldomain/Event;Ljava/util/Date;)Z

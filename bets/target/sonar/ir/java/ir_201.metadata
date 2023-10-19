@@ -1,3 +1,1 @@
-exceptions.EventFinished#<init>()V
-==
-<init> java.lang.Exception#<init>()V
+exceptions.EventFinished#instance-init#

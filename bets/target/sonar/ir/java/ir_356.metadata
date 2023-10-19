@@ -1,1 +1,1 @@
-domain.Transaction#getDirua()Ljava/lang/Double;
+domain.Transaction#getErabiltzailea()Ldomain/Registered;

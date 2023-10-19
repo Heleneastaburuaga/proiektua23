@@ -1,19 +1,18 @@
 
-:domain.Registered#getJarraitutakoLista()Ljava/util/Vector;U
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaà à(2"1*¶
+:domain.Registered#getJarraitzaileLista()Ljava/util/Vector;U
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaÄ Ä(2"1*ß
 1
-â	 â(m
-k
+Å	 Å(n
+l
 
-â	 â(
-%0java.util.Vector"__id*?
+Å	 Å(
+%0java.util.Vector"__id*@
 
-__unknown_file (#*!
-domain.Registered"
+__unknown_file ($*"
+domain.Registered"
+	niriLista"&
 
-nikLista"&
-
-â â(
+Å Å(
 
 %0java.util.VectorB
 domain.RegisteredH

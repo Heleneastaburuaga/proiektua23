@@ -1,4 +1,3 @@
-domain.Registered#toString()Ljava/lang/String;
-java.lang.String#equals(Ljava/lang/Object;)Z
+domain.Registered#addJarraitzailea(Ldomain/Jarraitzailea;)V
 ==
-getUsername domain.Registered#getUsername()Ljava/lang/String;
+add java.util.Vector#add(Ljava/lang/Object;)Z

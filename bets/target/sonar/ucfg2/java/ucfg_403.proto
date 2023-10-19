@@ -1,15 +1,15 @@
 
-,domain.Transaction#getData()Ljava/util/Date;T
-J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.java; ;("1*™
-1<	 <(f
-d
-<	 <(
-%0java.util.Date"__id*<
+/domain.Transaction#getDirua()Ljava/lang/Double;T
+J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.java5 5("1*ž
+16	 6(i
+g
+6	 6(
+%0java.lang.Double"__id*=
 
-__unknown_file ( *
-domain.Transaction"
-data""
-< <(
-
-%0java.util.DateB
+__unknown_file (!*
+domain.Transaction"
+dirua"$
+6 6(
+
+%0java.lang.DoubleB
 domain.TransactionH

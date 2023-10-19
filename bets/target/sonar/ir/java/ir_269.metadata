@@ -1,3 +1,1 @@
-domain.Sport#addEvent(Ldomain/Event;)V
-==
-add java.util.Vector#add(Ljava/lang/Object;)Z
+domain.Sport#eguneratuApustuKantitatea()V

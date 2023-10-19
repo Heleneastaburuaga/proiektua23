@@ -1,1 +1,1 @@
-domain.Transaction#instance-init#
+domain.Registered#setBankAccount(Ljava/lang/Integer;)V

@@ -1,4 +1,3 @@
-domain.Quote#equals(Ljava/lang/Object;)Z
-java.lang.Object#getClass()Ljava/lang/Class;
+domain.Quote#addApustua(Ldomain/Apustua;)V
 ==
-getQuoteNumber domain.Quote#getQuoteNumber()Ljava/lang/Integer;
+add java.util.ArrayList#add(Ljava/lang/Object;)Z

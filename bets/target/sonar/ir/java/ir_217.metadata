@@ -1,10 +1,5 @@
-businessLogic.BLFacadeImplementation#gertaerakSortu(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)Z
-exceptions.EventFinished#<init>(Ljava/lang/String;)V
-java.util.Date#<init>()V
-exceptions.EventFinished#instance-init#
-java.util.Date#instance-init#
+businessLogic.BLFacadeImplementation#storeRegistered(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
 ==
-gertaerakSortu dataAccess.DataAccess#gertaerakSortu(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)Z
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
-compareTo java.util.Date#compareTo(Ljava/util/Date;)I
+storeRegistered dataAccess.DataAccess#storeRegistered(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V

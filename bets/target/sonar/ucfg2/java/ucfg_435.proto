@@ -1,58 +1,50 @@
 
-,gui.MainGUI#getBoton3()Ljavax/swing/JButton;O
-C/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/MainGUI.javaÅ Å("3*õ
-2
-É É(&><
-
-É É($
-%2javax.swing.JButton"javax.swing.JButtonl
-j
-
-É É(&
+,gui.MainGUI#getBoton2()Ljavax/swing/JButton;M
+C/C:/Users/lande/git/proiektua23/bets/src/main/java/gui/MainGUI.javan n("3*ˇ
+2p p(%<:
+p p(#
+%2javax.swing.JButton"javax.swing.JButtonj
+h
+p p(%
 %3"javax.swing.JButton#<init>()V*7
 
 __unknown_file (
 
-%2javax.swing.JButtonu
-s
-
-É É(&&
-gui.MainGUI"
-jButtonQueryQueries"__id*7
+%2javax.swing.JButtonr
+p
+p p(%%
+gui.MainGUI"
+jButtonCreateQuery"__id*7
 
 __unknown_file (
 
-%2javax.swing.JButtonu
-s
-
-Ñ Ñ(
-%4javax.swing.JButton"__id*D
+%2javax.swing.JButtonr
+p
+q q(
+%4javax.swing.JButton"__id*C
 
-__unknown_file ((*&
-gui.MainGUI"
-jButtonQueryQueriesÊ
-„
-
-Ñ Ñ(D
+__unknown_file ('*%
+gui.MainGUI"
+jButtonCreateQuery‰
+·
+q q(C
 %5java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*8
 
 __unknown_file ("
 java.util.ResourceBundle*)
 
 __unknown_file (
-	Etiquetas¸˘
-
-Ñ Ñ(^
+	Etiquetas˘ˆ
+q q(\
 %6java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;*<
 
 __unknown_file ( 
 
-%5java.util.ResourceBundle*,
+%5java.util.ResourceBundle*+
 
-__unknown_file (
-QueryQueries2getString(Ljava/lang/String;)‡›
-
-Ñ Ñ(_
+__unknown_file (
+CreateQuery2getString(Ljava/lang/String;)ﬁ€
+q q(]
 
 %7void"7javax.swing.AbstractButton#setText(Ljava/lang/String;)V*7
 
@@ -62,28 +54,24 @@ s
 
 __unknown_file (
 
-%6java.lang.String2setText(Ljava/lang/String;)u
-s
-
-Ö Ö(
-%8javax.swing.JButton"__id*D
+%6java.lang.String2setText(Ljava/lang/String;)r
+p
+r r(
+%8javax.swing.JButton"__id*C
 
-__unknown_file ((*&
-gui.MainGUI"
-jButtonQueryQueries20
-
-Ö- Ö(J
-%9gui.MainGUI$3"gui.MainGUI$3d
-b
-
-Ö) ã(
+__unknown_file ('*%
+gui.MainGUI"
+jButtonCreateQuery0.
+r, r(I
+%9gui.MainGUI$2"gui.MainGUI$2b
+`
+r( w(
 %10"java.lang.Object#<init>()V*1
 
 __unknown_file (
 
-%9gui.MainGUI$3åâ
-
-Ö ã(
+%9gui.MainGUI$2äá
+r w(
 %11void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V*7
 
 __unknown_file (
@@ -92,21 +80,18 @@ b
 
 __unknown_file (
 
-%9gui.MainGUI$322addActionListener(Ljava/awt/event/ActionListener;)*
-1*ª
-3
-Ç Ç(u
-s
-
-Ç Ç(
-%0javax.swing.JButton"__id*D
+%9gui.MainGUI$222addActionListener(Ljava/awt/event/ActionListener;)*
+1*¥
+3o o(r
+p
+o o(
+%0javax.swing.JButton"__id*C
 
-__unknown_file ((*&
-gui.MainGUI"
-jButtonQueryQueries™
-ß
-
-Ç Ç(!
+__unknown_file ('*%
+gui.MainGUI"
+jButtonCreateQuery®
+•
+o o( 
 %1boolean"	__compare*"
 
 __unknown_file (
@@ -119,19 +104,16 @@ s
 __unknown_file (
 ""*
 2
-1*≥
-1
-ç	 ç(v
-t
-
-ç	 ç(
-%12javax.swing.JButton"__id*D
+1*¨
+1y	 y(s
+q
+y	 y(
+%12javax.swing.JButton"__id*C
 
-__unknown_file ((*&
-gui.MainGUI"
-jButtonQueryQueries"*
-
-ç ç(
+__unknown_file ('*%
+gui.MainGUI"
+jButtonCreateQuery"(
+y y(
 
 %12javax.swing.JButtonB
 gui.MainGUI

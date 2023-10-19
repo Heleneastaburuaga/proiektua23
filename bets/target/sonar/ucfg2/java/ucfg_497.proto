@@ -1,7 +1,15 @@
 
-*configuration.ConfigXML#isDatabaseLocal()ZY
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.javaA A("1*!
-1B	 B("
-B B(
-""B
-configuration.ConfigXMLHX
+3configuration.ConfigXML#getUser()Ljava/lang/String;Y
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java9 9("1*¢
+1:	 :(m
+k
+:	 :(
+%0java.lang.String"__id*A
+
+__unknown_file (%*#
+configuration.ConfigXML"
+user"$
+: :(
+
+%0java.lang.StringB
+configuration.ConfigXMLH

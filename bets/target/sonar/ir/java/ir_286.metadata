@@ -1,1 +1,1 @@
-domain.Quote#setQuestion(Ldomain/Question;)V
+domain.Quote#setQuoteNumber(Ljava/lang/Integer;)V

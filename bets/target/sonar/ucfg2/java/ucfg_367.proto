@@ -1,15 +1,15 @@
 
-5domain.Registered#getIrabazitakoa()Ljava/lang/Double;S
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.java` `("1*¤
-1a	 a(o
-m
-a	 a(
-%0java.lang.Double"__id*C
+6domain.Registered#getApustuAnitzak()Ljava/util/Vector;S
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaX X(-"1*¥
+1Y	 Y(p
+n
+Y	 Y(
+%0java.util.Vector"__id*D
 
-__unknown_file ('*%
-domain.Registered"
-irabazitakoa"$
-a a(
+__unknown_file ((*&
+domain.Registered"
+apustuAnitzak"$
+Y Y(
 
-%0java.lang.DoubleB
+%0java.util.VectorB
 domain.RegisteredH

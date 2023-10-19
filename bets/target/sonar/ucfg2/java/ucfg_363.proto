@@ -1,15 +1,15 @@
 
-0domain.Registered#getDirukop()Ljava/lang/Double;S
-I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaP P("1*Ÿ
-1Q	 Q(j
-h
-Q	 Q(
-%0java.lang.Double"__id*>
+5domain.Registered#getTransakzioak()Ljava/util/Vector;S
+I/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Registered.javaH H(+"1*¤
+1I	 I(o
+m
+I	 I(
+%0java.util.Vector"__id*C
 
-__unknown_file ("* 
-domain.Registered"	
-dirukop"$
-Q Q(
+__unknown_file ('*%
+domain.Registered"
+transakzioak"$
+I I(
 
-%0java.lang.DoubleB
+%0java.util.VectorB
 domain.RegisteredH

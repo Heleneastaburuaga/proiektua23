@@ -1,1 +1,7 @@
-domain.Quote#hashCode()I
+domain.Quote#removeApustua(Ldomain/Apustua;)V
+java.lang.Integer#equals(Ljava/lang/Object;)Z
+==
+get java.util.ArrayList#get(I)Ljava/lang/Object;
+getApostuaNumber domain.Apustua#getApostuaNumber()Ljava/lang/Integer;
+remove java.util.ArrayList#remove(I)Ljava/lang/Object;
+size java.util.ArrayList#size()I

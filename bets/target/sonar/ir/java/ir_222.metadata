@@ -1,5 +1,7 @@
-businessLogic.BLFacadeImplementation#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z
+businessLogic.BLFacadeImplementation#diruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/lang/String;)V
+java.util.Date#<init>()V
+java.util.Date#instance-init#
 ==
 close dataAccess.DataAccess#close()V
-ApustuaEgin dataAccess.DataAccess#ApustuaEgin(Ldomain/Registered;Ljava/util/Vector;Ljava/lang/Double;Ljava/lang/Integer;)Z
+DiruaSartu dataAccess.DataAccess#DiruaSartu(Ldomain/Registered;Ljava/lang/Double;Ljava/util/Date;Ljava/lang/String;)V
 open dataAccess.DataAccess#open(Z)V

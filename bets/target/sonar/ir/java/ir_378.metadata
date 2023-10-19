@@ -1,1 +1,3 @@
-gui.MainGUI#setBussinessLogic(LbusinessLogic/BLFacade;)V
+gui.MainGUI#instance-init#
+javax.swing.ButtonGroup#instance-init#
+javax.swing.ButtonGroup#<init>()V

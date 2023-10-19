@@ -1014,7 +1014,7 @@ public void open(boolean initializeMode){
 					spo.setApustuKantitatea(spo.getApustuKantitatea()-1);
 					db.getTransaction().commit();
 				}
-				//aldaketa
+
 			}
 			
 		}

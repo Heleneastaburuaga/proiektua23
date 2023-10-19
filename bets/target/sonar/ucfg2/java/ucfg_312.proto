@@ -1,161 +1,15 @@
 
-(domain.Sport#equals(Ljava/lang/Object;)ZN
-D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Sport.javaJ J("startingBlock*!
-2V
- V("
-V V(
-""*ƒ
-3T T([
-Y
-T T(
-spdomain.Sport"__id*3
-
-__unknown_file (
-
-ojava.lang.Object¶£
-U U(
-%5java.lang.Integer"5domain.Sport#getApustuKantitatea()Ljava/lang/Integer;*0
-
-__unknown_file (
-
-spdomain.Sport2getApustuKantitatea()¶
-£
-U U(%
-%6boolean"	__compare*"
-
-__unknown_file (
-==*5
-
-__unknown_file (
-
-%5java.lang.Integer*"
-
-__unknown_file (
-""*
-2
-1*Ç
-startingBlockJ J( â
-Ü
-I I(
-
-%10"
-__annotate*2
-
-__unknown_file (
-java.lang.Override*3
-
-__unknown_file (
-
-ojava.lang.ObjectV
-T
-J J(
-ojava.lang.Object"__annotation*#
-
-__unknown_file (
-
-%10*
-9*!
-4R
- R("
-R R(
-""*Ú
-5Q Q(	åâ
-Q Q(
-%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*,
-
-__unknown_file (
-domain.Sport2
-getClass()ìê
-Q Q($
-%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*3
-
-__unknown_file (
-
-ojava.lang.Object2
-getClass()µ
-≤
-Q Q($
-%4boolean"	__compare*"
-
-__unknown_file (
-!=*3
-
-__unknown_file (
-
-%2java.lang.Class*3
-
-__unknown_file (
-
-%3java.lang.Class*
-3
-4*!
-6O
- O("
-O O(
-""*º
-7N N(§
-°
-N N(
-%1boolean"	__compare*"
-
-__unknown_file (
-==*3
-
-__unknown_file (
-
-ojava.lang.Object*"
-
-__unknown_file (
-""*
-5
-6*!
-8L
- L("
-L L(
-""*∆
-9K K(	Æ
-´
-K K(
-%0boolean"	__compare*"
-
-__unknown_file (
-==*,
-
-__unknown_file (
-domain.Sport*3
-
-__unknown_file (
-
-ojava.lang.Object*
-7
-8*Ï
-1X	 X(c
+)domain.Sport#toString()Ljava/lang/String;N
+D/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Sport.javaE E("1*ò
+1F	 F(c
 a
-X	 X(
-%7java.lang.String"__id*7
+F	 F(
+%0java.lang.String"__id*7
 
 __unknown_file (*
 domain.Sport"
-izenaéã
-X X((
-%8java.lang.String")domain.Sport#getIzena()Ljava/lang/String;*0
-
-__unknown_file (
-
-spdomain.Sport2
-getIzena()“œ
-X	 X()
-%9boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
-
-__unknown_file (
+izena"$
+F F(
 
-%7java.lang.String*4
-
-__unknown_file (
-
-%8java.lang.String2equals(Ljava/lang/Object;)"
-X X(*
-"":!
-J J(
-ojava.lang.ObjectB
-domain.SportHX
+%0java.lang.StringB
+domain.SportH

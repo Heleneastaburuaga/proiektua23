@@ -1,5 +1,10 @@
-businessLogic.BLFacadeImplementation#storeQuote(Ljava/lang/String;Ljava/lang/Double;Ldomain/Question;)V
+businessLogic.BLFacadeImplementation#gertaerakSortu(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)Z
+exceptions.EventFinished#<init>(Ljava/lang/String;)V
+java.util.Date#<init>()V
+exceptions.EventFinished#instance-init#
+java.util.Date#instance-init#
 ==
-storeQuote dataAccess.DataAccess#storeQuote(Ljava/lang/String;Ljava/lang/Double;Ldomain/Question;)Ldomain/Quote;
+gertaerakSortu dataAccess.DataAccess#gertaerakSortu(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)Z
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
+compareTo java.util.Date#compareTo(Ljava/util/Date;)I

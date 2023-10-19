@@ -1,1 +1,1 @@
-domain.Registered#getPassword()Ljava/lang/String;
+domain.Registered#getUsername()Ljava/lang/String;

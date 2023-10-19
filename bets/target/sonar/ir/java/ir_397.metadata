@@ -1,3 +1,3 @@
-domain.Apustua#<init>(Ldomain/ApustuAnitza;Ldomain/Quote;)V
+gui.DiruaSartuGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)V
 ==
-<init> java.lang.Object#<init>()V
+setVisible java.awt.Window#setVisible(Z)V

@@ -1,1 +1,4 @@
-domain.Registered#setTaldea(Ldomain/Team;)V
+domain.Registered#toString()Ljava/lang/String;
+java.lang.String#equals(Ljava/lang/Object;)Z
+==
+getUsername domain.Registered#getUsername()Ljava/lang/String;

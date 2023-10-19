@@ -1,5 +1,5 @@
-businessLogic.BLFacadeImplementation#findApustuAnitza(Ldomain/Registered;)Ljava/util/List;
+businessLogic.BLFacadeImplementation#findApustua(Ldomain/Registered;)Ljava/util/List;
 ==
-findApustuAnitza dataAccess.DataAccess#findApustuAnitza(Ldomain/Registered;)Ljava/util/List;
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
+findApustua dataAccess.DataAccess#findApustua(Ldomain/Registered;)Ljava/util/List;

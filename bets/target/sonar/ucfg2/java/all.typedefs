@@ -1631,9 +1631,10 @@ getUsers()(domain.Team#getUsers()Ljava/util/Vector;O
 firstDayMonth(Ljava/util/Date;)Fconfiguration.UtilDate#firstDayMonth(Ljava/util/Date;)Ljava/util/Date;g
 lastDayMonth(Ljava/util/Date;)Econfiguration.UtilDate#lastDayMonth(Ljava/util/Date;)Ljava/util/Date;C
 newDate(III)3configuration.UtilDate#newDate(III)Ljava/util/Date;W
-trim(Ljava/util/Date;)=configuration.UtilDate#trim(Ljava/util/Date;)Ljava/util/Date;¹
+trim(Ljava/util/Date;)=configuration.UtilDate#trim(Ljava/util/Date;)Ljava/util/Date;È
 domain.Eventjava.io.Serializablejava.lang.Object"
-<init>()domain.Event#<init>()VÀ
+<init>()domain.Event#<init>()VŒ
+=<init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Date;)Kdomain.Event#<init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Date;)VÀ
 W<init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Date;Ldomain/Team;Ldomain/Team;)edomain.Event#<init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Date;Ldomain/Team;Ldomain/Team;)Vf
 *<init>(Ljava/lang/String;Ljava/util/Date;)8domain.Event#<init>(Ljava/lang/String;Ljava/util/Date;)Vš
 D<init>(Ljava/lang/String;Ljava/util/Date;Ldomain/Team;Ldomain/Team;)Rdomain.Event#<init>(Ljava/lang/String;Ljava/util/Date;Ldomain/Team;Ldomain/Team;)V^
@@ -1850,10 +1851,10 @@ hashCode()domain.Apustua#hashCode()I^
 %setApostuaNumber(Ljava/lang/Integer;)5domain.Apustua#setApostuaNumber(Ljava/lang/Integer;)V`
 &setApustuAnitza(Ldomain/ApustuAnitza;)6domain.Apustua#setApustuAnitza(Ldomain/ApustuAnitza;)VN
 setEgoera(Ljava/lang/String;)-domain.Apustua#setEgoera(Ljava/lang/String;)VD
-setKuota(Ldomain/Quote;)(domain.Apustua#setKuota(Ldomain/Quote;)Vú
-
+setKuota(Ldomain/Quote;)(domain.Apustua#setKuota(Ldomain/Quote;)V‹
 domain.Quotejava.io.Serializablejava.lang.Object"
-<init>()domain.Quote#<init>()Vj
+<init>()domain.Quote#<init>()VŽ
+><init>(ILjava/lang/Double;Ljava/lang/String;Ldomain/Question;)Ldomain.Quote#<init>(ILjava/lang/Double;Ljava/lang/String;Ldomain/Question;)Vj
 ,<init>(Ljava/lang/Double;Ljava/lang/String;):domain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;)VŒ
 =<init>(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)Kdomain.Quote#<init>(Ljava/lang/Double;Ljava/lang/String;Ldomain/Question;)VJ
 addApustua(Ldomain/Apustua;)*domain.Quote#addApustua(Ldomain/Apustua;)VF

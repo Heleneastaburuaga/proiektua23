@@ -1,15 +1,15 @@
 
-8domain.Transaction#getErabiltzailea()Ldomain/Registered;T
-J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.java/ /(#"1*§
-10	 0(q
-o
-0	 0(
-%0domain.Registered"__id*D
+<domain.Transaction#getTransactionNumber()Ljava/lang/Integer;T
+J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.java) )($"1*©
+1*	 *(s
+q
+*	 *(
+%0java.lang.Integer"__id*F
 
-__unknown_file ((*&
-domain.Transaction"
-erabiltzaile"%
-0 0(
+__unknown_file (**(
+domain.Transaction"
+transactionNum"%
+* *(
 
-%0domain.RegisteredB
+%0java.lang.IntegerB
 domain.TransactionH

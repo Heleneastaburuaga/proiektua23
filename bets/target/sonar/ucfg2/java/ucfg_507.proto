@@ -1,18 +1,19 @@
 
-;configuration.ConfigXML#getDatabaseNode()Ljava/lang/String;[
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java§ §("1*°
+9configuration.ConfigXML#getDbFilename()Ljava/lang/String;[
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.javaŸ Ÿ("1*®
 1
-¨	 ¨(w
-u
+ 	  (u
+s
 
-¨	 ¨(
-%0java.lang.String"__id*I
+ 	  (
+%0java.lang.String"__id*G
 
-__unknown_file (-*+
-configuration.ConfigXML"
-databaseNode"&
+__unknown_file (+*)
+configuration.ConfigXML"
 
-¨ ¨(
+dbFilename"&
+
+   (
 
 %0java.lang.StringB
 configuration.ConfigXMLH

@@ -1,4 +1,8 @@
-gui.TaldeaApostatuGUI#instance-init#
-gui.MainGUI#getBusinessLogic()LbusinessLogic/BLFacade;
-javax.swing.DefaultListModel#instance-init#
-javax.swing.DefaultListModel#<init>()V
+gui.MainGUI#getPanel()Ljavax/swing/JPanel;
+gui.MainGUI#getRdbtnNewRadioButton_2()Ljavax/swing/JRadioButton;
+gui.MainGUI#getRdbtnNewRadioButton_1()Ljavax/swing/JRadioButton;
+javax.swing.JPanel#<init>()V
+gui.MainGUI#getRdbtnNewRadioButton()Ljavax/swing/JRadioButton;
+javax.swing.JPanel#instance-init#
+==
+add java.awt.Container#add(Ljava/awt/Component;)Ljava/awt/Component;

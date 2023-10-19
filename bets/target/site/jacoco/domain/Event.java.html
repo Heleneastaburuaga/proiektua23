@@ -22,7 +22,7 @@ public class Event implements Serializable {
 	private Integer eventNumber;
 	private String description; 
 	private Date eventDate;
-<span class="pc" id="L25">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
+<span class="fc" id="L25">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
 	private Vector&lt;Question&gt; questions=new Vector&lt;Question&gt;();
 	@XmlIDREF
 	private Sport sport;
@@ -51,52 +51,58 @@ public class Event implements Serializable {
 <span class="fc" id="L51">		this.kanpokoa=kanpokoa;</span>
 <span class="fc" id="L52">	}</span>
 	
-<span class="nc" id="L54">	public Event(String description,Date eventDate, Team lokala, Team kanpokoa) {</span>
-<span class="nc" id="L55">		this.description = description;</span>
-<span class="nc" id="L56">		this.eventDate=eventDate;</span>
-<span class="nc" id="L57">		this.lokala=lokala;</span>
-<span class="nc" id="L58">		this.kanpokoa=kanpokoa;</span>
-<span class="nc" id="L59">	}</span>
+<span class="fc" id="L54">	public Event(String description,Date eventDate, Team lokala, Team kanpokoa) {</span>
+<span class="fc" id="L55">		this.description = description;</span>
+<span class="fc" id="L56">		this.eventDate=eventDate;</span>
+<span class="fc" id="L57">		this.lokala=lokala;</span>
+<span class="fc" id="L58">		this.kanpokoa=kanpokoa;</span>
+<span class="fc" id="L59">	}</span>
 	
 <span class="fc" id="L61">	public Event(String description,Date eventDate) {</span>
 <span class="fc" id="L62">		this.description = description;</span>
 <span class="fc" id="L63">		this.eventDate=eventDate;</span>
 <span class="fc" id="L64">	}</span>
+<span class="fc" id="L65">	public Event(Integer eventNumber, String description,Date eventDate) {</span>
+<span class="fc" id="L66">		this.eventNumber = eventNumber;</span>
+<span class="fc" id="L67">		this.description = description;</span>
+<span class="fc" id="L68">		this.eventDate=eventDate;</span>
+<span class="fc" id="L69">	}</span>
+
 
 	public Integer getEventNumber() {
-<span class="fc" id="L67">		return eventNumber;</span>
+<span class="fc" id="L73">		return eventNumber;</span>
 	}
 
 	public void setEventNumber(Integer eventNumber) {
-<span class="nc" id="L71">		this.eventNumber = eventNumber;</span>
-<span class="nc" id="L72">	}</span>
+<span class="nc" id="L77">		this.eventNumber = eventNumber;</span>
+<span class="nc" id="L78">	}</span>
 
 	public String getDescription() {
-<span class="nc" id="L75">		return description;</span>
+<span class="fc" id="L81">		return description;</span>
 	}
 	
 	public void setDescription(String description) {
-<span class="nc" id="L79">		this.description=description;</span>
-<span class="nc" id="L80">	}</span>
+<span class="nc" id="L85">		this.description=description;</span>
+<span class="nc" id="L86">	}</span>
 
 	public Date getEventDate() {
-<span class="fc" id="L83">		return eventDate;</span>
+<span class="fc" id="L89">		return eventDate;</span>
 	}
 
 	public void setEventDate(Date eventDate) {
-<span class="nc" id="L87">		this.eventDate = eventDate;</span>
-<span class="nc" id="L88">	}	</span>
+<span class="nc" id="L93">		this.eventDate = eventDate;</span>
+<span class="nc" id="L94">	}	</span>
 	
 	public Sport getSport() {
-<span class="nc" id="L91">		return sport;</span>
+<span class="nc" id="L97">		return sport;</span>
 	}
 
 	public void setSport(Sport sport) {
-<span class="fc" id="L95">		this.sport = sport;</span>
-<span class="fc" id="L96">	}</span>
+<span class="fc" id="L101">		this.sport = sport;</span>
+<span class="fc" id="L102">	}</span>
 
 	public String toString(){
-<span class="fc" id="L99">		return eventNumber+&quot;;&quot;+description;</span>
+<span class="fc" id="L105">		return eventNumber+&quot;;&quot;+description;</span>
 	}
 	
 	/**
@@ -107,14 +113,14 @@ public class Event implements Serializable {
 	 * @return Bet
 	 */
 	public Question addQuestion(String question, double betMinimum)  {
-<span class="fc" id="L110">        Question q=new Question(question,betMinimum, this);</span>
-<span class="fc" id="L111">        questions.add(q);</span>
-<span class="fc" id="L112">        return q;</span>
+<span class="fc" id="L116">        Question q=new Question(question,betMinimum, this);</span>
+<span class="fc" id="L117">        questions.add(q);</span>
+<span class="fc" id="L118">        return q;</span>
 	}
 	
 	public void listaraGehitu(Question q)  {
-<span class="nc" id="L116">        questions.add(q);</span>
-<span class="nc" id="L117">	}</span>
+<span class="nc" id="L122">        questions.add(q);</span>
+<span class="nc" id="L123">	}</span>
 
 	
 	/**
@@ -124,49 +130,49 @@ public class Event implements Serializable {
 	 * @return true if the question exists and false in other case
 	 */
 	public boolean DoesQuestionExists(String question)  {	
-<span class="fc bfc" id="L127" title="All 2 branches covered.">		for (Question q:this.getQuestions()){</span>
-<span class="fc bfc" id="L128" title="All 2 branches covered.">			if (q.getQuestion().compareTo(question)==0)</span>
-<span class="fc" id="L129">				return true;</span>
-<span class="fc" id="L130">		}</span>
-<span class="fc" id="L131">		return false;</span>
+<span class="fc bfc" id="L133" title="All 2 branches covered.">		for (Question q:this.getQuestions()){</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">			if (q.getQuestion().compareTo(question)==0)</span>
+<span class="fc" id="L135">				return true;</span>
+<span class="fc" id="L136">		}</span>
+<span class="fc" id="L137">		return false;</span>
 	}
 		
 	public Team getLokala() {
-<span class="nc" id="L135">		return lokala;</span>
+<span class="nc" id="L141">		return lokala;</span>
 	}
 
 	public void setLokala(Team lokala) {
-<span class="nc" id="L139">		this.lokala = lokala;</span>
-<span class="nc" id="L140">	}</span>
+<span class="nc" id="L145">		this.lokala = lokala;</span>
+<span class="nc" id="L146">	}</span>
 
 	public Team getKanpokoa() {
-<span class="nc" id="L143">		return kanpokoa;</span>
+<span class="nc" id="L149">		return kanpokoa;</span>
 	}
 
 	public void setKanpokoa(Team kanpokoa) {
-<span class="nc" id="L147">		this.kanpokoa = kanpokoa;</span>
-<span class="nc" id="L148">	}</span>
+<span class="nc" id="L153">		this.kanpokoa = kanpokoa;</span>
+<span class="nc" id="L154">	}</span>
 	
 	@Override
 	public int hashCode() {
-<span class="nc" id="L152">		final int prime = 31;</span>
-<span class="nc" id="L153">		int result = 1;</span>
-<span class="nc" id="L154">		result = prime * result + eventNumber;</span>
-<span class="nc" id="L155">		return result;</span>
+<span class="nc" id="L158">		final int prime = 31;</span>
+<span class="nc" id="L159">		int result = 1;</span>
+<span class="nc" id="L160">		result = prime * result + eventNumber;</span>
+<span class="nc" id="L161">		return result;</span>
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-<span class="nc bnc" id="L160" title="All 2 branches missed.">		if (this == obj)</span>
-<span class="nc" id="L161">			return true;</span>
-<span class="nc bnc" id="L162" title="All 2 branches missed.">		if (obj == null)</span>
-<span class="nc" id="L163">			return false;</span>
-<span class="nc bnc" id="L164" title="All 2 branches missed.">		if (getClass() != obj.getClass())</span>
-<span class="nc" id="L165">			return false;</span>
-<span class="nc" id="L166">		Event other = (Event) obj;</span>
-<span class="nc bnc" id="L167" title="All 2 branches missed.">		if (eventNumber != other.eventNumber)</span>
-<span class="nc" id="L168">			return false;</span>
-<span class="nc" id="L169">		return true;</span>
+<span class="nc bnc" id="L166" title="All 2 branches missed.">		if (this == obj)</span>
+<span class="nc" id="L167">			return true;</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">		if (obj == null)</span>
+<span class="nc" id="L169">			return false;</span>
+<span class="nc bnc" id="L170" title="All 2 branches missed.">		if (getClass() != obj.getClass())</span>
+<span class="nc" id="L171">			return false;</span>
+<span class="nc" id="L172">		Event other = (Event) obj;</span>
+<span class="nc bnc" id="L173" title="All 2 branches missed.">		if (eventNumber != other.eventNumber)</span>
+<span class="nc" id="L174">			return false;</span>
+<span class="nc" id="L175">		return true;</span>
 	}
 	
 	

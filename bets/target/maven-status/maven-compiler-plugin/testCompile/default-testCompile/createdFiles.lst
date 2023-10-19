@@ -1,6 +1,12 @@
 CreateQuestionDAW.class
-CreateQuestionBLBMTest.class
 CreateQuestionDAB.class
+GertaeraEzabatuDAWTest.class
+GertaerakSortuBLBMTest.class
 test\dataAccess\TestDataAccess.class
+GertaeraEzabatuDABTest.class
 CreateQuestionInt.class
+GertaerakSortuDAWTest.class
+CreateQuestionBLBMTest.class
+GertaeraEzabatuBLBMTest.class
+GertaerakSortuDABTest.class
 test\businessLogic\TestFacadeImplementation.class

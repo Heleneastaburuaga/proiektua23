@@ -1,2 +1,1 @@
-domain.Quote#toString()Ljava/lang/String;
-java.lang.Double#toString(D)Ljava/lang/String;
+domain.Quote#getQuestion()Ldomain/Question;

@@ -1,1 +1,1 @@
-domain.Quote#getQuote()Ljava/lang/Double;
+domain.Quote#getApustuak()Ljava/util/ArrayList;

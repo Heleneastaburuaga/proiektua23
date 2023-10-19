@@ -1,15 +1,15 @@
 
-3configuration.ConfigXML#getUser()Ljava/lang/String;Y
-O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java9 9("1*¢
-1:	 :(m
-k
-:	 :(
-%0java.lang.String"__id*A
+5configuration.ConfigXML#getLocale()Ljava/lang/String;Y
+O/C:/Users/lande/git/proiektua23/bets/src/main/java/configuration/ConfigXML.java1 1("1*¤
+12	 2(o
+m
+2	 2(
+%0java.lang.String"__id*C
 
-__unknown_file (%*#
-configuration.ConfigXML"
-user"$
-: :(
+__unknown_file ('*%
+configuration.ConfigXML"
+locale"$
+2 2(
 
 %0java.lang.StringB
 configuration.ConfigXMLH

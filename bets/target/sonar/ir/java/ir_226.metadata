@@ -1,5 +1,5 @@
-businessLogic.BLFacadeImplementation#findTransakzioak(Ldomain/Registered;)Ljava/util/List;
+businessLogic.BLFacadeImplementation#apustuaEzabatu(Ldomain/Registered;Ldomain/ApustuAnitza;)V
 ==
+apustuaEzabatu dataAccess.DataAccess#apustuaEzabatu(Ldomain/Registered;Ldomain/ApustuAnitza;)V
 close dataAccess.DataAccess#close()V
-findTransakzioak dataAccess.DataAccess#findTransakzioak(Ldomain/Registered;)Ljava/util/List;
 open dataAccess.DataAccess#open(Z)V

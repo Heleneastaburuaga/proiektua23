@@ -1,1 +1,1 @@
-configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;
+configuration.ConfigXML#getBusinessLogicName()Ljava/lang/String;

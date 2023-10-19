@@ -1,5 +1,5 @@
-businessLogic.BLFacadeImplementation#getEventsAll()Ljava/util/List;
+businessLogic.BLFacadeImplementation#rankingLortu()Ljava/util/List;
 ==
 close dataAccess.DataAccess#close()V
 open dataAccess.DataAccess#open(Z)V
-getEventsAll dataAccess.DataAccess#getEventsAll()Ljava/util/List;
+rankingLortu dataAccess.DataAccess#rankingLortu()Ljava/util/List;

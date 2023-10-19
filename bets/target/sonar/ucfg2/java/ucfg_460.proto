@@ -1,15 +1,15 @@
 
-'domain.Apustua#getKuota()Ldomain/Quote;P
-F/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Apustua.java4 4("1*’
-15	 5(a
-_
-5	 5(
-%0domain.Quote"__id*9
+4domain.Apustua#getApostuaNumber()Ljava/lang/Integer;P
+F/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Apustua.java, ,( "1*¤
+1-	 -(n
+l
+-	 -(
+%0java.lang.Integer"__id*A
 
-__unknown_file (*
-domain.Apustua"
-kuota" 
-5 5(
-
-%0domain.QuoteB
+__unknown_file (%*#
+domain.Apustua"
+apustuaNumber"%
+- -(
+
+%0java.lang.IntegerB
 domain.ApustuaH

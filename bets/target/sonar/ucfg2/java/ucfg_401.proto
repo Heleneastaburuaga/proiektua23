@@ -1,15 +1,15 @@
 
-/domain.Transaction#getDirua()Ljava/lang/Double;T
-J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.java5 5("1*ž
-16	 6(i
-g
-6	 6(
-%0java.lang.Double"__id*=
+8domain.Transaction#getErabiltzailea()Ldomain/Registered;T
+J/C:/Users/lande/git/proiektua23/bets/src/main/java/domain/Transaction.java/ /(#"1*§
+10	 0(q
+o
+0	 0(
+%0domain.Registered"__id*D
 
-__unknown_file (!*
-domain.Transaction"
-dirua"$
-6 6(
-
-%0java.lang.DoubleB
+__unknown_file ((*&
+domain.Transaction"
+erabiltzaile"%
+0 0(
+
+%0domain.RegisteredB
 domain.TransactionH

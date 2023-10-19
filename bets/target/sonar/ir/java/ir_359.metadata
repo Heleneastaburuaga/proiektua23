@@ -1,1 +1,1 @@
-domain.Transaction#setData(Ljava/util/Date;)V
+domain.Transaction#setDirua(Ljava/lang/Double;)V

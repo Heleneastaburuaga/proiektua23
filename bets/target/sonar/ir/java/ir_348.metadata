@@ -1,1 +1,1 @@
-domain.Registered#isAdmin()Z
+domain.Registered#getBankAccount()Ljava/lang/Integer;
