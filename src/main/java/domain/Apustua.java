@@ -23,7 +23,7 @@ public class Apustua implements Serializable{
 	@XmlJavaTypeAdapter(IntegerAdapter.class)
 	@Id @GeneratedValue
 	private Integer apustuaNumber; 
-	
+	//hola
 	@XmlIDREF
 	private Quote kuota;
 	@XmlIDREF
