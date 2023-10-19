@@ -47,7 +47,7 @@ public class UtilDate {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		calendar.setTimeZone(TimeZone.getTimeZone("CET"));
-		//int month=calendar.get(Calendar.MONTH);
+
 		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
 		calendar.set(Calendar.MILLISECOND, 0);
 		calendar.set(Calendar.SECOND, 0);
