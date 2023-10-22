@@ -1,6 +1,7 @@
 package dataAccess;
 
 import java.util.ArrayList;
+import domain.ApustuDataAccess;
 //hello
 import java.util.Calendar;
 import java.util.Collection;
@@ -25,7 +26,7 @@ import domain.Apustua;
 
 import domain.Event;
 import domain.Jarraitzailea;
-
+import domain.JarraitzaileakBegiratuDataAccess;
 import domain.Question;
 import domain.Quote;
 import domain.Registered;
@@ -40,13 +41,15 @@ import exceptions.QuoteAlreadyExist;
  * It implements the data access to the objectDb database
  */
 public class DataAccess  {
+	private static final String DIRUA_SARTU = "DiruaSartu";
+	private static final String APUSTUA_EGIN = "ApustuaEgin";
 	protected static EntityManager  db;
 	protected static EntityManagerFactory emf;
 
 
 	ConfigXML c=ConfigXML.getInstance();
 
-     public DataAccess(boolean initializeMode)  {
+     public DataAccess(final boolean initializeMode)  {
 		
 		System.out.println("Creating DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
 
@@ -69,83 +72,83 @@ public class DataAccess  {
 		try {
 
 			
-		   Calendar today = Calendar.getInstance();
+		   final Calendar today = Calendar.getInstance();
 		   
 		   int month=today.get(Calendar.MONTH);
 		   month+=1;
 		   int year=today.get(Calendar.YEAR);
 		   if (month==12) { month=0; year+=1;}  
 		   
-		   Team team1= new Team("Atletico");
-		   Team team2= new Team("Athletic");
-		   Team team3= new Team("Eibar");
-		   Team team4= new Team("Barcelona");
-		   Team team5= new Team("Getafe");
-		   Team team6= new Team("Celta");
-		   Team team7= new Team("Alaves");
-		   Team team8= new Team("Deportivo");
-		   Team team9= new Team("Espanol");
-		   Team team10= new Team("Villareal");
-		   Team team11= new Team("Las_Palmas");
-		   Team team12= new Team("Sevilla");
-		   Team team13= new Team("Malaga");
-		   Team team14= new Team("Valencia");
-		   Team team15= new Team("Girona");
-		   Team team16= new Team("Leganes");
-		   Team team17= new Team("Real_Sociedad");
-		   Team team18= new Team("Levante");
-		   Team team19= new Team("Betis");
-		   Team team20= new Team("Real_Madrid");
-		   Team team21= new Team("LA_Lakers");
-		   Team team22= new Team("Phoenix_Suns");
-		   Team team23= new Team("Atlanta_Hawks");
-		   Team team24= new Team("Houston_Rockets");
-		   Team team25= new Team("Miami_Heat");
-		   Team team26= new Team("Chicago_Bulls");
-		   Team team27= new Team("Boston_Celtics");
-		   Team team28= new Team("Memphis_Grizzlies");
-		   Team team29= new Team("Nadal");
-		   Team team30= new Team("Alcaraz");
-		   Team team31= new Team("Djokovic");
-		   Team team32= new Team("Federer");
+		   final Team team1= new Team("Atletico");
+		   final Team team2= new Team("Athletic");
+		   final Team team3= new Team("Eibar");
+		   final Team team4= new Team("Barcelona");
+		   final Team team5= new Team("Getafe");
+		   final Team team6= new Team("Celta");
+		   final Team team7= new Team("Alaves");
+		   final Team team8= new Team("Deportivo");
+		   final Team team9= new Team("Espanol");
+		   final Team team10= new Team("Villareal");
+		   final Team team11= new Team("Las_Palmas");
+		   final Team team12= new Team("Sevilla");
+		   final Team team13= new Team("Malaga");
+		   final Team team14= new Team("Valencia");
+		   final Team team15= new Team("Girona");
+		   final Team team16= new Team("Leganes");
+		   final Team team17= new Team("Real_Sociedad");
+		   final Team team18= new Team("Levante");
+		   final Team team19= new Team("Betis");
+		   final Team team20= new Team("Real_Madrid");
+		   final Team team21= new Team("LA_Lakers");
+		   final Team team22= new Team("Phoenix_Suns");
+		   final Team team23= new Team("Atlanta_Hawks");
+		   final Team team24= new Team("Houston_Rockets");
+		   final Team team25= new Team("Miami_Heat");
+		   final Team team26= new Team("Chicago_Bulls");
+		   final Team team27= new Team("Boston_Celtics");
+		   final Team team28= new Team("Memphis_Grizzlies");
+		   final Team team29= new Team("Nadal");
+		   final Team team30= new Team("Alcaraz");
+		   final Team team31= new Team("Djokovic");
+		   final Team team32= new Team("Federer");
 		   
 	    
-			Event ev1=new Event(1, "Atletico-Athletic", UtilDate.newDate(year,month,17), team1, team2);
-			Event ev2=new Event(2, "Eibar-Barcelona", UtilDate.newDate(year,month,17), team3, team4);
-			Event ev3=new Event(3, "Getafe-Celta", UtilDate.newDate(year,month,17), team5, team6);
-			Event ev4=new Event(4, "Alaves-Deportivo", UtilDate.newDate(year,month,17), team7, team8);
-			Event ev5=new Event(5, "Espanol-Villareal", UtilDate.newDate(year,month,17), team9, team10);
-			Event ev6=new Event(6, "Las Palmas-Sevilla", UtilDate.newDate(year,month,17), team11, team12);
-			Event ev7=new Event(7, "Malaga-Valencia", UtilDate.newDate(year,month,17), team13, team14);
-			Event ev8=new Event(8, "Girona-Leganes", UtilDate.newDate(year,month,17), team15, team16);
-			Event ev9=new Event(9, "Real Sociedad-Levante", UtilDate.newDate(year,month,17), team17, team18);
-			Event ev10=new Event(10, "Betis-Real Madrid", UtilDate.newDate(year,month,17), team19, team20);
+			final Event ev1=new Event(1, "Atletico-Athletic", UtilDate.newDate(year,month,17), team1, team2);
+			final Event ev2=new Event(2, "Eibar-Barcelona", UtilDate.newDate(year,month,17), team3, team4);
+			final Event ev3=new Event(3, "Getafe-Celta", UtilDate.newDate(year,month,17), team5, team6);
+			final Event ev4=new Event(4, "Alaves-Deportivo", UtilDate.newDate(year,month,17), team7, team8);
+			final Event ev5=new Event(5, "Espanol-Villareal", UtilDate.newDate(year,month,17), team9, team10);
+			final Event ev6=new Event(6, "Las Palmas-Sevilla", UtilDate.newDate(year,month,17), team11, team12);
+			final Event ev7=new Event(7, "Malaga-Valencia", UtilDate.newDate(year,month,17), team13, team14);
+			final Event ev8=new Event(8, "Girona-Leganes", UtilDate.newDate(year,month,17), team15, team16);
+			final Event ev9=new Event(9, "Real Sociedad-Levante", UtilDate.newDate(year,month,17), team17, team18);
+			final Event ev10=new Event(10, "Betis-Real Madrid", UtilDate.newDate(year,month,17), team19, team20);
 
-			Event ev11=new Event(11, "Atletico-Athletic", UtilDate.newDate(year,month,1), team1, team2);
-			Event ev12=new Event(12, "Eibar-Barcelona", UtilDate.newDate(year,month,1), team3, team4);
-			Event ev13=new Event(13, "Getafe-Celta", UtilDate.newDate(year,month,1), team5, team6);
-			Event ev14=new Event(14, "Alaves-Deportivo", UtilDate.newDate(year,month,1), team7, team8);
-			Event ev15=new Event(15, "Espanol-Villareal", UtilDate.newDate(year,month,1), team9, team10);
-			Event ev16=new Event(16, "Las Palmas-Sevilla", UtilDate.newDate(year,month,1), team11, team12);
+			final Event ev11=new Event(11, "Atletico-Athletic", UtilDate.newDate(year,month,1), team1, team2);
+			final Event ev12=new Event(12, "Eibar-Barcelona", UtilDate.newDate(year,month,1), team3, team4);
+			final Event ev13=new Event(13, "Getafe-Celta", UtilDate.newDate(year,month,1), team5, team6);
+			final Event ev14=new Event(14, "Alaves-Deportivo", UtilDate.newDate(year,month,1), team7, team8);
+			final Event ev15=new Event(15, "Espanol-Villareal", UtilDate.newDate(year,month,1), team9, team10);
+			final Event ev16=new Event(16, "Las Palmas-Sevilla", UtilDate.newDate(year,month,1), team11, team12);
 			
 
-			Event ev17=new Event(17, "Malaga-Valencia", UtilDate.newDate(year,month+1,28), team13, team14);
-			Event ev18=new Event(18, "Girona-Leganes", UtilDate.newDate(year,month+1,28), team15, team16);
-			Event ev19=new Event(19, "Real Sociedad-Levante", UtilDate.newDate(year,month+1,28), team17, team18);
-			Event ev20=new Event(20, "Betis-Real Madrid", UtilDate.newDate(year,month+1,28), team19, team20);
-			Event ev21=new Event(21, "Real Madrid-Barcelona", UtilDate.newDate(year, month-2, 21), team20, team4);
+			final Event ev17=new Event(17, "Malaga-Valencia", UtilDate.newDate(year,month+1,28), team13, team14);
+			final Event ev18=new Event(18, "Girona-Leganes", UtilDate.newDate(year,month+1,28), team15, team16);
+			final Event ev19=new Event(19, "Real Sociedad-Levante", UtilDate.newDate(year,month+1,28), team17, team18);
+			final Event ev20=new Event(20, "Betis-Real Madrid", UtilDate.newDate(year,month+1,28), team19, team20);
+			final Event ev21=new Event(21, "Real Madrid-Barcelona", UtilDate.newDate(year, month-2, 21), team20, team4);
 			
-			Event ev22=new Event(22, "LA Lakers-Phoenix Suns", UtilDate.newDate(year,month,17), team21, team22);
-			Event ev23=new Event(23, "Atlanta Hawks-Houston Rockets", UtilDate.newDate(year,month,17), team23, team24);
-			Event ev24=new Event(24, "Miami Heat-Chicago Bulls", UtilDate.newDate(year,month,17), team25, team26);
-			Event ev25=new Event(25, "Boston Celtics-Memphis Grizzlies", UtilDate.newDate(year,month,1), team27, team28);
+			final Event ev22=new Event(22, "LA Lakers-Phoenix Suns", UtilDate.newDate(year,month,17), team21, team22);
+			final Event ev23=new Event(23, "Atlanta Hawks-Houston Rockets", UtilDate.newDate(year,month,17), team23, team24);
+			final Event ev24=new Event(24, "Miami Heat-Chicago Bulls", UtilDate.newDate(year,month,17), team25, team26);
+			final Event ev25=new Event(25, "Boston Celtics-Memphis Grizzlies", UtilDate.newDate(year,month,1), team27, team28);
 			
-			Event ev26=new Event(26, "Nadal-Alcaraz", UtilDate.newDate(year,month,1), team29, team30);
-			Event ev27=new Event(27, "Djokovic-Federer", UtilDate.newDate(year,month,17), team31, team32);
+			final Event ev26=new Event(26, "Nadal-Alcaraz", UtilDate.newDate(year,month,1), team29, team30);
+			final Event ev27=new Event(27, "Djokovic-Federer", UtilDate.newDate(year,month,17), team31, team32);
 			
-			Sport sp1=new Sport("Futbol");
-			Sport sp2=new Sport("Baloncesto");
-			Sport sp3=new Sport("Tennis");
+			final Sport sp1=new Sport("Futbol");
+			final Sport sp2=new Sport("Baloncesto");
+			final Sport sp3=new Sport("Tennis");
 			
 			sp1.addEvent(ev1);
 			sp1.addEvent(ev2);
@@ -203,7 +206,7 @@ public class DataAccess  {
 			ev26.setSport(sp3);
 			ev27.setSport(sp3);
 			
-			Event ev = new Event("Athetic-Alaves", UtilDate.newDate(2023, 9, 22), team2, team7);
+			final Event ev = new Event("Athetic-Alaves", UtilDate.newDate(2023, 9, 22), team2, team7);
             sp1.addEvent(ev);
             ev.setSport(sp1);
 			
@@ -220,11 +223,11 @@ public class DataAccess  {
 			Question q10;
 			Question q11;
 			
-			Registered ad1=new Registered("admin", "123", 1234,true);
-			Registered reg1 =new Registered("registered", "123", 1234);
-			Registered reg2 = new Registered("andrea", "123", 1111);
-			Registered reg3 = new Registered("markel", "123", 1111);
-			Registered reg4 = new Registered("mikel", "123", 1111);
+			final Registered ad1=new Registered("admin", "123", 1234,true);
+			final Registered reg1 =new Registered("registered", "123", 1234);
+			final Registered reg2 = new Registered("andrea", "123", 1111);
+			final Registered reg3 = new Registered("markel", "123", 1111);
+			final Registered reg4 = new Registered("mikel", "123", 1111);
 									
 			if (Locale.getDefault().equals(new Locale("es"))) {
 				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
@@ -236,7 +239,7 @@ public class DataAccess  {
 				
 			}
 			else if (Locale.getDefault().equals(new Locale("en"))) {
-				String whoWin="Who will win the match?";
+				final String whoWin="Who will win the match?";
 				q1=ev1.addQuestion(whoWin,1);
 				q2=ev1.addQuestion("Who will score first?",2);
 				q3=ev11.addQuestion(whoWin,1);
@@ -263,70 +266,70 @@ public class DataAccess  {
 			
 			
 			
-			Quote quote1 = q1.addQuote(1.3, "1", q1); 
-			Quote quote2 = q2.addQuote(2.5, "X", q2); 
-			Quote quote3 = q3.addQuote(100.0, "2", q3);
-			Quote quote4 = q7.addQuote(2.5, "2", q7);
-			Quote quote5 = q8.addQuote(2.0, "1", q8);
-			Quote quote6 = q7.addQuote(5.0, "1", q7);
-			Quote quote7 = q9.addQuote(3.0, "1", q9);
-			Quote quote8 = q9.addQuote(1.5, "2", q9);
-			Quote quote9 = q10.addQuote(2.5, "1", q10);
-			Quote quote10 = q10.addQuote(1.6, "2", q10);
-			Quote quote11 =q11.addQuote(2.3, "1", q11);
-			Quote quote12 =q11.addQuote(1.5, "2", q11);
+			final Quote quote1 = q1.addQuote(1.3, "1", q1); 
+			final Quote quote2 = q2.addQuote(2.5, "X", q2); 
+			final Quote quote3 = q3.addQuote(100.0, "2", q3);
+			final Quote quote4 = q7.addQuote(2.5, "2", q7);
+			final Quote quote5 = q8.addQuote(2.0, "1", q8);
+			final Quote quote6 = q7.addQuote(5.0, "1", q7);
+			final Quote quote7 = q9.addQuote(3.0, "1", q9);
+			final Quote quote8 = q9.addQuote(1.5, "2", q9);
+			final Quote quote9 = q10.addQuote(2.5, "1", q10);
+			final Quote quote10 = q10.addQuote(1.6, "2", q10);
+			final Quote quote11 =q11.addQuote(2.3, "1", q11);
+			final Quote quote12 =q11.addQuote(1.5, "2", q11);
 			
-			ApustuAnitza apA1 = new ApustuAnitza(reg1, 5.0);
-			ApustuAnitza apA3 = new ApustuAnitza(reg4, 34.5);
-			ApustuAnitza apA4 = new ApustuAnitza(reg2, 14.5);
-			ApustuAnitza apA5 = new ApustuAnitza(reg3, 10.0);
-			ApustuAnitza apA6 = new ApustuAnitza(reg4, 4.5);
-			ApustuAnitza apA7 = new ApustuAnitza(reg1, 6.0);
-			ApustuAnitza apA8 = new ApustuAnitza(reg1, 2.5);
-			ApustuAnitza apA9 = new ApustuAnitza(reg2, 4.0);
-			ApustuAnitza apA10= new ApustuAnitza(reg2, 7.5);
-			ApustuAnitza apA11= new ApustuAnitza(reg3, 4.5);
-			ApustuAnitza apA12= new ApustuAnitza(reg3, 6.5);
-			ApustuAnitza apA13= new ApustuAnitza(reg2, 6.5);
+			final ApustuAnitza apA1 = new ApustuAnitza(reg1, 5.0);
+			final ApustuAnitza apA3 = new ApustuAnitza(reg4, 34.5);
+			final ApustuAnitza apA4 = new ApustuAnitza(reg2, 14.5);
+			final ApustuAnitza apA5 = new ApustuAnitza(reg3, 10.0);
+			final ApustuAnitza apA6 = new ApustuAnitza(reg4, 4.5);
+			final ApustuAnitza apA7 = new ApustuAnitza(reg1, 6.0);
+			final ApustuAnitza apA8 = new ApustuAnitza(reg1, 2.5);
+			final ApustuAnitza apA9 = new ApustuAnitza(reg2, 4.0);
+			final ApustuAnitza apA10= new ApustuAnitza(reg2, 7.5);
+			final ApustuAnitza apA11= new ApustuAnitza(reg3, 4.5);
+			final ApustuAnitza apA12= new ApustuAnitza(reg3, 6.5);
+			final ApustuAnitza apA13= new ApustuAnitza(reg2, 6.5);
 		
-			Apustua ap1 = new Apustua(apA1, quote4);
-			Apustua ap2 = new Apustua(apA1, quote1);
+			final Apustua ap1 = new Apustua(apA1, quote4);
+			final Apustua ap2 = new Apustua(apA1, quote1);
 			apA1.addApustua(ap2);
 			apA1.addApustua(ap1);
 			
-			Apustua ap3 = new Apustua(apA3, quote4);
+			final Apustua ap3 = new Apustua(apA3, quote4);
 			apA3.addApustua(ap3);
 			
-			Apustua ap4 = new Apustua(apA4, quote4);
+			final Apustua ap4 = new Apustua(apA4, quote4);
 			apA4.addApustua(ap4);
 			
-			Apustua ap5 = new Apustua(apA5, quote4);
+			final Apustua ap5 = new Apustua(apA5, quote4);
 			apA5.addApustua(ap5);
 			
-			Apustua ap6 = new Apustua(apA6, quote1);
-			Apustua ap13 = new Apustua(apA6, quote2);
+			final Apustua ap6 = new Apustua(apA6, quote1);
+			final Apustua ap13 = new Apustua(apA6, quote2);
 			apA6.addApustua(ap6);
 			apA6.addApustua(ap13);
 			
-			Apustua ap7 = new Apustua(apA7, quote7);
+			final Apustua ap7 = new Apustua(apA7, quote7);
 			apA7.addApustua(ap7);
 			
-			Apustua ap8 = new Apustua(apA8, quote9);
+			final Apustua ap8 = new Apustua(apA8, quote9);
 			apA8.addApustua(ap8);
 			
-			Apustua ap9 = new Apustua(apA9, quote8);
+			final Apustua ap9 = new Apustua(apA9, quote8);
 			apA9.addApustua(ap9);
 			
-			Apustua ap10= new Apustua(apA10, quote10);
+			final Apustua ap10= new Apustua(apA10, quote10);
 			apA10.addApustua(ap10);
 			
-			Apustua ap11= new Apustua(apA11, quote10);
+			final Apustua ap11= new Apustua(apA11, quote10);
 			apA11.addApustua(ap11);
 			
-			Apustua ap12= new Apustua(apA12, quote11);
+			final Apustua ap12= new Apustua(apA12, quote11);
 			apA12.addApustua(ap12);
 			
-			Apustua ap14= new Apustua(apA13, quote8);
+			final Apustua ap14= new Apustua(apA13, quote8);
 			apA13.addApustua(ap14);
 			
 			quote4.addApustua(ap1);
@@ -375,17 +378,17 @@ public class DataAccess  {
 			
 			
 			
-			Transaction t1 = new Transaction(reg1, apA1.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t3 = new Transaction(reg2, apA4.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t4 = new Transaction(reg3, apA5.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t5 = new Transaction(reg4, apA3.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t6 = new Transaction(reg4, apA6.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t7 = new Transaction(reg1, apA7.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t8 = new Transaction(reg1, apA8.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t9 = new Transaction(reg2, apA9.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t10 = new Transaction(reg2, apA10.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t11 = new Transaction(reg3, apA11.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t12 = new Transaction(reg3, apA12.getBalioa(), new Date(), "ApustuaEgin");
+			final Transaction t1 = new Transaction(reg1, apA1.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t3 = new Transaction(reg2, apA4.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t4 = new Transaction(reg3, apA5.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t5 = new Transaction(reg4, apA3.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t6 = new Transaction(reg4, apA6.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t7 = new Transaction(reg1, apA7.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t8 = new Transaction(reg1, apA8.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t9 = new Transaction(reg2, apA9.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t10 = new Transaction(reg2, apA10.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t11 = new Transaction(reg3, apA11.getBalioa(), new Date(), APUSTUA_EGIN);
+			final Transaction t12 = new Transaction(reg3, apA12.getBalioa(), new Date(), APUSTUA_EGIN);
 			
 			reg1.addTransaction(t1);
 			reg2.addTransaction(t3);
@@ -601,14 +604,14 @@ public class DataAccess  {
 			
 			db.getTransaction().commit();
 			
-			this.DiruaSartu(reg1, 50.0, new Date(), "DiruaSartu");
-			this.DiruaSartu(reg2, 50.0, new Date(), "DiruaSartu");
-			this.DiruaSartu(reg3, 50.0, new Date(), "DiruaSartu");
-			this.DiruaSartu(reg4, 50.0, new Date(), "DiruaSartu");
+			this.DiruaSartu(reg1, 50.0, new Date(), DIRUA_SARTU);
+			this.DiruaSartu(reg2, 50.0, new Date(), DIRUA_SARTU);
+			this.DiruaSartu(reg3, 50.0, new Date(), DIRUA_SARTU);
+			this.DiruaSartu(reg4, 50.0, new Date(), DIRUA_SARTU);
 			
 			System.out.println("Db initialized");
 		}
-		catch (Exception e){
+		catch (final Exception e){
 			e.printStackTrace();
 		}
 	}
@@ -622,15 +625,15 @@ public class DataAccess  {
 	 * @return the created question, or null, or an exception
  	 * @throws QuestionAlreadyExist if the same question already exists for the event
 	 */
-	public Question createQuestion(Event event, String question, float betMinimum) throws  QuestionAlreadyExist {
+	public Question createQuestion(final Event event, final String question, final float betMinimum) throws  QuestionAlreadyExist {
 		System.out.println(">> DataAccess: createQuestion=> event= "+event+" question= "+question+" betMinimum="+betMinimum);
 		
-			Event ev = db.find(Event.class, event.getEventNumber());
+			final Event ev = db.find(Event.class, event.getEventNumber());
 			
 			if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
 			
 			db.getTransaction().begin();
-			Question q = ev.addQuestion(question, betMinimum);
+			final Question q = ev.addQuestion(question, betMinimum);
 			//db.persist(q);
 			db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class
 							// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
@@ -645,13 +648,13 @@ public class DataAccess  {
 	 * @param date in which events are retrieved
 	 * @return collection of events
 	 */
-	public ArrayList<Event> getEvents(Date date) {
+	public ArrayList<Event> getEvents(final Date date) {
 		System.out.println(">> DataAccess: getEvents");
-		ArrayList<Event> res = new ArrayList<Event>();	
-		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.eventDate=?1",Event.class);   
+		final ArrayList<Event> res = new ArrayList<Event>();	
+		final TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.eventDate=?1",Event.class);   
 		query.setParameter(1, date);
-		List<Event> events = query.getResultList();
-	 	 for (Event ev:events){
+		final List<Event> events = query.getResultList();
+	 	 for (final Event ev:events){
 	 	   System.out.println(ev.toString());		 
 		   res.add(ev);
 		  }
@@ -664,19 +667,19 @@ public class DataAccess  {
 	 * @param date of the month for which days with events want to be retrieved 
 	 * @return collection of dates
 	 */
-	public Vector<Date> getEventsMonth(Date date) {
+	public Vector<Date> getEventsMonth(final Date date) {
 		System.out.println(">> DataAccess: getEventsMonth");
-		Vector<Date> res = new Vector<Date>();	
+		final Vector<Date> res = new Vector<Date>();	
 		
-		Date firstDayMonthDate= UtilDate.firstDayMonth(date);
-		Date lastDayMonthDate= UtilDate.lastDayMonth(date);
+		final Date firstDayMonthDate= UtilDate.firstDayMonth(date);
+		final Date lastDayMonthDate= UtilDate.lastDayMonth(date);
 				
 		
-		TypedQuery<Date> query = db.createQuery("SELECT DISTINCT ev.eventDate FROM Event ev WHERE ev.eventDate BETWEEN ?1 and ?2",Date.class);   
+		final TypedQuery<Date> query = db.createQuery("SELECT DISTINCT ev.eventDate FROM Event ev WHERE ev.eventDate BETWEEN ?1 and ?2",Date.class);   
 		query.setParameter(1, firstDayMonthDate);
 		query.setParameter(2, lastDayMonthDate);
-		List<Date> dates = query.getResultList();
-	 	 for (Date d:dates){
+		final List<Date> dates = query.getResultList();
+	 	 for (final Date d:dates){
 	 	   System.out.println(d.toString());		 
 		   res.add(d);
 		  }
@@ -684,7 +687,7 @@ public class DataAccess  {
 	}
 	
 
-public void open(boolean initializeMode){
+public void open(final boolean initializeMode){
 		
 		System.out.println("Opening DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
 
@@ -698,7 +701,7 @@ public void open(boolean initializeMode){
 			  emf = Persistence.createEntityManagerFactory("objectdb:"+fileName);
 			  db = emf.createEntityManager();
 		} else {
-			Map<String, String> properties = new HashMap<String, String>();
+			final Map<String, String> properties = new HashMap<String, String>();
 			  properties.put("javax.persistence.jdbc.user", c.getUser());
 			  properties.put("javax.persistence.jdbc.password", c.getPassword());
 
@@ -708,70 +711,80 @@ public void open(boolean initializeMode){
     	   }
 		
 	}
-	public boolean existQuestion(Event event, String question) {
+	public boolean existQuestion(final Event event, final String question) {
 		System.out.println(">> DataAccess: existQuestion=> event= "+event+" question= "+question);
-		Event ev = db.find(Event.class, event.getEventNumber());
+		final Event ev = db.find(Event.class, event.getEventNumber());
 		return ev.DoesQuestionExists(question);
 	
 	}
 	
-	public Registered isLogin(String username, String password) {
-		Registered u = db.find(Registered.class, username);
+	public Registered isLogin(final String username, final String password) {
+		final Registered u = db.find(Registered.class, username);
 		if(u!=null) {
 			if(u.getPassword().equals(password)) return u;
 		}
 		return null;
 	}
 	
-	public boolean isRegister(String username) {
-		Registered u = db.find(Registered.class, username); 
+	public boolean isRegister(final String username) {
+		final Registered u = db.find(Registered.class, username); 
 		return (u!=null);
 	}
 	
-	public void storeRegistered(String username, String password, Integer bankAccount) {
+	public void storeRegistered(final String username, final String password, final Integer bankAccount) {
 		db.getTransaction().begin();
-		Registered ad = new Registered(username, password, bankAccount);
+		final Registered ad = new Registered(username, password, bankAccount);
 		db.persist(ad);
 		db.getTransaction().commit();
 	}
 	
-	public boolean gertaerakSortu(String description,Date eventDate, String sport) {
+	public boolean gertaerakSortu(final String description,final Date eventDate, final String sport) {
 		boolean b = true;
 		db.getTransaction().begin();
-		Sport spo =db.find(Sport.class, sport);
+		final Sport spo =db.find(Sport.class, sport);
 		if(spo!=null) {
-			TypedQuery<Event> equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
-			equery.setParameter(1, eventDate);
-			for(Event ev: equery.getResultList()) {
-				if(ev.getDescription().equals(description)) {
-					b = false;
-				}
-			}
-			if(b) {
-				String[] taldeak = description.split("-");
-				Team lokala = new Team(taldeak[0]);
-				Team kanpokoa = new Team(taldeak[1]);
-				Event e = new Event(description, eventDate, lokala, kanpokoa);
-				e.setSport(spo);
-				spo.addEvent(e);
-				db.persist(e);
-			}
+			b = gertaeraSortu2(description, eventDate, b, spo);
 		}else {
 			return false;
 		}
 		db.getTransaction().commit();
 		return b;
 	}
+
+	private boolean gertaeraSortu2(final String description, final Date eventDate, boolean b, final Sport spo) {
+		final TypedQuery<Event> equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
+		equery.setParameter(1, eventDate);
+		for(final Event ev: equery.getResultList()) {
+			if(ev.getDescription().equals(description)) {
+				b = false;
+			}
+		}
+		if(b) {
+			eventuaSortu(description, eventDate, spo);
+		}
+		return b;
+	}
+
+	private void eventuaSortu(final String description, final Date eventDate, final Sport spo) {
+		final String[] taldeak = description.split("-");
+		final Team lokala = new Team(taldeak[0]);
+		final Team kanpokoa = new Team(taldeak[1]);
+		final Event e = new Event(description, eventDate, lokala, kanpokoa);
+		e.setSport(spo);
+		spo.addEvent(e);
+		db.persist(e);
+	}
 	
-	public Quote storeQuote(String forecast, Double Quote, Question question) throws QuoteAlreadyExist {
+	
+	public Quote storeQuote(final String forecast, final Double Quote, final Question question) throws QuoteAlreadyExist {
 		//System.out.println(">> DataAccess: createQuestion=> event= "+event+" question= "+question+" betMinimum="+betMinimum);
 		
-		Question q = db.find(Question.class, question.getQuestionNumber());
+		final Question q = db.find(Question.class, question.getQuestionNumber());
 		
 		if (q.doesQuoteExist(forecast)) throw new QuoteAlreadyExist("Kuota existitzen da");
 		
 		db.getTransaction().begin();
-		Quote quo = q.addQuote(Quote, forecast, q);
+		final Quote quo = q.addQuote(Quote, forecast, q);
 		db.persist(quo); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class
 						// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
 		db.getTransaction().commit();
@@ -784,47 +797,47 @@ public void open(boolean initializeMode){
 		System.out.println("DataBase closed");
 	}
 	
-	public Sport findSport(Event q){
-		Event sp = db.find(Event.class, q.getEventNumber());
+	public Sport findSport(final Event q){
+		final Event sp = db.find(Event.class, q.getEventNumber());
 		return sp.getSport(); 
 	}
 	
-	public Event findEvent(Quote q){
-		Quote quo = db.find(Quote.class, q.getQuoteNumber());
+	public Event findEvent(final Quote q){
+		final Quote quo = db.find(Quote.class, q.getQuoteNumber());
 		return quo.getQuestion().getEvent(); 
 	}
 	
-	public Team findTeam(Registered u){
-		Registered user = (Registered) db.find(Registered.class, u.getUsername());
+	public Team findTeam(final Registered u){
+		final Registered user = (Registered) db.find(Registered.class, u.getUsername());
 		return user.getTaldea(); 
 	}
 	
-	public Event findEventFromApustua(Apustua q){
-		Apustua quo = db.find(Apustua.class, q.getApostuaNumber());
+	public Event findEventFromApustua(final Apustua q){
+		final Apustua quo = db.find(Apustua.class, q.getApostuaNumber());
 		return quo.getKuota().getQuestion().getEvent(); 
 	}
 	
-	public Question findQuestionFromQuote(Quote q){
-		Quote quo = db.find(Quote.class, q.getQuoteNumber());
+	public Question findQuestionFromQuote(final Quote q){
+		final Quote quo = db.find(Quote.class, q.getQuoteNumber());
 		return quo.getQuestion(); 
 	}
 	
-	public Collection<Question> findQuestion(Event event){
-		TypedQuery<Question> Qquery = db.createQuery("SELECT q FROM Question q WHERE q.getEvent() =?1 ",Question.class);
+	public Collection<Question> findQuestion(final Event event){
+		final TypedQuery<Question> Qquery = db.createQuery("SELECT q FROM Question q WHERE q.getEvent() =?1 ",Question.class);
 		Qquery.setParameter(1, event);
 		return Qquery.getResultList();
 	}
 	
-	public Collection<Quote> findQuote(Question question){
-		TypedQuery<Quote> Qquery = db.createQuery("SELECT q FROM Quote q WHERE q.getQuestion() =?1 ",Quote.class);
+	public Collection<Quote> findQuote(final Question question){
+		final TypedQuery<Quote> Qquery = db.createQuery("SELECT q FROM Quote q WHERE q.getQuestion() =?1 ",Quote.class);
 		Qquery.setParameter(1, question);
 		return Qquery.getResultList();
 	}
 	
-	public void DiruaSartu(Registered u, Double dirua, Date data, String mota) {
-		Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
+	public void DiruaSartu(final Registered u, final Double dirua, final Date data, final String mota) {
+		final Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
 		db.getTransaction().begin();
-		Transaction t = new Transaction(user, dirua, data, mota); 
+		final Transaction t = new Transaction(user, dirua, data, mota); 
 		System.out.println(t.getMota());
 		user.addTransaction(t);
 		user.updateDiruKontua(dirua);
@@ -832,137 +845,179 @@ public void open(boolean initializeMode){
 		db.getTransaction().commit();
 	}
 	
-	public boolean ApustuaEgin(Registered u, Vector<Quote> quote, Double balioa, Integer apustuBikoitzaGalarazi) {
-		Registered user = (Registered) db.find(Registered.class, u.getUsername());
+	public boolean ApustuaEgin(final Registered u, final Vector<Quote> quote, final Double balioa, Integer apustuBikoitzaGalarazi) {
+		final Registered user = (Registered) db.find(Registered.class, u.getUsername());
 		Boolean b;
 		if(user.getDirukop()>=balioa) {
 			db.getTransaction().begin();
-			ApustuAnitza apustuAnitza = new ApustuAnitza(user, balioa);
+			final ApustuAnitza apustuAnitza = new ApustuAnitza(user, balioa);
 			db.persist(apustuAnitza);
-			for(Quote quo: quote) {
-				Quote kuote = db.find(Quote.class, quo.getQuoteNumber());
-				Apustua ap = new Apustua(apustuAnitza, kuote);
-				db.persist(ap);
-				apustuAnitza.addApustua(ap);
-				kuote.addApustua(ap);
-			}
-			db.getTransaction().commit();
-			db.getTransaction().begin();
-			if(apustuBikoitzaGalarazi==-1) {
-				apustuBikoitzaGalarazi=apustuAnitza.getApustuAnitzaNumber();
-			}
-			apustuAnitza.setApustuKopia(apustuBikoitzaGalarazi);
-			user.updateDiruKontua(-balioa);
-			Transaction t = new Transaction(user, balioa, new Date(), "ApustuaEgin"); 
+			ApustuDataAccess apustuDA= new ApustuDataAccess(quote, balioa, apustuBikoitzaGalarazi, user, apustuAnitza);
+			apustuBikoitzaGalarazi = apustuAnitza(apustuDA);
+		
+			final Transaction t = new Transaction(user, balioa, new Date(), APUSTUA_EGIN); 
 			user.addApustuAnitza(apustuAnitza);
-			for(Apustua a: apustuAnitza.getApustuak()) {
-				Apustua apu = db.find(Apustua.class, a.getApostuaNumber());
-				Quote q = db.find(Quote.class, apu.getKuota().getQuoteNumber());
-				Sport spo =q.getQuestion().getEvent().getSport();
-				spo.setApustuKantitatea(spo.getApustuKantitatea()+1);
-				
-			}
+			apustuKantitatea(apustuAnitza);
 			user.addTransaction(t);
 			db.persist(t);
 			db.getTransaction().commit();
-			for(Jarraitzailea reg:user.getJarraitzaileLista()) {
-				Jarraitzailea erab=db.find(Jarraitzailea.class, reg.getJarraitzaileaNumber());
-				b=true;
-				for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
-					if(apu.getApustuKopia().equals(apustuAnitza.getApustuKopia())) {
-						b=false;
-					}
-				}
-				if(b) {
-					if(erab.getNork().getDiruLimitea()<balioa) {
-						this.ApustuaEgin(erab.getNork(), quote, erab.getNork().getDiruLimitea(), apustuBikoitzaGalarazi);
-					}else{
-						this.ApustuaEgin(erab.getNork(), quote, balioa, apustuBikoitzaGalarazi);
-					}
-				}
-			}
+			JarraitzaileakBegiratuDataAccess jarraitzaileakBegiratuDA= new JarraitzaileakBegiratuDataAccess
+					(quote, balioa, apustuBikoitzaGalarazi, user, apustuAnitza);
+			jarraitzaileakBegiratu(jarraitzaileakBegiratuDA);
 			return true; 
 		}else{
 			return false; 
 		}
 		
 	}
+
+	private void jarraitzaileakBegiratu(JarraitzaileakBegiratuDataAccess jarraitzaileakBegiratuDA) {
+		Boolean b;
+		for(final Jarraitzailea reg:jarraitzaileakBegiratuDA.getUser().getJarraitzaileLista()) {
+			final Jarraitzailea erab=db.find(Jarraitzailea.class, reg.getJarraitzaileaNumber());
+			b=true;
+			for(final ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
+				if(apu.getApustuKopia().equals(jarraitzaileakBegiratuDA.getApustuAnitza().getApustuKopia())) {
+					b=false;
+				}
+			}
+			double balioa=jarraitzaileakBegiratuDA.getBalioa();
+			Vector<Quote> quote= jarraitzaileakBegiratuDA.getQuote();
+			int apustuBikoitzaGalarazi=jarraitzaileakBegiratuDA.getApustuBikoitzaGalarazi();
+			if(b) {
+				if(erab.getNork().getDiruLimitea()<balioa) {
+					this.ApustuaEgin(erab.getNork(), quote, erab.getNork().getDiruLimitea(), apustuBikoitzaGalarazi);
+				}else{
+					this.ApustuaEgin(erab.getNork(), quote, balioa, apustuBikoitzaGalarazi);
+				}
+			}
+		}
+	}
+
+	private void apustuKantitatea(final ApustuAnitza apustuAnitza) {
+		for(final Apustua a: apustuAnitza.getApustuak()) {
+			final Apustua apu = db.find(Apustua.class, a.getApostuaNumber());
+			final Quote q = db.find(Quote.class, apu.getKuota().getQuoteNumber());
+			final Sport spo =q.getQuestion().getEvent().getSport();
+			spo.setApustuKantitatea(spo.getApustuKantitatea()+1);
+			
+		}
+	}
+
+	private Integer apustuAnitza(ApustuDataAccess apustuDA) {
+		ApustuAnitza apustuAnitza= apustuDA.getApustuAnitza();
+		int apustuBikoitzaGalarazi=apustuDA.getApustuBikoitzaGalarazi();
+		Registered user= apustuDA.getUser();
+		double balioa= apustuDA.getBalioa();
+		for(final Quote quo: apustuDA.getQuote()) {
+			final Quote kuote = db.find(Quote.class, quo.getQuoteNumber());
+			final Apustua ap = new Apustua(apustuAnitza, kuote);
+			db.persist(ap);
+			apustuAnitza.addApustua(ap);
+			kuote.addApustua(ap);
+		}
+		db.getTransaction().commit();
+		db.getTransaction().begin();
+		if(apustuBikoitzaGalarazi==-1) {
+			apustuBikoitzaGalarazi=apustuAnitza.getApustuAnitzaNumber();
+		}
+		apustuAnitza.setApustuKopia(apustuBikoitzaGalarazi);
+		user.updateDiruKontua(-balioa);
+		return apustuBikoitzaGalarazi;
+	}
 	
-	public void apustuaEzabatu(Registered user1, ApustuAnitza ap) {
-		Registered user = (Registered) db.find(Registered.class, user1.getUsername());
-		ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, ap.getApustuAnitzaNumber());
+	public void apustuaEzabatu(final Registered user1, final ApustuAnitza ap) {
+		final Registered user = (Registered) db.find(Registered.class, user1.getUsername());
+		final ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, ap.getApustuAnitzaNumber());
 		db.getTransaction().begin();
 		user.updateDiruKontua(apustuAnitza.getBalioa());
-		Transaction t = new Transaction(user, apustuAnitza.getBalioa(), new Date(), "ApustuaEzabatu");
+		final Transaction t = new Transaction(user, apustuAnitza.getBalioa(), new Date(), "ApustuaEzabatu");
 		user.addTransaction(t);
 		db.persist(t);
 		user.removeApustua(apustuAnitza);
 		int i;
 		for(i=0; i<apustuAnitza.getApustuak().size(); i++) {
 			apustuAnitza.getApustuak().get(i).getKuota().removeApustua(apustuAnitza.getApustuak().get(i));
-			Sport spo =apustuAnitza.getApustuak().get(i).getKuota().getQuestion().getEvent().getSport();
+			final Sport spo =apustuAnitza.getApustuak().get(i).getKuota().getQuestion().getEvent().getSport();
 			spo.setApustuKantitatea(spo.getApustuKantitatea()-1);
 		}
 		db.remove(apustuAnitza);
 		db.getTransaction().commit();
 	}
 	
-	public List<Apustua> findApustua(Registered u){
-		Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
-		TypedQuery<Apustua> Aquery = db.createQuery("SELECT a FROM Apustua a WHERE a.getUser().getUsername() =?1 ", Apustua.class);
+	public List<Apustua> findApustua(final Registered u){
+		final Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
+		final TypedQuery<Apustua> Aquery = db.createQuery("SELECT a FROM Apustua a WHERE a.getUser().getUsername() =?1 ", Apustua.class);
 		Aquery.setParameter(1, u.getUsername());
 		return Aquery.getResultList();
 	}
-	public List<ApustuAnitza> findApustuAnitza(Registered u){
-		Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
-		TypedQuery<ApustuAnitza> Aquery = db.createQuery("SELECT aa FROM ApustuAnitza aa WHERE aa.getUser().getUsername() =?1 ", ApustuAnitza.class);
+	public List<ApustuAnitza> findApustuAnitza(final Registered u){
+		final Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
+		final TypedQuery<ApustuAnitza> Aquery = db.createQuery("SELECT aa FROM ApustuAnitza aa WHERE aa.getUser().getUsername() =?1 ", ApustuAnitza.class);
 		Aquery.setParameter(1, u.getUsername());
 		return Aquery.getResultList();
 	}
 	
-	public List<Transaction> findTransakzioak(Registered u){
-		Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
-		TypedQuery<Transaction> Tquery = db.createQuery("SELECT t FROM Transaction t WHERE t.getErabiltzailea().getUsername() =?1 ", Transaction.class);
+	public List<Transaction> findTransakzioak(final Registered u){
+		final Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
+		final TypedQuery<Transaction> Tquery = db.createQuery("SELECT t FROM Transaction t WHERE t.getErabiltzailea().getUsername() =?1 ", Transaction.class);
 		Tquery.setParameter(1, u.getUsername());
 		return Tquery.getResultList();
 		
 	}
 	
-	public void ApustuaIrabazi(ApustuAnitza apustua) {
-		ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, apustua.getApustuAnitzaNumber());
-		Registered reg = apustuAnitza.getUser();
-		Registered r = db.find(Registered.class, reg.getUsername());
+	public void ApustuaIrabazi(final ApustuAnitza apustua) {
+		final ApustuAnitza apustuAnitza = db.find(ApustuAnitza.class, apustua.getApustuAnitzaNumber());
+		final Registered reg = apustuAnitza.getUser();
+		final Registered r = db.find(Registered.class, reg.getUsername());
 		db.getTransaction().begin();
 		apustuAnitza.setEgoera("irabazita");
 		Double d=apustuAnitza.getBalioa();
-		for(Apustua ap: apustuAnitza.getApustuak()) {
+		for(final Apustua ap: apustuAnitza.getApustuak()) {
 			d = d*ap.getKuota().getQuote();
 		}
 		r.updateDiruKontua(d);
 		r.setIrabazitakoa(r.getIrabazitakoa()+d);
 		r.setZenbat(r.getZenbat()+1);
-		Transaction t = new Transaction(r, d, new Date(), "ApustuaIrabazi"); 
+		final Transaction t = new Transaction(r, d, new Date(), "ApustuaIrabazi"); 
 		db.persist(t);
 		db.getTransaction().commit();
 	}
 	
-	public void EmaitzakIpini(Quote quote) throws EventNotFinished{
+	public void EmaitzakIpini(final Quote quote) throws EventNotFinished{
 		
-		Quote q = db.find(Quote.class, quote); 
-		String result = q.getForecast();
+		final Quote q = db.find(Quote.class, quote); 
+		final String result = q.getForecast();
 		
 		if(new Date().compareTo(q.getQuestion().getEvent().getEventDate())<0)
 			throw new EventNotFinished();
 
-		ArrayList<Apustua> listApustuak = q.getApustuak();
+		final ArrayList<Apustua> listApustuak = q.getApustuak();
 		db.getTransaction().begin();
-		Question que = q.getQuestion(); 
-		Question question = db.find(Question.class, que); 
+		emaitzaIpini2(q, result);
+		db.getTransaction().commit();
+		emaitzaIpini3(listApustuak);
+	}
+
+	private void emaitzaIpini3(final ArrayList<Apustua> listApustuak) {
+		for(final Apustua a : listApustuak) {
+			db.getTransaction().begin();
+			final Boolean bool=a.getApustuAnitza().irabazitaMarkatu();
+			db.getTransaction().commit();
+			if(bool) {
+				this.ApustuaIrabazi(a.getApustuAnitza());
+			}
+		}
+	}
+
+	private void emaitzaIpini2(final Quote q, final String result) {
+		final Question que = q.getQuestion(); 
+		final Question question = db.find(Question.class, que); 
 		question.setResult(result);
-		for(Quote quo: question.getQuotes()) {
-			for(Apustua apu: quo.getApustuak()) {
+		for(final Quote quo: question.getQuotes()) {
+			for(final Apustua apu: quo.getApustuak()) {
 				
-				Boolean b=apu.galdutaMarkatu(quo);
+				final Boolean b=apu.galdutaMarkatu(quo);
 				if(b) {
 					apu.getApustuAnitza().setEgoera("galduta");
 				}else {
@@ -970,52 +1025,17 @@ public void open(boolean initializeMode){
 				}
 			}
 		}
-		db.getTransaction().commit();
-		for(Apustua a : listApustuak) {
-			db.getTransaction().begin();
-			Boolean bool=a.getApustuAnitza().irabazitaMarkatu();
-			db.getTransaction().commit();
-			if(bool) {
-				this.ApustuaIrabazi(a.getApustuAnitza());
-			}
-		}
 	}
 	
-	public boolean gertaeraEzabatu(Event ev) {
-		Event event  = db.find(Event.class, ev); 
+	public boolean gertaeraEzabatu(final Event ev) {
+		final Event event  = db.find(Event.class, ev); 
 		boolean resultB = true; 
-		List<Question> listQ = event.getQuestions(); 
-		for(Question q : listQ) {
-			if(q.getResult() == null) {
-				resultB = false; 
-			}
-		}
+		resultB = galderakBegiratu(event, resultB);
 		if(resultB == false) {
 			return false;
-		}else if(new Date().compareTo(event.getEventDate())<0) {
-			TypedQuery<Quote> Qquery = db.createQuery("SELECT q FROM Quote q WHERE q.getQuestion().getEvent().getEventNumber() =?1", Quote.class);
-			Qquery.setParameter(1, event.getEventNumber()); 
-			List<Quote> listQUO = Qquery.getResultList();
-			for(int j=0; j<listQUO.size(); j++) {
-				Quote quo = db.find(Quote.class, listQUO.get(j));
-				for(int i=0; i<quo.getApustuak().size(); i++) {
-					ApustuAnitza apustuAnitza = quo.getApustuak().get(i).getApustuAnitza();
-					ApustuAnitza ap1 = db.find(ApustuAnitza.class, apustuAnitza.getApustuAnitzaNumber());
-					db.getTransaction().begin();
-					ap1.removeApustua(quo.getApustuak().get(i));
-					db.getTransaction().commit();
-					if(ap1.getApustuak().isEmpty() && !ap1.getEgoera().equals("galduta")) {
-						this.apustuaEzabatu(ap1.getUser(), ap1);
-					}else if(!ap1.getApustuak().isEmpty() && ap1.irabazitaMarkatu()){
-						this.ApustuaIrabazi(ap1);
-					}
-					db.getTransaction().begin();
-					Sport spo =quo.getQuestion().getEvent().getSport();
-					spo.setApustuKantitatea(spo.getApustuKantitatea()-1);
-					db.getTransaction().commit();
-				}
-
-			}
+		}
+		if(new Date().compareTo(event.getEventDate())<0) {
+			eventBegiratu(event);
 			
 		}
 		db.getTransaction().begin();
@@ -1023,19 +1043,59 @@ public void open(boolean initializeMode){
 		db.getTransaction().commit();
 		return true; 
 	}
+
+	private void eventBegiratu(final Event event) {
+		final TypedQuery<Quote> Qquery = db.createQuery("SELECT q FROM Quote q WHERE q.getQuestion().getEvent().getEventNumber() =?1", Quote.class);
+		Qquery.setParameter(1, event.getEventNumber()); 
+		final List<Quote> listQUO = Qquery.getResultList();
+		for(int j=0; j<listQUO.size(); j++) {
+			final Quote quo = db.find(Quote.class, listQUO.get(j));
+			for(int i=0; i<quo.getApustuak().size(); i++) {
+				final ApustuAnitza apustuAnitza = quo.getApustuak().get(i).getApustuAnitza();
+				final ApustuAnitza ap1 = db.find(ApustuAnitza.class, apustuAnitza.getApustuAnitzaNumber());
+				db.getTransaction().begin();
+				ap1.removeApustua(quo.getApustuak().get(i));
+				db.getTransaction().commit();
+				apustuaBegiratu(ap1);
+				db.getTransaction().begin();
+				final Sport spo =quo.getQuestion().getEvent().getSport();
+				spo.setApustuKantitatea(spo.getApustuKantitatea()-1);
+				db.getTransaction().commit();
+			}
+
+		}
+	}
+
+	private void apustuaBegiratu(final ApustuAnitza ap1) {
+		if(ap1.getApustuak().isEmpty() && !ap1.getEgoera().equals("galduta")) {
+			this.apustuaEzabatu(ap1.getUser(), ap1);
+		}else if(!ap1.getApustuak().isEmpty() && ap1.irabazitaMarkatu()){
+			this.ApustuaIrabazi(ap1);
+		}
+	}
+
+	private boolean galderakBegiratu(final Event event, boolean resultB) {
+		final List<Question> listQ = event.getQuestions(); 
+		for(final Question q : listQ) {
+			if(q.getResult() == null) {
+				resultB = false; 
+			}
+		}
+		return resultB;
+	}
 	
-	public String saldoaBistaratu(Registered u) {
-		Registered reg = (Registered)db.find(Registered.class, u.getUsername());
+	public String saldoaBistaratu(final Registered u) {
+		final Registered reg = (Registered)db.find(Registered.class, u.getUsername());
 		return reg.getDirukop().toString();
 	}
 	
 	
 	public List<Registered> rankingLortu(){
-		TypedQuery<Registered> Rquery = db.createQuery("SELECT r FROM Registered r", Registered.class);
-		List<Registered> listR = Rquery.getResultList();
-		List<Registered> ema= new ArrayList<Registered>();
+		final TypedQuery<Registered> Rquery = db.createQuery("SELECT r FROM Registered r", Registered.class);
+		final List<Registered> listR = Rquery.getResultList();
+		final List<Registered> ema= new ArrayList<Registered>();
 		int i;
-		for(Registered r: listR) {
+		for(final Registered r: listR) {
 			if(ema.isEmpty()) {
 				ema.add(0, r);
 			}else {
@@ -1050,38 +1110,38 @@ public void open(boolean initializeMode){
 	}
 	
 	public List<Event> getEventsAll() {	
-		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev ",Event.class);   
-		List<Event> events = query.getResultList();
+		final TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev ",Event.class);   
+		final List<Event> events = query.getResultList();
 	 	return events;
 	}
 	
 	
 	
-	public boolean gertaerakKopiatu(Event e, Date date) {
+	public boolean gertaerakKopiatu(final Event e, final Date date) {
 		Boolean b=false;
-		Event gertaera = db.find(Event.class, e.getEventNumber());
+		final Event gertaera = db.find(Event.class, e.getEventNumber());
 		db.getTransaction().begin();
 		
 		
-		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.getDescription()=?1 and ev.getEventDate()=?2",Event.class);   
+		final TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.getDescription()=?1 and ev.getEventDate()=?2",Event.class);   
 		query.setParameter(1,gertaera.getDescription());
 		query.setParameter(2, date);
 		if(query.getResultList().isEmpty()) {
 			b=true;
-			String[] taldeak = gertaera.getDescription().split("-");
-			Team lokala = new Team(taldeak[0]);
-			Team kanpokoa = new Team(taldeak[1]);
-			Event gertKopiatu = new Event(gertaera.getDescription(), date, lokala, kanpokoa);
+			final String[] taldeak = gertaera.getDescription().split("-");
+			final Team lokala = new Team(taldeak[0]);
+			final Team kanpokoa = new Team(taldeak[1]);
+			final Event gertKopiatu = new Event(gertaera.getDescription(), date, lokala, kanpokoa);
 			gertKopiatu.setSport(gertaera.getSport());
 			gertaera.getSport().addEvent(gertKopiatu);
 			db.persist(gertKopiatu);
-				for(Question q : gertaera.getQuestions()) {
-					Question que= new Question(q.getQuestion(), q.getBetMinimum(), gertKopiatu);
+				for(final Question q : gertaera.getQuestions()) {
+					final Question que= new Question(q.getQuestion(), q.getBetMinimum(), gertKopiatu);
 					gertKopiatu.listaraGehitu(que);
-					Question galdera = db.find(Question.class, q.getQuestionNumber());
+					final Question galdera = db.find(Question.class, q.getQuestionNumber());
 					db.persist(que);
-					for(Quote k: galdera.getQuotes()) {
-						Quote kuo= new Quote(k.getQuote(), k.getForecast(), que);
+					for(final Quote k: galdera.getQuotes()) {
+						final Quote kuo= new Quote(k.getQuote(), k.getForecast(), que);
 						que.listaraGehitu(kuo);
 						db.persist(kuo);
 					}
@@ -1091,16 +1151,16 @@ public void open(boolean initializeMode){
 		return b;
 	}
 	
-	public boolean jarraitu(Registered jabea, Registered jarraitua, Double limit) {
+	public boolean jarraitu(final Registered jabea, final Registered jarraitua, final Double limit) {
 		Boolean b=false;
-		Registered jarraitu = (Registered) db.find(Registered.class, jarraitua.getUsername());
-		Registered harpideduna = (Registered) db.find(Registered.class, jabea.getUsername());
+		final Registered jarraitu = (Registered) db.find(Registered.class, jarraitua.getUsername());
+		final Registered harpideduna = (Registered) db.find(Registered.class, jabea.getUsername());
 		
-		Jarraitzailea jarraitzailea = new Jarraitzailea(harpideduna,jarraitu);
+		final Jarraitzailea jarraitzailea = new Jarraitzailea(harpideduna,jarraitu);
 		//if(!harpideduna.getJarraitutakoLista().contains(jarraitu)) {
 		if(!harpideduna.getJarraitutakoLista().contains(jarraitzailea)) {
 			db.getTransaction().begin();
-			Jarraitzailea jar = new Jarraitzailea(harpideduna, jarraitu);
+			final Jarraitzailea jar = new Jarraitzailea(harpideduna, jarraitu);
 			harpideduna.addJarraitutako(jar);
 			jarraitu.addJarraitzailea(jar);
 			b=true;
@@ -1115,10 +1175,10 @@ public void open(boolean initializeMode){
 	public Sport popularrenaLortu() {
 		Integer max=Integer.MIN_VALUE;
 		Sport s=null;
-		TypedQuery<Sport> query = db.createQuery("SELECT sp FROM Sport sp ",Sport.class);
-		List<Sport>sp =query.getResultList();
+		final TypedQuery<Sport> query = db.createQuery("SELECT sp FROM Sport sp ",Sport.class);
+		final List<Sport>sp =query.getResultList();
 		Integer kont;
-		for(Sport sport: sp) {
+		for(final Sport sport: sp) {
 			kont=sport.getApustuKantitatea();
 			if(kont>max) {
 				s=sport;
@@ -1128,37 +1188,37 @@ public void open(boolean initializeMode){
 		return s;
 	}
 	
-	public void ezJarraituTaldea(Registered u) {
-		Registered r = (Registered) db.find(Registered.class, u.getUsername()); 
+	public void ezJarraituTaldea(final Registered u) {
+		final Registered r = (Registered) db.find(Registered.class, u.getUsername()); 
 		db.getTransaction().begin();
-		Team t = db.find(Team.class, r.getTaldea());
+		final Team t = db.find(Team.class, r.getTaldea());
 		t.removeUser(r);
 		r.setTaldea(null);
 		db.getTransaction().commit();
 	}
 	
 	public List<Team> getAllTeams() {	
-		TypedQuery<Team> query = db.createQuery("SELECT t FROM Team t ",Team.class);   
-		List<Team> teams = query.getResultList();
+		final TypedQuery<Team> query = db.createQuery("SELECT t FROM Team t ",Team.class);   
+		final List<Team> teams = query.getResultList();
 	 	return teams;
 	}
 	
-	public void jarraituTaldea(Registered u, Team t) {
-		Registered r = (Registered) db.find(Registered.class, u.getUsername());
-		Team team = db.find(Team.class, t.getIzena());
+	public void jarraituTaldea(final Registered u, final Team t) {
+		final Registered r = (Registered) db.find(Registered.class, u.getUsername());
+		final Team team = db.find(Team.class, t.getIzena());
 		db.getTransaction().begin();
 		r.setTaldea(team);
 		team.addUser(r);
 		db.getTransaction().commit();
 	}
 	
-	public Registered findUser(Registered user){
+	public Registered findUser(final Registered user){
 		return db.find(Registered.class, user.getUsername());
 	}
 	
-	public List<Event> getEventsTeam(Team team) {
-		Team t=db.find(Team.class, team.getIzena());
-		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.getLokala().getIzena()=?1 OR ev.getKanpokoa().getIzena()=?2",Event.class);
+	public List<Event> getEventsTeam(final Team team) {
+		final Team t=db.find(Team.class, team.getIzena());
+		final TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.getLokala().getIzena()=?1 OR ev.getKanpokoa().getIzena()=?2",Event.class);
 		query.setParameter(1, t.getIzena());
 		query.setParameter(2, t.getIzena());
 		return query.getResultList();
