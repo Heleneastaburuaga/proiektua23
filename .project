@@ -20,11 +20,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>refactor.pdf</name>
-			<type>1</type>
-			<location>C:/Users/lande/Downloads/SI-Lab04.pdf</location>
-		</link>
-	</linkedResources>
 </projectDescription>
