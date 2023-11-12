@@ -2,6 +2,9 @@ package gui;
 
 import java.awt.Color;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import javax.swing.UIManager;
@@ -9,9 +12,14 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
 import businessLogic.BLFacade;
+import businessLogic.BLFacadeFactory;
 import businessLogic.BLFacadeImplementation;
+import businessLogic.ExtendedIterator;
+import businessLogic.ExternalBLFacadeFactory;
+import businessLogic.LocalBLFacadeFactory;
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
+import domain.Event;
 
 public class ApplicationLauncher { 
 	
@@ -32,51 +40,46 @@ public class ApplicationLauncher {
 		
 		MainUserGUI b = new MainUserGUI(); 
 		b.setVisible(true);
-
-
+		boolean isLocal=false;
 		try {
 			
-			BLFacade appFacadeInterface;
-//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
-//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+			BLFacadeFactory factory ;
+            if(c.isBusinessLogicLocal()) {
+            	factory = new LocalBLFacadeFactory();
+            	isLocal=true;
+            }else {
+            	factory = new ExternalBLFacadeFactory();
+            }
+            
+            BLFacade appFacadeInterface = factory.createBLFacade();
+            if(isLocal=true) {
+            	SimpleDateFormat  sdf =  new SimpleDateFormat("dd/MM/yyyy");
+         	    Date    date;
+         	    try {
+         	        date =    sdf.parse("17/12/2023");
+         	        ExtendedIterator<Event> i = appFacadeInterface.getEventsIterator(date);
+         	        Event    e;
+         	        i.goLast();    
+         	        while (i.hasPrevious())    {
+         	            e =    i.previous();
+         	            System.out.println(e.toString());
+         	        }
+         	        System.out.println();
+
+         	        i.goFirst();
+         	        while (i.hasNext())    {
+         	            e =    i.next();
+         	            System.out.println(e.toString());
+         	        }
+         	    }    catch (ParseException    e1)    {
+         	        System.out.println("Data arazoak     " +    "17/12/2023");
+         	    }
+            }
+            
+            //UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
+            //UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
-			
-			if (c.isBusinessLogicLocal()) {
-				
-				//In this option the DataAccess is created by FacadeImplementationWS
-				//appFacadeInterface=new BLFacadeImplementation();
-
-				//In this option, you can parameterize the DataAccess (e.g. a Mock DataAccess object)
-
-				DataAccess da= new DataAccess(c.getDataBaseOpenMode().equals("initialize"));
-				appFacadeInterface=new BLFacadeImplementation(da);
-
-				
-			}
-			
-			else { //If remote
-				
-				 String serviceName= "http://"+c.getBusinessLogicNode() +":"+ c.getBusinessLogicPort()+"/ws/"+c.getBusinessLogicName()+"?wsdl";
-				 
-				//URL url = new URL("http://localhost:9999/ws/ruralHouses?wsdl");
-				URL url = new URL(serviceName);
-
-		 
-		        //1st argument refers to wsdl document above
-				//2nd argument is service name, refer to wsdl document above
-//		        QName qname = new QName("http://businessLogic/", "FacadeImplementationWSService");
-		        QName qname = new QName("http://businessLogic/", "BLFacadeImplementationService");
-		 
-		        Service service = Service.create(url, qname);
-
-		         appFacadeInterface = service.getPort(BLFacade.class);
-			} 
-			/*if (c.getDataBaseOpenMode().equals("initialize")) 
-				appFacadeInterface.initializeBD();
-				*/
 			MainGUI.setBussinessLogic(appFacadeInterface);
-
-		
 
 			
 		}catch (Exception e) {

@@ -46,6 +46,7 @@ public class MainGUI extends JFrame {
 	private JRadioButton rdbtnNewRadioButton_2;
 	private JPanel panel;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JButton btnTable;
 	
 	/**
 	 * This is the default constructor
@@ -96,6 +97,7 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getLblNewLabel());
 			jContentPane.add(getBoton3());
 			jContentPane.add(getBoton2());
+			jContentPane.add(getBtnTable());
 			jContentPane.add(getPanel());
 		}
 		return jContentPane;
@@ -208,5 +210,17 @@ public class MainGUI extends JFrame {
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
 	
+	private JButton getBtnTable() {
+		if (btnTable == null) {
+			btnTable = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnTable.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					
+				}
+			});
+		
+		}
+		return btnTable;
+	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 

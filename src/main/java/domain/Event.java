@@ -174,6 +174,19 @@ public class Event implements Serializable {
 			return false;
 		return true;
 	}
+
+	public void print() {
+		 System.out.println("Event Number: " + getEventNumber());
+	     System.out.println("Description: " + getDescription());
+	     System.out.println("Event Date: " + getEventDate());
+	     System.out.println("Sport: " + getSport());
+	     System.out.println("Local Team: " + getLokala());
+	     System.out.println("Visitor Team: " + getKanpokoa());
+	     System.out.println("Questions:");
+	     for (Question question : getQuestions()) {
+	    	 System.out.println("\t" + question);
+	     }
+	}
 	
 	
 }

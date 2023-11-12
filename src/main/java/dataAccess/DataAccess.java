@@ -19,6 +19,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+import businessLogic.ExtendedIterator;
+import businessLogic.ExtendedIteratorEvents;
 import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.ApustuAnitza;
@@ -659,6 +661,14 @@ public class DataAccess  {
 		   res.add(ev);
 		  }
 	 	return res;
+	}
+	
+	public ExtendedIterator<Event> getEventsIterator(final Date date) {
+		System.out.println(">> DataAccess: getEvents");
+		final TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.eventDate=?1", Event.class);
+		query.setParameter(1, date);
+		final List<Event> events = query.getResultList();
+		return new ExtendedIteratorEvents(events);
 	}
 	
 	/**

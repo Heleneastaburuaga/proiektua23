@@ -1,12 +1,5 @@
-/.DS_Store
-/Etiquetas.properties
-/Etiquetas_en.properties
-/Etiquetas_en_US.properties
-/Etiquetas_es.properties
-/Etiquetas_eus.properties
+/META-INF/
 /businessLogic/
-/configuration/
+/gui/
 /dataAccess/
 /domain/
-/exceptions/
-/META-INF/

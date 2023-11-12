@@ -105,6 +105,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		return events;
 	}
 
+    @WebMethod 
+    public ExtendedIterator getEventsIterator(Date date) {
+ 	   dbManager.open(false);
+ 		ExtendedIterator<Event> events= dbManager.getEventsIterator(date);
+ 		dbManager.close();
+ 		return events;
+    }
     
 	/**
 	 * This method invokes the data access to retrieve the dates a month for which there are events
